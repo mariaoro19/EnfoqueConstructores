@@ -1,34 +1,346 @@
-.App {
+
+/*
+@font-face {
+  font-family: 'FuturaBold';
+  src: url('/EnfoqueConstructores/enfoque-constructores/public/fonts/Futura_Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FuturaLight';
+  src: url('fonts/Futura_light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FuturaMedium';
+  src: url('fonts/Futura_medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FuturaHeavy';
+  src: url('fonts/Futura_Heavy.ttf') format('truetype');
+}*/
+
+:root {
+  --naranja: #e99e3c;  /* Color principal */
+  --gris-oscuro: #525151;  /* Color secundario */
+  --gris-claro: #d9d9d9;  /* Color de acento */
+  --font-titulos: 'Mulish', sans-serif;
+  --font-cuerpo: 'Montserrat', sans-serif;
+
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Ocultar el scroll horizontal */
+  background-color: var(--gris-claro);
+  
+}
+
+* {
+  box-sizing: border-box; /* Para asegurar que padding y borders no causen desbordamiento */
+}
+
+/* Navbar contenedor */
+.navbar {
+  background-color: var(--gris-claro);
+  margin: 0;
+  display: flex;  /* Alinea los elementos en fila (row) */
+  justify-content: space-evenly; /* Distribuye los elementos horizontalmente */
+  align-items:center;
+  width: 100%;
+  padding: 4rem 4rem 0 4rem;
+  
+  
+}
+
+
+.logo-container img{
+  width: 100%; 
+  
+}
+
+/* Establecemos flexbox en el ul para alinear en fila */
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 1rem 1.2rem 1rem;
+  display: flex;  /* Alinea los elementos en fila (row) */
+  align-items: center; /* Alinea verticalmente los elementos en el centro */
+  justify-content: space-around;
   text-align: center;
+  width: 80%;
+  
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Cada item del navbar */
+.navbar ul li {
+  margin: 0 0.0625rem; /* Espaciado horizontal entre los elementos */
+  
 }
 
 
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+/* Enlaces del navbar */
+.navbar ul li a {
+  color: var(--gris-oscuro);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  position: relative; 
+  height: 2rem;
+
+}
+/* Cambia a negrita cuando pasas el mouse */
+/*
+.navbar ul li a:hover {
+  font-weight: bold; 
+}*/
+
+
+/* Estilo para el hover - línea debajo del enlace */
+.navbar ul li a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.125rem; /* Grosor de la línea */
+  background-color: var(--naranja); /* Color morado */
+  border-radius: 0.3125rem;
+  font-weight: bold; 
+  transition: width 0.3s ease; /* Animación suave */
+  font-family: var(--font-titulos);
+  
+  
+}
+
+.navbar ul li a:hover, 
+    .navbar ul li a.active {
+      font-weight: bold; /* Aplica bold cuando se hace hover o está activo */
+    }
+
+/* Al principio la línea no aparece */
+.navbar ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; /* Ancho 0 para que no aparezca inicialmente */
+  height: 0.125rem;
+  background-color: var(--naranja);
+  transition: width 0.3s ease; /* Animación suave */
+  
+}
+
+/* Al cargar la página, el enlace de "Home" tiene la línea por defecto */
+.navbar ul li a.active::after {
+  width: 100%; /* Muestra la línea morada completamente debajo de "Home" */
+}
+.btnNaranja{
+  display: inline-block; 
+  width: auto;  
+  height: auto ; 
+  color: var(--gris-oscuro);
+  background: var(--naranja);
+  border-radius: 2rem;
+  margin:0;
+  text-align: center;
+  cursor: pointer; 
+  padding: 0 0.5rem 0 0.5rem;
+  
+  
+}
+.btnNaranja a{
+  font-size: 1.5rem !important;
+  
+}
+
+/*INICIO*/
+
+.inicio{
+  display: flex; 
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; 
+  justify-content: space-between; 
+  text-align: center;
+  background-color: var(--gris-claro);
+  
+
+}
+.BannerHome{
+  width: 100%; 
+  margin-top: 2rem;
+  padding: 0 4rem 0 4rem;
+}
+.aliados{
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-between; 
+  
+  margin-top: 2rem;
+  padding: 0 4rem 0 4rem;
+  height: 40%;
+  
+  
+  
+}
+.HomeCircle {
+  padding: 0;
+  margin: 0;
+  
+  height: 40%;
+}
+.aliadosInfo{
+  margin:2rem 2rem 0 0;
+  height: 100%;
+  
+  
+}
+.aliadosInfo h1 {
+  font-size: 3rem;
+  color:var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  font-weight: bolder;
+  text-align: left;
+}
+.aliadosInfo p {
+  font-size: 2rem;
+  color:var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  text-align: justify;
+  
+}
+.proyectos-list{
+  background-image: url('utils/home/BKproyectos.webp');
+  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  width: 100%;
+  padding: 4rem;
+  display: flex; 
+  flex-direction: column;
+  align-items: left; 
+  text-align: left;
+
+}
+.LogosProyectos{
+  width: 100%;
+  margin:3rem 0 0 0;
+  
+}
+.proyectos-list-info{
+  display: flex; 
+  flex-direction: row;
+  align-items: left; 
+  justify-content: left; 
+  text-align: left;
+
 }
 
-.App-link {
-  color: #61dafb;
+.proyectos-list-info-text{
+  margin: 0;
+  padding: 0;
+}
+.proyectos-list-info-text h1{
+  padding: 0;
+  margin: 0;
+  font-size: 4rem;
+  line-height: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lineaVertical{
+  background-color: var(--naranja);
+  width: 0.25rem;
+  margin: 0.5rem;
+}
+
+.clientes{
+  background-color: var(--naranja);
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  justify-content: center; 
+  text-align: left;
+  width: 100%;
+}
+.clientes-logo{
+  display: flex; 
+  flex-direction: column;
+  align-items:flex-start; 
+  justify-content: left; 
+  width: 30%;
+}
+.clientes-logo h1{
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--gris-oscuro);
+}
+/* Estilo del círculo */
+.circleDarkGrey {
+  width: 3rem;  /* Ancho del círculo */
+  height: 3rem;  /* Alto del círculo (igual al ancho para hacer un círculo) */
+  background-color: var(--gris-oscuro);  /* Color gris del círculo */
+  border-radius: 50%;  /* Hace que el div sea un círculo */
+}
+.ovalGrey {
+  width: 10rem;  /* Ajusta el ancho del óvalo */
+  height: 3rem;  /* Ajusta la altura del óvalo */
+  background-color: var(--gris-claro);  /* Color morado del óvalo */
+  border-radius: 3rem;  /* Hace que los bordes sean redondeados, formando un óvalo */
+  position: relative;  /* Para posicionar el círculo dentro */
+  display: flex;
+  justify-content: flex-end; /* Alinea el círculo a la derecha */
+  align-items: center; /* Centra el círculo verticalmente */
+  padding-right: 0.3rem; /* Espacio a la derecha entre el círculo y el borde del óvalo */
+  margin-right: 0.5rem;
+}
+.clientes-info{
+  margin: 4rem;
+}
+.clientes-info li{
+  font-size: 2rem;
+  color: var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  margin-bottom: 1rem;
+}
+.grua{
+  margin: 2rem;
+}
+
+/*footbar*/
+
+.footbar {
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 4rem;
+
+}
+.footbar-info{
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: space-between; 
+}
+.footbar-info a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* Usa el color del texto padre o define un color específico */
+}
+
+.instagram, .email, .ubicacion{
+  display: flex; 
+  flex-direction: row;
+  align-items: left; 
+  justify-content: space-between; 
+}
+.instagram-icon, .email-icon, .ubicacion-icon{
+  width: 20%;
+  height: auto;
+}
+.footbar-info p{
+  font-size: 1.5rem;
+  color: var(--gris-oscuro);
 }

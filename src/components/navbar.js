@@ -13,20 +13,31 @@ const navbar = () => {
      <ul>
        <li>
          <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
-           Inicio
+           INICIO
          </NavLink>
        </li>
        <li>
          <NavLink to="/conocenos" className={({ isActive }) => (isActive ? 'active' : '')}>
-           Conócenos
+           CONÓCENOS
          </NavLink>
        </li>
        <li>
          <NavLink to="/proyectos" className={({ isActive }) => (isActive ? 'active' : '')}>
-           Proyectos
+           PROYECTOS
          </NavLink>
        </li>
+       <li>
+         <NavLink to="/lanzamientos" className={({ isActive }) => (isActive ? 'active' : '')}>
+           PRÓXIMOS LANZAMIENTOS
+         </NavLink>
+       </li>
+       <li>
+        <div className='btnNaranja'>
+          <a href="https://wa.me/3206192322" target="_blank" rel="noopener noreferrer">Contáctanos</a>
+        </div>
+       </li>
      </ul>
+
    </nav>
   );
 };

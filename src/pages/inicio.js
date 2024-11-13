@@ -1,6 +1,9 @@
 import React from 'react';
 import '../App.css';
-import { Helmet } from 'react-helmet';
+import BannerHome from '../utils/home/Banner-Home.webp';
+import HomeCircle from '../utils/home/Image-circle.webp';
+import LogosProyectos from '../utils/home/Logos-proyectos.webp';
+import Grua from '../utils/home/Grua.webp';
 
 const inicio = () => {
   /*
@@ -76,7 +79,54 @@ const inicio = () => {
           <meta name="description" content="Agencia de marketing digital especializada en SEO, SEM, y gestión de redes sociales." />
           <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>*/}
-      {/*<img src="/src/utils/home/Banner-Home.webp" alt="BannerHome" />*/}
+      <img className="BannerHome" src={BannerHome} alt="BannerHome" />
+      <div className='aliados'>
+        <div className='aliadosInfo'>
+          <h1>Somos el aliado que necesitas para hacer realidad tus proyectos de construcción.</h1>
+          <p>Brindamos outsourcing especializado en todo Colombia para constructoras,
+          gestionando tareas clave como procesos jurídicos, cartera y administración, para que
+          puedas enfocarte en construir.</p>
+        </div>
+        <img className='HomeCircle' src={HomeCircle} alt="HomeCircle" />
+      </div>
+      <div className='proyectos-list'>
+        <div className='proyectos-list-info'>
+          <div className='lineaVertical'></div>
+          <div className='proyectos-list-info-text'>
+            <h1 style={{color: 'var(--naranja)'}}>Más de 16</h1>
+            <h1 style={{color: '#fff'}}>proyectos</h1>
+            <h1 style={{color: '#fff'}}>desarrollados</h1>
+          </div>
+        </div>
+        <img className='LogosProyectos' src={LogosProyectos} alt="LogosProyectos" />
+      </div>
+      <div className='clientes'>
+        <div className='clientes-logo'>
+          <h1>Conoce algunos de nuestros clientes</h1>
+          <div className="ovalGrey">
+            <div className="circleDarkGrey"></div>
+          </div>
+          <img className='grua' src={Grua} alt="Grua" />
+        </div>
+        <dvi className='clientes-info'>
+          <ul>
+            <li>Promotora Altos de Plan Parejo S.A.S.</li>
+            <li>Promotora Mirador de Plan Parejo S.A.S.</li>
+            <li>Promotora las Heliconias S.A.S.</li>
+            <li>Promotora Karakolí S.A.S.</li>
+            <li>Palo Santo Construcciones .S.A.S.</li>
+            <li>Promotora Piamonte S.A.S</li>
+            <li>Promotora Oro Blanco S.A.S.</li>
+            <li>Promotora Mandala S.A.S.</li>
+            <li>Promotora Los Nogales S.A.S.</li>
+            <li>Promotora Arboleda S.A.S.</li>
+            <li>Virente Construcciones S.A.S.</li>
+            <li>Promotoa Navio S.A.S.</li>
+            <li>Promotora Andalucía S.A.S.</li>
+          </ul>
+        </dvi>
+
+      </div>
      
       
       
