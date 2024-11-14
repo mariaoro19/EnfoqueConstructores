@@ -518,6 +518,7 @@ html, body {
 
 .logo {
   height: 3rem; 
+  width: auto;
   
 }
 
