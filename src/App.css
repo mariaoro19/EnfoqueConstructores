@@ -28,6 +28,8 @@
   --font-cuerpo: 'Montserrat', sans-serif;
 
 }
+
+
 html, body {
   width: 100%;
   overflow-x: hidden; /* Ocultar el scroll horizontal */
@@ -240,7 +242,7 @@ html, body {
   
 }
 .proyectos-list{
-  background-image: url('utils/home/BKproyectos.webp');
+  background-image: url('utils/inicio/BKproyectos.webp');
   background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita la repetición de la imagen */
@@ -336,8 +338,245 @@ html, body {
 .grua{
   margin: 2rem;
 }
+/*CONOCENOS*/
+.conocenos{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+}
+
+.somos{
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-evenly;  
+  width: 100%;
+  padding: 1rem 4rem 1rem 4rem;
+
+}
+.ImagenSomos{
+  width: 30%;
+  height: auto;
+}
+.lineaVerticalGris{
+  background-color: var(--gris-oscuro);
+  height: 20rem;
+  width: 0.25rem;
+}
+.somos p{
+  font-size: 1.6rem;
+  color: var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  width: 50%;
+  text-align: justify;
+  letter-spacing: 0.1em; 
+}
+.valores{
+  background-color: var(--gris-oscuro);
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-evenly;  
+  width: 100%;
+  padding: 1rem 4rem 1rem 4rem;
+}
+.circleOrange {
+  width: 5rem;  /* Ancho del círculo */
+  height: 5rem;  /* Alto del círculo (igual al ancho para hacer un círculo) */
+  background-color: var(--naranja);  /* Color gris del círculo */
+  border-radius: 5rem;  /* Hace que el div sea un círculo */
+}
+.ovalGreyConocenos {
+  width: 19rem;  /* Ajusta el ancho del óvalo */
+  height: 5rem;  /* Ajusta la altura del óvalo */
+  background-color: var(--gris-claro);  /* Color morado del óvalo */
+  border-radius: 3rem;  /* Hace que los bordes sean redondeados, formando un óvalo */
+  position: relative;  /* Para posicionar el círculo dentro */
+  display: flex;
+  justify-content: flex-end; /* Alinea el círculo a la derecha */
+  align-items: center; /* Centra el círculo verticalmente */
+  padding-right: 0rem; /* Espacio a la derecha entre el círculo y el borde del óvalo */
+  margin-right: 0.5rem;
+}
+.ovalGreyConocenos h1{
+  color: var(--gris-oscuro);
+  font-family: var(--font-titulos);
+  margin: 0 0.35rem 0 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 1;
+  width: 60%;
+}
+.valores-list{
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: space-evenly;  
+  text-align: justify;
+  width: 55%;
+  height: auto;
+
+}
+.ovalGreyValores{
+  
+  background-color: var(--gris-claro);  /* Color morado del óvalo */
+  border-radius: 3rem;  /* Hace que los bordes sean redondeados, formando un óvalo */
+  position: relative;  /* Para posicionar el círculo dentro */
+  display: flex;
+  justify-content: flex-start; /* Alinea el círculo a la derecha */
+  align-items: center; /* Centra el círculo verticalmente */
+  margin: 0 1rem 0 0;
+  
+}
+.ovalGreyValores h1{
+  color: var(--gris-oscuro);
+  font-family: var(--font-titulos);
+  font-weight: bold;
+  margin: 0;
+  padding: 0.2rem 0.25rem 0.2rem 0.25rem;
+  font-size: 2rem;
+}
+.valores-list-texto p{
+  color: var(--gris-claro);
+  font-family: var(--font-cuerpo);
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+.valores-list-texto{
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: space-evenly;  
+  margin:0.5rem
+}
+.valores-list-texto-alt{
+  display: flex; 
+  flex-direction: row;
+  align-items:baseline; 
+  justify-content: space-evenly;  
+  text-align: justify;
+}
+
+.mision-vision{
+  display: flex; 
+  flex-direction: column;
+  align-items:center; 
+  justify-content: space-evenly;  
+  padding: 1rem 4rem 1rem 4rem;
+  width: 90%;
+
+}
+.mision-vision-detalle{
+  display: flex; 
+  flex-direction: row;
+  align-items:center; 
+  justify-content: center; 
+  text-align: center;
+
+}
+.logo-mision, .logo-vision{
+  background-color: var(--naranja);
+  border-radius: 3rem;  /* Hace que los bordes sean redondeados, formando un óvalo */
+  position: relative;  /* Para posicionar el círculo dentro */
+  display: flex;
+  justify-content: center; /* Alinea el círculo a la derecha */
+  align-items: center; /* Centra el círculo verticalmente */
+  min-height: 10rem;
+  margin:1rem;
+  width: 90%;
+}
+.logo-mision img, .logo-vision img{
+  height: 100%;
+}
+
+.mision, .vision{
+  width: 100%;
+  display: flex; 
+  flex-direction: column;
+  align-items:center; 
+  justify-content:center;
+  text-align: center;
+  margin: 1rem 0 0 0;
+}
+.mision-texto,.vision-texto{
+  background-image: url('utils/conocenos/Cuadro-MV.webp');
+  height: 30rem;
+  background-size: contain; /* Ajusta la imagen para que se muestre completa */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  margin:1rem;
+  width:90%;
+  padding: 0.5rem 0 0 0;
+  height: 25rem;
+  display: flex; 
+  flex-direction: column;
+  align-items:center; 
+  justify-content:flex-start;
+  text-align: center;
+
+}
+.mision-vision-detalle h1{
+  font-size: 2.5rem;
+  color: var(--gris-oscuro);
+  padding: 0;
+  margin: 2rem 0 0 0;
+}
+.mision-vision-detalle p{
+  font-size: 1.5rem;
+  color: var(--gris-oscuro);
+  padding: 1rem;
+  margin: 0;
+  text-align: justify;
+}
+.mision-vision-contactanos{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-between; 
+  width: 50%;
+
+}
+.mision-vision-contactanos h1{
+  font-size: 2.5rem;
+  color: var(--gris-oscuro);
+  text-align: center;
+  
+}
+
+.btnNaranja{
+  display: inline-block; 
+  width: auto;  
+  height: auto ; 
+  color: var(--gris-oscuro);
+  background: var(--naranja);
+  border-radius: 2rem;
+  margin:0 0 1rem 0;
+  text-align: center;
+  cursor: pointer; 
+  padding: 0 1rem 0 1rem;
+  
+  
+}
+.btnNaranja a{
+  font-size: 2.5rem !important;
+  font-weight: bold;
+  
+}
 
 /*footbar*/
+.footbar {
+  background-color: var(--gris-claro); /* Color por defecto */
+}
+
+.footbar.conocenos-bg {
+  background-color: var(--gris-oscuro); /* Color específico para Conócenos */
+  color: var(--gris-claro);
+}
+.footbar.conocenos-bg p {
+  color: var(--gris-claro);
+}
 
 .footbar {
   display: flex; 
@@ -356,7 +595,7 @@ html, body {
   width: 50%;
   
 }
-.footbar-info a, .btnNaranjaNavbar a, .btnNaranjaFootbar a {
+.footbar-info a, .btnNaranjaNavbar a, .btnNaranjaFootbar a, .btnNaranja a {
   text-decoration: none; /* Elimina el subrayado */
   color: inherit; /* Usa el color del texto padre o define un color específico */
 }
@@ -669,6 +908,186 @@ html, body {
   margin: 2rem;
 }
 
+
+/*CONOCENOS*/
+.conocenos{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+}
+
+.somos{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-evenly;  
+  width: 100%;
+  padding: 0 0.5rem 0 0.5rem;
+
+}
+.ImagenSomos{
+  width: 60%;
+}
+.lineaVerticalGris{
+  display: none;
+}
+.somos p{
+  font-size: 1rem;
+  width: 100%;
+}
+.valores{
+
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-evenly;  
+  width: 100%;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+.circleOrange {
+  width: 3rem;  /* Ancho del círculo */
+  height: 3rem;  /* Alto del círculo (igual al ancho para hacer un círculo) */
+  border-radius: 3rem;  /* Hace que el div sea un círculo */
+}
+.ovalGreyConocenos {
+  width: 20rem;  /* Ajusta el ancho del óvalo */
+  height: 3rem;  /* Ajusta la altura del óvalo */
+  border-radius: 3rem;  /* Hace que los bordes sean redondeados, formando un óvalo */
+  padding-right: 0rem; /* Espacio a la derecha entre el círculo y el borde del óvalo */
+  margin-right: 0.5rem;
+}
+.ovalGreyConocenos h1{
+  margin: 0 0.35rem 0 0.5rem;
+  padding: 0;
+  font-size: 1.7rem;
+  width: 80%;
+}
+.valores-list{
+  margin: 1.5rem 0 0 0;
+  width: 100%;
+  height: auto;
+
+}
+.ovalGreyValores{
+  
+  border-radius: 3rem;  /* Hace que los bordes sean redondeados, formando un óvalo */
+  margin: 0 1rem 0 0;
+  
+}
+.ovalGreyValores h1{
+  margin: 0;
+  padding: 0.2rem 0.25rem 0.2rem 0.25rem;
+  font-size: 1.2rem;
+}
+.valores-list-texto p{
+  font-size: 1rem;
+}
+.valores-list-texto{
+
+  margin:0.5rem
+}
+
+
+.mision-vision{
+  display: flex; 
+  flex-direction: column;
+  align-items:center; 
+  justify-content: center;
+  text-align: justify;  
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  width: 100%;
+  
+
+}
+.mision-vision-detalle{
+  display: flex; 
+  flex-direction: column;
+  align-items:center; 
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+
+}
+.mision-vision-detalle h1{
+  font-size: 1.5rem;
+  padding: 1.5rem 0 0 0;
+  margin: 0;
+}
+.mision-vision-detalle p{
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 0;
+  
+}
+.mision-texto h1, .mision-text p{
+  margin: 0;
+  padding: 0;
+}
+.logo-mision, .logo-vision{
+  min-height: 4rem;
+  width: 4rem;
+  padding: 0;
+  margin: 0;
+  
+
+}
+.logo-mision img, .logo-vision img{
+  height: 3rem;
+  padding: 0;
+  margin: 0;
+
+}
+.mision, .vision{
+  width: 100%;
+  display: flex; 
+  flex-direction: column;
+  align-items:center; 
+  justify-content:center;
+  text-align: center;
+  margin: 1rem 0 0 0;
+}
+.mision-texto,.vision-texto{
+  width:78%;
+  padding: 0.5rem 0 0 0;
+  height: 17rem;
+  display: flex; 
+  flex-direction: column;
+  align-items:center; 
+  justify-content:center;
+  text-align: center;
+  
+  
+}
+.mision-vision-contactanos{
+  width: 100%;
+
+}
+
+.mision-vision-contactanos h1{
+  font-size: 2rem;
+
+  
+}
+
+.btnNaranja{
+  display: inline-block; 
+  width: auto;  
+  height: auto ; 
+  color: var(--gris-oscuro);
+  background: var(--naranja);
+  border-radius: 2rem;
+  margin:0 0 1rem 0;
+  text-align: center;
+  cursor: pointer; 
+  padding: 0 1rem 0 1rem;
+  
+  
+}
+.btnNaranja a{
+  font-size: 2.5rem !important;
+  font-weight: bold;
+  
+}
 /*footbar*/
 
 .footbar {

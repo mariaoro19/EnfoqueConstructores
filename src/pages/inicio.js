@@ -1,9 +1,9 @@
 import React from 'react';
 import '../App.css';
-import BannerHome from '../utils/home/Banner-Home.webp';
-import HomeCircle from '../utils/home/Image-circle.webp';
-import LogosProyectos from '../utils/home/Logos-proyectos.webp';
-import Grua from '../utils/home/Grua.webp';
+import BannerHome from '../utils/inicio/Banner-Home.webp';
+import HomeCircle from '../utils/inicio/Image-circle.webp';
+import LogosProyectos from '../utils/inicio/Logos-proyectos.webp';
+import Grua from '../utils/inicio/Grua.webp';
 
 const inicio = () => {
   /*

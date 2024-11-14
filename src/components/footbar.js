@@ -1,12 +1,12 @@
 import React from 'react';
-import instagram from '../utils/home/Instagram.webp';
-import CorreoElectronico from '../utils/home/Correo-electronico.webp';
-import Ubicacion from '../utils/home/Ubicacion.webp';
+import instagram from '../utils/inicio/Instagram.webp';
+import CorreoElectronico from '../utils/inicio/Correo-electronico.webp';
+import Ubicacion from '../utils/inicio/Ubicacion.webp';
 import '../App.css';
 
-const footbar = () => {
+const footbar = ({ isConocenosPage }) => {
   return (
-    <nav className="footbar">
+    <footer className={`footbar ${isConocenosPage ? 'conocenos-bg' : ''}`}>
       <div className="footbar-info">
         <a href="https://www.instagram.com/enfoque.constructores/" target="_blank" rel="noopener noreferrer" className='instagram'>
           <div className='instagram'>
@@ -41,7 +41,7 @@ const footbar = () => {
 
       </div>
       
-  </nav>
+    </footer>
   );
 };
 

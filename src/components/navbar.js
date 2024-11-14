@@ -25,8 +25,8 @@ const Navbar = () => {
           <li><a href="/lanzamientos">PRÓXIMOS LANZAMIENTOS</a></li>
           <li>
             <div className='btnNaranjaNavbarMovil'>
-            <a href="https://wa.me/3206192322" target="_blank" rel="noopener noreferrer">Contáctanos</a>
-          </div>
+              <a href="https://wa.me/3206192322" target="_blank" rel="noopener noreferrer">Contáctanos</a>
+            </div>
           </li>
         </ul>
     </div>
