@@ -14,7 +14,7 @@ const footbar = () => {
               <p>enfoque.constructores</p>
           </div>
         </a>
-        <a href="servicioalcliente@enfoqueconstructores.com" className='email'>
+        <a href="mailto:servicioalcliente@enfoqueconstructores.com" target="_blank" rel="noopener noreferrer" className='email'>
           <div className='email'>
               <img className='email-icon' src={CorreoElectronico} alt="Email" />
               <p>servicioalcliente@enfoqueconstructores.com</p>
@@ -32,9 +32,7 @@ const footbar = () => {
 
         
       </div>
-      <div className='lineaVertical'>
-
-      </div>
+      <div className='lineaVerticalFootbar'></div>
       <div className='contactanos'>
         <p>Recibe más información aquí</p>
         <div className='btnNaranja'>

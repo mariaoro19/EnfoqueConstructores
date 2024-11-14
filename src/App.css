@@ -45,15 +45,17 @@ html, body {
   margin: 0;
   display: flex;  /* Alinea los elementos en fila (row) */
   justify-content: space-evenly; /* Distribuye los elementos horizontalmente */
-  align-items:center;
+  align-items:flex-end;
+  text-align: center;
   width: 100%;
   padding: 4rem 4rem 0 4rem;
   
+
   
 }
 
 
-.logo-container img{
+.logo {
   width: 100%; 
   
 }
@@ -68,13 +70,17 @@ html, body {
   justify-content: space-around;
   text-align: center;
   width: 80%;
-  
+
   
 }
 
 /* Cada item del navbar */
 .navbar ul li {
   margin: 0 0.0625rem; /* Espaciado horizontal entre los elementos */
+  display: flex;  /* Alinea los elementos en fila (row) */
+  align-items: center; /* Alinea verticalmente los elementos en el centro */
+  text-align: left;
+  width: 20%;
   
 }
 
@@ -88,7 +94,7 @@ html, body {
   font-weight: bold;
   display: block;
   position: relative; 
-  height: 2rem;
+  height: 2.5rem;
 
 }
 /* Cambia a negrita cuando pasas el mouse */
@@ -144,15 +150,16 @@ html, body {
   color: var(--gris-oscuro);
   background: var(--naranja);
   border-radius: 2rem;
-  margin:0;
+  margin:0 0 1rem 0;
   text-align: center;
   cursor: pointer; 
-  padding: 0 0.5rem 0 0.5rem;
+  padding: 0 1rem 0 1rem;
   
   
 }
 .btnNaranja a{
-  font-size: 1.5rem !important;
+  font-size: 2rem !important;
+  font-weight: bold;
   
 }
 
@@ -315,8 +322,9 @@ html, body {
   display: flex; 
   flex-direction: row;
   align-items: center; 
-  justify-content: space-between; 
+  justify-content: space-between;  
   padding: 4rem;
+
 
 }
 .footbar-info{
@@ -324,8 +332,10 @@ html, body {
   flex-direction: column;
   align-items: flex-start; 
   justify-content: space-between; 
+  width: 50%;
+  
 }
-.footbar-info a {
+.footbar-info a, .btnNaranja a {
   text-decoration: none; /* Elimina el subrayado */
   color: inherit; /* Usa el color del texto padre o define un color específico */
 }
@@ -333,14 +343,42 @@ html, body {
 .instagram, .email, .ubicacion{
   display: flex; 
   flex-direction: row;
-  align-items: left; 
-  justify-content: space-between; 
+  align-items: center; 
+  justify-content: center;
+  margin:0;
+  padding: 0;
+  text-align: left;
+  
 }
 .instagram-icon, .email-icon, .ubicacion-icon{
-  width: 20%;
-  height: auto;
+  height: 2rem;
+  padding-right: 0.5rem;
+  
 }
-.footbar-info p{
-  font-size: 1.5rem;
+.footbar-info p, .contactanos p{
+  font-size: 2rem;
   color: var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  padding: 0;
+  margin: 0.3rem;
+  
+  
+}
+.contactanos{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+  width: 40%;
+  
+  
+}
+.lineaVerticalFootbar{
+  background-color: var(--naranja);
+  width: 0.5rem;
+  margin: 0.5rem;
+  height: 10rem;
+  margin-left: 25%;
+  
 }
