@@ -35,7 +35,7 @@ const footbar = () => {
       <div className='lineaVerticalFootbar'></div>
       <div className='contactanos'>
         <p>Recibe más información aquí</p>
-        <div className='btnNaranja'>
+        <div className='btnNaranjaFootbar'>
           <a href="https://wa.me/3206192322" target="_blank" rel="noopener noreferrer">Contáctanos</a>
         </div>
 

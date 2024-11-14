@@ -80,7 +80,8 @@ html, body {
   display: flex;  /* Alinea los elementos en fila (row) */
   align-items: center; /* Alinea verticalmente los elementos en el centro */
   text-align: left;
-  width: 20%;
+  
+  padding: 0.5rem;
   
 }
 
@@ -143,7 +144,7 @@ html, body {
 .navbar ul li a.active::after {
   width: 100%; /* Muestra la línea morada completamente debajo de "Home" */
 }
-.btnNaranja{
+.btnNaranjaNavbar{
   display: inline-block; 
   width: auto;  
   height: auto ; 
@@ -157,7 +158,26 @@ html, body {
   
   
 }
-.btnNaranja a{
+.btnNaranjaNavbar a{
+  font-size: 2rem !important;
+  font-weight: bold;
+  
+}
+.btnNaranjaFootbar{
+  display: inline-block; 
+  width: auto;  
+  height: auto ; 
+  color: var(--gris-oscuro);
+  background: var(--naranja);
+  border-radius: 2rem;
+  margin:0 0 1rem 0;
+  text-align: center;
+  cursor: pointer; 
+  padding: 0 1rem 0 1rem;
+  
+  
+}
+.btnNaranjaFootbar a{
   font-size: 2rem !important;
   font-weight: bold;
   
@@ -271,6 +291,7 @@ html, body {
   justify-content: center; 
   text-align: left;
   width: 100%;
+  padding: 0 1rem 0 1rem;
 }
 .clientes-logo{
   display: flex; 
@@ -335,7 +356,7 @@ html, body {
   width: 50%;
   
 }
-.footbar-info a, .btnNaranja a {
+.footbar-info a, .btnNaranjaNavbar a, .btnNaranjaFootbar a {
   text-decoration: none; /* Elimina el subrayado */
   color: inherit; /* Usa el color del texto padre o define un color específico */
 }
@@ -356,7 +377,7 @@ html, body {
   
 }
 .footbar-info p, .contactanos p{
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--gris-oscuro);
   font-family: var(--font-cuerpo);
   padding: 0;
@@ -370,7 +391,7 @@ html, body {
   align-items: center; 
   justify-content: center;
   text-align: center;
-  width: 40%;
+  width: 20%;
   
   
 }
@@ -380,5 +401,334 @@ html, body {
   margin: 0.5rem;
   height: 10rem;
   margin-left: 25%;
+}
+/* Estilo base para pantallas grandes (escondemos el ícono de menú) */
+.menu-icon,.menu-content ul {
+  display: none; /* Inicialmente ocultamos el ícono de menú */
+}
+@media screen and (max-width: 1060px) {
+ /* Navbar contenedor */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  position: relative;
+  font-size: 1rem;
+}
+/* Menú desplegado */
+.menu-content {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Coloca el menú fuera de la pantalla */
+  width: 50%; /* Ancho del menú */
+  height: 100vh;
+  background-color: var(--naranja);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease; /* Transición suave para 'right' */
+  z-index: 1; /* Asegura que el menú se muestre por encima de otros elementos */
   
+}
+
+/* Menú activo: cuando la clase 'active' está presente */
+.menu-content.active {
+  right: 0; /* Muestra el menú al moverlo a la derecha de la pantalla */
+}
+.menu-icon {
+  display: block;
+  cursor: pointer;
+  position: fixed; /* Fija el ícono en la parte superior */
+  top: 1rem; /* Ajusta la distancia desde la parte superior */
+  right: 1rem; /* Coloca el ícono en el lado derecho */
+  z-index: 3; /* Asegura que el ícono esté por encima del menú */
+}
+
+
+
+
+/* Estilos de la lista del menú */
+.menu-content ul {
+  display: block;
+  list-style: none;
+  margin: 3rem 0 2rem 0;
+  width: 100%;
+  
+}
+
+.menu-content ul li {
+  margin: 0;
+  padding: 0;
+  
+  
+  
+}
+
+.menu-content ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color:var(--gris-oscuro);
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-titulos);
+}
+
+/* Estilo para el hover - línea debajo del enlace */
+.menu-content ul li a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.125rem; /* Grosor de la línea */
+  background-color: var(--gris-claro); /* Color morado */
+  border-radius: 0.3125rem;
+  font-weight: bold; 
+  transition: width 0.3s ease; /* Animación suave */
+  font-family: var(--font-titulos);
+  
+  
+}
+
+.menu-content ul li a:hover, 
+    .navbar ul li a.active {
+      font-weight: bold; /* Aplica bold cuando se hace hover o está activo */
+    }
+
+/* Al principio la línea no aparece */
+.menu-content ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; /* Ancho 0 para que no aparezca inicialmente */
+  height: 0.125rem;
+  background-color: var(--gris-claro);
+  transition: width 0.3s ease; /* Animación suave */
+  
+}
+
+/* Al cargar la página, el enlace de "Home" tiene la línea por defecto */
+.menu-content ul li a.active::after {
+  width: 100%; /* Muestra la línea completamente debajo de "Home" */
+}
+
+.navbar-pc ul{
+  display: none;
+}
+
+.logo {
+  height: 3rem; 
+  
+}
+
+.btnNaranjaNavbarMovil{
+  display: inline-block; 
+  width: auto;  
+  height: auto ; 
+  background: var(--gris-claro);
+  border-radius: 2rem;
+  margin:2rem 0 1rem 0;
+  text-align: center;
+  cursor: pointer; 
+  padding: 0 0.5rem 0 0.5rem;
+  
+  
+}
+.btnNaranjaNavbarMovil a{
+  font-size: 1.5rem !important;
+  font-weight: bold;
+  
+}
+
+
+.btnNaranjaNavbar{
+  display: none;
+  
+}
+
+.menu-icon img{
+  width: 1.5rem;
+  height: auto;
+}
+
+/*INICIO*/
+
+
+.BannerHome{
+  width: 100%; 
+  margin-top: 1rem;
+  padding: 0 0.5rem 0 0.5rem;
+}
+.aliados{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  padding: 0 1rem 0 1rem;
+  width: 100%;
+  
+}
+.HomeCircle {
+  padding: 0;
+  margin: 0 0 1rem 0;
+  width: 60%;
+  
+}
+.aliadosInfo{
+  margin:0;
+  width: 100%;
+  
+  
+}
+.aliadosInfo h1 {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+  color:var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  font-weight: bolder;
+  text-align: justify;
+}
+.aliadosInfo p {
+  font-size: 1rem;
+  color:var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  text-align: justify;
+  
+}
+.proyectos-list{
+  padding: 1rem;
+
+}
+.LogosProyectos{
+  
+  margin:1rem 0 0 0;
+  
+}
+
+.proyectos-list-info-text h1{
+
+  font-size: 1.5rem; 
+}
+
+.lineaVertical{
+  background-color: var(--naranja);
+  width: 0.25rem;
+  margin: 0.5rem;
+}
+
+.clientes{
+  background-color: var(--naranja);
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: left;
+  width: 100%;
+  padding: 0 1rem 0 1rem;
+}
+.clientes-logo{
+  display: flex; 
+  flex-direction: column;
+  align-items:flex-start; 
+  justify-content: left; 
+  width: 100%;
+}
+.clientes-logo img{
+  width: 90%;
+}
+.clientes-logo h1{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--gris-oscuro);
+}
+/* Estilo del círculo */
+.circleDarkGrey {
+  width: 1rem;  /* Ancho del círculo */
+  height: 1rem;  /* Alto del círculo (igual al ancho para hacer un círculo) */
+  border-radius: 50%;  /* Hace que el div sea un círculo */
+}
+.ovalGrey {
+  width: 4rem;  /* Ajusta el ancho del óvalo */
+  height: 1rem;  /* Ajusta la altura del óvalo */
+  border-radius: 3rem;  /* Hace que los bordes sean redondeados, formando un óvalo */
+  padding-right: 0.3rem; /* Espacio a la derecha entre el círculo y el borde del óvalo */
+  margin-right: 0.5rem;
+}
+.clientes-info{
+  margin: 1rem;
+}
+.clientes-info li{
+  font-size: 1rem;
+  color: var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  margin-bottom: 1rem;
+}
+.grua{
+  margin: 2rem;
+}
+
+/*footbar*/
+
+.footbar {
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-between;  
+  padding: 1rem;
+
+
+}
+.footbar-info{
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: space-between; 
+  width: 100%;
+  margin: 0.5rem;
+  
+}
+
+
+.instagram, .email, .ubicacion{
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  justify-content: center;
+  margin:0;
+  padding: 0;
+  text-align: left;
+  
+}
+.instagram-icon, .email-icon, .ubicacion-icon{
+  height: 1.2rem;
+  
+}
+.footbar-info p, .contactanos p{
+  font-size: 0.85rem;
+
+  
+  
+}
+.contactanos{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+  
+  
+}
+.lineaVerticalFootbar{
+  display: none;
+}
+
+.btnNaranjaFootbar a{
+  font-size: 1.5rem !important;
+
+  
+}
+
 }
