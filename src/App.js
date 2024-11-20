@@ -6,7 +6,7 @@ import Conocenos from './pages/conocenos';
 import Lanzamientos from './pages/lanzamientos';
 import Navbar from './components/navbar';
 import Footbar from './components/footbar';
-import Sauce from './pages/proyectos/medellin/Sauce'; // Detalle proyecto Sauce
+import Sauce from './pages/proyectos/union/Sauces'; // Detalle proyecto Sauce
 import Alamos from './pages/proyectos/santander/Alamos'; // Detalle proyecto Álamos
 
 
@@ -21,6 +21,8 @@ function App() {
 
   // Aplica 'conocenos-bg' a Footbar si la ruta es '/conocenos'
   const isConocenosPage = location.pathname === '/conocenos';
+  const isSaucesPage = location.pathname === '/proyectos/union/Sauces';
+
   return (
     
       <div className={isMenuOpen ? 'navbar active' : ''}>
@@ -29,13 +31,13 @@ function App() {
           <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/conocenos" element={<Conocenos />} />
-            <Route path="/proyectos/medellin/Sauce" element={<Sauce />} />
+            <Route path="/proyectos/union/Sauces" element={<Sauce />} />
             <Route path="/proyectos/santander/Alamos" element={<Alamos />} />
             <Route path="/lanzamientos" element={<Lanzamientos />} />
           </Routes>
         </div>
         {/* Pasamos el isConocenosPage al Footbar */}
-        <Footbar isConocenosPage={isConocenosPage} />
+        <Footbar isConocenosPage={isConocenosPage}  isSaucesPage={isSaucesPage}/>
       </div>
   );
 }

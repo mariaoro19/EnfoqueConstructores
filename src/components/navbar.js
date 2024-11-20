@@ -23,16 +23,7 @@ const Navbar = () => {
   const toggleProyectosMenu = () => {
     setIsProyectosOpen(prevState => !prevState);  // Toggle open/close menu
   };
-/*
-  const selectCity = (city) => {
-    setSelectedCity(city);  // Set selected city
-    
-    if (city === 'Medellin') {
-      navigate('/proyectos/medellin/sauce'); // Redirige a la ruta de Medellín
-    } else if (city === 'Santander') {
-      navigate('/proyectos/santander/alamos'); // Redirige a la ruta de Santander
-    }
-  };*/
+
 
   const handleMenuToggle = () => {
     setMenuActive(!menuActive); // Alterna el estado
@@ -59,17 +50,17 @@ const Navbar = () => {
           {isProyectosOpen && (
             <ul >
               <li
-                onMouseEnter={() => selectCity('Medellin')}
+                onMouseEnter={() => selectCity('Union')}
                 onMouseLeave={() => selectCity(null)}
               >
-                Medellín
-                {selectedCity === 'Medellin' && (
+                Unión
+                {selectedCity === 'Union' && (
                   <ul>
                     <li>
-                      <NavLink to="/proyectos/medellin/sauce">Sauce</NavLink>
+                      <NavLink to="/proyectos/union/Sauces">Sauce</NavLink>
                     </li>
                     <li>
-                      <NavLink to="/proyectos/medellin/palmas">Palmas</NavLink>
+                      <NavLink to="/proyectos/union/palmas">Palmas</NavLink>
                     </li>
                   </ul>
                 )}
@@ -122,17 +113,17 @@ const Navbar = () => {
           {isProyectosOpen && (
             <ul>
               <li
-                onMouseEnter={() => selectCity('Medellin')}
+                onMouseEnter={() => selectCity('Union')}
                 onMouseLeave={() => selectCity(null)}
               >
-                Medellín
-                {selectedCity === 'Medellin' && (
+                Unión
+                {selectedCity === 'Union' && (
                   <ul >
                     <li>
-                      <NavLink to="/proyectos/medellin/sauce">Sauce</NavLink>
+                      <NavLink to="/proyectos/union/Sauces">Los Sauces</NavLink>
                     </li>
                     <li>
-                      <NavLink to="/proyectos/medellin/palmas">Palmas</NavLink>
+                      <NavLink to="/proyectos/union/palmas">Palmas</NavLink>
                     </li>
                   </ul>
                 )}
@@ -156,45 +147,6 @@ const Navbar = () => {
             </ul>
           )}
         </li>
-          {/*<li>
-          <NavLink
-            to="#" // Este enlace no redirige, solo controla el estado
-            onClick={toggleProyectosMenu}
-            className={({ isActive }) => (isActive || isProyectosOpen ? 'active' : '')}
-          >
-            PROYECTOS
-          </NavLink>
-          {isProyectosOpen && (
-            <ul className="dropdown">
-              <li onClick={() => selectCity('Medellin')}>
-                Medellín
-                {selectedCity === 'Medellin' && (
-                  <ul className="dropdown2">
-                    <li>
-                      <NavLink to="/proyectos/medellin/sauce">Sauce</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/proyectos/medellin/palmas">Palmas</NavLink>
-                    </li>
-                  </ul>
-                )}
-              </li>
-              <li onClick={() => selectCity('Santander')}>
-                Santander
-                {selectedCity === 'Santander' && (
-                  <ul className="dropdown2">
-                    <li>
-                      <NavLink to="/proyectos/santander/alamos">Álamos</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/proyectos/santander/bosques">Bosques</NavLink>
-                    </li>
-                  </ul>
-                )}
-              </li>
-            </ul>
-          )}
-        </li>*/}
 
           <li><NavLink to="/lanzamientos" className={({ isActive }) => (isActive ? 'active' : '')}>PRÓXIMOS LANZAMIENTOS</NavLink></li>
         </ul>
