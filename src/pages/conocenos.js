@@ -1,5 +1,5 @@
 import React from 'react';
-import BannerConocenos from '../utils/conocenos/Banner-Conocenos.webp';
+import BannerConocenos from '../utils/conocenos/Imagen-banner.webp';
 import ImagenSomos from '../utils/conocenos/Imagen_Somos.webp';
 import ImagenCohete from '../utils/conocenos/Imagen_Cohete.webp';
 import ImagenBombillo from '../utils/conocenos/Imagen_Bombillo.webp';

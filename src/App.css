@@ -2,12 +2,12 @@
 /*
 @font-face {
   font-family: 'FuturaBold';
-  src: url('/EnfoqueConstructores/enfoque-constructores/public/fonts/Futura_Bold.ttf') format('truetype');
+  src: url('./fonts/Futura_Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'FuturaLight';
-  src: url('fonts/Futura_light.ttf') format('truetype');
+  src: url('./fonts/Futura_light.ttf') format('truetype');
 }
 
 @font-face {
@@ -18,14 +18,17 @@
 @font-face {
   font-family: 'FuturaHeavy';
   src: url('fonts/Futura_Heavy.ttf') format('truetype');
-}*/
-
+}
+*/
 :root {
   --naranja: #e99e3c;  /* Color principal */
   --gris-oscuro: #525151;  /* Color secundario */
   --gris-claro: #d9d9d9;  /* Color de acento */
+  --gris-medio:#7f7f7f;
+  --font-cuerpo: 'Futura', Arial, sans-serif;
+  /*--font-cuerpo: 'Montserrat', sans-serif;*/
   --font-titulos: 'Mulish', sans-serif;
-  --font-cuerpo: 'Montserrat', sans-serif;
+
 
 }
 
@@ -46,7 +49,7 @@ html, body {
   background-color: var(--gris-claro);
   margin: 0;
   display: flex;  /* Alinea los elementos en fila (row) */
-  justify-content: space-evenly; /* Distribuye los elementos horizontalmente */
+  justify-content: space-between; /* Distribuye los elementos horizontalmente */
   align-items:flex-end;
   text-align: center;
   width: 100%;
@@ -56,60 +59,103 @@ html, body {
   
 }
 
-
 .logo {
   width: 100%; 
-  padding: 1rem 0 0 0;
+  
   
 }
 
+/*
+.navbar.active {
+  background-color: transparent;
+  z-index: 100;
+}*/
+
 /* Establecemos flexbox en el ul para alinear en fila */
-.navbar ul {
+.navbar-pc .navbar-menu {
   list-style-type: none;
   margin: 0;
-  padding: 0 1rem 1.2rem 1rem;
-  display: flex;  /* Alinea los elementos en fila (row) */
-  align-items: center; /* Alinea verticalmente los elementos en el centro */
+  /*position: absolute; 
+  display: block;*/
+  /*display: flex;  
+  align-items: center; 
   justify-content: space-around;
-  text-align: center;
-  width: 80%;
+  text-align: center;*/
+  display: flex; /* Flexbox para menú horizontal */
+  justify-content: center;
+  align-items: center;
+  /*flex-direction: row;*/
+  gap: 1rem; /* Espaciado entre elementos */
+  position: relative; /* Necesario para submenús */
+  width: 50rem;
+  padding: 0 1rem 1rem 1rem; 
+  
 
   
+}
+.navbar-pc .navbar-menu ul {
+  /* removed some rules that were causing bad positioning */
+  position: absolute; /* instead of relative - stops pushing other menu items around */
+  display: none;
+  font-size: 1.5rem;
+  font-family: var(--font-cuerpo);
+  background-color: var(--naranja);
+  color: var(--gris-oscuro);
+  width: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2); 
+  top:100%;
+}
+.navbar-pc .navbar-menu ul ul {
+  /* removed some rules that were causing bad positioning */
+  position: absolute; /* instead of relative - stops pushing other menu items around */
+  display: none;
+  font-size: 1.5rem;
+  font-family: var(--font-cuerpo);
+  background-color: var(--gris-oscuro);
+  
+  width: auto;
+  left: 100%;
+  top:50%;
+  
+}
+.navbar-pc .navbar-menu ul ul li a{
+  color: var(--gris-claro);
 }
 
 /* Cada item del navbar */
-.navbar ul li {
+.navbar-menu li {
   margin: 0 0.0625rem; /* Espaciado horizontal entre los elementos */
-  display: flex;  /* Alinea los elementos en fila (row) */
-  align-items: center; /* Alinea verticalmente los elementos en el centro */
+  display: flex;  
+  align-items: center; 
   text-align: left;
-  
   padding: 0.5rem;
+  width: auto;
+  max-width: 10rem;
+  position: relative;
+  
+  
   
 }
 
 
 
 /* Enlaces del navbar */
-.navbar ul li a {
+.navbar-pc .navbar-menu li a {
   color: var(--gris-oscuro);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   display: block;
   position: relative; 
   height: 2.5rem;
 
 }
-/* Cambia a negrita cuando pasas el mouse */
-/*
-.navbar ul li a:hover {
-  font-weight: bold; 
-}*/
-
 
 /* Estilo para el hover - línea debajo del enlace */
-.navbar ul li a:hover::after {
+.navbar-pc li a:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -125,13 +171,13 @@ html, body {
   
 }
 
-.navbar ul li a:hover, 
-    .navbar ul li a.active {
+.navbar-pc li a:hover, 
+  .navbar-pc li a.active {
       font-weight: bold; /* Aplica bold cuando se hace hover o está activo */
     }
 
 /* Al principio la línea no aparece */
-.navbar ul li a::after {
+.navbar-pc li a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -144,26 +190,128 @@ html, body {
 }
 
 /* Al cargar la página, el enlace de "Home" tiene la línea por defecto */
-.navbar ul li a.active::after {
+.navbar-pc li a.active::after {
   width: 100%; /* Muestra la línea morada completamente debajo de "Home" */
 }
+.navbar-pc li a.active:not([href="#"])::after {
+  width: 100%; /* Solo activa la línea si no es # */
+}
+
+.navbar-pc li a[href="#"].active::after {
+  width: 0; /* Desactiva la línea si es el enlace vacío */
+}
+
+
+.navbar-pc li:hover  ul {
+  display: block; /* Muestra la lista cuando se pasa el ratón por encima */
+}
+.navbar-pc li:hover ul ul {
+  display: block; /* Muestra la lista cuando se pasa el ratón por encima */
+}
+
+.navbar-pc .navbar-menu ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.navbar-pc .navbar-menu ul li:hover {
+  background-color: var(--gris-claro);
+}
+
+.navbar-pc .navbar-menu ul ul li:hover {
+  background-color: var(--naranja);
+}
+/*
+
+.dropdown {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2); 
+  top:100%;
+  
+}
+
+.dropdown > li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: relative;
+  
+}
+
+.dropdown ul {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  
+}
+
+.dropdown li {
+  padding: 0.5rem 1rem;
+  position: relative; 
+}
+
+.dropdown li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dropdown li a:hover {
+  color: var(--naranja);
+}
+.dropdown2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2); 
+  top:50%;
+  right: 100%;
+}
+.dropdown2 > li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: relative;
+}
+.dropdown2 ul {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.dropdown2 li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dropdown2 li a:hover {
+  color: var(--gris-oscuro);
+}
+.dropdown li:hover .dropdown2 {
+  display: block; 
+}*/
+
 .btnNaranjaNavbar{
-  display: inline-block; 
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  
   width: auto;  
-  height: auto ; 
+  height: 3rem ; 
   color: var(--gris-oscuro);
   background: var(--naranja);
   border-radius: 2rem;
   margin:0 0 1rem 0;
   text-align: center;
   cursor: pointer; 
-  padding: 0 1rem 0 1rem;
+  padding: 1.5rem 1rem 1.5rem 1rem;
   
-  
+
 }
 .btnNaranjaNavbar a{
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
   font-weight: bold;
+  text-align: center;
   
 }
 .btnNaranjaFootbar{
@@ -196,21 +344,24 @@ html, body {
   text-align: center;
   background-color: var(--gris-claro);
   
+  
 
 }
 .BannerHome{
   width: 100%; 
-  margin-top: 2rem;
+  margin: 2rem 4rem 0 4rem;
+  border-radius: 0.5rem;
   padding: 0 4rem 0 4rem;
+  
 }
 .aliados{
   display: flex; 
   flex-direction: row;
   align-items: center; 
   justify-content: space-between; 
-  
-  margin-top: 2rem;
   padding: 0 4rem 0 4rem;
+  
+  margin: 2rem 0 2rem 0;
   height: 40%;
   
   
@@ -231,15 +382,20 @@ html, body {
 .aliadosInfo h1 {
   font-size: 3rem;
   color:var(--gris-oscuro);
-  font-family: var(--font-cuerpo);
-  font-weight: bolder;
+  font-family: var(--font-titulos);
+  font-weight: 900;
   text-align: left;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
 }
 .aliadosInfo p {
   font-size: 2rem;
-  color:var(--gris-oscuro);
+  color:var(--gris-medio);
   font-family: var(--font-cuerpo);
   text-align: justify;
+  font-weight: 400;
+  letter-spacing: -0.05em; 
+  
   
 }
 .proyectos-list{
@@ -258,6 +414,7 @@ html, body {
 .LogosProyectos{
   width: 100%;
   margin:3rem 0 0 0;
+  
   
 }
 .proyectos-list-info{
@@ -304,9 +461,10 @@ html, body {
   width: 30%;
 }
 .clientes-logo h1{
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
   color: var(--gris-oscuro);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 /* Estilo del círculo */
 .circleDarkGrey {
@@ -324,17 +482,17 @@ html, body {
   display: flex;
   justify-content: flex-end; /* Alinea el círculo a la derecha */
   align-items: center; /* Centra el círculo verticalmente */
-  padding-right: 0.3rem; /* Espacio a la derecha entre el círculo y el borde del óvalo */
+  padding-right: 0; /* Espacio a la derecha entre el círculo y el borde del óvalo */
   margin-right: 0.5rem;
 }
 .clientes-info{
   margin: 4rem;
 }
 .clientes-info li{
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: var(--gris-oscuro);
   font-family: var(--font-cuerpo);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .grua{
   margin: 2rem;
@@ -353,6 +511,7 @@ html, body {
   justify-content: space-evenly;  
   width: 100%;
   padding: 1rem 4rem 1rem 4rem;
+  
 
 }
 .ImagenSomos{
@@ -365,12 +524,13 @@ html, body {
   width: 0.25rem;
 }
 .somos p{
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: var(--gris-oscuro);
   font-family: var(--font-cuerpo);
   width: 50%;
   text-align: justify;
-  letter-spacing: 0.1em; 
+  letter-spacing: -0.02em; 
+  font-weight: 300;
 }
 .valores{
   background-color: var(--gris-oscuro);
@@ -408,6 +568,8 @@ html, body {
   font-size: 2.5rem;
   line-height: 1;
   width: 60%;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
 }
 .valores-list{
   display: flex; 
@@ -508,7 +670,7 @@ html, body {
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   margin:1rem;
-  width:90%;
+  width:25rem;
   padding: 0.5rem 0 0 0;
   height: 25rem;
   display: flex; 
@@ -569,13 +731,19 @@ html, body {
 /*footbar*/
 .footbar {
   background-color: var(--gris-claro); /* Color por defecto */
+  height: 15rem;
 }
-
-.footbar.conocenos-bg {
+.footer-hidden {
+  display: none;
+}
+.hide-footer {
+  display: none;
+}
+.footbar.footer-hidden {
   background-color: var(--gris-oscuro); /* Color específico para Conócenos */
   color: var(--gris-claro);
 }
-.footbar.conocenos-bg p {
+.footbar.footer-hidden p {
   color: var(--gris-claro);
 }
 
@@ -617,11 +785,11 @@ html, body {
   
 }
 .footbar-info p, .contactanos p{
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: var(--gris-oscuro);
   font-family: var(--font-cuerpo);
   padding: 0;
-  margin: 0.3rem;
+  margin: 0.5rem;
   
   
 }
@@ -633,14 +801,14 @@ html, body {
   text-align: center;
   width: 20%;
   
-  
+
 }
+
 .lineaVerticalFootbar{
   background-color: var(--naranja);
-  width: 0.5rem;
-  margin: 0.5rem;
+  width: 0.4rem;
   height: 10rem;
-  margin-left: 25%;
+  margin: 0 0 0 25%;
 }
 /* Estilo base para pantallas grandes (escondemos el ícono de menú) */
 .menu-icon,.menu-content ul {
@@ -693,6 +861,27 @@ html, body {
   margin: 3rem 0 2rem 0;
   width: 100%;
   
+}
+nav ul ul {
+  display: none;
+  position: absolute;
+  background: #f9f9f9;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul ul li {
+  padding: 0.5rem 1rem;
+}
+
+nav ul ul li a {
+  text-decoration: none;
+  color: #333;
 }
 
 .menu-content ul li {

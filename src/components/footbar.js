@@ -6,7 +6,10 @@ import '../App.css';
 
 const footbar = ({ isConocenosPage }) => {
   return (
-    <footer className={`footbar ${isConocenosPage ? 'conocenos-bg' : ''}`}>
+    
+    
+    <footer className={`footbar ${isConocenosPage ? 'footer-hidden' : ''}`}>
+
       <div className="footbar-info">
         <a href="https://www.instagram.com/enfoque.constructores/" target="_blank" rel="noopener noreferrer" className='instagram'>
           <div className='instagram'>
@@ -36,7 +39,7 @@ const footbar = ({ isConocenosPage }) => {
       <div className='contactanos'>
         <p>Recibe más información aquí</p>
         <div className='btnNaranjaFootbar'>
-          <a href="https://wa.me/3206192322" target="_blank" rel="noopener noreferrer">Contáctanos</a>
+          <a href="https://wa.link/sjwok3" target="_blank" rel="noopener noreferrer">Contáctanos</a>
         </div>
 
       </div>
