@@ -17,7 +17,8 @@ import Imagen2 from '../../../utils/sauces/Imagen2.webp';
 import Imagen3 from '../../../utils/sauces/Imagen3.webp';
 import Imagen4 from '../../../utils/sauces/Imagen4.webp';
 import Mapa from '../../../utils/sauces/mapaSauces.webp';
-import emailjs from 'emailjs-com';
+import { send, EmailJSResponseStatus } from '@emailjs/react-native';
+import emailjs from '@emailjs/browser';
 
 
 
@@ -54,27 +55,43 @@ const Sauce = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+ 
 
-    if (!formData.autorizacion) {
-      alert('Debes aceptar el tratamiento de datos.');
-      return;
-    }
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+    console.log("handleOnSubmit")
+
+    const templateParams = {
+      nombre: formData.nombre,
+      apellido: formData.apellido,
+      email: formData.email,
+      celular: formData.celular,
+      autorizacion: formData.autorizacion ? 'Sí' : 'No',
+    };
+    console.log(templateParams)
 
     emailjs
       .send(
-        'service_ojyr97f', // Reemplaza con tu ID de servicio de EmailJS
-        'TU_TEMPLATE_ID', // Reemplaza con tu ID de plantilla de EmailJS
-        formData,
-        'TU_USER_ID' // Reemplaza con tu clave pública de EmailJS
+        'service_z9iajad', // Reemplaza con tu Service ID
+        'template_7jo9zmo', // Reemplaza con tu Template ID
+        templateParams,
+        'mYRqabaum9FpJ6eh0' // Reemplaza con tu Public Key
       )
       .then(
-        (result) => {
-          alert('Información enviada correctamente.');
+        (response) => {
+          alert('Formulario enviado correctamente. ¡Pronto te contactaremos!');
+          console.log('SUCCESS!', response.status, response.text);
+          setFormData({
+            nombre: '',
+            apellido: '',
+            email: '',
+            celular: '',
+            autorizacion: false,
+          });
         },
         (error) => {
-          alert('Hubo un error al enviar la información: ' + error.text);
+          alert('Hubo un error al enviar el formulario');
+          console.error('FAILED...', error);
         }
       );
   };
@@ -91,7 +108,7 @@ const Sauce = () => {
           <h3>*|Casas con posibilidad de <br></br> ampliación a segundo piso</h3>
         </div>
         <div className='form-sauces'>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleOnSubmit}>
             <div>
               <label>Nombre</label>
               <input
@@ -269,7 +286,7 @@ const Sauce = () => {
           nuestros asesores.</p>
         </div>
         <div className='form-sauces'>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleOnSubmit}>
             <div>
               <label>Nombre</label>
               <input

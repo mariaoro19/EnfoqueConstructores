@@ -153,7 +153,7 @@ const Navbar = () => {
       </div>
 
       <div className='btnNaranjaNavbar'>
-        <a href="https://wa.me/3206192322" target="_blank" rel="noopener noreferrer">Contáctanos</a>
+        <a href="https://wa.link/sjwok3" target="_blank" rel="noopener noreferrer">Contáctanos</a>
       </div>
     </nav>
   );
