@@ -4,11 +4,11 @@ import CorreoElectronico from '../utils/inicio/Correo-electronico.webp';
 import Ubicacion from '../utils/inicio/Ubicacion.webp';
 import '../App.css';
 
-const footbar = ({ isConocenosPage,isSaucesPage }) => {
+const footbar = ({ isConocenosPage,isSaucesPage,isPiamontePage }) => {
   return (
     
     
-    <footer className={`footbar ${isConocenosPage || isSaucesPage ? 'footer-hidden' : ''}`}>
+    <footer className={`footbar ${isConocenosPage || isSaucesPage || isPiamontePage ? 'footer-hidden' : ''}`}>
 
       <div className="footbar-info">
         <a href="https://www.instagram.com/enfoque.constructores/" target="_blank" rel="noopener noreferrer" className='instagram'>

@@ -67,23 +67,20 @@ const Navbar = () => {
                   </ul>
                 )}
               </li>
-              {/*
+              
               <li
-                onMouseEnter={() => selectCity('Santander')}
+                onMouseEnter={() => selectCity('Bolivar')}
                 onMouseLeave={() => selectCity(null)}
               >
-                Santander
-                {selectedCity === 'Santander' && (
+                Bolivar
+                {selectedCity === 'Bolivar' && (
                   <ul >
                     <li>
-                      <NavLink to="/proyectos/santander/alamos">Álamos</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/proyectos/santander/bosques">Bosques</NavLink>
+                      <NavLink to="/proyectos/bolivar/Piamonte">Piamonte</NavLink>
                     </li>
                   </ul>
                 )}
-              </li>*/}
+              </li>
             </ul>
           )}
         </li>
@@ -134,23 +131,20 @@ const Navbar = () => {
                   </ul>
                 )}
               </li>
-              {/*
+              
               <li
-                onMouseEnter={() => selectCity('Santander')}
+                onMouseEnter={() => selectCity('Bolivar')}
                 onMouseLeave={() => selectCity(null)}
               >
-                Santander
-                {selectedCity === 'Santander' && (
+                Bolivar
+                {selectedCity === 'Bolivar' && (
                   <ul>
                     <li>
-                      <NavLink to="/proyectos/santander/alamos">Álamos</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/proyectos/santander/bosques">Bosques</NavLink>
+                      <NavLink to="/proyectos/bolivar/Piamonte">Piamonte</NavLink>
                     </li>
                   </ul>
                 )}
-              </li>*/}
+              </li>
             </ul>
           )}
         </li>

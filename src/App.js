@@ -6,8 +6,9 @@ import Conocenos from './pages/conocenos';
 import Lanzamientos from './pages/lanzamientos';
 import Navbar from './components/navbar';
 import Footbar from './components/footbar';
-import Sauce from './pages/proyectos/union/Sauces'; // Detalle proyecto Sauce
-import Alamos from './pages/proyectos/santander/Alamos'; // Detalle proyecto Álamos
+import Sauce from './pages/proyectos/union/Sauces'; 
+import Alamos from './pages/proyectos/santander/Alamos'; 
+import Piamonte from './pages/proyectos/bolivar/Piamonte'; 
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
   // Aplica 'conocenos-bg' a Footbar si la ruta es '/conocenos'
   const isConocenosPage = location.pathname === '/conocenos';
   const isSaucesPage = location.pathname === '/proyectos/union/Sauces';
+  const isPiamontePage = location.pathname === '/proyectos/bolivar/Piamonte';
 
   return (
     
@@ -33,11 +35,12 @@ function App() {
             <Route path="/conocenos" element={<Conocenos />} />
             <Route path="/proyectos/union/Sauces" element={<Sauce />} />
             <Route path="/proyectos/santander/Alamos" element={<Alamos />} />
+            <Route path="/proyectos/bolivar/Piamonte" element={<Piamonte />} />
             <Route path="/lanzamientos" element={<Lanzamientos />} />
           </Routes>
         </div>
         {/* Pasamos el isConocenosPage al Footbar */}
-        <Footbar isConocenosPage={isConocenosPage}  isSaucesPage={isSaucesPage}/>
+        <Footbar isConocenosPage={isConocenosPage}  isSaucesPage={isSaucesPage} isPiamontePage={isPiamontePage}/>
       </div>
   );
 }

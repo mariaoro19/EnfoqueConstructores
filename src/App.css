@@ -26,8 +26,9 @@
   --gris-claro: #d9d9d9;  /* Color de acento */
   --gris-medio:#7f7f7f;
   --verde-sauces:#95b733;
+  --verde-oscuro-piamonte:#27703b;
+  --verde-claro-piamonte:#95b733;
   --font-cuerpo: 'Futura', Arial, sans-serif;
-  /*--font-cuerpo: 'Montserrat', sans-serif;*/
   --font-titulos: 'Mulish', sans-serif;
   
 
@@ -662,6 +663,7 @@ html, body {
   font-weight: bold;
   
 }
+
 /*Sauces*/
 .sauces{
   display: flex; 
@@ -679,7 +681,7 @@ html, body {
   align-items: center; 
   justify-content: space-between; 
   width: 100%;
-  background-image: url('utils/sauces/Banner.png');
+  background-image: url('utils/sauces/Banner.webp');
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; /* Evita la repetición de la imagen */
@@ -810,7 +812,7 @@ html, body {
   justify-content: space-between; 
 
 }
-.btnGris {
+.btnGrisSauces {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -823,7 +825,7 @@ html, body {
   margin: 0.5rem;
   cursor: pointer;
   padding: 0.5rem;
-  width: 90%;
+  width: 100%;
   font-size: 1.5rem; /* Ajusta el tamaño de la letra */
   
   font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
@@ -832,7 +834,7 @@ html, body {
   box-shadow: none; /* Elimina sombras */
   transition: background-color 0.3s ease; /* Transición para hover */
 }
-.btnGris a {
+.btnGrisSauces a {
   color: inherit; /* Hereda el color del contenedor */
   text-decoration: none; /* Sin subrayado */
   width: 100%; /* Ocupar todo el ancho del botón */
@@ -842,10 +844,10 @@ html, body {
   justify-content: center;
 }
 
-.btnGris:hover {
+.btnGrisSauces:hover {
   background: var(--gris-medio); /* Color más claro al pasar el cursor */
 }
-.btnGris2 {
+.btnGrisSauces2 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -858,15 +860,16 @@ html, body {
   margin: 1rem;
   cursor: pointer;
   padding: 0.5rem;
-  width: 70%;
+  width: 20rem !important;
   font-size: 1.5rem; /* Ajusta el tamaño de la letra */
   font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
   border: none; /* Elimina bordes */
   outline: none; /* Elimina contornos */
   box-shadow: none; /* Elimina sombras */
   transition: background-color 0.3s ease; /* Transición para hover */
-}
-.btnGris2 a {
+  
+} 
+.btnGrisSauces2 a {
   color: inherit; /* Hereda el color del contenedor */
   text-decoration: none; /* Sin subrayado */
   width: 100%; /* Ocupar todo el ancho del botón */
@@ -876,7 +879,7 @@ html, body {
   justify-content: center;
 }
 
-.btnGris2:hover {
+.btnGrisSauces2:hover {
   background: var(--gris-medio); /* Color más claro al pasar el cursor */
 }
 
@@ -1223,12 +1226,652 @@ html, body {
   font-size: 2rem;
   width: 100%;
 }
-.contactenos-sauces-info .btnGris{
+
+.btnGrisSaucesContacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  color: var(--gris-claro);
+  background: var(--gris-oscuro);
+  border-radius: 2rem;
+  margin: 2rem 0 2rem 0;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 30%;
+  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  
+  font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
+  border: none; /* Elimina bordes */
+  outline: none; /* Elimina contornos */
+  box-shadow: none; /* Elimina sombras */
+  transition: background-color 0.3s ease; /* Transición para hover */
+}
+.btnGrisSaucesContacto a {
+  color: inherit; /* Hereda el color del contenedor */
+  text-decoration: none; /* Sin subrayado */
+  width: 100%; /* Ocupar todo el ancho del botón */
+  height: 100%; /* Ocupar toda la altura del botón */
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+}
+
+.btnGrisSaucesContacto:hover {
+  background: var(--gris-medio); /* Color más claro al pasar el cursor */
+}
+
+/*Piamonte*/
+
+.piamonte{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  width: 100%;
+  margin: 2rem 0 1rem 0;
+  padding: 0;
+}
+
+.banner-piamonte{
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-between; 
+  width: 100%;
+  background-image: url('utils/piamonte/Banner.webp');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  margin: 0;
+  height: auto;
+}
+.banner-piamonte-info{
+  display: flex; 
+  flex-direction: column;
+  align-items:flex-start; 
+  justify-content: space-between; 
+  padding: 1rem 5rem 1rem 5rem;
+  height: 40rem;
+  width: 100%;
+}
+.banner-piamonte-info h1{
+  color:var(--gris-oscuro);
+  font-size: 4rem;
+  font-family: var(--font-titulos);
+  font-weight: bold;
+  -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
+  padding: 0;
+  margin: 0;
+  line-height: 1; 
+  width: 40%;
+}
+
+.banner-piamonte-info h3{
+  color:var(--gris-oscuro);
+  font-size: 2rem;
+  font-family: var(--font-titulos);
+  font-weight: bold;
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  padding: 0;
+  margin: 0 0 1rem 0;
+  line-height: 1; 
+  width: 60%;
+
+}
+
+.banner-ubicacion-piamonte{
+  display: flex; 
+  flex-direction: row;
+  align-items:center; 
+  justify-content: space-between; 
+  gap:0.5rem
+
+}
+.banner-ubicacion-piamonte h2{
+  font-size: 1.8rem;
+  font-family: var(--font-titulos);
+  color: var(--gris-oscuro);
+  font-weight: bold;
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  letter-spacing: -0.02em;
+}
+
+.form-piamonte {
+  background-color: var(--verde-oscuro-piamonte);
+  border-radius: 2.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 52rem; /* Ancho total de la tarjeta del formulario */
+  box-sizing: border-box; /* Asegúrate de incluir padding en el cálculo del ancho */
+  margin: 1rem 5rem 1rem 1rem;
+}
+
+.form-piamonte form {
+  width: 100%; /* Formulario ocupa todo el ancho del contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem; /* Espaciado entre los elementos */
+}
+
+.form-piamonte form > div {
+  width: 100%; /* Cada div ocupa el ancho total del formulario */
+}
+
+.form-piamonte label {
+  display: block; /* Para que ocupe todo el ancho disponible */
+  font-size: 1.2rem;
+  color: var(--gris-claro);
+  margin-bottom: 0.5rem;
+}
+
+.form-piamonte input[type="text"],
+.form-piamonte input[type="email"]{
+  width: 100%; /* Input ocupa todo el ancho de su contenedor padre */
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: var(--font-cuerpo);
+}
+.autorizo-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem; /* Espacio entre el checkbox y el texto */
+  margin-top: 0.5rem;
+}
+
+.autorizo-checkbox input[type="checkbox"] {
+  margin: 0; /* Elimina cualquier margen por defecto */
+  width: auto; /* Asegúrate de que no se extienda horizontalmente */
+  height: auto; /* Ajusta la altura al tamaño predeterminado */
+  font-weight: bold;
+}
+
+.autorizo-checkbox label {
+  font-size: 1rem;
+  color: var(--gris-claro);
+  display: flex;
+  align-items: center;
+  line-height: 1.5rem; /* Para un alineamiento vertical más limpio */
+  gap: 0.5rem; /* Espaciado entre los elementos internos */
+}
+
+
+.form-piamonte div{
+  display: flex; 
+  flex-direction: column;
+  align-items:flex-start; 
+  justify-content: space-between; 
+
+}
+.btnNaranjaPiamonte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  color: var(--gris-claro);
+  background: var(--naranja);
+  border-radius: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  
+  font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
+  border: none; /* Elimina bordes */
+  outline: none; /* Elimina contornos */
+  box-shadow: none; /* Elimina sombras */
+  transition: background-color 0.3s ease; /* Transición para hover */
+}
+.btnNaranjaPiamonte a {
+  color: inherit; /* Hereda el color del contenedor */
+  text-decoration: none; /* Sin subrayado */
+  width: 100%; /* Ocupar todo el ancho del botón */
+  height: 100%; /* Ocupar toda la altura del botón */
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+}
+
+.btnNaranjaPiamonte:hover {
+  background: var(--gris-medio); /* Color más claro al pasar el cursor */
+}
+.btnNaranjaPiamonte2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  color: var(--gris-claro);
+  background: var(--naranja);
+  border-radius: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 20rem !important;
+  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
+  border: none; /* Elimina bordes */
+  outline: none; /* Elimina contornos */
+  box-shadow: none; /* Elimina sombras */
+  transition: background-color 0.3s ease; /* Transición para hover */
+}
+.btnNaranjaPiamonte2 a {
+  color: inherit; /* Hereda el color del contenedor */
+  text-decoration: none; /* Sin subrayado */
+  width: 100%; /* Ocupar todo el ancho del botón */
+  height: 100%; /* Ocupar toda la altura del botón */
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+}
+
+.btnNaranjaPiamonte2:hover {
+  background: var(--gris-medio); /* Color más claro al pasar el cursor */
+}
+
+.proyecto-piamonte{
+  background-color: var(--verde-claro-piamonte);
+  color: var(--gris-claro);
+  font-family: var(--font-titulos);
+  width: 100%;
+
+}
+.proyecto-piamonte h1{
+
+  font-size: 4rem;
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  margin: 0;
+  -webkit-text-stroke: 2px var(--gris-claro); /* Añade un contorno negro */
+  
+
+}
+.descubre-piamonte{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+
+}
+.descubre-piamonte p{
+  font-family: var(--font-cuerpo);
+  color: var(--gris-oscuro);
+  width: 50%;
+  font-size: 1.7rem;
+  text-align: justify;
+  padding: 3rem;
+  
+
+}
+.galerias-fotos-piamonte {
+  position: relative;
+  width: 60%;
+  max-width: 600px; /* Ajusta el tamaño según sea necesario */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.contenedor-foto {
+  width: 100%;
+  height: auto;
+}
+
+.contenedor-foto img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.btn-flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  color: #333;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-flecha.izquierda {
+  left: 10px; /* Posición de la flecha izquierda */
+}
+
+.btn-flecha.derecha {
+  right: 10px; /* Posición de la flecha derecha */
+}
+
+.espacios-sacuces{
+  background-color: var(--verde-oscuro-piamonte);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+  padding: 1rem;
+}
+.espacios-sacuces h1{
+  font-size: 4.5rem;
+  color: var(--gris-claro);
+  font-family: var(--font-titulos);
+  margin:1rem;
+  padding: 0;
+  -webkit-text-stroke: 3px var(--gris-claro); /* Añade un contorno negro */
+  font-weight: bold;
+  line-height: 1;
+  width: 30%;
+  text-align: center;
+}
+.espacios-sacuces p{
+  font-size: 2.3rem;
+  color: var(--gris-claro);
+  font-family: var(--font-cuerpo);
+  width: 30%;
+  text-align: justify;
+  padding: 0.5rem;
+}
+.lineaVerticalVerde{
+  background-color: var(--verde-claro-piamonte);
+  width: 0.4rem;
+  height: 90%;
+  margin: 1rem;
+
+}
+
+.info-piamonte {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+ }
+.info-piamonte-img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  margin:1rem;
+
+}
+.info-piamonte-img img{
+  margin:0.5rem;
+  height: 3rem;
+  
+
+}
+.info-piamonte-texto{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin:0.5rem;
+  
+  
+
+}
+.info-piamonte-texto p{
+  color: var(--gris-claro);
+  font-family: var(--font-cuerpo);
+  font-size: 1.7rem;
+  padding: 0;
+  width: 100%;
+  margin: 0.6rem 0 0.6rem 0;
+  text-align: left;
+  height: 3rem;
+  line-height: 1;
+}
+
+.planta-piamonte{
+  background-color: var(--verde-claro-piamonte);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.planta-piamonte h1{
+  font-family: var(--font-titulos);
+  color: var(--gris-claro);
+  font-size: 4rem;
+  -webkit-text-stroke: 2px var(--gris-claro); /* Añade un contorno negro */
+}
+.planta-piamonte img{
+  width: 55%;
+  text-align: center;
+}
+.comodidades{
+  background-image: url('utils/piamonte/Banner2.webp');
+  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+  padding: 2rem;
+
+}
+.lineaVerticalVerdeOscuro{
+  background-color: var(--verde-oscuro-piamonte);
+  width: 0.4rem;
+  height: 90%;
+  margin: 1rem;
+
+}
+.comodidades h1{
+  font-family: var(--font-titulos);
+  color: var(--gris-oscuro);
+  font-size: 4rem;
+  -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
+  width: 50%;
+  line-height: 1;
+}
+.comodidades-lista{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  margin: 1rem;
+
+}
+.salon,.juegos,.sendero,.cancha,.parqueadero{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+
+}
+.comodidades-lista img{
+  margin:0.5rem 0.5rem 0 0;
+
+}
+.comodidades-lista p{
+  width: 100%;
+  font-size: 1.7rem;
+  font-family: var(--font-cuerpo);
+  color: var(--gris-oscuro);
+  margin: 0;
+  padding: 0;
+
+
+}
+.ubicacion-piamonte{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 5rem;
+}
+.ubicacion-piamonte-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 40%;
+
+}
+.ubicacion-piamonte-info h1{
+  font-family: var(--font-titulos);
+  font-size: 3rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
+  letter-spacing: 0.01em;
+  margin:0.5rem;
+  padding: 0;
+}
+.ubicacion-piamonte-info h2{
+  font-family: var(--font-titulos);
+  font-size: 2.5rem;
+  color: var(--gris-oscuro);
+  letter-spacing: -0.02em;
+  margin:0;
+  padding: 0;
+}
+.ubicacion-piamonte-maps{
+  width: 50%;
+}
+.ubicacion-piamonte-maps img{
+  width: 100%;
+
+}
+.piamonte-eleccion{
+  background-color: var(--verde-oscuro-piamonte);
+  width: 100%;
+  padding:2rem;
+}
+.piamonte-eleccion h1,h2{
+  font-size: 4rem;
+  color: var(--gris-claro);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+.piamonte-info{
+  display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ background-color: var(--verde-claro-piamonte);
+ width: 100%;
+ padding: 1rem;
+ gap:3rem;
+}
+.piamonte-info p{
+  color: var(--gris-claro);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.piamonte-info img{
+  text-align: center;
+}
+.piamonte-info div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+}
+.contactenos-piamonte{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 2rem 0 2rem 4rem;
+  height: auto;
+}
+.contactenos-piamonte-info h1{
+  font-family: var(--font-titulos);
+  color: var(--verde-oscuro-piamonte);
+  margin: 0;
+  padding: 0;
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: -0.01em;
+  -webkit-text-stroke: 2px var(--verde-oscuro-piamonte); /* Añade un contorno negro */
+}
+.contactenos-piamonte-info p{
+  font-family: var(--font-titulos);
+  color: var(--gris-oscuro);
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  width: 100%;
+}
+.contactenos-piamonte-info .btnGris{
   width: 30%;
   border-radius: 2rem;
   margin: 1rem 0 2rem 0;
 }
+.btnNaranjaPiamonteContacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  color: var(--gris-claro);
+  background: var(--naranja);
+  border-radius: 2rem;
+  margin: 2rem 0 2rem 0;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 30%;
+  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
+  border: none; /* Elimina bordes */
+  outline: none; /* Elimina contornos */
+  box-shadow: none; /* Elimina sombras */
+  transition: background-color 0.3s ease; /* Transición para hover */
+}
+.btnNaranjaPiamonteContacto a {
+  color: inherit; /* Hereda el color del contenedor */
+  text-decoration: none; /* Sin subrayado */
+  width: 100%; /* Ocupar todo el ancho del botón */
+  height: 100%; /* Ocupar toda la altura del botón */
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+}
 
+.btnNaranjaPiamonteContacto:hover {
+  background: var(--gris-medio); /* Color más claro al pasar el cursor */
+}
 
  
 
@@ -1268,7 +1911,7 @@ html, body {
   width: 50%;
   
 }
-.footbar-info a, .btnNaranjaNavbar a,.btnNaranjaNavbarMovil a, .btnNaranjaFootbar a, .btnNaranja a, .btnGris a, .btnGris [type=submit] {
+.footbar-info a, .btnNaranjaNavbar a,.btnNaranjaNavbarMovil a, .btnNaranjaFootbar a, .btnNaranja a,button, .btnGrisSauces2 a,.btnNaranjaPiamonte2 a  {
   text-decoration: none; /* Elimina el subrayado */
   color: inherit; /* Usa el color del texto padre o define un color específico */
 }
@@ -2094,7 +2737,7 @@ nav ul li a span.rotate{
 
 .banner-sauces{
 
-  background-image: url('utils/sauces/Banner.png');
+  background-image: url('utils/sauces/Banner.webp');
   background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
   background-position: center top; /* Alinea la imagen hacia arriba */
   background-repeat: no-repeat;
@@ -2150,10 +2793,15 @@ nav ul li a span.rotate{
   margin: 0 0 1rem 0;
 }
 
-.btnGris a {
+.btnGrisSauces a {
   font-size: 1rem;
 }
-
+.btnGrisSauces2{
+  width: 15rem !important;
+}
+.btnGrisSaucesContacto {
+  width: 100%;
+}
 .proyecto-sauces h1{
 
   font-size: 2rem;
@@ -2211,7 +2859,6 @@ nav ul li a span.rotate{
   padding: 0.5rem;
 }
 .lineaVerticalVerde{
-  background-color: var(--verde-sauces);
   width: 90%;
   height: 0.4rem;
   margin: 1rem;
@@ -2368,8 +3015,296 @@ nav ul li a span.rotate{
   width: 100%;
   margin:0.5rem;
 }
-.contactenos-sauces-info .btnGris{
-  width: 50%;
+
+/*piamonte*/
+
+.piamonte{
+
+  padding: 0;
+  margin: 0;
+
+}
+
+.banner-piamonte{
+
+  background-image: url('utils/piamonte/Banner.webp');
+  background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
+  background-position: center top; /* Alinea la imagen hacia arriba */
+  background-repeat: no-repeat;
+  height: auto; /* Ajusta la altura según lo necesites */
+  width: 100%; /* Ajusta el ancho si es necesario */
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.banner-piamonte-info{
+  display: flex; 
+  flex-direction: column;
+  align-items:center; 
+  justify-content: space-between; 
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.banner-piamonte-info h1{
+  font-size: 3rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
+  width: 100%;
+  padding: 1rem;
+}
+.banner-piamonte-info h2{
+  font-size: 2.5rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  
+
+}
+.banner-piamonte-info h3{
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+
+}
+
+
+.form-piamonte {
+  border-radius: 2.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20rem; /* Ancho total de la tarjeta del formulario */
+  margin: 0 0 1rem 0;
+}
+
+.btnNaranjaPiamonte a {
+  font-size: 1rem;
+}
+.btnNaranjaPiamonte2{
+  width: 15rem !important;
+}
+.btnNaranjaPiamonteContacto {
+  width: 100%;
+}
+.proyecto-piamonte h1{
+
+  font-size: 2rem;
+
+}
+.descubre-piamonte{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+}
+.descubre-piamonte p{
+ 
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.8rem;
+  
+
+}
+.galerias-fotos-piamonte {
+  position: relative;
+  width: 80%;
+  margin: 0 0 1rem;
+  
+}
+
+
+.btn-flecha {
+
+  font-size: 1rem;
+  width: 2rem;
+  height: 2rem;
+
+}
+
+.espacios-sacuces{
+  
+  flex-direction: column;
+  height: auto;
+  padding: 0.5rem;
+}
+.espacios-sacuces h1{
+  font-size: 2.5rem;
+  margin:0.5rem;
+  padding: 0;
+  -webkit-text-stroke: 1px var(--gris-claro); /* Añade un contorno negro */
+  width: 100%;
+  text-align: center;
+}
+.espacios-sacuces p{
+  font-size: 2rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+.lineaVerticalVerde{
+  width: 90%;
+  height: 0.4rem;
+  margin: 1rem;
+
+}
+
+.info-piamonte {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+ }
+.info-piamonte-img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  margin:1rem;
+
+}
+.info-piamonte-img img{
+  margin:1.5rem;
+  height: 3.5rem;
+  
+
+}
+.info-piamonte-texto{
+  
+  flex-direction: column;
+
+}
+.info-piamonte-texto p{
+  font-size: 1.7rem;
+  padding: 0;
+  width: 100%;
+  margin: 0.5rem 0 0.5rem 0;
+  text-align: left;
+  height: 5rem;
+}
+
+.planta-piamonte{
+
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.planta-piamonte h1{
+
+  font-size: 2rem;
+  
+}
+
+.comodidades{
+  background-image: url('utils/piamonte/Banner2.webp');
+  background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
+  background-position: center top; /* Alinea la imagen hacia arriba */
+  background-repeat: no-repeat;/* Evita la repetición de la imagen */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 0.5rem;
+
+}
+.comodidades h1{
+
+  font-size: 2rem;
+  width: 100%;
+  
+}
+
+.comodidades-lista p{
+  width: 100%;
+  font-size: 1.5rem;
+  color: var(--gris-oscuro);
+
+
+}
+.ubicacion-piamonte{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+.ubicacion-piamonte-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+
+}
+.ubicacion-piamonte-info h1{
+  
+  font-size: 2rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
+  letter-spacing: 0.1em;
+  margin:0.5rem;
+  padding: 0;
+}
+.ubicacion-piamonte-info h2{
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+  margin:0;
+  padding: 0;
+}
+.ubicacion-piamonte-info img{
+  width: 3rem;
+}
+.ubicacion-piamonte-maps{
+  width: 90%;
+  margin:0.5rem
+}
+.ubicacion-piamonte-maps img{
+  width: 100%;
+
+}
+
+.piamonte-eleccion h1,h2{
+  font-size: 2rem;
+}
+
+.piamonte-info{
+ flex-direction: column;
+ width: 100%;
+ padding: 1rem;
+ gap:1rem;
+}
+
+
+.contactenos-piamonte{
+
+  flex-direction: column;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  
+}
+.contactenos-piamonte-info h1{
+
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+}
+.contactenos-piamonte-info p{
+
+  font-size: 1.5rem;
+  width: 100%;
+  margin:0.5rem;
 }
 
 /*footbar*/

@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
-import logoSauces from '../../../utils/sauces/Logo.webp';
-import ubicacionNaranja from '../../../utils/sauces/UbicacionNaranja.webp';
-import metros from '../../../utils/sauces/Metros-cuadrados.webp';
-import habitacion from '../../../utils/sauces/Habitaciones.webp';
-import bano from '../../../utils/sauces/Bano.webp';
-import parqueadero from '../../../utils/sauces/Parqueadero.webp';
-import otros from '../../../utils/sauces/Casa.webp';
-import planta from '../../../utils/sauces/Planta.webp';
-import arbol from '../../../utils/sauces/Arbol.webp';
-import ubicacion from '../../../utils/sauces/Ubicacion.webp';
-import acceso from '../../../utils/sauces/Figura1.webp';
-import independencia from '../../../utils/sauces/Figura2.webp';
-import ambiente from '../../../utils/sauces/Figura3.webp';
-import Imagen1 from '../../../utils/sauces/Imagen1.webp';
-import Imagen2 from '../../../utils/sauces/Imagen2.webp';
-import Imagen3 from '../../../utils/sauces/Imagen3.webp';
-import Imagen4 from '../../../utils/sauces/Imagen4.webp';
-import Mapa from '../../../utils/sauces/mapaSauces.webp';
+import logoPiamonte from '../../../utils/piamonte/Logo.webp';
+import ubicacion1 from '../../../utils/piamonte/Ubicacion1.webp';
+import ubicacion2 from '../../../utils/piamonte/Ubicacion2.webp';
+import metros from '../../../utils/piamonte/Metros-cuadrados.webp';
+import habitacion from '../../../utils/piamonte/Habitaciones.webp';
+import bano from '../../../utils/piamonte/Bano.webp';
+import otros from '../../../utils/piamonte/Casa.webp';
+import planta from '../../../utils/piamonte/Planta.webp';
+import logoSolo from '../../../utils/piamonte/LogoSolo.webp';
+import ubicacion from '../../../utils/piamonte/Ubicacion.webp';
+import acceso from '../../../utils/piamonte/Figura1.webp';
+import independencia from '../../../utils/piamonte/Figura2.webp';
+import ambiente from '../../../utils/piamonte/Figura3.webp';
+import Imagen1 from '../../../utils/piamonte/Imagen1.webp';
+import Imagen2 from '../../../utils/piamonte/Imagen2.webp';
+import Imagen3 from '../../../utils/piamonte/Imagen3.webp';
+import Imagen4 from '../../../utils/piamonte/Imagen4.webp';
+import Mapa from '../../../utils/piamonte/mapa.webp';
 import emailjs from '@emailjs/browser';
 
 
@@ -72,7 +72,7 @@ const Sauce = () => {
     emailjs
       .send(
         'service_z9iajad', // Reemplaza con tu Service ID
-        'template_7jo9zmo', // Reemplaza con tu Template ID
+        'template_v3pg618', // Reemplaza con tu Template ID
         templateParams,
         'mYRqabaum9FpJ6eh0' // Reemplaza con tu Public Key
       )
@@ -95,18 +95,18 @@ const Sauce = () => {
       );
   };
   return (
-    <div className='sauces'>
-      <div className='banner-sauces'>
-        <div className='banner-sauces-info'>
-          <img src={logoSauces} alt="logoSauces" />
-          <h1>Casas VIS</h1>
-          <div className='banner-ubicacion-sauces'>
-            <img src={ubicacionNaranja} alt="ubicacionNaranja" />
-            <h2>La Unión <br></br>Antioquia</h2>
+    <div className='piamonte'>
+      <div className='banner-piamonte'>
+        <div className='banner-piamonte-info'>
+          <img src={logoPiamonte} alt="logoPiamonte" />
+          <h1>Proyecto de casas</h1>
+          <div className='banner-ubicacion-piamonte'>
+            <img src={ubicacion1} alt="ubicacionNaranja" />
+            <h2>Turbaco<br></br>Bolivar</h2>
           </div>
           <h3>*|Casas con posibilidad de ampliación a segundo piso</h3>
         </div>
-        <div className='form-sauces'>
+        <div className='form-piamonte'>
           <form onSubmit={handleOnSubmit}>
             <div>
               <label>Nombre</label>
@@ -160,24 +160,23 @@ const Sauce = () => {
                 Autorizo el tratamiento de mis datos personales y <br></br> políticas de privacidad
               </label>
             </div>
-            <button className='btnGrisSauces' type="submit">Solicitar Información</button>
-            <div className='btnGrisSauces2'>
-              <a href="https://wa.link/np8w02" target="_blank" rel="noopener noreferrer">Contactar un asesor</a>
+            <button className='btnNaranjaPiamonte' type="submit">Solicitar Información</button>
+            <div className='btnNaranjaPiamonte2'>
+              <a href="https://wa.link/ox86uj" target="_blank" rel="noopener noreferrer">Contactar un asesor</a>
             </div>
           </form>
         </div>
       </div>
-      <div className='proyecto-sauces'>
-        <h1>Proyecto de casas <br></br> desde 135 SMMLV</h1>
+      <div className='proyecto-piamonte'>
+        <h1>Proyecto de casas <br></br> desde $146.900.000</h1>
       </div>
-      <div className='descubre-sacuces'>
-        <p><strong>Descubre nuestro proyecto Los Sauces, </strong>
-          un lugar donde la independencia y la tranquilidad se encuentran. 
-          <strong>Este proyecto de 402 casas en La Unión - Antioquia,</strong> ofrece más que viviendas: 
-          te invita a formar parte de una comunidad segura y privilegiada. 
-          Imagina un hogar con patio y antejardín, perfecto para disfrutar con tu familia. 
-          <strong>¿Te animas a ser parte de Los Sauces?</strong> </p>
-        <div className="galerias-fotos-sauces">
+      <div className='descubre-piamonte'>
+        <p><strong>Bienvenido a Piamonte,</strong>
+        un lugar donde cada casa tiene su propio espacio y cada familia encuentra su hogar.
+        <strong>Con 700 unidades de vivienda en Turbaco - Bólivar,</strong> 
+        este proyecto ofrece tranquilidad, seguridad y la oportunidad de ser parte de una comunidad única.
+        <strong>¿Listo para vivirlo?  </strong> </p>
+        <div className="galerias-fotos-piamonte">
          <button className="btn-flecha izquierda" onClick={anteriorFoto}>
             &#8249;
           </button>
@@ -193,63 +192,57 @@ const Sauce = () => {
       <div className='espacios-sacuces'>
         <h1>Espacios<br></br> amplios y <br></br>  cómodos</h1>
         <div className='lineaVerticalVerde'></div>
-        <p>Casas de 48 m2 en lotes de 68 m2 y con placa para construir segundo<br></br> piso.</p>
+        <p>Casas de 43 m2 en lotes de 84 m2 y con placa para construir segundo piso</p>
         <div className='lineaVerticalVerde'></div>
-        <div className='info-sauces'>
-          <div className='info-sauces-img'>
+        <div className='info-piamonte'>
+          <div className='info-piamonte-img'>
           <img src={metros} alt="metros" />
           <img src={habitacion} alt="habitaciones" />
           <img src={bano} alt="banos" />
-          <img src={parqueadero} alt="parqueadero" />
           <img src={otros} alt="otros" />
 
           </div>
-          <div className='info-sauces-texto'>
-            <p>48 m2.</p>
+          <div className='info-piamonte-texto'>
+            <p>43 m2 con posibilidad de ampliación.</p>
             <p>2 habitaciones.</p>
             <p>1 baño.</p>
-            <p>1 parqueadero.</p>
             <p>Patio, cocina, sala-comedor y antejardín.</p>
           </div>
         </div>
       </div>
-      <div className='planta-sauces'>
+      <div className='planta-piamonte'>
         <h1>Planta arquitectónica</h1>
         <img src={planta} alt="planta" />
       </div>
       <div className='comodidades'>
         <h1>Excelentes comodidades de la urbanización para compartir en familia</h1>
-        <div className='lineaVerticalVerde'></div>
+        <div className='lineaVerticalVerdeOscuro'></div>
         <div className='comodidades-lista'>
           <div className='salon'>
-            <img src={arbol} alt="arlbol" />
+            <img src={logoSolo} alt="arlbol" />
             <p>Salón social.</p>
           </div>
           <div className='juegos'>
-            <img src={arbol} alt="arlbol" />
+            <img src={logoSolo} alt="arlbol" />
             <p>Juegos infantiles.</p>
           </div>
           <div className='sendero'>
-            <img src={arbol} alt="arlbol" />
+            <img src={logoSolo} alt="arlbol" />
             <p>Sendero.</p>
           </div>
           <div className='cancha'>
-            <img src={arbol} alt="arlbol" />
+            <img src={logoSolo} alt="arlbol" />
             <p>Cancha múltiple.</p>
-          </div>
-          <div className='parqueadero'>
-            <img src={arbol} alt="arlbol" />
-            <p>Parqueadero visitantes.</p>
           </div>
         </div>
       </div>
-      <div className='ubicacion-sauces'>
-        <div className='ubicacion-sauces-info'>
-          <img src={ubicacion} alt="ubicacion" />
+      <div className='ubicacion-piamonte'>
+        <div className='ubicacion-piamonte-info'>
+          <img src={ubicacion2} alt="ubicacion" />
           <h1>Fácil acceso <br></br> por la vía principal</h1>
-          <h2> La Unión - Sonsón</h2>
+          <h2>Turbaco - Bolivar</h2>
         </div>
-        <div className='ubicacion-sauces-maps'>
+        <div className='ubicacion-piamonte-maps'>
           <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
             <img src={Mapa} alt="Mapa" />
           </a>
@@ -257,11 +250,11 @@ const Sauce = () => {
 
 
       </div>
-      <div className='sauces-eleccion'>
-        <h1>Vivir en casa sí es posible y </h1>
-        <h2>Los Sauces es tu mejor elección.</h2>
+      <div className='piamonte-eleccion'>
+        <h1>Construir momentos inolvidables comienza en una casa y <strong>Piamonte es tu mejor decisión.</strong>  </h1>
+        
       </div>
-      <div className='sauces-info'>
+      <div className='piamonte-info'>
         <div className='acceso'>
           <img src={acceso} alt="acceso" />
           <p>Fácil acceso y excelente ubicación</p>
@@ -275,16 +268,16 @@ const Sauce = () => {
           <p>Ambiente tranquilo y natural</p>
         </div>
       </div>
-      <div className='contactenos-sauces'>
-        <div className='contactenos-sauces-info'>
+      <div className='contactenos-piamonte'>
+        <div className='contactenos-piamonte-info'>
           <h1>Contáctanos y recibe asesoría personalizada </h1>
-          <div className='btnGrisSaucesContacto'>
-            <a href="https://wa.link/np8w02" target="_blank" rel="noopener noreferrer">¡Hablemos aquí!</a>  
+          <div className='btnNaranjaPiamonteContacto'>
+            <a href="https://wa.link/ox86uj" target="_blank" rel="noopener noreferrer">¡Hablemos aquí!</a>  
           </div>
           <p>O diligencia nuestro formulario <br></br>para ser contactado(a) por uno de <br></br>
           nuestros asesores.</p>
         </div>
-        <div className='form-sauces'>
+        <div className='form-piamonte'>
           <form onSubmit={handleOnSubmit}>
             <div>
               <label>Nombre</label>
@@ -338,7 +331,7 @@ const Sauce = () => {
                 Autorizo el tratamiento de mis datos personales y <br></br> políticas de privacidad
               </label>
             </div>
-            <button className='btnGrisSauces' type="submit">Solicitar Información</button>
+            <button className='btnNaranjaPiamonte' type="submit">Solicitar Información</button>
           </form>
         </div>
 
