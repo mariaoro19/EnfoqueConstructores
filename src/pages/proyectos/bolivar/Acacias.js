@@ -34,9 +34,8 @@ const Sauce = () => {
     autorizacion: false,
   });
   const fotos = [Imagen1, Imagen2, Imagen3, Imagen4,Imagen5,Imagen6,Imagen7,Imagen8];
-  const lat = 5.970917; // Latitud en formato decimal
-  const lng = -75.354806; // Longitud en formato decimal
-  const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lng}&hl=es`;
+
+  const googleMapsUrl = `https://www.google.com/maps?ll=10.341112,-75.409567&z=10&t=m&hl=es-ES&gl=US&mapclient=embed&q=Dg.+35+Turbaco,+Bol%C3%ADvar`;
 
 
   const [indiceActual, setIndiceActual] = useState(0);
@@ -69,7 +68,7 @@ const Sauce = () => {
       email: formData.email,
       celular: formData.celular,
       autorizacion: formData.autorizacion ? 'Sí' : 'No',
-      to_email: 'escrituracion6@enfoqueconstructores.com', // Define el destinatario aquí,
+      to_email: 'iyoung@enfoqueconstructores.com', // Define el destinatario aquí,
       proyecto:"Acacias"
     };
 
@@ -174,14 +173,14 @@ const Sauce = () => {
         </div>
       </div>
       <div className='proyecto-acacias'>
-        <h1>Proyecto de casas <br></br> desde $146.900.000</h1>
+        <h1>Proyecto de casas <br></br> desde $166.400.000</h1>
       </div>
       <div className='descubre-acacias'>
         <p><strong>Las Acacias </strong>
         es más que un proyecto de casas, es la oportunidad de vivir como siempre soñaste. 
         <strong> Ubicado en Turbaco - Bolivar a tan solo 30 minutos de Cartagena, </strong> 
         con 500 viviendas independientes; disfrutarás de un hogar con patio y antejardín, ideal para ti y tu familia. 
-        <strong>¡Conoce lo que hace de Alameda un lugar especial!</strong> </p>
+        <strong>¡Conoce lo que hace de Las Acacias un lugar especial!</strong> </p>
         <div className="galerias-fotos-acacias">
          <button className="btn-flecha izquierda" onClick={anteriorFoto}>
             &#8249;
@@ -220,28 +219,28 @@ const Sauce = () => {
         <h1>Planta arquitectónica</h1>
         <img src={planta} alt="planta" />
       </div>
-      <div className='comodidades'>
+      <div className='comodidades-acacias'>
         <h1>Excelentes comodidades de la urbanización para compartir en familia</h1>
         <div className='lineaVerticalVerdeOscuro'></div>
-        <div className='comodidades-lista'>
+        <div className='comodidades-acacias-lista'>
           <div className='salon'>
-            <img src={logoSolo} alt="arlbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Salón social.</p>
           </div>
           <div className='juegos'>
-            <img src={logoSolo} alt="arlbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Juegos infantiles.</p>
           </div>
           <div className='sendero'>
-            <img src={logoSolo} alt="arlbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Sendero.</p>
           </div>
           <div className='elemento'>
-            <img src={logoSolo} alt="arlbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Elemento de lista.</p>
           </div>
           <div className='lago'>
-            <img src={logoSolo} alt="arlbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Lago.</p>
           </div>
         </div>
@@ -285,7 +284,7 @@ const Sauce = () => {
           <div className='btnNaranjaAcaciasContacto'>
             <a href="https://wa.link/5rrb86" target="_blank" rel="noopener noreferrer">¡Hablemos aquí!</a>  
           </div>
-          <p>O diligencia nuestro formulario <br></br>para ser contactado(a) por uno de <br></br>
+          <p>O diligencia nuestro formulario <br></br>para ser contactado(a) por uno de
           nuestros asesores.</p>
         </div>
         <div className='form-acacias'>

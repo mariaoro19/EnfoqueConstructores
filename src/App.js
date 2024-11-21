@@ -7,7 +7,6 @@ import Lanzamientos from './pages/lanzamientos';
 import Navbar from './components/navbar';
 import Footbar from './components/footbar';
 import Sauce from './pages/proyectos/union/Sauces'; 
-import Alamos from './pages/proyectos/santander/Alamos'; 
 import Piamonte from './pages/proyectos/bolivar/Piamonte'; 
 import Acacias from './pages/proyectos/bolivar/Acacias';
 import Alameda from './pages/proyectos/sucre/Alameda';
@@ -39,7 +38,6 @@ function App() {
             <Route path="/" element={<Inicio />} />
             <Route path="/conocenos" element={<Conocenos />} />
             <Route path="/proyectos/union/Sauces" element={<Sauce />} />
-            <Route path="/proyectos/santander/Alamos" element={<Alamos />} />
             <Route path="/proyectos/bolivar/Piamonte" element={<Piamonte />} />
             <Route path="/proyectos/bolivar/Acacias" element={<Acacias />} />
             <Route path="/proyectos/sucre/Alameda" element={<Alameda />} />

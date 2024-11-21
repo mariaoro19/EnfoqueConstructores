@@ -82,7 +82,7 @@ const Navbar = () => {
                 )}
               </li>
               <li
-                onMouseEnter={() => selectCity('Bolivar')}
+                onMouseEnter={() => selectCity('Sucre')}
                 onMouseLeave={() => selectCity(null)}
               >
                 Sucre
@@ -158,7 +158,7 @@ const Navbar = () => {
                 )}
               </li>
               <li
-                onMouseEnter={() => selectCity('Bolivar')}
+                onMouseEnter={() => selectCity('Sucre')}
                 onMouseLeave={() => selectCity(null)}
               >
                 Sucre

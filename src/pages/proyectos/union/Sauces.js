@@ -31,9 +31,8 @@ const Sauce = () => {
     autorizacion: false,
   });
   const fotos = [Imagen1, Imagen2, Imagen3, Imagen4];
-  const lat = 5.970917; // Latitud en formato decimal
-  const lng = -75.354806; // Longitud en formato decimal
-  const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lng}&hl=es`;
+
+  const googleMapsUrl = `https://www.google.com/maps/place/5%C2%B058'15.3%22N+75%C2%B021'17.3%22W/@5.9709096,-75.3573723,17z/data=!3m1!4b1!4m4!3m3!8m2!3d5.9709096!4d-75.3547974?hl=es&entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D`;
 
 
   const [indiceActual, setIndiceActual] = useState(0);
@@ -100,7 +99,7 @@ const Sauce = () => {
     <div className='sauces'>
       <div className='banner-sauces'>
         <div className='banner-sauces-info'>
-          <img src={logoSauces} alt="logoSauces" />
+          <img className="logoSauces" src={logoSauces} alt="logoSauces" />
           <h1>Casas VIS</h1>
           <div className='banner-ubicacion-sauces'>
             <img src={ubicacionNaranja} alt="ubicacionNaranja" />
@@ -150,7 +149,7 @@ const Sauce = () => {
                 required
               />
             </div>
-            <div className='autorizo-checkbox'>
+            <div className='autorizo-checkbox-sauces'>
               <label className='autorizo'>
                 <input
                   type="checkbox"
@@ -175,10 +174,10 @@ const Sauce = () => {
       <div className='descubre-sacuces'>
         <p><strong>Descubre nuestro proyecto Los Sauces, </strong>
           un lugar donde la independencia y la tranquilidad se encuentran. 
-          <strong>Este proyecto de 402 casas en La Unión - Antioquia,</strong> ofrece más que viviendas: 
+          <strong> Este proyecto de 402 casas en La Unión - Antioquia,</strong> ofrece más que viviendas: 
           te invita a formar parte de una comunidad segura y privilegiada. 
           Imagina un hogar con patio y antejardín, perfecto para disfrutar con tu familia. 
-          <strong>¿Te animas a ser parte de Los Sauces?</strong> </p>
+          <strong> ¿Te animas a ser parte de Los Sauces?</strong> </p>
         <div className="galerias-fotos-sauces">
          <button className="btn-flecha izquierda" onClick={anteriorFoto}>
             &#8249;
@@ -195,7 +194,7 @@ const Sauce = () => {
       <div className='espacios-sauces'>
         <h1>Espacios<br></br> amplios y <br></br>  cómodos</h1>
         <div className='lineaVerticalVerde'></div>
-        <p>Casas de 48 m2 en lotes de 68 m2 y con placa para construir segundo<br></br> piso.</p>
+        <p>Casas de 48 m2 en lotes de 68 m2 y con placa para construir segundo piso.</p>
         <div className='lineaVerticalVerde'></div>
         <div className='info-sauces'>
           <div className='info-sauces-img'>
@@ -219,28 +218,28 @@ const Sauce = () => {
         <h1>Planta arquitectónica</h1>
         <img src={planta} alt="planta" />
       </div>
-      <div className='comodidades'>
+      <div className='comodidades-sauces'>
         <h1>Excelentes comodidades de la urbanización para compartir en familia</h1>
         <div className='lineaVerticalVerde'></div>
-        <div className='comodidades-lista'>
+        <div className='comodidades-sauces-lista'>
           <div className='salon'>
-            <img src={arbol} alt="arlbol" />
+            <img src={arbol} alt="arbol" />
             <p>Salón social.</p>
           </div>
           <div className='juegos'>
-            <img src={arbol} alt="arlbol" />
+            <img src={arbol} alt="arbol" />
             <p>Juegos infantiles.</p>
           </div>
           <div className='sendero'>
-            <img src={arbol} alt="arlbol" />
+            <img src={arbol} alt="arbol" />
             <p>Sendero.</p>
           </div>
           <div className='cancha'>
-            <img src={arbol} alt="arlbol" />
+            <img src={arbol} alt="arbol" />
             <p>Cancha múltiple.</p>
           </div>
           <div className='parqueadero'>
-            <img src={arbol} alt="arlbol" />
+            <img src={arbol} alt="arbol" />
             <p>Parqueadero visitantes.</p>
           </div>
         </div>
@@ -283,7 +282,7 @@ const Sauce = () => {
           <div className='btnGrisSaucesContacto'>
             <a href="https://wa.link/np8w02" target="_blank" rel="noopener noreferrer">¡Hablemos aquí!</a>  
           </div>
-          <p>O diligencia nuestro formulario <br></br>para ser contactado(a) por uno de <br></br>
+          <p>O diligencia nuestro formulario <br></br>para ser contactado(a) por uno de
           nuestros asesores.</p>
         </div>
         <div className='form-sauces'>
@@ -328,7 +327,7 @@ const Sauce = () => {
                 required
               />
             </div>
-            <div className='autorizo-checkbox'>
+            <div className='autorizo-checkbox-sauces'>
               <label className='autorizo'>
                 <input
                   type="checkbox"

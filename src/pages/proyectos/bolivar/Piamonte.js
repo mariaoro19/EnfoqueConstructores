@@ -30,9 +30,7 @@ const Sauce = () => {
     autorizacion: false,
   });
   const fotos = [Imagen1, Imagen2, Imagen3, Imagen4];
-  const lat = 5.970917; // Latitud en formato decimal
-  const lng = -75.354806; // Longitud en formato decimal
-  const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lng}&hl=es`;
+  const googleMapsUrl = `https://www.google.com/maps?ll=10.312563,-75.397937&z=14&t=m&hl=es-ES&gl=US&mapclient=embed&q=8J72%2B2R+Turbaco,+Bol%C3%ADvar`;
 
 
   const [indiceActual, setIndiceActual] = useState(0);
@@ -173,11 +171,11 @@ const Sauce = () => {
         <h1>Proyecto de casas <br></br> desde $146.900.000</h1>
       </div>
       <div className='descubre-piamonte'>
-        <p><strong>Bienvenido a Piamonte,</strong>
+        <p><strong>Bienvenido a Piamonte, </strong>
         un lugar donde cada casa tiene su propio espacio y cada familia encuentra su hogar.
-        <strong>Con 700 unidades de vivienda en Turbaco - Bólivar,</strong> 
-        este proyecto ofrece tranquilidad, seguridad y la oportunidad de ser parte de una comunidad única.
-        <strong>¿Listo para vivirlo?  </strong> </p>
+        <strong> Con 700 unidades de vivienda en Turbaco - Bólivar, </strong> 
+         este proyecto ofrece tranquilidad, seguridad y la oportunidad de ser parte de una comunidad única.
+        <strong> ¿Listo para vivirlo?  </strong> </p>
         <div className="galerias-fotos-piamonte">
          <button className="btn-flecha izquierda" onClick={anteriorFoto}>
             &#8249;
@@ -194,7 +192,7 @@ const Sauce = () => {
       <div className='espacios-piamonte'>
         <h1>Espacios<br></br> amplios y <br></br>  cómodos</h1>
         <div className='lineaVerticalVerde'></div>
-        <p>Casas de 43 m2 en lotes de 84 m2 y con placa para construir segundo piso</p>
+        <p>Casas de 43 m2 en lotes de 84 m2 y con placa para construir segundo piso.</p>
         <div className='lineaVerticalVerde'></div>
         <div className='info-piamonte'>
           <div className='info-piamonte-img'>
@@ -216,24 +214,24 @@ const Sauce = () => {
         <h1>Planta arquitectónica</h1>
         <img src={planta} alt="planta" />
       </div>
-      <div className='comodidades'>
+      <div className='comodidades-piamonte'>
         <h1>Excelentes comodidades de la urbanización para compartir en familia</h1>
         <div className='lineaVerticalVerdeOscuro'></div>
-        <div className='comodidades-lista'>
+        <div className='comodidades-piamonte-lista'>
           <div className='salon'>
-            <img src={logoSolo} alt="arlbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Salón social.</p>
           </div>
           <div className='juegos'>
-            <img src={logoSolo} alt="arlbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Juegos infantiles.</p>
           </div>
           <div className='sendero'>
-            <img src={logoSolo} alt="arlbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Sendero.</p>
           </div>
           <div className='cancha'>
-            <img src={logoSolo} alt="arlbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Cancha múltiple.</p>
           </div>
         </div>
@@ -276,7 +274,7 @@ const Sauce = () => {
           <div className='btnNaranjaPiamonteContacto'>
             <a href="https://wa.link/ox86uj" target="_blank" rel="noopener noreferrer">¡Hablemos aquí!</a>  
           </div>
-          <p>O diligencia nuestro formulario <br></br>para ser contactado(a) por uno de <br></br>
+          <p>O diligencia nuestro formulario <br></br>para ser contactado(a) por uno de
           nuestros asesores.</p>
         </div>
         <div className='form-piamonte'>

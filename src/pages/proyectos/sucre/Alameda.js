@@ -1,21 +1,28 @@
 import React, { useState } from 'react';
-import logoPiamonte from '../../../utils/piamonte/Logo.webp';
-import ubicacion1 from '../../../utils/piamonte/Ubicacion1.webp';
-import ubicacion2 from '../../../utils/piamonte/Ubicacion2.webp';
-import metros from '../../../utils/piamonte/Metros-cuadrados.webp';
-import habitacion from '../../../utils/piamonte/Habitaciones.webp';
-import bano from '../../../utils/piamonte/Bano.webp';
-import otros from '../../../utils/piamonte/Casa.webp';
-import planta from '../../../utils/piamonte/Planta.webp';
-import logoSolo from '../../../utils/piamonte/LogoSolo.webp';
-import acceso from '../../../utils/piamonte/Figura1.webp';
-import independencia from '../../../utils/piamonte/Figura2.webp';
-import ambiente from '../../../utils/piamonte/Figura3.webp';
-import Imagen1 from '../../../utils/piamonte/Imagen1.webp';
-import Imagen2 from '../../../utils/piamonte/Imagen2.webp';
-import Imagen3 from '../../../utils/piamonte/Imagen3.webp';
-import Imagen4 from '../../../utils/piamonte/Imagen4.webp';
-import Mapa from '../../../utils/piamonte/mapa.webp';
+import logoAlameda from '../../../utils/alameda/Logo.webp';
+import ubicacion1 from '../../../utils/alameda/Ubicacion1.webp';
+import ubicacion2 from '../../../utils/alameda/Ubicacion2.webp';
+import metros from '../../../utils/alameda/Metros-cuadrados.webp';
+import habitacion from '../../../utils/alameda/Habitaciones.webp';
+import bano from '../../../utils/alameda/Bano.webp';
+import otros from '../../../utils/alameda/Casa.webp';
+import planta from '../../../utils/alameda/Planta.webp';
+import logoSolo from '../../../utils/alameda/LogoSolo.webp';
+import acceso from '../../../utils/alameda/Figura1.webp';
+import independencia from '../../../utils/alameda/Figura2.webp';
+import ambiente from '../../../utils/alameda/Figura3.webp';
+import Imagen1 from '../../../utils/alameda/Imagen1.webp';
+import Imagen3 from '../../../utils/alameda/Imagen3.webp';
+import Imagen4 from '../../../utils/alameda/Imagen4.webp';
+import Imagen5 from '../../../utils/alameda/Imagen5.webp';
+import Imagen7 from '../../../utils/alameda/Imagen7.webp';
+import Imagen8 from '../../../utils/alameda/Imagen8.webp';
+import Imagen9 from '../../../utils/alameda/Imagen9.webp';
+import Imagen10 from '../../../utils/alameda/Imagen10.webp';
+import Imagen11 from '../../../utils/alameda/Imagen11.webp';
+import Imagen12 from '../../../utils/alameda/Imagen12.webp';
+import Imagen13 from '../../../utils/alameda/Imagen13.webp';
+import Mapa from '../../../utils/alameda/mapa.webp';
 import emailjs from '@emailjs/browser';
 
 
@@ -29,10 +36,8 @@ const Sauce = () => {
     celular: '',
     autorizacion: false,
   });
-  const fotos = [Imagen1, Imagen2, Imagen3, Imagen4];
-  const lat = 5.970917; // Latitud en formato decimal
-  const lng = -75.354806; // Longitud en formato decimal
-  const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lng}&hl=es`;
+  const fotos = [Imagen1, Imagen3, Imagen4,Imagen5,Imagen7,Imagen8,Imagen9,Imagen10,Imagen11,Imagen12,Imagen13];
+  const googleMapsUrl = `https://www.google.com/maps/place/7JWG%2BR5,+Sincelejo,+Sucre,+Colombia/@9.297062,-75.374562,14z/data=!4m5!3m4!1s0x8e59144841172957:0xfd54006d98c481fc!8m2!3d9.2970625!4d-75.3745625?hl=es-ES&entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D`;
 
 
   const [indiceActual, setIndiceActual] = useState(0);
@@ -65,7 +70,10 @@ const Sauce = () => {
       email: formData.email,
       celular: formData.celular,
       autorizacion: formData.autorizacion ? 'Sí' : 'No',
+      to_email: 'mvergara@enfoqueconstructores.com', // Define el destinatario aquí,
+      proyecto:"Alameda"
     };
+
     console.log(templateParams)
 
     emailjs
@@ -94,18 +102,18 @@ const Sauce = () => {
       );
   };
   return (
-    <div className='piamonte'>
-      <div className='banner-piamonte'>
-        <div className='banner-piamonte-info'>
-          <img src={logoPiamonte} alt="logoPiamonte" />
+    <div className='alameda'>
+      <div className='banner-alameda'>
+        <div className='banner-alameda-info'>
+          <img className='logoAlameda' src={logoAlameda} alt="logoAlameda" />
           <h1>Proyecto de casas</h1>
-          <div className='banner-ubicacion-piamonte'>
+          <div className='banner-ubicacion-alameda'>
             <img src={ubicacion1} alt="ubicacionNaranja" />
-            <h2>Turbaco<br></br>Bolivar</h2>
+            <h2>Sincelejo<br></br>Sucre</h2>
           </div>
           <h3>*|Casas con posibilidad de ampliación a segundo piso</h3>
         </div>
-        <div className='form-piamonte'>
+        <div className='form-alameda'>
           <form onSubmit={handleOnSubmit}>
             <div>
               <label>Nombre</label>
@@ -159,23 +167,21 @@ const Sauce = () => {
                 Autorizo el tratamiento de mis datos personales y <br></br> políticas de privacidad
               </label>
             </div>
-            <button className='btnNaranjaPiamonte' type="submit">Solicitar Información</button>
-            <div className='btnNaranjaPiamonte2'>
-              <a href="https://wa.link/ox86uj" target="_blank" rel="noopener noreferrer">Contactar un asesor</a>
+            <button className='btnNaranjaAlameda' type="submit">Solicitar Información</button>
+            <div className='btnNaranjaAlameda2'>
+              <a href="https://wa.link/fgp87p" target="_blank" rel="noopener noreferrer">Contactar un asesor</a>
             </div>
           </form>
         </div>
       </div>
-      <div className='proyecto-piamonte'>
-        <h1>Proyecto de casas <br></br> desde $146.900.000</h1>
+      <div className='proyecto-alameda'>
+        <h1>Proyecto de casas <br></br> desde $150.000.000</h1>
       </div>
-      <div className='descubre-piamonte'>
-        <p><strong>Bienvenido a Piamonte,</strong>
-        un lugar donde cada casa tiene su propio espacio y cada familia encuentra su hogar.
-        <strong>Con 700 unidades de vivienda en Turbaco - Bólivar,</strong> 
-        este proyecto ofrece tranquilidad, seguridad y la oportunidad de ser parte de una comunidad única.
-        <strong>¿Listo para vivirlo?  </strong> </p>
-        <div className="galerias-fotos-piamonte">
+      <div className='descubre-alameda'>
+        <p><strong>Bienvenidos a Alameda, un exclusivo proyecto de casas en Sincelejo - Sucre, </strong>
+        diseñado para quienes buscan tranquilidad, seguridad y un espacio propio para disfrutar en familia.  Con 180 viviendas cuidadosamente construidas, tendrás un hogar con patio y antejardín en un entorno que inspira comunidad y calidad de vida.
+        <strong> ¡Descubre cómo vivir de una manera única y especial!</strong> </p>
+        <div className="galerias-fotos-alameda">
          <button className="btn-flecha izquierda" onClick={anteriorFoto}>
             &#8249;
           </button>
@@ -188,20 +194,20 @@ const Sauce = () => {
         </div>
 
       </div>
-      <div className='espacios-sacuces'>
+      <div className='espacios-alameda'>
         <h1>Espacios<br></br> amplios y <br></br>  cómodos</h1>
-        <div className='lineaVerticalVerde'></div>
-        <p>Casas de 43 m2 en lotes de 84 m2 y con placa para construir segundo piso</p>
-        <div className='lineaVerticalVerde'></div>
-        <div className='info-piamonte'>
-          <div className='info-piamonte-img'>
+        <div className='lineaVerticalAzulClaro'></div>
+        <p>Casas de 43 m2 en lotes de 72 m2 y con placa para construir segundo piso. </p>
+        <div className='lineaVerticalAzulClaro'></div>
+        <div className='info-alameda'>
+          <div className='info-alameda-img'>
           <img src={metros} alt="metros" />
           <img src={habitacion} alt="habitaciones" />
           <img src={bano} alt="banos" />
           <img src={otros} alt="otros" />
 
           </div>
-          <div className='info-piamonte-texto'>
+          <div className='info-alameda-texto'>
             <p>43 m2 con posibilidad de ampliación.</p>
             <p>2 habitaciones.</p>
             <p>1 baño.</p>
@@ -209,39 +215,40 @@ const Sauce = () => {
           </div>
         </div>
       </div>
-      <div className='planta-piamonte'>
+      <div className='planta-alameda'>
         <h1>Planta arquitectónica</h1>
         <img src={planta} alt="planta" />
       </div>
-      <div className='comodidades'>
+      <div className='comodidades-alameda'>
         <h1>Excelentes comodidades de la urbanización para compartir en familia</h1>
-        <div className='lineaVerticalVerdeOscuro'></div>
-        <div className='comodidades-lista'>
+        <div className='lineaVerticalAzulClaro'></div>
+        <div className='comodidades-alameda-lista'>
           <div className='salon'>
-            <img src={logoSolo} alt="arlbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Salón social.</p>
           </div>
           <div className='juegos'>
-            <img src={logoSolo} alt="arlbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Juegos infantiles.</p>
           </div>
           <div className='sendero'>
-            <img src={logoSolo} alt="arlbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Sendero.</p>
           </div>
           <div className='cancha'>
-            <img src={logoSolo} alt="arlbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Cancha múltiple.</p>
           </div>
         </div>
       </div>
-      <div className='ubicacion-piamonte'>
-        <div className='ubicacion-piamonte-info'>
+      <div className='ubicacion-alameda'>
+        <div className='ubicacion-alameda-info'>
           <img src={ubicacion2} alt="ubicacion" />
-          <h1>Fácil acceso <br></br> por la vía principal</h1>
-          <h2>Turbaco - Bolivar</h2>
+          <h1>Fácil acceso <br></br>por vía principal</h1>
+          <h2>Sincelejo - Sucre</h2>
+  
         </div>
-        <div className='ubicacion-piamonte-maps'>
+        <div className='ubicacion-alameda-maps'>
           <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
             <img src={Mapa} alt="Mapa" />
           </a>
@@ -249,11 +256,11 @@ const Sauce = () => {
 
 
       </div>
-      <div className='piamonte-eleccion'>
-        <h1>Construir momentos inolvidables comienza en una casa y <strong>Piamonte es tu mejor decisión.</strong>  </h1>
+      <div className='alameda-eleccion'>
+        <h1>Vivir en casa no es solo un sueño, <br></br> <strong>en Alameda es una realidad hecha para ti.</strong>  </h1>
         
       </div>
-      <div className='piamonte-info'>
+      <div className='alameda-info'>
         <div className='acceso'>
           <img src={acceso} alt="acceso" />
           <p>Fácil acceso y excelente ubicación</p>
@@ -267,16 +274,16 @@ const Sauce = () => {
           <p>Ambiente tranquilo y natural</p>
         </div>
       </div>
-      <div className='contactenos-piamonte'>
-        <div className='contactenos-piamonte-info'>
+      <div className='contactenos-alameda'>
+        <div className='contactenos-alameda-info'>
           <h1>Contáctanos y recibe asesoría personalizada </h1>
-          <div className='btnNaranjaPiamonteContacto'>
-            <a href="https://wa.link/ox86uj" target="_blank" rel="noopener noreferrer">¡Hablemos aquí!</a>  
+          <div className='btnNaranjaAlamedaContacto'>
+            <a href="https://wa.link/fgp87p" target="_blank" rel="noopener noreferrer">¡Hablemos aquí!</a>  
           </div>
-          <p>O diligencia nuestro formulario <br></br>para ser contactado(a) por uno de <br></br>
+          <p>O diligencia nuestro formulario <br></br>para ser contactado(a) por uno de
           nuestros asesores.</p>
         </div>
-        <div className='form-piamonte'>
+        <div className='form-alameda'>
           <form onSubmit={handleOnSubmit}>
             <div>
               <label>Nombre</label>
@@ -330,7 +337,7 @@ const Sauce = () => {
                 Autorizo el tratamiento de mis datos personales y <br></br> políticas de privacidad
               </label>
             </div>
-            <button className='btnNaranjaPiamonte' type="submit">Solicitar Información</button>
+            <button className='btnNaranjaAlameda' type="submit">Solicitar Información</button>
           </form>
         </div>
 

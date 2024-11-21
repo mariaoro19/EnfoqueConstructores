@@ -1,25 +1,5 @@
 
-/*
-@font-face {
-  font-family: 'FuturaBold';
-  src: url('./fonts/Futura_Bold.ttf') format('truetype');
-}
 
-@font-face {
-  font-family: 'FuturaLight';
-  src: url('./fonts/Futura_light.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'FuturaMedium';
-  src: url('fonts/Futura_medium.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'FuturaHeavy';
-  src: url('fonts/Futura_Heavy.ttf') format('truetype');
-}
-*/
 :root {
   --naranja: #e99e3c;  /* Color principal */
   --gris-oscuro: #525151;  /* Color secundario */
@@ -29,6 +9,8 @@
   --verde-oscuro-piamonte:#27703b;
   --verde-claro-piamonte:#95b733;
   --azul-oscuro-acacias:#072b5f;
+  --azul-oscuro-alameda:#072b5f;
+  --azul-claro-alameda:#3b82bd;
   --font-cuerpo: 'Futura', Arial, sans-serif;
   --font-titulos: 'Mulish', sans-serif;
   
@@ -676,6 +658,7 @@ html, body {
   padding: 0;
 }
 
+
 .banner-sauces{
   display: flex; 
   flex-direction: row;
@@ -689,12 +672,15 @@ html, body {
   margin: 0;
   height: auto;
 }
+.logoSauces{
+  margin-top: 1rem;
+}
 .banner-sauces-info{
   display: flex; 
   flex-direction: column;
   align-items:flex-start; 
   justify-content: space-between; 
-  padding: 1rem 5rem 1rem 5rem;
+  padding: 2rem 5rem 1rem 5rem;
   height: 40rem;
   width: 100%;
 }
@@ -707,6 +693,8 @@ html, body {
   padding: 0;
   margin: 0;
   line-height: 1; 
+  width: 10rem;
+
 }
 .banner-sauces-info h3{
   color:var(--gris-claro);
@@ -726,7 +714,7 @@ html, body {
   flex-direction: row;
   align-items:center; 
   justify-content: space-between; 
-  gap:0.5rem
+ 
 
 }
 .banner-ubicacion-sauces h2{
@@ -736,6 +724,7 @@ html, body {
   font-weight: bold;
   -webkit-text-stroke: 1px var(--gris-claro); /* Añade un contorno negro */
   letter-spacing: -0.02em;
+
 }
 
 .form-sauces {
@@ -768,6 +757,7 @@ html, body {
   font-size: 1.2rem;
   color: var(--gris-oscuro);
   margin-bottom: 0.5rem;
+  font-family: var(--font-cuerpo);
 }
 
 .form-sauces input[type="text"],
@@ -780,7 +770,7 @@ html, body {
   font-size: 1rem;
   font-family: var(--font-cuerpo);
 }
-.autorizo-checkbox {
+.autorizo-checkbox-sauces {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -789,20 +779,21 @@ html, body {
   margin-top: 0.5rem;
 }
 
-.autorizo-checkbox input[type="checkbox"] {
+.autorizo-checkbox-sauces input[type="checkbox"] {
   margin: 0; /* Elimina cualquier margen por defecto */
   width: auto; /* Asegúrate de que no se extienda horizontalmente */
   height: auto; /* Ajusta la altura al tamaño predeterminado */
   font-weight: bold;
 }
 
-.autorizo-checkbox label {
+.autorizo-checkbox-sauces label {
   font-size: 1rem;
   color: var(--gris-oscuro);
   display: flex;
   align-items: center;
   line-height: 1.5rem; /* Para un alineamiento vertical más limpio */
   gap: 0.5rem; /* Espaciado entre los elementos internos */
+  font-family: var(--font-cuerpo);
 }
 
 
@@ -1066,7 +1057,7 @@ html, body {
   width: 55%;
   text-align: center;
 }
-.comodidades{
+.comodidades-sauces{
   background-image: url('utils/sauces/Banner2.webp');
   background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
   background-position: center; /* Centra la imagen */
@@ -1080,7 +1071,7 @@ html, body {
   padding: 2rem;
 
 }
-.comodidades h1{
+.comodidades-sauces h1{
   font-family: var(--font-titulos);
   color: var(--gris-claro);
   font-size: 4rem;
@@ -1088,7 +1079,7 @@ html, body {
   width: 50%;
   line-height: 1;
 }
-.comodidades-lista{
+.comodidades-sauces-lista{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1104,11 +1095,11 @@ html, body {
   text-align: left;
 
 }
-.comodidades-lista img{
+.comodidades-sauces-lista img{
   margin:0.5rem 0.5rem 0 0;
 
 }
-.comodidades-lista p{
+.comodidades-sauces-lista p{
   width: 100%;
   font-size: 1.7rem;
   font-family: var(--font-cuerpo);
@@ -1163,7 +1154,7 @@ html, body {
   width: 100%;
   padding:2rem;
 }
-.sauces-eleccion h1,h2{
+.sauces-eleccion h1,.sauces-eleccion h2{
   font-size: 4rem;
   color: var(--gris-oscuro);
   text-align: center;
@@ -1200,6 +1191,7 @@ html, body {
   justify-content: center;
   width: 20%;
 }
+
 .contactenos-sauces{
   display: flex;
   flex-direction: row;
@@ -1209,6 +1201,20 @@ html, body {
   padding: 2rem 0 2rem 4rem;
   height: auto;
 }
+.contactenos-sauces-info{
+  width: 100%;
+  padding: 2rem 0 2rem 3rem;
+}
+
+.contactenos-sauces-info p{
+  font-family: var(--font-titulos);
+  color: var(--gris-oscuro);
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  width: 100%;
+}
+
 .contactenos-sauces-info h1{
   font-family: var(--font-titulos);
   color: var(--gris-oscuro);
@@ -1218,15 +1224,10 @@ html, body {
   font-weight: bold;
   letter-spacing: -0.01em;
   -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
+  width: 30rem;
 }
-.contactenos-sauces-info p{
-  font-family: var(--font-titulos);
-  color: var(--gris-oscuro);
-  margin: 0;
-  padding: 0;
-  font-size: 2rem;
-  width: 100%;
-}
+
+
 
 .btnGrisSaucesContacto {
   display: flex;
@@ -1370,6 +1371,7 @@ html, body {
   font-size: 1.2rem;
   color: var(--gris-claro);
   margin-bottom: 0.5rem;
+  font-family: var(--font-cuerpo);
 }
 
 .form-piamonte input[type="text"],
@@ -1405,6 +1407,7 @@ html, body {
   align-items: center;
   line-height: 1.5rem; /* Para un alineamiento vertical más limpio */
   gap: 0.5rem; /* Espaciado entre los elementos internos */
+  font-family: var(--font-cuerpo);
 }
 
 
@@ -1668,7 +1671,7 @@ html, body {
   width: 55%;
   text-align: center;
 }
-.comodidades{
+.comodidades-piamonte{
   background-image: url('utils/piamonte/Banner2.webp');
   background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
   background-position: center; /* Centra la imagen */
@@ -1689,7 +1692,7 @@ html, body {
   margin: 1rem;
 
 }
-.comodidades h1{
+.comodidades-piamonte h1{
   font-family: var(--font-titulos);
   color: var(--gris-oscuro);
   font-size: 4rem;
@@ -1697,7 +1700,7 @@ html, body {
   width: 50%;
   line-height: 1;
 }
-.comodidades-lista{
+.comodidades-piamonte-lista{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1713,11 +1716,11 @@ html, body {
   text-align: left;
 
 }
-.comodidades-lista img{
+.comodidades-piamonte-lista img{
   margin:0.5rem 0.5rem 0 0;
 
 }
-.comodidades-lista p{
+.comodidades-piamonte-lista p{
   width: 100%;
   font-size: 1.7rem;
   font-family: var(--font-cuerpo);
@@ -1816,6 +1819,10 @@ html, body {
   padding: 2rem 0 2rem 4rem;
   height: auto;
 }
+.contactenos-piamonte-info{
+  width: 100%;
+  padding: 2rem 0 2rem 3rem;
+}
 .contactenos-piamonte-info h1{
   font-family: var(--font-titulos);
   color: var(--verde-oscuro-piamonte);
@@ -1825,20 +1832,17 @@ html, body {
   font-weight: bold;
   letter-spacing: -0.01em;
   -webkit-text-stroke: 2px var(--verde-oscuro-piamonte); /* Añade un contorno negro */
+  width: 30rem;
 }
 .contactenos-piamonte-info p{
   font-family: var(--font-titulos);
-  color: var(--gris-oscuro);
+  color: var(--verde-oscuro-piamonte);
   margin: 0;
   padding: 0;
   font-size: 2rem;
   width: 100%;
 }
-.contactenos-piamonte-info .btnGris{
-  width: 30%;
-  border-radius: 2rem;
-  margin: 1rem 0 2rem 0;
-}
+
 .btnNaranjaPiamonteContacto {
   display: flex;
   flex-direction: column;
@@ -1885,6 +1889,9 @@ html, body {
   width: 100%;
   margin: 2rem 0 1rem 0;
   padding: 0;
+}
+.logoAcacias{
+  margin-top: 1rem;
 }
 
 .banner-acacias{
@@ -1981,6 +1988,7 @@ html, body {
   font-size: 1.2rem;
   color: var(--gris-claro);
   margin-bottom: 0.5rem;
+  font-family: var(--font-cuerpo);
 }
 
 .form-acacias input[type="text"],
@@ -2016,6 +2024,7 @@ html, body {
   align-items: center;
   line-height: 1.5rem; /* Para un alineamiento vertical más limpio */
   gap: 0.5rem; /* Espaciado entre los elementos internos */
+  font-family: var(--font-cuerpo);
 }
 
 
@@ -2280,7 +2289,7 @@ html, body {
   width: 55%;
   text-align: center;
 }
-.comodidades{
+.comodidades-acacias{
   background-image: url('utils/acacias/Banner2.webp');
   background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
   background-position: center; /* Centra la imagen */
@@ -2295,7 +2304,7 @@ html, body {
 
 }
 
-.comodidades h1{
+.comodidades-acacias h1{
   font-family: var(--font-titulos);
   color: var(--gris-oscuro);
   font-size: 4rem;
@@ -2303,7 +2312,7 @@ html, body {
   width: 50%;
   line-height: 1;
 }
-.comodidades-lista{
+.comodidades-acacias-lista{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -2319,11 +2328,11 @@ html, body {
   text-align: left;
 
 }
-.comodidades-lista img{
+.comodidades-acacias-lista img{
   margin:0.5rem 0.5rem 0 0;
 
 }
-.comodidades-lista p{
+.comodidades-acacias-lista p{
   width: 100%;
   font-size: 1.7rem;
   font-family: var(--font-cuerpo);
@@ -2448,17 +2457,13 @@ html, body {
 }
 .contactenos-acacias-info p{
   font-family: var(--font-titulos);
-  color: var(--gris-oscuro);
+  color: var(--azul-oscuro-acacias);
   margin: 0;
   padding: 0;
   font-size: 2rem;
   width: 100%;
 }
-.contactenos-acacias-info .btnGris{
-  width: 30%;
-  border-radius: 2rem;
-  margin: 1rem 0 2rem 0;
-}
+
 .btnNaranjaAcaciasContacto {
   display: flex;
   flex-direction: column;
@@ -2491,6 +2496,619 @@ html, body {
 }
 
 .btnNaranjaAcaciasContacto:hover {
+  background: var(--gris-medio); /* Color más claro al pasar el cursor */
+}
+
+/*Alameda*/
+
+
+.alameda{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  width: 100%;
+  margin: 2rem 0 1rem 0;
+  padding: 0;
+}
+
+.banner-alameda{
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-between; 
+  width: 100%;
+  background-image: url('utils/alameda/Banner.webp');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  margin: 0;
+  height: auto;
+}
+.banner-alameda-info{
+  display: flex; 
+  flex-direction: column;
+  align-items:flex-start; 
+  justify-content: space-between; 
+  padding: 1rem 5rem 1rem 5rem;
+  height: 40rem;
+  width: 100%;
+}
+.banner-alameda-info h1{
+  color:var(--azul-oscuro-alameda);
+  font-size: 4rem;
+  font-family: var(--font-titulos);
+  font-weight: bold;
+  -webkit-text-stroke: 3px var(--azul-oscuro-alameda); /* Añade un contorno negro */
+  padding: 0;
+  margin: 0;
+  line-height: 1; 
+  width: 40%;
+}
+
+
+.banner-alameda-info h3{
+  color:var(--azul-oscuro-alameda);
+  font-size: 2rem;
+  font-family: var(--font-titulos);
+  font-weight: bold;
+  -webkit-text-stroke: 1px var(--azul-oscuro-alameda); /* Añade un contorno negro */
+  padding: 0;
+  margin: 0 0 1rem 0;
+  line-height: 1; 
+  width: 60%;
+
+}
+
+.banner-ubicacion-alameda{
+  display: flex; 
+  flex-direction: row;
+  align-items:flex-start; 
+  justify-content: space-between; 
+  gap:0.5rem
+
+}
+.banner-ubicacion-alameda h2{
+  font-size: 2rem;
+  font-family: var(--font-titulos);
+  color: var(--azul-oscuro-alameda);
+  font-weight: bold;
+  -webkit-text-stroke: 1px var(--azul-oscuro-alameda); /* Añade un contorno negro */
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.form-alameda {
+  background-color: var(--azul-oscuro-alameda);
+  border-radius: 2.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 52rem; /* Ancho total de la tarjeta del formulario */
+  box-sizing: border-box; /* Asegúrate de incluir padding en el cálculo del ancho */
+  margin: 1rem 5rem 1rem 1rem;
+}
+
+.form-alameda form {
+  width: 100%; /* Formulario ocupa todo el ancho del contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem; /* Espaciado entre los elementos */
+}
+
+.form-alameda form > div {
+  width: 100%; /* Cada div ocupa el ancho total del formulario */
+}
+
+.form-alameda label {
+  display: block; /* Para que ocupe todo el ancho disponible */
+  font-size: 1.2rem;
+  color: var(--gris-claro);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-cuerpo);
+  font-family: var(--font-cuerpo);
+}
+
+.form-alameda input[type="text"],
+.form-alameda input[type="email"]{
+  width: 100%; /* Input ocupa todo el ancho de su contenedor padre */
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: var(--font-cuerpo);
+}
+.autorizo-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem; /* Espacio entre el checkbox y el texto */
+  margin-top: 0.5rem;
+}
+
+.autorizo-checkbox input[type="checkbox"] {
+  margin: 0; /* Elimina cualquier margen por defecto */
+  width: auto; /* Asegúrate de que no se extienda horizontalmente */
+  height: auto; /* Ajusta la altura al tamaño predeterminado */
+  font-weight: bold;
+}
+
+.autorizo-checkbox label {
+  font-size: 1rem;
+  color: var(--gris-claro);
+  display: flex;
+  align-items: center;
+  line-height: 1.5rem; /* Para un alineamiento vertical más limpio */
+  gap: 0.5rem; /* Espaciado entre los elementos internos */
+  font-family: var(--font-cuerpo);
+}
+
+
+.form-alameda div{
+  display: flex; 
+  flex-direction: column;
+  align-items:flex-start; 
+  justify-content: space-between; 
+
+}
+.btnNaranjaAlameda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  color: var(--gris-claro);
+  background: var(--naranja);
+  border-radius: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  
+  font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
+  border: none; /* Elimina bordes */
+  outline: none; /* Elimina contornos */
+  box-shadow: none; /* Elimina sombras */
+  transition: background-color 0.3s ease; /* Transición para hover */
+}
+.btnNaranjaAlameda a {
+  color: inherit; /* Hereda el color del contenedor */
+  text-decoration: none; /* Sin subrayado */
+  width: 100%; /* Ocupar todo el ancho del botón */
+  height: 100%; /* Ocupar toda la altura del botón */
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+}
+
+.btnNaranjaAlameda:hover {
+  background: var(--gris-medio); /* Color más claro al pasar el cursor */
+}
+.btnNaranjaAlameda2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  color: var(--gris-claro);
+  background: var(--naranja);
+  border-radius: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 20rem !important;
+  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
+  border: none; /* Elimina bordes */
+  outline: none; /* Elimina contornos */
+  box-shadow: none; /* Elimina sombras */
+  transition: background-color 0.3s ease; /* Transición para hover */
+}
+.btnNaranjaAlameda2 a {
+  color: inherit; /* Hereda el color del contenedor */
+  text-decoration: none; /* Sin subrayado */
+  width: 100%; /* Ocupar todo el ancho del botón */
+  height: 100%; /* Ocupar toda la altura del botón */
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+}
+
+.btnNaranjaAlameda2:hover {
+  background: var(--gris-medio); /* Color más claro al pasar el cursor */
+}
+
+.proyecto-alameda{
+  background-color: var(--azul-claro-alameda);
+  color: var(--gris-claro);
+  font-family: var(--font-titulos);
+  width: 100%;
+
+}
+.proyecto-alameda h1{
+
+  font-size: 4rem;
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  margin: 0;
+  -webkit-text-stroke: 2px var(--gris-claro); /* Añade un contorno negro */
+  
+
+}
+.descubre-alameda{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+
+}
+.descubre-alameda p{
+  font-family: var(--font-cuerpo);
+  color: var(--azul-oscuro-alameda);
+  width: 50%;
+  font-size: 1.7rem;
+  text-align: justify;
+  padding: 3rem;
+  
+
+}
+.galerias-fotos-alameda {
+  position: relative;
+  width: 60%;
+  max-width: 600px; /* Ajusta el tamaño según sea necesario */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  
+}
+
+.contenedor-foto {
+  width: 100%;
+  height: auto;
+}
+
+.contenedor-foto img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.btn-flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  color: #333;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-flecha.izquierda {
+  left: 10px; /* Posición de la flecha izquierda */
+}
+
+.btn-flecha.derecha {
+  right: 10px; /* Posición de la flecha derecha */
+}
+
+.espacios-alameda{
+  background-color: var(--azul-oscuro-alameda);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+  padding: 1rem;
+}
+.espacios-alameda h1{
+  font-size: 4.5rem;
+  color: var(--gris-claro);
+  font-family: var(--font-titulos);
+  margin:1rem;
+  padding: 0;
+  -webkit-text-stroke: 3px var(--gris-claro); /* Añade un contorno negro */
+  font-weight: bold;
+  line-height: 1;
+  width: 30%;
+  text-align: center;
+}
+.espacios-alameda p{
+  font-size: 2.3rem;
+  color: var(--gris-claro);
+  font-family: var(--font-cuerpo);
+  width: 30%;
+  text-align: justify;
+  padding: 0.5rem;
+}
+.lineaVerticalAzulClaro{
+  background-color: var(--azul-claro-alameda);
+  width: 0.4rem;
+  height: 90%;
+  margin: 1rem;
+
+}
+
+.info-alameda {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+ }
+.info-alameda-img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  margin:1rem;
+
+}
+.info-alameda-img img{
+  margin:0.5rem;
+  height: 3rem;
+  
+
+}
+.info-alameda-texto{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin:0.5rem;
+  
+  
+
+}
+.info-alameda-texto p{
+  color: var(--gris-claro);
+  font-family: var(--font-cuerpo);
+  font-size: 1.7rem;
+  padding: 0;
+  width: 100%;
+  margin: 0.6rem 0 0.6rem 0;
+  text-align: left;
+  height: 3rem;
+  line-height: 1;
+}
+
+.planta-alameda{
+  background-color: var(--azul-claro-alameda);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.planta-alameda h1{
+  font-family: var(--font-titulos);
+  color: var(--gris-claro);
+  font-size: 4rem;
+  -webkit-text-stroke: 2px var(--gris-claro); /* Añade un contorno negro */
+}
+.planta-alameda img{
+  width: 55%;
+  text-align: center;
+}
+.comodidades-alameda{
+  background-image: url('utils/alameda/Banner2.webp');
+  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+  padding: 2rem;
+
+}
+
+.comodidades-alameda h1{
+  font-family: var(--font-titulos);
+  color: var(--azul-oscuro-alameda);
+  font-size: 4rem;
+  -webkit-text-stroke: 2px var(--azul-oscuro-alameda); /* Añade un contorno negro */
+  width: 50%;
+  line-height: 1;
+}
+.comodidades-alameda-lista{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  margin: 1rem;
+
+}
+.salon,.juegos,.sendero,.cancha{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+
+}
+.comodidades-alameda-lista img{
+  margin:0.5rem 0.5rem 0 0;
+
+}
+.comodidades-alameda-lista p{
+  width: 100%;
+  font-size: 1.7rem;
+  font-family: var(--font-cuerpo);
+  color: var(--azul-oscuro-alameda);
+  margin: 0;
+  padding: 0;
+
+
+}
+.ubicacion-alameda{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 5rem;
+}
+.ubicacion-alameda-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 40%;
+
+}
+.ubicacion-alameda-info h1{
+  font-family: var(--font-titulos);
+  font-size: 3rem;
+  color: var(--azul-oscuro-alameda);
+  -webkit-text-stroke: 3px var(--azul-oscuro-alameda); /* Añade un contorno negro */
+  letter-spacing: 0.05em;
+  margin:0.5rem;
+  padding: 0;
+}
+.ubicacion-alameda-info h2{
+  font-family: var(--font-titulos);
+  font-size: 3rem;
+  color: var(--azul-oscuro-alameda);
+  letter-spacing: -0.02em;
+  margin:0;
+  padding: 0;
+}
+
+.ubicacion-alameda-maps{
+  width: 50%;
+}
+.ubicacion-alameda-maps img{
+  width: 100%;
+
+}
+.alameda-eleccion{
+  background-color: var(--azul-oscuro-alameda);
+  width: 100%;
+  padding:2rem;
+}
+.alameda-eleccion h1{
+  font-size: 3.7rem;
+  color: var(--gris-claro);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+.alameda-info{
+  display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ background-color: var(--azul-claro-alameda);
+ width: 100%;
+ padding: 1rem;
+ gap:3rem;
+}
+.alameda-info p{
+  color: var(--gris-claro);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.alameda-info img{
+  text-align: center;
+}
+.alameda-info div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+}
+.contactenos-alameda{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 2rem 0 2rem 4rem;
+  height: auto;
+}
+.contactenos-alameda-info{
+  width: 100%;
+  padding: 2rem 0 2rem 3rem;
+}
+.contactenos-alameda-info h1{
+  font-family: var(--font-titulos);
+  color: var(--azul-oscuro-alameda);
+  margin: 0;
+  padding: 0;
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: -0.01em;
+  -webkit-text-stroke: 2px var(--azul-oscuro-alameda); /* Añade un contorno negro */
+  width: 30rem;
+}
+.contactenos-alameda-info p{
+  font-family: var(--font-titulos);
+  color: var(--azul-oscuro-alameda);
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.btnNaranjaAlamedaContacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  color: var(--azul-oscuro-alameda);
+  background: var(--naranja);
+  border-radius: 2rem;
+  margin: 2rem 0 2rem 0;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 30%;
+  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
+  border: none; /* Elimina bordes */
+  outline: none; /* Elimina contornos */
+  box-shadow: none; /* Elimina sombras */
+  transition: background-color 0.3s ease; /* Transición para hover */
+}
+.btnNaranjaAlamedaContacto a {
+  color: inherit; /* Hereda el color del contenedor */
+  text-decoration: none; /* Sin subrayado */
+  width: 100%; /* Ocupar todo el ancho del botón */
+  height: 100%; /* Ocupar toda la altura del botón */
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+}
+
+.btnNaranjaAlamedaContacto:hover {
   background: var(--gris-medio); /* Color más claro al pasar el cursor */
 }
 
@@ -2533,7 +3151,7 @@ html, body {
   
 }
 .footbar-info a, .btnNaranjaNavbar a,.btnNaranjaNavbarMovil a, .btnNaranjaFootbar a, .btnNaranja a,button, .btnGrisSauces2 a,
-.btnNaranjaPiamonte2 a, .btnNaranjaAcacias2 a  {
+.btnNaranjaPiamonte2 a, .btnNaranjaAcacias2 a,.btnNaranjaAlameda2 a  {
   text-decoration: none; /* Elimina el subrayado */
   color: inherit; /* Usa el color del texto padre o define un color específico */
 }
@@ -3385,6 +4003,8 @@ nav ul li a span.rotate{
   font-size: 3rem;
   color: var(--gris-oscuro);
   -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
+  width: 100%;
+  text-align: center;
 
 }
 .banner-sauces-info h2{
@@ -3400,6 +4020,7 @@ nav ul li a span.rotate{
   padding: 1rem;
   color: var(--gris-oscuro);
   -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  text-align: center;
 
 }
 
@@ -3536,7 +4157,7 @@ nav ul li a span.rotate{
   
 }
 
-.comodidades{
+.comodidades-sauces{
   background-image: url('utils/sauces/Banner2.webp');
   background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
   background-position: center top; /* Alinea la imagen hacia arriba */
@@ -3550,14 +4171,14 @@ nav ul li a span.rotate{
   padding: 0.5rem;
 
 }
-.comodidades h1{
+.comodidades-sauces h1{
 
   font-size: 2rem;
   width: 100%;
   
 }
 
-.comodidades-lista p{
+.comodidades-sauces-lista p{
   width: 100%;
   font-size: 1.5rem;
   color: var(--gris-oscuro);
@@ -3607,7 +4228,7 @@ nav ul li a span.rotate{
 
 }
 
-.sauces-eleccion h1,h2{
+.sauces-eleccion h1,.sauces-eleccion h2{
   font-size: 2rem;
 }
 
@@ -3622,14 +4243,24 @@ nav ul li a span.rotate{
 .contactenos-sauces{
 
   flex-direction: column;
-  padding: 0.5rem 0 0.5rem 0.5rem;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  margin:0;
   
+}
+.contactenos-sauces-info{
+  padding: 0.5rem;
+
 }
 .contactenos-sauces-info h1{
 
   font-size: 2rem;
   letter-spacing: -0.01em;
   -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 .contactenos-sauces-info p{
 
@@ -3771,12 +4402,13 @@ nav ul li a span.rotate{
   width: 100%;
   padding: 0.5rem;
 }
-.lineaVerticalVerde{
+.lineaVerticalVerdeOscuro{
   width: 90%;
   height: 0.4rem;
   margin: 1rem;
 
 }
+
 
 .info-piamonte {
   display: flex;
@@ -3827,7 +4459,7 @@ nav ul li a span.rotate{
   
 }
 
-.comodidades{
+.comodidades-piamonte{
   background-image: url('utils/piamonte/Banner2.webp');
   background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
   background-position: center top; /* Alinea la imagen hacia arriba */
@@ -3841,14 +4473,14 @@ nav ul li a span.rotate{
   padding: 0.5rem;
 
 }
-.comodidades h1{
+.comodidades-piamonte h1{
 
   font-size: 2rem;
   width: 100%;
   
 }
 
-.comodidades-lista p{
+.comodidades-piamonte-lista p{
   width: 100%;
   font-size: 1.5rem;
   color: var(--gris-oscuro);
@@ -3916,11 +4548,17 @@ nav ul li a span.rotate{
   padding: 0.5rem 0 0.5rem 0.5rem;
   
 }
+.contactenos-piamonte-info{
+  padding: 0.5rem;
+
+}
 .contactenos-piamonte-info h1{
 
   font-size: 2rem;
-  letter-spacing: -0.01em;
-  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  letter-spacing: 0.1em;
+  width: 100%;
+  text-align: center;
+  
 }
 .contactenos-piamonte-info p{
 
@@ -4122,7 +4760,7 @@ nav ul li a span.rotate{
   
 }
 
-.comodidades{
+.comodidades-acacias{
   background-image: url('utils/acacias/Banner2.webp');
   background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
   background-position: center top; /* Alinea la imagen hacia arriba */
@@ -4136,7 +4774,7 @@ nav ul li a span.rotate{
   padding: 0.5rem;
 
 }
-.comodidades h1{
+.comodidades-acacias h1{
 
   font-size: 2rem;
   width: 100%;
@@ -4144,7 +4782,7 @@ nav ul li a span.rotate{
   
 }
 
-.comodidades-lista p{
+.comodidades-acacias-lista p{
   width: 100%;
   font-size: 1.5rem;
   color: var(--gris-oscuro);
@@ -4239,6 +4877,302 @@ nav ul li a span.rotate{
   margin:0.5rem;
 }
 
+/*alameda*/
+
+
+.alameda{
+
+  padding: 0;
+  margin: 0;
+
+}
+
+.banner-alameda{
+
+  background-image: url('utils/alameda/Banner.webp');
+  background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
+  background-position: center top; /* Alinea la imagen hacia arriba */
+  background-repeat: no-repeat;
+  height: auto; /* Ajusta la altura según lo necesites */
+  width: 100%; /* Ajusta el ancho si es necesario */
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.banner-alameda-info{
+  display: flex; 
+  flex-direction: column;
+  align-items:center; 
+  justify-content: space-between; 
+  padding: 0.5rem;
+  width: 100%;
+}
+.logoAlameda{
+  height: 10rem;
+  margin: 1rem 0 0 0;
+}
+
+.banner-alameda-info h1{
+  font-size: 3rem;
+  width: 100%;
+  padding: 1rem;
+}
+.banner-alameda-info h2{
+  font-size: 2.5rem;
+
+
+}
+.banner-alameda-info h3{
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+
+.form-alameda {
+  border-radius: 2.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20rem; /* Ancho total de la tarjeta del formulario */
+  margin: 0 0 1rem 0;
+}
+
+.btnNaranjaAlameda a {
+  font-size: 1rem;
+}
+.btnNaranjaAlameda2{
+  width: 15rem !important;
+}
+.btnNaranjaAlamedaContacto {
+  width: 100%;
+}
+.proyecto-alameda h1{
+
+  font-size: 2rem;
+
+}
+.descubre-alameda{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+}
+.descubre-alameda p{
+ 
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.8rem;
+  
+
+}
+.galerias-fotos-alameda {
+  position: relative;
+  width: 80%;
+  margin: 0 0 1rem;
+  
+}
+
+
+.btn-flecha {
+
+  font-size: 1rem;
+  width: 2rem;
+  height: 2rem;
+
+}
+
+.espacios-alameda{
+  
+  flex-direction: column;
+  height: auto;
+  padding: 0.5rem;
+}
+.espacios-alameda h1{
+  font-size: 2.5rem;
+  margin:0.5rem;
+  padding: 0;
+  -webkit-text-stroke: 1px var(--gris-claro); /* Añade un contorno negro */
+  width: 100%;
+  text-align: center;
+}
+.espacios-alameda p{
+  font-size: 2rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+.lineaVerticalAzulClaro{
+  width: 90%;
+  height: 0.4rem;
+  margin: 1rem;
+
+}
+
+.info-alameda {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+ }
+.info-alameda-img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  margin:1rem;
+
+}
+.info-alameda-img img{
+  margin:1.5rem;
+  height: 3.5rem;
+  
+
+}
+.info-alameda-texto{
+  
+  flex-direction: column;
+
+}
+.info-alameda-texto p{
+  font-size: 1.7rem;
+  padding: 0;
+  width: 100%;
+  margin: 1rem 0 0 0;
+  text-align: left;
+  height: 5.5rem;
+}
+
+.planta-alameda{
+
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.planta-alameda h1{
+
+  font-size: 2rem;
+  
+}
+
+.comodidades-alameda{
+  background-image: url('utils/alameda/Banner2.webp');
+  background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
+  background-position: center top; /* Alinea la imagen hacia arriba */
+  background-repeat: no-repeat;/* Evita la repetición de la imagen */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 0.5rem;
+
+}
+.comodidades-alameda h1{
+
+  font-size: 2rem;
+  width: 100%;
+  letter-spacing: 0.05em;
+  
+}
+
+.comodidades-alameda-lista p{
+  width: 100%;
+  font-size: 1.5rem;
+  color: var(--gris-oscuro);
+
+
+}
+.ubicacion-alameda{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+.ubicacion-alameda-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+
+}
+.ubicacion-alameda-info h1{
+  
+  font-size: 2rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
+  letter-spacing: 0.1em;
+  margin:0.5rem;
+  padding: 0;
+  
+}
+.ubicacion-alameda-info h2{
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+  margin:0;
+  padding: 0;
+}
+
+.ubicacion-alameda-info img{
+  width: 3rem;
+}
+.ubicacion-alameda-maps{
+  width: 90%;
+  margin:0.5rem
+}
+.ubicacion-alameda-maps img{
+  width: 100%;
+
+}
+
+.alameda-eleccion h1,h2{
+  font-size: 2rem;
+}
+
+.alameda-info{
+ flex-direction: column;
+ width: 100%;
+ padding: 1rem;
+ gap:1rem;
+}
+
+
+.contactenos-alameda{
+
+  flex-direction: column;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  
+}
+.contactenos-alameda-info{
+  width: 100%;
+  padding: 0.5rem;
+
+}
+.contactenos-alameda-info h1{
+
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+  width: 100%;
+}
+.contactenos-alameda-info p{
+
+  font-size: 1.5rem;
+  width: 100%;
+  margin:0.5rem;
+}
 
 /*footbar*/
 
