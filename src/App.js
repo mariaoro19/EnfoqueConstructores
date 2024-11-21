@@ -9,6 +9,9 @@ import Footbar from './components/footbar';
 import Sauce from './pages/proyectos/union/Sauces'; 
 import Alamos from './pages/proyectos/santander/Alamos'; 
 import Piamonte from './pages/proyectos/bolivar/Piamonte'; 
+import Acacias from './pages/proyectos/bolivar/Acacias';
+import Alameda from './pages/proyectos/sucre/Alameda';
+
 
 
 function App() {
@@ -24,6 +27,8 @@ function App() {
   const isConocenosPage = location.pathname === '/conocenos';
   const isSaucesPage = location.pathname === '/proyectos/union/Sauces';
   const isPiamontePage = location.pathname === '/proyectos/bolivar/Piamonte';
+  const isAlamedaPage = location.pathname === '/proyectos/sucre/Alameda';
+  const isAcaciasPage = location.pathname === '/proyectos/bolivar/Acacias';
 
   return (
     
@@ -36,11 +41,18 @@ function App() {
             <Route path="/proyectos/union/Sauces" element={<Sauce />} />
             <Route path="/proyectos/santander/Alamos" element={<Alamos />} />
             <Route path="/proyectos/bolivar/Piamonte" element={<Piamonte />} />
+            <Route path="/proyectos/bolivar/Acacias" element={<Acacias />} />
+            <Route path="/proyectos/sucre/Alameda" element={<Alameda />} />
             <Route path="/lanzamientos" element={<Lanzamientos />} />
           </Routes>
         </div>
         {/* Pasamos el isConocenosPage al Footbar */}
-        <Footbar isConocenosPage={isConocenosPage}  isSaucesPage={isSaucesPage} isPiamontePage={isPiamontePage}/>
+        <Footbar isConocenosPage={isConocenosPage} 
+         isSaucesPage={isSaucesPage} 
+         isPiamontePage={isPiamontePage}
+         isAlamedaPage={isAlamedaPage}
+         isAcaciasPage={isAcaciasPage}
+         />
       </div>
   );
 }
