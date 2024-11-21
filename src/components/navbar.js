@@ -10,10 +10,7 @@ const Navbar = () => {
   const [isProyectosOpen, setIsProyectosOpen] = useState(false);
   const [selectedCity, setSelectedCity] = useState(null);
   const navigate = useNavigate();
-  /*
-  const toggleProyectosMenu = () => {
-    setIsProyectosOpen(!isProyectosOpen);
-  };*/
+ 
 
   const selectCity = (city) => {
     setSelectedCity(city);
@@ -21,7 +18,8 @@ const Navbar = () => {
   
 
   const toggleProyectosMenu = () => {
-    setIsProyectosOpen(prevState => !prevState);  // Toggle open/close menu
+    setIsProyectosOpen(prevState => !prevState);  
+    //setIsProyectosOpen(!isProyectosOpen);
   };
 
 
@@ -43,28 +41,33 @@ const Navbar = () => {
           <NavLink
             to="#"
             onClick={toggleProyectosMenu}
-            className={({ isActive }) => (isActive || isProyectosOpen ? 'active' : '')}
+            className={({ isActive }) => 
+              isActive || isProyectosOpen ? 'active' : ''
+            }
           >
             PROYECTOS
           </NavLink>
           {isProyectosOpen && (
             <ul >
               <li
+                className="union-item"
                 onMouseEnter={() => selectCity('Union')}
                 onMouseLeave={() => selectCity(null)}
               >
-                Unión
+                La Unión
                 {selectedCity === 'Union' && (
                   <ul>
                     <li>
-                      <NavLink to="/proyectos/union/Sauces">Sauce</NavLink>
+                      <NavLink to="/proyectos/union/Sauces">Los Sauces</NavLink>
                     </li>
-                    <li>
+                    {/*<li>
                       <NavLink to="/proyectos/union/palmas">Palmas</NavLink>
-                    </li>
+                    </li>*/}
+                    
                   </ul>
                 )}
               </li>
+              {/*
               <li
                 onMouseEnter={() => selectCity('Santander')}
                 onMouseLeave={() => selectCity(null)}
@@ -80,17 +83,17 @@ const Navbar = () => {
                     </li>
                   </ul>
                 )}
-              </li>
+              </li>*/}
             </ul>
           )}
         </li>
 
           <li><a href="/lanzamientos">PRÓXIMOS LANZAMIENTOS</a></li>
-          <li>
-            <div className='btnNaranjaNavbarMovil'>
-              <a href="https://wa.link/sjwok3" target="_blank" rel="noopener noreferrer">Contáctanos</a>
-            </div>
-          </li>
+          
+          <div className='btnNaranjaNavbarMovil'>
+            <a href="https://wa.link/sjwok3" target="_blank" rel="noopener noreferrer">Contáctanos</a>
+          </div>
+          
         </ul>
       </div>
 
@@ -106,7 +109,9 @@ const Navbar = () => {
           <NavLink
             to="#"
             onClick={toggleProyectosMenu}
-            className={({ isActive }) => (isActive || isProyectosOpen ? 'active' : '')}
+            className={({ isActive }) => 
+              isActive || isProyectosOpen ? 'active' : ''
+            }
           >
             PROYECTOS
           </NavLink>
@@ -116,7 +121,7 @@ const Navbar = () => {
                 onMouseEnter={() => selectCity('Union')}
                 onMouseLeave={() => selectCity(null)}
               >
-                Unión
+                La Unión
                 {selectedCity === 'Union' && (
                   <ul >
                     <li>
