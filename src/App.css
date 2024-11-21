@@ -714,6 +714,7 @@ html, body {
   padding: 0;
   margin: 0 0 1rem 0;
   line-height: 1; 
+  width: 60%;
 
 }
 
@@ -2083,6 +2084,294 @@ nav ul li a span.rotate{
   font-weight: bold;
   
 }
+/*Sauces*/
+.sauces{
+
+  padding: 0;
+  margin: 0;
+
+}
+
+.banner-sauces{
+
+  background-image: url('utils/sauces/Banner.png');
+  background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
+  background-position: center top; /* Alinea la imagen hacia arriba */
+  background-repeat: no-repeat;
+  height: auto; /* Ajusta la altura según lo necesites */
+  width: 100%; /* Ajusta el ancho si es necesario */
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.banner-sauces-info{
+  display: flex; 
+  flex-direction: column;
+  align-items:center; 
+  justify-content: space-between; 
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.banner-sauces-info h1{
+  font-size: 3rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
+
+}
+.banner-sauces-info h2{
+  font-size: 2.5rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  
+
+}
+.banner-sauces-info h3{
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+
+}
+
+
+.form-sauces {
+  border-radius: 2.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20rem; /* Ancho total de la tarjeta del formulario */
+  margin: 0 0 1rem 0;
+}
+
+.btnGris a {
+  font-size: 1rem;
+}
+
+.proyecto-sauces h1{
+
+  font-size: 2rem;
+
+}
+.descubre-sacuces{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+}
+.descubre-sacuces p{
+ 
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.8rem;
+  
+
+}
+.galerias-fotos-sauces {
+  position: relative;
+  width: 80%;
+  margin: 0 0 1rem;
+  
+}
+
+
+.btn-flecha {
+
+  font-size: 1rem;
+  width: 2rem;
+  height: 2rem;
+
+}
+
+.espacios-sacuces{
+  
+  flex-direction: column;
+  height: auto;
+  padding: 0.5rem;
+}
+.espacios-sacuces h1{
+  font-size: 2.5rem;
+  margin:0.5rem;
+  padding: 0;
+  -webkit-text-stroke: 1px var(--gris-claro); /* Añade un contorno negro */
+  width: 100%;
+  text-align: center;
+}
+.espacios-sacuces p{
+  font-size: 2rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+.lineaVerticalVerde{
+  background-color: var(--verde-sauces);
+  width: 90%;
+  height: 0.4rem;
+  margin: 1rem;
+
+}
+
+.info-sauces {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+ }
+.info-sauces-img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  margin:1rem;
+
+}
+.info-sauces-img img{
+  margin:1.5rem;
+  height: 3.5rem;
+  
+
+}
+.info-sauces-texto{
+  
+  flex-direction: column;
+
+}
+.info-sauces-texto p{
+  font-size: 1.7rem;
+  padding: 0;
+  width: 100%;
+  margin: 0.5rem 0 0.5rem 0;
+  text-align: left;
+  height: 5rem;
+}
+
+.planta-sauces{
+
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.planta-sauces h1{
+
+  font-size: 2rem;
+  
+}
+
+.comodidades{
+  background-image: url('utils/sauces/Banner2.webp');
+  background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
+  background-position: center top; /* Alinea la imagen hacia arriba */
+  background-repeat: no-repeat;/* Evita la repetición de la imagen */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 0.5rem;
+
+}
+.comodidades h1{
+
+  font-size: 2rem;
+  width: 100%;
+  
+}
+
+.comodidades-lista p{
+  width: 100%;
+  font-size: 1.5rem;
+  color: var(--gris-oscuro);
+
+
+}
+.ubicacion-sauces{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+.ubicacion-sauces-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+
+}
+.ubicacion-sauces-info h1{
+  
+  font-size: 2rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
+  letter-spacing: 0.1em;
+  margin:0.5rem;
+  padding: 0;
+}
+.ubicacion-sauces-info h2{
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+  margin:0;
+  padding: 0;
+}
+.ubicacion-sauces-info img{
+  width: 3rem;
+}
+.ubicacion-sauces-maps{
+  width: 90%;
+  margin:0.5rem
+}
+.ubicacion-sauces-maps img{
+  width: 100%;
+
+}
+
+.sauces-eleccion h1,h2{
+  font-size: 2rem;
+}
+
+.sauces-info{
+ flex-direction: column;
+ width: 100%;
+ padding: 1rem;
+ gap:1rem;
+}
+
+
+.contactenos-sauces{
+
+  flex-direction: column;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  
+}
+.contactenos-sauces-info h1{
+
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+}
+.contactenos-sauces-info p{
+
+  font-size: 1.5rem;
+  width: 100%;
+  margin:0.5rem;
+}
+.contactenos-sauces-info .btnGris{
+  width: 50%;
+}
+
 /*footbar*/
 
 .footbar {

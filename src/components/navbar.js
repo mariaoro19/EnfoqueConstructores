@@ -127,12 +127,14 @@ const Navbar = () => {
                     <li>
                       <NavLink to="/proyectos/union/Sauces">Los Sauces</NavLink>
                     </li>
+                    {/*
                     <li>
                       <NavLink to="/proyectos/union/palmas">Palmas</NavLink>
-                    </li>
+                </li>*/}
                   </ul>
                 )}
               </li>
+              {/*
               <li
                 onMouseEnter={() => selectCity('Santander')}
                 onMouseLeave={() => selectCity(null)}
@@ -148,7 +150,7 @@ const Navbar = () => {
                     </li>
                   </ul>
                 )}
-              </li>
+              </li>*/}
             </ul>
           )}
         </li>

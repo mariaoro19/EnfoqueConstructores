@@ -99,13 +99,13 @@ const Sauce = () => {
     <div className='sauces'>
       <div className='banner-sauces'>
         <div className='banner-sauces-info'>
-          <img src={logoSauces} alt="BannerHome" />
-          <h1>Casas <br></br>VIS</h1>
+          <img src={logoSauces} alt="logoSauces" />
+          <h1>Casas VIS</h1>
           <div className='banner-ubicacion-sauces'>
             <img src={ubicacionNaranja} alt="ubicacionNaranja" />
             <h2>La Unión <br></br>Antioquia</h2>
           </div>
-          <h3>*|Casas con posibilidad de <br></br> ampliación a segundo piso</h3>
+          <h3>*|Casas con posibilidad de ampliación a segundo piso</h3>
         </div>
         <div className='form-sauces'>
           <form onSubmit={handleOnSubmit}>
