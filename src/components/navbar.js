@@ -60,9 +60,6 @@ const Navbar = () => {
                     <li>
                       <NavLink to="/proyectos/union/Sauces">Los Sauces</NavLink>
                     </li>
-                    {/*<li>
-                      <NavLink to="/proyectos/union/palmas">Palmas</NavLink>
-                    </li>*/}
                     
                   </ul>
                 )}
@@ -77,6 +74,22 @@ const Navbar = () => {
                   <ul >
                     <li>
                       <NavLink to="/proyectos/bolivar/Piamonte">Piamonte</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/proyectos/bolivar/Acacias">Las Acacias</NavLink>
+                    </li>
+                  </ul>
+                )}
+              </li>
+              <li
+                onMouseEnter={() => selectCity('Bolivar')}
+                onMouseLeave={() => selectCity(null)}
+              >
+                Sucre
+                {selectedCity === 'Sucre' && (
+                  <ul >
+                    <li>
+                      <NavLink to="/proyectos/sucre/Alameda">Alameda</NavLink>
                     </li>
                   </ul>
                 )}
@@ -124,10 +137,6 @@ const Navbar = () => {
                     <li>
                       <NavLink to="/proyectos/union/Sauces">Los Sauces</NavLink>
                     </li>
-                    {/*
-                    <li>
-                      <NavLink to="/proyectos/union/palmas">Palmas</NavLink>
-                </li>*/}
                   </ul>
                 )}
               </li>
@@ -141,6 +150,22 @@ const Navbar = () => {
                   <ul>
                     <li>
                       <NavLink to="/proyectos/bolivar/Piamonte">Piamonte</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/proyectos/bolivar/Acacias">Las Acacias</NavLink>
+                    </li>
+                  </ul>
+                )}
+              </li>
+              <li
+                onMouseEnter={() => selectCity('Bolivar')}
+                onMouseLeave={() => selectCity(null)}
+              >
+                Sucre
+                {selectedCity === 'Sucre' && (
+                  <ul >
+                    <li>
+                      <NavLink to="/proyectos/sucre/Alameda">Alameda</NavLink>
                     </li>
                   </ul>
                 )}

@@ -1,21 +1,25 @@
 import React, { useState } from 'react';
-import logoPiamonte from '../../../utils/piamonte/Logo.webp';
-import ubicacion1 from '../../../utils/piamonte/Ubicacion1.webp';
-import ubicacion2 from '../../../utils/piamonte/Ubicacion2.webp';
-import metros from '../../../utils/piamonte/Metros-cuadrados.webp';
-import habitacion from '../../../utils/piamonte/Habitaciones.webp';
-import bano from '../../../utils/piamonte/Bano.webp';
-import otros from '../../../utils/piamonte/Casa.webp';
-import planta from '../../../utils/piamonte/Planta.webp';
-import logoSolo from '../../../utils/piamonte/LogoSolo.webp';
-import acceso from '../../../utils/piamonte/Figura1.webp';
-import independencia from '../../../utils/piamonte/Figura2.webp';
-import ambiente from '../../../utils/piamonte/Figura3.webp';
-import Imagen1 from '../../../utils/piamonte/Imagen1.webp';
-import Imagen2 from '../../../utils/piamonte/Imagen2.webp';
-import Imagen3 from '../../../utils/piamonte/Imagen3.webp';
-import Imagen4 from '../../../utils/piamonte/Imagen4.webp';
-import Mapa from '../../../utils/piamonte/mapa.webp';
+import logoAcacias from '../../../utils/acacias/Logo.webp';
+import ubicacion1 from '../../../utils/acacias/Ubicacion1.webp';
+import ubicacion2 from '../../../utils/acacias/Ubicacion2.webp';
+import metros from '../../../utils/acacias/Metros-cuadrados.webp';
+import habitacion from '../../../utils/acacias/Habitaciones.webp';
+import bano from '../../../utils/acacias/Bano.webp';
+import otros from '../../../utils/acacias/Casa.webp';
+import planta from '../../../utils/acacias/Planta.webp';
+import logoSolo from '../../../utils/acacias/LogoSolo.webp';
+import acceso from '../../../utils/acacias/Figura1.webp';
+import independencia from '../../../utils/acacias/Figura2.webp';
+import ambiente from '../../../utils/acacias/Figura3.webp';
+import Imagen1 from '../../../utils/acacias/Imagen1.webp';
+import Imagen2 from '../../../utils/acacias/Imagen2.webp';
+import Imagen3 from '../../../utils/acacias/Imagen3.webp';
+import Imagen4 from '../../../utils/acacias/Imagen4.webp';
+import Imagen5 from '../../../utils/acacias/Imagen5.webp';
+import Imagen6 from '../../../utils/acacias/Imagen6.webp';
+import Imagen7 from '../../../utils/acacias/Imagen7.webp';
+import Imagen8 from '../../../utils/acacias/Imagen8.webp';
+import Mapa from '../../../utils/acacias/mapa.webp';
 import emailjs from '@emailjs/browser';
 
 
@@ -29,7 +33,7 @@ const Sauce = () => {
     celular: '',
     autorizacion: false,
   });
-  const fotos = [Imagen1, Imagen2, Imagen3, Imagen4];
+  const fotos = [Imagen1, Imagen2, Imagen3, Imagen4,Imagen5,Imagen6,Imagen7,Imagen8];
   const lat = 5.970917; // Latitud en formato decimal
   const lng = -75.354806; // Longitud en formato decimal
   const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lng}&hl=es`;
@@ -65,7 +69,10 @@ const Sauce = () => {
       email: formData.email,
       celular: formData.celular,
       autorizacion: formData.autorizacion ? 'Sí' : 'No',
+      to_email: 'escrituracion6@enfoqueconstructores.com', // Define el destinatario aquí,
+      proyecto:"Acacias"
     };
+
     console.log(templateParams)
 
     emailjs
@@ -94,18 +101,18 @@ const Sauce = () => {
       );
   };
   return (
-    <div className='piamonte'>
-      <div className='banner-piamonte'>
-        <div className='banner-piamonte-info'>
-          <img src={logoPiamonte} alt="logoPiamonte" />
+    <div className='acacias'>
+      <div className='banner-acacias'>
+        <div className='banner-acacias-info'>
+          <img className='logoAcacias' src={logoAcacias} alt="logoAcacias" />
           <h1>Proyecto de casas</h1>
-          <div className='banner-ubicacion-piamonte'>
+          <div className='banner-ubicacion-acacias'>
             <img src={ubicacion1} alt="ubicacionNaranja" />
             <h2>Turbaco<br></br>Bolivar</h2>
           </div>
           <h3>*|Casas con posibilidad de ampliación a segundo piso</h3>
         </div>
-        <div className='form-piamonte'>
+        <div className='form-acacias'>
           <form onSubmit={handleOnSubmit}>
             <div>
               <label>Nombre</label>
@@ -159,23 +166,23 @@ const Sauce = () => {
                 Autorizo el tratamiento de mis datos personales y <br></br> políticas de privacidad
               </label>
             </div>
-            <button className='btnNaranjaPiamonte' type="submit">Solicitar Información</button>
-            <div className='btnNaranjaPiamonte2'>
-              <a href="https://wa.link/ox86uj" target="_blank" rel="noopener noreferrer">Contactar un asesor</a>
+            <button className='btnNaranjaAcacias' type="submit">Solicitar Información</button>
+            <div className='btnNaranjaAcacias2'>
+              <a href="https://wa.link/5rrb86" target="_blank" rel="noopener noreferrer">Contactar un asesor</a>
             </div>
           </form>
         </div>
       </div>
-      <div className='proyecto-piamonte'>
+      <div className='proyecto-acacias'>
         <h1>Proyecto de casas <br></br> desde $146.900.000</h1>
       </div>
-      <div className='descubre-piamonte'>
-        <p><strong>Bienvenido a Piamonte,</strong>
-        un lugar donde cada casa tiene su propio espacio y cada familia encuentra su hogar.
-        <strong>Con 700 unidades de vivienda en Turbaco - Bólivar,</strong> 
-        este proyecto ofrece tranquilidad, seguridad y la oportunidad de ser parte de una comunidad única.
-        <strong>¿Listo para vivirlo?  </strong> </p>
-        <div className="galerias-fotos-piamonte">
+      <div className='descubre-acacias'>
+        <p><strong>Las Acacias </strong>
+        es más que un proyecto de casas, es la oportunidad de vivir como siempre soñaste. 
+        <strong> Ubicado en Turbaco - Bolivar a tan solo 30 minutos de Cartagena, </strong> 
+        con 500 viviendas independientes; disfrutarás de un hogar con patio y antejardín, ideal para ti y tu familia. 
+        <strong>¡Conoce lo que hace de Alameda un lugar especial!</strong> </p>
+        <div className="galerias-fotos-acacias">
          <button className="btn-flecha izquierda" onClick={anteriorFoto}>
             &#8249;
           </button>
@@ -188,28 +195,28 @@ const Sauce = () => {
         </div>
 
       </div>
-      <div className='espacios-sacuces'>
+      <div className='espacios-acacias'>
         <h1>Espacios<br></br> amplios y <br></br>  cómodos</h1>
-        <div className='lineaVerticalVerde'></div>
-        <p>Casas de 43 m2 en lotes de 84 m2 y con placa para construir segundo piso</p>
-        <div className='lineaVerticalVerde'></div>
-        <div className='info-piamonte'>
-          <div className='info-piamonte-img'>
+        <div className='lineaVerticalNaranja'></div>
+        <p>Casas de 61 m2 en lotes de 98 m2 y con placa para construir segundo piso.</p>
+        <div className='lineaVerticalNaranja'></div>
+        <div className='info-acacias'>
+          <div className='info-acacias-img'>
           <img src={metros} alt="metros" />
           <img src={habitacion} alt="habitaciones" />
           <img src={bano} alt="banos" />
           <img src={otros} alt="otros" />
 
           </div>
-          <div className='info-piamonte-texto'>
-            <p>43 m2 con posibilidad de ampliación.</p>
+          <div className='info-acacias-texto'>
+            <p>61 m2 con posibilidad de ampliación. </p>
             <p>2 habitaciones.</p>
             <p>1 baño.</p>
             <p>Patio, cocina, sala-comedor y antejardín.</p>
           </div>
         </div>
       </div>
-      <div className='planta-piamonte'>
+      <div className='planta-acacias'>
         <h1>Planta arquitectónica</h1>
         <img src={planta} alt="planta" />
       </div>
@@ -229,19 +236,24 @@ const Sauce = () => {
             <img src={logoSolo} alt="arlbol" />
             <p>Sendero.</p>
           </div>
-          <div className='cancha'>
+          <div className='elemento'>
             <img src={logoSolo} alt="arlbol" />
-            <p>Cancha múltiple.</p>
+            <p>Elemento de lista.</p>
+          </div>
+          <div className='lago'>
+            <img src={logoSolo} alt="arlbol" />
+            <p>Lago.</p>
           </div>
         </div>
       </div>
-      <div className='ubicacion-piamonte'>
-        <div className='ubicacion-piamonte-info'>
+      <div className='ubicacion-acacias'>
+        <div className='ubicacion-acacias-info'>
           <img src={ubicacion2} alt="ubicacion" />
-          <h1>Fácil acceso <br></br> por la vía principal</h1>
+          <h1>Fácil acceso</h1>
           <h2>Turbaco - Bolivar</h2>
+          <h3>A tan solo 30 minutos de Cartagena</h3>
         </div>
-        <div className='ubicacion-piamonte-maps'>
+        <div className='ubicacion-acacias-maps'>
           <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
             <img src={Mapa} alt="Mapa" />
           </a>
@@ -249,11 +261,11 @@ const Sauce = () => {
 
 
       </div>
-      <div className='piamonte-eleccion'>
-        <h1>Construir momentos inolvidables comienza en una casa y <strong>Piamonte es tu mejor decisión.</strong>  </h1>
+      <div className='acacias-eleccion'>
+        <h1>Si buscas un lugar que lo tenga todo, <br></br> <strong>Las Acacias te abre las puertas de tu nuevo hogar.</strong>  </h1>
         
       </div>
-      <div className='piamonte-info'>
+      <div className='acacias-info'>
         <div className='acceso'>
           <img src={acceso} alt="acceso" />
           <p>Fácil acceso y excelente ubicación</p>
@@ -267,16 +279,16 @@ const Sauce = () => {
           <p>Ambiente tranquilo y natural</p>
         </div>
       </div>
-      <div className='contactenos-piamonte'>
-        <div className='contactenos-piamonte-info'>
+      <div className='contactenos-acacias'>
+        <div className='contactenos-acacias-info'>
           <h1>Contáctanos y recibe asesoría personalizada </h1>
-          <div className='btnNaranjaPiamonteContacto'>
-            <a href="https://wa.link/ox86uj" target="_blank" rel="noopener noreferrer">¡Hablemos aquí!</a>  
+          <div className='btnNaranjaAcaciasContacto'>
+            <a href="https://wa.link/5rrb86" target="_blank" rel="noopener noreferrer">¡Hablemos aquí!</a>  
           </div>
           <p>O diligencia nuestro formulario <br></br>para ser contactado(a) por uno de <br></br>
           nuestros asesores.</p>
         </div>
-        <div className='form-piamonte'>
+        <div className='form-acacias'>
           <form onSubmit={handleOnSubmit}>
             <div>
               <label>Nombre</label>
@@ -330,7 +342,7 @@ const Sauce = () => {
                 Autorizo el tratamiento de mis datos personales y <br></br> políticas de privacidad
               </label>
             </div>
-            <button className='btnNaranjaPiamonte' type="submit">Solicitar Información</button>
+            <button className='btnNaranjaAcacias' type="submit">Solicitar Información</button>
           </form>
         </div>
 

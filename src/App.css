@@ -28,6 +28,7 @@
   --verde-sauces:#95b733;
   --verde-oscuro-piamonte:#27703b;
   --verde-claro-piamonte:#95b733;
+  --azul-oscuro-acacias:#072b5f;
   --font-cuerpo: 'Futura', Arial, sans-serif;
   --font-titulos: 'Mulish', sans-serif;
   
@@ -964,7 +965,7 @@ html, body {
   right: 10px; /* Posición de la flecha derecha */
 }
 
-.espacios-sacuces{
+.espacios-sauces{
   background-color: var(--gris-oscuro);
   display: flex;
   flex-direction: row;
@@ -973,7 +974,7 @@ html, body {
   height: 25rem;
   padding: 1rem;
 }
-.espacios-sacuces h1{
+.espacios-sauces h1{
   font-size: 4.5rem;
   color: var(--gris-claro);
   font-family: var(--font-titulos);
@@ -985,7 +986,7 @@ html, body {
   width: 30%;
   text-align: center;
 }
-.espacios-sacuces p{
+.espacios-sauces p{
   font-size: 2.3rem;
   color: var(--gris-claro);
   font-family: var(--font-cuerpo);
@@ -1565,7 +1566,7 @@ html, body {
   right: 10px; /* Posición de la flecha derecha */
 }
 
-.espacios-sacuces{
+.espacios-piamonte{
   background-color: var(--verde-oscuro-piamonte);
   display: flex;
   flex-direction: row;
@@ -1574,7 +1575,7 @@ html, body {
   height: 25rem;
   padding: 1rem;
 }
-.espacios-sacuces h1{
+.espacios-piamonte h1{
   font-size: 4.5rem;
   color: var(--gris-claro);
   font-family: var(--font-titulos);
@@ -1586,7 +1587,7 @@ html, body {
   width: 30%;
   text-align: center;
 }
-.espacios-sacuces p{
+.espacios-piamonte p{
   font-size: 2.3rem;
   color: var(--gris-claro);
   font-family: var(--font-cuerpo);
@@ -1704,7 +1705,7 @@ html, body {
   margin: 1rem;
 
 }
-.salon,.juegos,.sendero,.cancha,.parqueadero{
+.salon,.juegos,.sendero,.cancha{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1873,6 +1874,626 @@ html, body {
   background: var(--gris-medio); /* Color más claro al pasar el cursor */
 }
 
+/*Acacias*/
+
+
+.acacias{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  width: 100%;
+  margin: 2rem 0 1rem 0;
+  padding: 0;
+}
+
+.banner-acacias{
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-between; 
+  width: 100%;
+  background-image: url('utils/acacias/Banner.webp');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  margin: 0;
+  height: auto;
+}
+.banner-acacias-info{
+  display: flex; 
+  flex-direction: column;
+  align-items:flex-start; 
+  justify-content: space-between; 
+  padding: 1rem 5rem 1rem 5rem;
+  height: 40rem;
+  width: 100%;
+}
+.banner-acacias-info h1{
+  color:var(--gris-oscuro);
+  font-size: 4rem;
+  font-family: var(--font-titulos);
+  font-weight: bold;
+  -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
+  padding: 0;
+  margin: 0;
+  line-height: 1; 
+  width: 40%;
+}
+
+.banner-acacias-info h3{
+  color:var(--gris-oscuro);
+  font-size: 2rem;
+  font-family: var(--font-titulos);
+  font-weight: bold;
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  padding: 0;
+  margin: 0 0 1rem 0;
+  line-height: 1; 
+  width: 60%;
+
+}
+
+.banner-ubicacion-acacias{
+  display: flex; 
+  flex-direction: row;
+  align-items:center; 
+  justify-content: space-between; 
+  gap:0.5rem
+
+}
+.banner-ubicacion-acacias h2{
+  font-size: 1.8rem;
+  font-family: var(--font-titulos);
+  color: var(--gris-oscuro);
+  font-weight: bold;
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  letter-spacing: -0.02em;
+}
+
+.form-acacias {
+  background-color: var(--azul-oscuro-acacias);
+  border-radius: 2.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 52rem; /* Ancho total de la tarjeta del formulario */
+  box-sizing: border-box; /* Asegúrate de incluir padding en el cálculo del ancho */
+  margin: 1rem 5rem 1rem 1rem;
+}
+
+.form-acacias form {
+  width: 100%; /* Formulario ocupa todo el ancho del contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem; /* Espaciado entre los elementos */
+}
+
+.form-acacias form > div {
+  width: 100%; /* Cada div ocupa el ancho total del formulario */
+}
+
+.form-acacias label {
+  display: block; /* Para que ocupe todo el ancho disponible */
+  font-size: 1.2rem;
+  color: var(--gris-claro);
+  margin-bottom: 0.5rem;
+}
+
+.form-acacias input[type="text"],
+.form-acacias input[type="email"]{
+  width: 100%; /* Input ocupa todo el ancho de su contenedor padre */
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: var(--font-cuerpo);
+}
+.autorizo-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem; /* Espacio entre el checkbox y el texto */
+  margin-top: 0.5rem;
+}
+
+.autorizo-checkbox input[type="checkbox"] {
+  margin: 0; /* Elimina cualquier margen por defecto */
+  width: auto; /* Asegúrate de que no se extienda horizontalmente */
+  height: auto; /* Ajusta la altura al tamaño predeterminado */
+  font-weight: bold;
+}
+
+.autorizo-checkbox label {
+  font-size: 1rem;
+  color: var(--gris-claro);
+  display: flex;
+  align-items: center;
+  line-height: 1.5rem; /* Para un alineamiento vertical más limpio */
+  gap: 0.5rem; /* Espaciado entre los elementos internos */
+}
+
+
+.form-acacias div{
+  display: flex; 
+  flex-direction: column;
+  align-items:flex-start; 
+  justify-content: space-between; 
+
+}
+.btnNaranjaAcacias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  color: var(--gris-claro);
+  background: var(--naranja);
+  border-radius: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  
+  font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
+  border: none; /* Elimina bordes */
+  outline: none; /* Elimina contornos */
+  box-shadow: none; /* Elimina sombras */
+  transition: background-color 0.3s ease; /* Transición para hover */
+}
+.btnNaranjaAcacias a {
+  color: inherit; /* Hereda el color del contenedor */
+  text-decoration: none; /* Sin subrayado */
+  width: 100%; /* Ocupar todo el ancho del botón */
+  height: 100%; /* Ocupar toda la altura del botón */
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+}
+
+.btnNaranjaAcacias:hover {
+  background: var(--gris-medio); /* Color más claro al pasar el cursor */
+}
+.btnNaranjaAcacias2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  color: var(--gris-claro);
+  background: var(--naranja);
+  border-radius: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 20rem !important;
+  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
+  border: none; /* Elimina bordes */
+  outline: none; /* Elimina contornos */
+  box-shadow: none; /* Elimina sombras */
+  transition: background-color 0.3s ease; /* Transición para hover */
+}
+.btnNaranjaAcacias2 a {
+  color: inherit; /* Hereda el color del contenedor */
+  text-decoration: none; /* Sin subrayado */
+  width: 100%; /* Ocupar todo el ancho del botón */
+  height: 100%; /* Ocupar toda la altura del botón */
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+}
+
+.btnNaranjaAcacias2:hover {
+  background: var(--gris-medio); /* Color más claro al pasar el cursor */
+}
+
+.proyecto-acacias{
+  background-color: var(--naranja);
+  color: var(--gris-claro);
+  font-family: var(--font-titulos);
+  width: 100%;
+
+}
+.proyecto-acacias h1{
+
+  font-size: 4rem;
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  margin: 0;
+  -webkit-text-stroke: 2px var(--gris-claro); /* Añade un contorno negro */
+  
+
+}
+.descubre-acacias{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+
+}
+.descubre-acacias p{
+  font-family: var(--font-cuerpo);
+  color: var(--gris-oscuro);
+  width: 50%;
+  font-size: 1.7rem;
+  text-align: justify;
+  padding: 3rem;
+  
+
+}
+.galerias-fotos-acacias {
+  position: relative;
+  width: 60%;
+  max-width: 600px; /* Ajusta el tamaño según sea necesario */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  
+}
+
+.contenedor-foto {
+  width: 100%;
+  height: auto;
+}
+
+.contenedor-foto img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.btn-flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  color: #333;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-flecha.izquierda {
+  left: 10px; /* Posición de la flecha izquierda */
+}
+
+.btn-flecha.derecha {
+  right: 10px; /* Posición de la flecha derecha */
+}
+
+.espacios-acacias{
+  background-color: var(--azul-oscuro-acacias);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+  padding: 1rem;
+}
+.espacios-acacias h1{
+  font-size: 4.5rem;
+  color: var(--gris-claro);
+  font-family: var(--font-titulos);
+  margin:1rem;
+  padding: 0;
+  -webkit-text-stroke: 3px var(--gris-claro); /* Añade un contorno negro */
+  font-weight: bold;
+  line-height: 1;
+  width: 30%;
+  text-align: center;
+}
+.espacios-acacias p{
+  font-size: 2.3rem;
+  color: var(--gris-claro);
+  font-family: var(--font-cuerpo);
+  width: 30%;
+  text-align: justify;
+  padding: 0.5rem;
+}
+.lineaVerticalNaranja{
+  background-color: var(--naranja);
+  width: 0.4rem;
+  height: 90%;
+  margin: 1rem;
+
+}
+
+.info-acacias {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+ }
+.info-acacias-img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  margin:1rem;
+
+}
+.info-acacias-img img{
+  margin:0.5rem;
+  height: 3rem;
+  
+
+}
+.info-acacias-texto{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin:0.5rem;
+  
+  
+
+}
+.info-acacias-texto p{
+  color: var(--gris-claro);
+  font-family: var(--font-cuerpo);
+  font-size: 1.7rem;
+  padding: 0;
+  width: 100%;
+  margin: 0.6rem 0 0.6rem 0;
+  text-align: left;
+  height: 3rem;
+  line-height: 1;
+}
+
+.planta-acacias{
+  background-color: var(--naranja);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.planta-acacias h1{
+  font-family: var(--font-titulos);
+  color: var(--gris-claro);
+  font-size: 4rem;
+  -webkit-text-stroke: 2px var(--gris-claro); /* Añade un contorno negro */
+}
+.planta-acacias img{
+  width: 55%;
+  text-align: center;
+}
+.comodidades{
+  background-image: url('utils/acacias/Banner2.webp');
+  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+  padding: 2rem;
+
+}
+
+.comodidades h1{
+  font-family: var(--font-titulos);
+  color: var(--gris-oscuro);
+  font-size: 4rem;
+  -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
+  width: 50%;
+  line-height: 1;
+}
+.comodidades-lista{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  margin: 1rem;
+
+}
+.salon,.juegos,.sendero,.lago,.elemento{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+
+}
+.comodidades-lista img{
+  margin:0.5rem 0.5rem 0 0;
+
+}
+.comodidades-lista p{
+  width: 100%;
+  font-size: 1.7rem;
+  font-family: var(--font-cuerpo);
+  color: var(--gris-oscuro);
+  margin: 0;
+  padding: 0;
+
+
+}
+.ubicacion-acacias{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 5rem;
+}
+.ubicacion-acacias-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 40%;
+
+}
+.ubicacion-acacias-info h1{
+  font-family: var(--font-titulos);
+  font-size: 3rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
+  letter-spacing: 0.01em;
+  margin:0.5rem;
+  padding: 0;
+}
+.ubicacion-acacias-info h2{
+  font-family: var(--font-titulos);
+  font-size: 2.5rem;
+  color: var(--gris-oscuro);
+  letter-spacing: -0.02em;
+  margin:0;
+  padding: 0;
+}
+.ubicacion-acacias-info h3{
+  font-family: var(--font-titulos);
+  font-size: 2.5rem;
+  color: var(--gris-oscuro);
+  margin:0;
+  padding: 0;
+  font-weight: bold;
+  -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
+}
+.ubicacion-acacias-maps{
+  width: 50%;
+}
+.ubicacion-acacias-maps img{
+  width: 100%;
+
+}
+.acacias-eleccion{
+  background-color: var(--naranja);
+  width: 100%;
+  padding:2rem;
+}
+.acacias-eleccion h1{
+  font-size: 3.7rem;
+  color: var(--gris-claro);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+.acacias-info{
+  display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ background-color: var(--azul-oscuro-acacias);
+ width: 100%;
+ padding: 1rem;
+ gap:3rem;
+}
+.acacias-info p{
+  color: var(--gris-claro);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.acacias-info img{
+  text-align: center;
+}
+.acacias-info div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+}
+.contactenos-acacias{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 2rem 0 2rem 4rem;
+  height: auto;
+}
+.contactenos-acacias-info{
+  width: 100%;
+  padding: 2rem 0 2rem 3rem;
+}
+.contactenos-acacias-info h1{
+  font-family: var(--font-titulos);
+  color: var(--azul-oscuro-acacias);
+  margin: 0;
+  padding: 0;
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: -0.01em;
+  -webkit-text-stroke: 2px var(--azul-oscuro-acacias); /* Añade un contorno negro */
+  width: 30rem;
+}
+.contactenos-acacias-info p{
+  font-family: var(--font-titulos);
+  color: var(--gris-oscuro);
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  width: 100%;
+}
+.contactenos-acacias-info .btnGris{
+  width: 30%;
+  border-radius: 2rem;
+  margin: 1rem 0 2rem 0;
+}
+.btnNaranjaAcaciasContacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  color: var(--gris-claro);
+  background: var(--naranja);
+  border-radius: 2rem;
+  margin: 2rem 0 2rem 0;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 30%;
+  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
+  border: none; /* Elimina bordes */
+  outline: none; /* Elimina contornos */
+  box-shadow: none; /* Elimina sombras */
+  transition: background-color 0.3s ease; /* Transición para hover */
+}
+.btnNaranjaAcaciasContacto a {
+  color: inherit; /* Hereda el color del contenedor */
+  text-decoration: none; /* Sin subrayado */
+  width: 100%; /* Ocupar todo el ancho del botón */
+  height: 100%; /* Ocupar toda la altura del botón */
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+}
+
+.btnNaranjaAcaciasContacto:hover {
+  background: var(--gris-medio); /* Color más claro al pasar el cursor */
+}
+
  
 
 /*footbar*/
@@ -1911,7 +2532,8 @@ html, body {
   width: 50%;
   
 }
-.footbar-info a, .btnNaranjaNavbar a,.btnNaranjaNavbarMovil a, .btnNaranjaFootbar a, .btnNaranja a,button, .btnGrisSauces2 a,.btnNaranjaPiamonte2 a  {
+.footbar-info a, .btnNaranjaNavbar a,.btnNaranjaNavbarMovil a, .btnNaranjaFootbar a, .btnNaranja a,button, .btnGrisSauces2 a,
+.btnNaranjaPiamonte2 a, .btnNaranjaAcacias2 a  {
   text-decoration: none; /* Elimina el subrayado */
   color: inherit; /* Usa el color del texto padre o define un color específico */
 }
@@ -2839,13 +3461,13 @@ nav ul li a span.rotate{
 
 }
 
-.espacios-sacuces{
+.espacios-sauces{
   
   flex-direction: column;
   height: auto;
   padding: 0.5rem;
 }
-.espacios-sacuces h1{
+.espacios-sauces h1{
   font-size: 2.5rem;
   margin:0.5rem;
   padding: 0;
@@ -2853,7 +3475,7 @@ nav ul li a span.rotate{
   width: 100%;
   text-align: center;
 }
-.espacios-sacuces p{
+.espacios-sauces p{
   font-size: 2rem;
   width: 100%;
   padding: 0.5rem;
@@ -3130,13 +3752,13 @@ nav ul li a span.rotate{
 
 }
 
-.espacios-sacuces{
+.espacios-piamonte{
   
   flex-direction: column;
   height: auto;
   padding: 0.5rem;
 }
-.espacios-sacuces h1{
+.espacios-piamonte h1{
   font-size: 2.5rem;
   margin:0.5rem;
   padding: 0;
@@ -3144,7 +3766,7 @@ nav ul li a span.rotate{
   width: 100%;
   text-align: center;
 }
-.espacios-sacuces p{
+.espacios-piamonte p{
   font-size: 2rem;
   width: 100%;
   padding: 0.5rem;
@@ -3306,6 +3928,317 @@ nav ul li a span.rotate{
   width: 100%;
   margin:0.5rem;
 }
+
+/*Acacias*/
+
+.acacias{
+
+  padding: 0;
+  margin: 0;
+
+}
+
+.banner-acacias{
+
+  background-image: url('utils/acacias/Banner.webp');
+  background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
+  background-position: center top; /* Alinea la imagen hacia arriba */
+  background-repeat: no-repeat;
+  height: auto; /* Ajusta la altura según lo necesites */
+  width: 100%; /* Ajusta el ancho si es necesario */
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.banner-acacias-info{
+  display: flex; 
+  flex-direction: column;
+  align-items:center; 
+  justify-content: space-between; 
+  padding: 0.5rem;
+  width: 100%;
+}
+.logoAcacias{
+  height: 10rem;
+  margin: 1rem 0 0 0;
+}
+
+.banner-acacias-info h1{
+  font-size: 3rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
+  width: 100%;
+  padding: 1rem;
+}
+.banner-acacias-info h2{
+  font-size: 2.5rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  
+
+}
+.banner-acacias-info h3{
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+
+}
+
+
+.form-acacias {
+  border-radius: 2.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20rem; /* Ancho total de la tarjeta del formulario */
+  margin: 0 0 1rem 0;
+}
+
+.btnNaranjaAcacias a {
+  font-size: 1rem;
+}
+.btnNaranjaAcacias2{
+  width: 15rem !important;
+}
+.btnNaranjaAcaciasContacto {
+  width: 100%;
+}
+.proyecto-acacias h1{
+
+  font-size: 2rem;
+
+}
+.descubre-acacias{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+}
+.descubre-acacias p{
+ 
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.8rem;
+  
+
+}
+.galerias-fotos-acacias {
+  position: relative;
+  width: 80%;
+  margin: 0 0 1rem;
+  
+}
+
+
+.btn-flecha {
+
+  font-size: 1rem;
+  width: 2rem;
+  height: 2rem;
+
+}
+
+.espacios-acacias{
+  
+  flex-direction: column;
+  height: auto;
+  padding: 0.5rem;
+}
+.espacios-acacias h1{
+  font-size: 2.5rem;
+  margin:0.5rem;
+  padding: 0;
+  -webkit-text-stroke: 1px var(--gris-claro); /* Añade un contorno negro */
+  width: 100%;
+  text-align: center;
+}
+.espacios-acacias p{
+  font-size: 2rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+.lineaVerticalNaranja{
+  width: 90%;
+  height: 0.4rem;
+  margin: 1rem;
+
+}
+
+.info-acacias {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+ }
+.info-acacias-img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  margin:1rem;
+
+}
+.info-acacias-img img{
+  margin:1.5rem;
+  height: 3.5rem;
+  
+
+}
+.info-acacias-texto{
+  
+  flex-direction: column;
+
+}
+.info-acacias-texto p{
+  font-size: 1.7rem;
+  padding: 0;
+  width: 100%;
+  margin: 1rem 0 0 0;
+  text-align: left;
+  height: 5.5rem;
+}
+
+.planta-acacias{
+
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.planta-acacias h1{
+
+  font-size: 2rem;
+  
+}
+
+.comodidades{
+  background-image: url('utils/acacias/Banner2.webp');
+  background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
+  background-position: center top; /* Alinea la imagen hacia arriba */
+  background-repeat: no-repeat;/* Evita la repetición de la imagen */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 0.5rem;
+
+}
+.comodidades h1{
+
+  font-size: 2rem;
+  width: 100%;
+  letter-spacing: 0.05em;
+  
+}
+
+.comodidades-lista p{
+  width: 100%;
+  font-size: 1.5rem;
+  color: var(--gris-oscuro);
+
+
+}
+.ubicacion-acacias{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+.ubicacion-acacias-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+
+}
+.ubicacion-acacias-info h1{
+  
+  font-size: 2rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
+  letter-spacing: 0.1em;
+  margin:0.5rem;
+  padding: 0;
+  
+}
+.ubicacion-acacias-info h2{
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+  margin:0;
+  padding: 0;
+}
+.ubicacion-acacias-info h3{
+  font-size: 1.7rem;
+  letter-spacing: 0.05em;
+  margin:0;
+  padding: 0;
+  width: 100%;
+}
+.ubicacion-acacias-info img{
+  width: 3rem;
+}
+.ubicacion-acacias-maps{
+  width: 90%;
+  margin:0.5rem
+}
+.ubicacion-acacias-maps img{
+  width: 100%;
+
+}
+
+.acacias-eleccion h1,h2{
+  font-size: 2rem;
+}
+
+.acacias-info{
+ flex-direction: column;
+ width: 100%;
+ padding: 1rem;
+ gap:1rem;
+}
+
+
+.contactenos-acacias{
+
+  flex-direction: column;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  
+}
+.contactenos-acacias-info{
+  width: 100%;
+  padding: 0.5rem;
+
+}
+.contactenos-acacias-info h1{
+
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  width: 100%;
+}
+.contactenos-acacias-info p{
+
+  font-size: 1.5rem;
+  width: 100%;
+  margin:0.5rem;
+}
+
 
 /*footbar*/
 

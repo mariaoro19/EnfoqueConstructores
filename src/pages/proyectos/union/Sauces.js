@@ -66,13 +66,15 @@ const Sauce = () => {
       email: formData.email,
       celular: formData.celular,
       autorizacion: formData.autorizacion ? 'Sí' : 'No',
+      to_email: 'ejecutivocomercial@enfoqueconstructores.com', // Define el destinatario aquí,
+      proyecto:"Los Sauces"
     };
     console.log(templateParams)
 
     emailjs
       .send(
         'service_z9iajad', // Reemplaza con tu Service ID
-        'template_7jo9zmo', // Reemplaza con tu Template ID
+        'template_v3pg618', // Reemplaza con tu Template ID
         templateParams,
         'mYRqabaum9FpJ6eh0' // Reemplaza con tu Public Key
       )
@@ -190,7 +192,7 @@ const Sauce = () => {
         </div>
 
       </div>
-      <div className='espacios-sacuces'>
+      <div className='espacios-sauces'>
         <h1>Espacios<br></br> amplios y <br></br>  cómodos</h1>
         <div className='lineaVerticalVerde'></div>
         <p>Casas de 48 m2 en lotes de 68 m2 y con placa para construir segundo<br></br> piso.</p>

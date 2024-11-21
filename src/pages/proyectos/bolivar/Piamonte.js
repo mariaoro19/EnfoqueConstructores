@@ -65,7 +65,10 @@ const Sauce = () => {
       email: formData.email,
       celular: formData.celular,
       autorizacion: formData.autorizacion ? 'Sí' : 'No',
+      to_email: 'escrituracion6@enfoqueconstructores.com', // Define el destinatario aquí,
+      proyecto:"Piamonte"
     };
+
     console.log(templateParams)
 
     emailjs
@@ -188,7 +191,7 @@ const Sauce = () => {
         </div>
 
       </div>
-      <div className='espacios-sacuces'>
+      <div className='espacios-piamonte'>
         <h1>Espacios<br></br> amplios y <br></br>  cómodos</h1>
         <div className='lineaVerticalVerde'></div>
         <p>Casas de 43 m2 en lotes de 84 m2 y con placa para construir segundo piso</p>
