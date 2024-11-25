@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 //import { BrowserRouter,Route, Routes,useLocation } from 'react-router-dom';
 import { Routes, Route, useLocation, BrowserRouter as Router } from 'react-router-dom';
 import Inicio from './pages/inicio';
@@ -16,6 +16,30 @@ import Alameda from './pages/proyectos/sucre/Alameda';
 function App() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isUpdated, setIsUpdated] = useState(true);
+
+  useEffect(() => {
+    const checkVersion = async () => {
+      try {
+        const res = await fetch('/version.json');
+        const { version } = await res.json();
+        const localVersion = localStorage.getItem('appVersion');
+        
+        if (localVersion !== version) {
+          localStorage.setItem('appVersion', version);
+          setIsUpdated(false);
+        }
+      } catch (err) {
+        console.error("Error checking version:", err);
+      }
+    };
+
+    checkVersion();
+  }, []);
+
+  if (!isUpdated) {
+    window.location.reload(); // Forzar recarga
+  }
 
   // Función que se ejecuta cuando se hace clic en "Proyectos"
   const handleMenuToggle = () => {

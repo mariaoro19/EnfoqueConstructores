@@ -71,10 +71,12 @@ html, body {
   justify-content: center;
   align-items: center;
   /*flex-direction: row;*/
-  gap: 1rem; /* Espaciado entre elementos */
+  gap: 2rem; /* Espaciado entre elementos */
   position: relative; /* Necesario para submenús */
-  width: 50rem;
+  width: 40rem;
   padding: 0; 
+
+  
   
 
   
@@ -83,46 +85,52 @@ html, body {
   /* removed some rules that were causing bad positioning */
   position: absolute; /* instead of relative - stops pushing other menu items around */
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-family: var(--font-cuerpo);
   background-color: var(--gris-claro);
   color: var(--gris-oscuro);
-  width: auto;
   list-style: none;
   padding: 0;
   margin: 0;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2); 
   top:100%;
+  
+  
 }
 .navbar-pc .navbar-menu ul ul {
   /* removed some rules that were causing bad positioning */
   position: absolute; /* instead of relative - stops pushing other menu items around */
   display: none;
-  font-size: 1.5rem;
   font-family: var(--font-cuerpo);
   background-color: var(--gris-claro);
   width: auto;
   left: 100%;
-  top:50%;
+  top:0;
+  
+}
+.navbar-pc .navbar-menu ul ul li{
+  width: 8rem;
   
 }
 .navbar-pc .navbar-menu ul ul li a{
   color: var(--gris-oscuro);
+  width: 8rem;
+  margin:0;
+  padding: 0;
+  text-align: center;
 }
 
 /* Cada item del navbar */
 .navbar-menu li {
-  margin: 0 0.0625rem; /* Espaciado horizontal entre los elementos */
+  /*margin: 0 0.0625rem;*/ /* Espaciado horizontal entre los elementos */
   display: flex;  
   align-items: center; 
   text-align: left;
   padding: 0.5rem;
-  width: auto;
-  max-width: 15rem;
+  max-width: 10rem;
   position: relative;
-  
-  
-  
+
+   
 }
 
 
@@ -131,11 +139,14 @@ html, body {
 .navbar-pc .navbar-menu li a {
   color: var(--gris-oscuro);
   text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
   display: block;
   position: relative; 
-  height: 2.7rem;
+  height: 2.9rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  
+  
+
   
 
 }
@@ -151,13 +162,15 @@ html, body {
   background-color: var(--naranja); 
   border-radius: 0.3125rem;
   transition: width 0.3s ease; /* Animación suave */
+  max-width: 10rem;
+  
 }
-
+/*
 .navbar-pc li a:hover, 
   .navbar-pc li a.active {
-      font-weight: bold; /* Aplica bold cuando se hace hover o está activo */
+      font-weight: bold; 
     }
-
+*/
 /*aqui*/
 /*    
 .navbar-pc > ul > li > a::after {
@@ -190,14 +203,29 @@ html, body {
   display: block; /* Muestra la lista cuando se pasa el ratón por encima */
 }
 
+/*Menu 2*/
 .navbar-pc .navbar-menu ul li {
   padding: 0.5rem;
   cursor: pointer;
+  font-size: 1.2rem;
+  width: 7rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-pc .navbar-menu ul li a{
+  font-size: 1.2rem;
+  text-align: center;
+  align-items: flex-start;
+  justify-content: center;
+  font-weight: normal;
+  display: flex;
+  height: 2rem;
+  border: 1px solid gray;
+
 }
 
-
-
-/*aqui*/
 
 .navbar-pc .navbar-menu ul li:hover {
   background-color: var(--naranja);
@@ -3355,6 +3383,7 @@ nav ul li a{
   margin: 0;
   padding: 0;
   font-family: var(--font-titulos);
+  width: 7rem;
   
 }
 .menu-content .navbar-menu ul li a {
@@ -3364,6 +3393,7 @@ nav ul li a{
   margin: 0;
   padding: 0;
   font-family: var(--font-titulos);
+  
   
 }
 
