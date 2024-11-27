@@ -9,8 +9,26 @@ const Navbar = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [isProyectosOpen, setIsProyectosOpen] = useState(false);
   const [selectedCity, setSelectedCity] = useState(null);
-  const navigate = useNavigate();
- 
+
+
+  // Cerrar el menú al hacer clic fuera
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const navbar = document.querySelector('.navbar');
+      if (navbar && !navbar.contains(event.target)) {
+        setMenuActive(false);
+        setIsProyectosOpen(false);
+        setSelectedCity(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
 
   const selectCity = (city) => {
     setSelectedCity(city);
@@ -98,7 +116,7 @@ const Navbar = () => {
           )}
         </li>
 
-          <li><a href="/lanzamientos">PRÓXIMOS LANZAMIENTOS</a></li>
+          <li className='proxLanzamientos'><a href="/lanzamientos">PRÓXIMOS LANZAMIENTOS</a></li>
           
           <div className='btnNaranjaNavbarMovil'>
             <a href="https://wa.link/sjwok3" target="_blank" rel="noopener noreferrer">Contáctanos</a>
@@ -174,7 +192,7 @@ const Navbar = () => {
           )}
         </li>
 
-          <li><NavLink to="/lanzamientos" className={({ isActive }) => (isActive ? 'active' : '')}>PRÓXIMOS LANZAMIENTOS</NavLink></li>
+          <li className='proxLanzamientos'><NavLink to="/lanzamientos" className={({ isActive }) => (isActive ? 'active' : '')}>PRÓXIMOS LANZAMIENTOS</NavLink></li>
         </ul>
       </div>
 

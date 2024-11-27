@@ -10,6 +10,7 @@ import Sauce from './pages/proyectos/union/Sauces';
 import Piamonte from './pages/proyectos/bolivar/Piamonte'; 
 import Acacias from './pages/proyectos/bolivar/Acacias';
 import Alameda from './pages/proyectos/sucre/Alameda';
+import ScrollToTop from "./pages/ScrollToTop";
 
 
 
@@ -75,6 +76,7 @@ function App() {
          isAlamedaPage={isAlamedaPage}
          isAcaciasPage={isAcaciasPage}
          />
+         <ScrollToTop />
       </div>
   );
 }

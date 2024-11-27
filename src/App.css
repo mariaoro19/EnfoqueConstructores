@@ -135,7 +135,7 @@ html, body {
 
 
 
-/* Enlaces del navbar */
+/* Menu 1 (navbar ppal) */
 .navbar-pc .navbar-menu li a {
   color: var(--gris-oscuro);
   text-decoration: none;
@@ -145,12 +145,14 @@ html, body {
   font-size: 1.2rem;
   font-weight: bold;
   
+
+  
   
 
   
 
 }
-/*aqui*/
+
 
 .navbar-pc > ul > li > a:hover::after {
   content: '';
@@ -165,24 +167,10 @@ html, body {
   max-width: 10rem;
   
 }
-/*
-.navbar-pc li a:hover, 
-  .navbar-pc li a.active {
-      font-weight: bold; 
-    }
-*/
-/*aqui*/
-/*    
-.navbar-pc > ul > li > a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0; /* Ancho inicial 0 *//*
-  height: 0.125rem;
-  background-color: var(--naranja);
-  transition: width 0.3s ease;
-}*/
+
+.navbar-pc li.active > ul {
+  display: block; /* Muestra el submenú cuando está activo */
+}
 
 /* Al cargar la página, el enlace de "Home" tiene la línea por defecto */
 .navbar-pc li a.active::after {
@@ -192,18 +180,13 @@ html, body {
   width: 100%; /* Solo activa la línea si no es # */
 }
 
+/* Muestra la lista cuando se pasa el ratón por encima */
 
-
-
-
-.navbar-pc li:hover  ul {
-  display: block; /* Muestra la lista cuando se pasa el ratón por encima */
-}
-.navbar-pc li:hover ul ul {
-  display: block; /* Muestra la lista cuando se pasa el ratón por encima */
+.navbar-pc li:hover > ul {
+  display: block; 
 }
 
-/*Menu 2*/
+/*Menu 2 (Ciudades)*/
 .navbar-pc .navbar-menu ul li {
   padding: 0.5rem;
   cursor: pointer;
@@ -213,7 +196,10 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid gray;
 }
+
+/*Menu 3 (Proyectos)*/
 .navbar-pc .navbar-menu ul li a{
   font-size: 1.2rem;
   text-align: center;
@@ -222,7 +208,7 @@ html, body {
   font-weight: normal;
   display: flex;
   height: 2rem;
-  border: 1px solid gray;
+  
 
 }
 
@@ -231,7 +217,7 @@ html, body {
   background-color: var(--naranja);
 
 }
-/*aqui*/
+
 
 .navbar-pc .navbar-menu ul ul li:hover {
   background-color: var(--naranja);
@@ -3229,6 +3215,37 @@ html, body {
 .menu-icon,.menu-content ul {
   display: none; /* Inicialmente ocultamos el ícono de menú */
 }
+
+/*ScrollToTop*/
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--naranja);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  background-color: var(--naranja);
+}
+
+.scroll-to-top:active {
+  transform: scale(0.9);
+}
+
+
 @media screen and (max-width: 1060px) {
  /* Navbar contenedor */
 /*
@@ -3269,11 +3286,53 @@ html, body {
   margin: 0;
   
 }
+.menu-content > ul > li > a {
+  position: relative;  /* Asegura que el pseudo-elemento se posicione relativo al enlace */
+  z-index: 1 ; /* Mantiene el texto por encima del fondo */
+}
+
+.menu-content > ul > li > a:hover::after {
+  content: '';
+  position: absolute ;
+  left: 0;
+  top: 100%; /* Asegura que el fondo cubra todo el enlace */
+  width: 8rem !important;
+  height: 0.01rem; /* Hace que el fondo cubra todo el área del enlace */
+  background-color: var(--gris-claro);
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease; /* Animación suave para el fondo */
+  z-index: 0 ; /* Envía el fondo detrás del texto */
+}
+
+
+/* Al cargar la página, el enlace de "Home" tiene la línea por defecto */
+.menu-content li a.active::after {
+  width: 100%; /* Muestra la línea morada completamente debajo de "Home" */
+}
 
 /* Menú activo: cuando la clase 'active' está presente */
 .menu-content.active {
   right: 0; /* Muestra el menú al moverlo a la derecha de la pantalla */
+  
+
 }
+.menu-content li.active > ul {
+  display: block; /* Muestra el submenú cuando está activo */
+}
+
+
+
+/* Muestra la lista cuando se pasa el ratón por encima */
+
+.menu-content li:hover > ul {
+  display: block; 
+}
+.proxLanzamientos a{
+  line-height: 1;
+  margin: 1rem 0 0 0 !important;
+
+}
+
 .menu-icon {
   display: block;
   cursor: pointer;
@@ -3284,65 +3343,98 @@ html, body {
 }
 
 .union-item {
-  width: 5rem !important;
+  
   padding: 0 !important;
   margin: 0 !important;
 }
 
 
-/* Estilos de la lista del menú */
+/* Menu 1 (Navbar) */
+.menu-content {
+  padding: 4rem 0 0 1rem;
+  
+
+}
+/* Todos los menu */
 .menu-content ul {
   display: block;
   list-style: none;
-  margin: 4rem 0 0 0;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  line-height: 2;
-  padding: 1rem 1rem 1rem 2rem;
-  
-  
+  line-height: 2.5;
+  padding: 1rem;
+ 
+
+
 }
+.menu-content ul ul{
+  margin:0 0 2rem 0;
+}
+
+
+/* Menu 2 (Ciudades) */
 nav ul ul {
   display: none; /* Ocultamos por defecto */
   position: relative; /* Usamos posición absoluta para controlar su ubicación */
   background: var(--gris-claro);
-  margin: 0;
   list-style: none;
-  left: -70%; /* Movemos hacia la izquierda más allá del contenedor */
-  top: 100%; /* Movemos hacia abajo completamente respecto al elemento padre */
-  transform: translateY(-30px); /* Ajustamos más hacia abajo */
+  left: -50%; /* Movemos hacia la izquierda más allá del contenedor */
+  top: 0%; /* Movemos hacia abajo completamente respecto al elemento padre */
+  transform: translateY(35px); /* Ajustamos más hacia abajo */
   color: var(--gris-oscuro);
   z-index: 100; 
   padding: 0;
-  max-width: 9rem;
   border-radius: 0.5rem;
+  white-space: nowrap;
+  
 
   
 }
+
+/* Menu 3 (Proyectos) */
 nav ul ul ul {
   display: none; /* Ocultamos por defecto */
   position: relative; /* Usamos posición absoluta para controlar su ubicación */
   background: var(--gris-oscuro);
   margin: 0 ;
   list-style: none;
-  left: -70%; /* Movemos hacia la izquierda más allá del contenedor */
-  top: 100%; /* Movemos hacia abajo completamente respecto al elemento padre */
-  transform: translateY(-2px); /* Ajustamos más hacia abajo */
+  left: 10%; /* Movemos hacia la izquierda más allá del contenedor */
+  top: 0; /* Movemos hacia abajo completamente respecto al elemento padre */
+  transform: translateY(10px); /* Ajustamos más hacia abajo */
   color: var(--gris-claro) !important;
   z-index: 100; 
   padding: 0 ;
-  width: 7rem !important;
+  
+  
 
   
+  
+}
+/* Menu 3 (Proyectos) */
+.menu-content ul ul ul li a{
+  border: 1px solid var(--gris-claro);
+  margin: 0.1rem !important;
+  padding: 0 0.5rem 0 0.5rem !important;
+  border-radius: 0.5rem;
+  text-align: center;
+  
+  
+
 }
 
 nav ul li:hover > ul {
   display: block;
+  margin: 0 0 2rem 0;
 }
+
 
 nav ul ul li {
   padding: 0;
   margin:0;
   width: 100%;
+  white-space: nowrap; 
+  
 }
 
 nav ul ul li a {
@@ -3351,14 +3443,17 @@ nav ul ul li a {
   width: 100%;
   margin: 0;
   padding: 0;
+  max-width: 7rem;
+  white-space: nowrap; 
+  
   
   
 }
 nav ul li a{
   text-align: left;
-  margin: 0;
   padding: 0;
   width: 100%;
+  
   
 
 }
@@ -3370,9 +3465,7 @@ nav ul li a{
   width: auto;
   display: flex;
  align-items: flex-start;
- justify-content: flex-start;
-  
-  
+ justify-content: flex-start;  
   
 }
 
@@ -3382,60 +3475,31 @@ nav ul li a{
   color:var(--gris-oscuro);
   margin: 0;
   padding: 0;
-  font-family: var(--font-titulos);
   width: 7rem;
+  font-family: var(--font-titulos);
   
 }
+/*menu 3 proyectos*/
 .menu-content .navbar-menu ul li a {
   text-decoration: none;
   font-size: 1rem;
   color:var(--gris-claro);
-  margin: 0;
   padding: 0;
   font-family: var(--font-titulos);
+  
   
   
 }
 
 /* Estilo para el hover - línea debajo del enlace */
-.menu-content ul li a:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 80%;
-  height: 0.125rem; /* Grosor de la línea */
-  background-color: var(--gris-claro); /* Color morado */
-  border-radius: 0.3125rem;
-  font-weight: bold; 
-  transition: width 0.3s ease; /* Animación suave */
-  font-family: var(--font-titulos);
-  
-  
-}
 
-.menu-content ul li a:hover, 
-    .navbar ul li a.active {
-      font-weight: bold; /* Aplica bold cuando se hace hover o está activo */
-    }
 
-/* Al principio la línea no aparece */
-/*
-.menu-content ul li a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0; 
-  height: 0.125rem;
-  background-color: var(--gris-claro);
-  transition: width 0.3s ease; 
-  
-}*/
 
 /* Al cargar la página, el enlace de "Home" tiene la línea por defecto */
 .menu-content ul li a.active::after {
   width: 100%; /* Muestra la línea completamente debajo de "Home" */
+
+
 }
 
 .navbar-pc ul{
@@ -3479,225 +3543,6 @@ nav ul li a{
   width: 2rem;
   height: auto;
 }
-/*
-.navbar .navbar-menu{
-  color: white;
-  font-size: 25px;
-  font-weight: 600;
-  line-height: 65px;
-  text-align: center;
-  background: #1e1e1e;
-  letter-spacing: 1px;
-}
-
-
-.navbar-menu li {
-  margin: 0 0.0625rem; 
-  display: flex;  
-  align-items: center; 
-  text-align: left;
-  padding: 0.5rem;
-  width: auto;
-  max-width: 15rem;
-  position: relative;
-  
-}
-.menu-icon {
-  display: block;
-  cursor: pointer;
-  position: fixed; 
-  top: 1rem; 
-  right: 1rem; 
-  z-index: 3; 
-}*/
-
-
-/* Menú desplegado */
-/*
-.menu-content {
-  position: fixed;
-  top: 0;
-  right: -100%; 
-  width: 50%; 
-  height: 100vh;
-  background-color: var(--naranja);
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  transition: right 0.3s ease; 
-  z-index: 1; 
-}*/
-
-/* Menú activo: cuando la clase 'active' está presente */
-/*
-.menu-content.active {
-  right: 0; 
-}
-
-
-
-
-.menu-content ul {
-  display: block;
-  list-style: none;
-  margin: 3rem 0 2rem 0;
-  padding: 0;
-  width: 100%;
-}
-
-.menu-content ul li {
-  margin: 0;
-  padding: 0;
-}
-
-/* Submenú */
-/*
-nav ul ul {
-  display: none; 
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  background: var(--gris-claro);
-  transition: max-height 0.3s ease; 
-  max-height: 0; 
-  position: relative;
-}
-
-nav ul li:hover > ul {
-  display: block;
-  max-height: 500px; 
-  padding: 1rem 0;
-  
-}
-nav ul li:hover ul {
-  display:block;
-  position: absolute;
-  background-color: var(--gris-claro);
-  margin-top: 1rem;
-  margin-left: -1rem;
-}
-
-nav ul ul li {
-  padding: 0.5rem 1rem;
-}
-
-nav ul ul li a {
-  text-decoration: none;
-  color: #333;
-}
-
-.menu-content ul li a {
-  text-decoration: none;
-  font-size: 1rem;
-  color: var(--gris-oscuro);
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-titulos);
-}
-
-
-.menu-content ul li a:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0.125rem; 
-  background-color: var(--gris-claro); 
-  border-radius: 0.3125rem;
-  font-weight: bold;
-  transition: width 0.3s ease;
-}
-
-
-.menu-content ul li a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0; 
-  height: 0.125rem;
-  background-color: var(--gris-claro);
-  transition: width 0.3s ease;
-}
-
-
-.menu-content ul li a.active::after {
-  width: 100%; 
-}
-*/
-/*
-.navbar.show{
-  right: 0px;
-}
-
-nav ul{
-  background: #1b1b1b;
-  height: 100%;
-  width: 100%;
-  list-style: none;
-}
-nav ul li{
-  line-height: 60px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-nav ul li:last-child{
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-nav ul li a{
-  position: relative;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  padding-left: 40px;
-  font-weight: 500;
-  display: block;
-  width: 100%;
-  border-left: 3px solid transparent;
-}
-nav ul li.active a{
-  color: cyan;
-  background: #1e1e1e;
-  border-left-color: cyan;
-}
-nav ul li a:hover{
-  background: #1e1e1e;
-}
-nav ul ul{
-  position: static;
-  display: none;
-}
-nav ul .navbar-menu.show{
-  display: block;
-}
-
-nav ul ul li{
-  line-height: 42px;
-  border-top: none;
-}
-nav ul ul li a{
-  font-size: 17px;
-  color: #e6e6e6;
-  padding-left: 80px;
-}
-nav ul li.active ul li a{
-  color: #e6e6e6;
-  background: #1b1b1b;
-  border-left-color: transparent;
-}
-nav ul ul li a:hover{
-  color: cyan!important;
-  background: #1e1e1e!important;
-}
-nav ul li a span{
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  font-size: 22px;
-  transition: transform 0.4s;
-}
-nav ul li a span.rotate{
-  transform: translateY(-50%) rotate(-180deg);
-}*/
 
 
 /*INICIO*/
