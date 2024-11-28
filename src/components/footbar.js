@@ -26,7 +26,7 @@ const footbar = ({ isConocenosPage,isSaucesPage,isPiamontePage,isAlamedaPage,isA
         <a href="https://maps.app.goo.gl/mPaxgYZB3rY8r9Bg6" target="_blank" rel="noopener noreferrer" className='address'>
             <div className='ubicacion'>
                 <img className='ubicacion-icon' src={Ubicacion} alt="Dirección" />
-                <p>Transv. 54 #21A - 104 Cartagena
+                <p>Transv. 54 #21A - 104 Cartagena Ed. Bosque Ejecutivo (Oficina 7-10) 
                   Ed. Bosque Ejecutivo (Oficina 7-10)
                 </p>
                 

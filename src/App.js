@@ -12,39 +12,34 @@ import Acacias from './pages/proyectos/bolivar/Acacias';
 import Alameda from './pages/proyectos/sucre/Alameda';
 import ScrollToTop from "./pages/ScrollToTop";
 
-
+const CURRENT_VERSION = '1.1.1'; 
 
 function App() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isUpdated, setIsUpdated] = useState(true);
 
   useEffect(() => {
-    const checkVersion = async () => {
-      try {
-        const res = await fetch('/version.json');
-        const { version } = await res.json();
-        const localVersion = localStorage.getItem('appVersion');
-        
-        if (localVersion !== version) {
-          localStorage.setItem('appVersion', version);
-          setIsUpdated(false);
-        }
-      } catch (err) {
-        console.error("Error checking version:", err);
-      }
-    };
-
-    checkVersion();
+    checkForUpdates();
   }, []);
 
-  if (!isUpdated) {
-    window.location.reload(); // Forzar recarga
-  }
 
   // Función que se ejecuta cuando se hace clic en "Proyectos"
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+  const checkForUpdates = async () => {
+    try {
+      const response = await fetch('/version.json');
+      if (response.ok) {
+        const { version } = await response.json();
+        if (version !== CURRENT_VERSION) {
+          alert('Nueva versión disponible. La página se recargará.');
+          window.location.reload(true); // Forzar recarga
+        }
+      }
+    } catch (error) {
+      console.error('Error al verificar la versión:', error);
+    }
   };
 
   // Aplica 'conocenos-bg' a Footbar si la ruta es '/conocenos'

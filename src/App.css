@@ -3329,7 +3329,7 @@ html, body {
 }
 .proxLanzamientos a{
   line-height: 1;
-  margin: 1rem 0 0 0 !important;
+  margin: 1.5rem 0 0 0 !important;
 
 }
 
@@ -3347,6 +3347,14 @@ html, body {
   padding: 0 !important;
   margin: 0 !important;
 }
+/*
+.bolivar-item li{
+  margin:0 0 0 1rem !important;
+}
+.sucre-item li{
+  margin:0 0 0 2rem !important;
+
+}*/
 
 
 /* Menu 1 (Navbar) */
@@ -3363,13 +3371,14 @@ html, body {
   padding: 0;
   width: 100%;
   line-height: 2.5;
-  padding: 1rem;
+  padding: 0.5rem;
  
 
 
 }
+/*Proyectos*/
 .menu-content ul ul{
-  margin:0 0 2rem 0;
+  margin:0 0 1rem 0;
 }
 
 
@@ -3379,12 +3388,12 @@ nav ul ul {
   position: relative; /* Usamos posición absoluta para controlar su ubicación */
   background: var(--gris-claro);
   list-style: none;
-  left: -50%; /* Movemos hacia la izquierda más allá del contenedor */
+  left: -65%; /* Movemos hacia la izquierda más allá del contenedor */
   top: 0%; /* Movemos hacia abajo completamente respecto al elemento padre */
-  transform: translateY(35px); /* Ajustamos más hacia abajo */
+  transform: translateY(45px); /* Ajustamos más hacia abajo */
   color: var(--gris-oscuro);
   z-index: 100; 
-  padding: 0;
+  padding: 0 1rem 0 1rem;
   border-radius: 0.5rem;
   white-space: nowrap;
   
@@ -3395,21 +3404,26 @@ nav ul ul {
 /* Menu 3 (Proyectos) */
 nav ul ul ul {
   display: none; /* Ocultamos por defecto */
-  position: relative; /* Usamos posición absoluta para controlar su ubicación */
+  position: relative; 
   background: var(--gris-oscuro);
   margin: 0 ;
   list-style: none;
-  left: 10%; /* Movemos hacia la izquierda más allá del contenedor */
+  /*left: 0%; /* Movemos hacia la izquierda más allá del contenedor */
   top: 0; /* Movemos hacia abajo completamente respecto al elemento padre */
-  transform: translateY(10px); /* Ajustamos más hacia abajo */
+  transform: translateY(35px); /* Ajustamos más hacia abajo */
   color: var(--gris-claro) !important;
   z-index: 100; 
   padding: 0 ;
   
-  
-
-  
-  
+}
+.union-item ul{
+  left: -40%;
+}
+.bolivar-item ul{
+  left: -30%;
+}
+.sucre-item ul{
+  left: -25%;
 }
 /* Menu 3 (Proyectos) */
 .menu-content ul ul ul li a{

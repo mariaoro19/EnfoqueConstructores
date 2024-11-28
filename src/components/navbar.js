@@ -84,6 +84,7 @@ const Navbar = () => {
               </li>
               
               <li
+                className="bolivar-item"
                 onMouseEnter={() => selectCity('Bolivar')}
                 onMouseLeave={() => selectCity(null)}
               >
@@ -100,6 +101,7 @@ const Navbar = () => {
                 )}
               </li>
               <li
+                className="sucre-item"
                 onMouseEnter={() => selectCity('Sucre')}
                 onMouseLeave={() => selectCity(null)}
               >
