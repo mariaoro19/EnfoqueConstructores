@@ -27,7 +27,6 @@ const footbar = ({ isConocenosPage,isSaucesPage,isPiamontePage,isAlamedaPage,isA
             <div className='ubicacion'>
                 <img className='ubicacion-icon' src={Ubicacion} alt="Dirección" />
                 <p>Transv. 54 #21A - 104 Cartagena Ed. Bosque Ejecutivo (Oficina 7-10) 
-                  Ed. Bosque Ejecutivo (Oficina 7-10)
                 </p>
                 
             </div>

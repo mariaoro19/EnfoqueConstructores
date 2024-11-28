@@ -12,7 +12,7 @@ import Acacias from './pages/proyectos/bolivar/Acacias';
 import Alameda from './pages/proyectos/sucre/Alameda';
 import ScrollToTop from "./pages/ScrollToTop";
 
-const CURRENT_VERSION = '1.1.2'; 
+const CURRENT_VERSION = '1.1.3'; 
 
 function App() {
   const location = useLocation();
