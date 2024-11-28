@@ -3329,7 +3329,7 @@ html, body {
 }
 .proxLanzamientos a{
   line-height: 1;
-  margin: 1.5rem 0 0 0 !important;
+  margin: 1rem 0 0 0 !important;
 
 }
 
@@ -3390,7 +3390,7 @@ nav ul ul {
   list-style: none;
   left: -65%; /* Movemos hacia la izquierda más allá del contenedor */
   top: 0%; /* Movemos hacia abajo completamente respecto al elemento padre */
-  transform: translateY(45px); /* Ajustamos más hacia abajo */
+  transform: translateY(40px); /* Ajustamos más hacia abajo */
   color: var(--gris-oscuro);
   z-index: 100; 
   padding: 0 1rem 0 1rem;
@@ -3432,14 +3432,16 @@ nav ul ul ul {
   padding: 0 0.5rem 0 0.5rem !important;
   border-radius: 0.5rem;
   text-align: center;
-  
-  
 
+}
+/* Menu 2 (Ciudades)*/
+.menu-content ul ul{
+  margin: 0 0 2rem 0 !important;
 }
 
 nav ul li:hover > ul {
   display: block;
-  margin: 0 0 2rem 0;
+  margin: 0 0 3rem 0;
 }
 
 
@@ -3527,12 +3529,12 @@ nav ul li a{
 }
 
 .btnNaranjaNavbarMovil{
-  display: inline-block; 
+  display: flex; 
   width: auto;  
   height: auto ; 
   background: var(--gris-claro);
   border-radius: 2rem;
-  margin:2rem 0 1rem 0;
+  margin:2rem 1rem 1rem 0;
   text-align: left;
   cursor: pointer; 
   padding: 0 0.5rem 0 0.5rem;

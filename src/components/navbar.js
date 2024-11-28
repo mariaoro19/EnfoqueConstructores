@@ -118,11 +118,11 @@ const Navbar = () => {
           )}
         </li>
 
-          <li className='proxLanzamientos'><a href="/lanzamientos">PRÓXIMOS LANZAMIENTOS</a></li>
-          
-          <div className='btnNaranjaNavbarMovil'>
-            <a href="https://wa.link/sjwok3" target="_blank" rel="noopener noreferrer">Contáctanos</a>
-          </div>
+        <li className='proxLanzamientos'><a href="/lanzamientos">PRÓXIMOS LANZAMIENTOS</a></li>
+        
+        <div className='btnNaranjaNavbarMovil'>
+          <a href="https://wa.link/sjwok3" target="_blank" rel="noopener noreferrer">Contáctanos</a>
+        </div>
           
         </ul>
       </div>
