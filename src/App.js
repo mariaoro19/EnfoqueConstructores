@@ -30,6 +30,7 @@ function App() {
   const checkForUpdates = async () => {
     try {
       const response = await fetch('/version.json');
+      console.log(response)
       if (response.ok) {
         const { version } = await response.json();
         if (version !== CURRENT_VERSION) {
