@@ -456,7 +456,7 @@ html, body {
 
 }
 .ImagenSomos{
-  width: 30%;
+  width: 25%;
   height: auto;
 }
 .lineaVerticalGris{
@@ -506,7 +506,7 @@ html, body {
   margin: 0 0.35rem 0 0;
   padding: 0;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   line-height: 1;
   width: 60%;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
@@ -525,7 +525,7 @@ html, body {
 .ovalGreyValores{
   
   background-color: var(--gris-claro);  /* Color morado del óvalo */
-  border-radius: 3rem;  /* Hace que los bordes sean redondeados, formando un óvalo */
+  border-radius: 2rem;  /* Hace que los bordes sean redondeados, formando un óvalo */
   position: relative;  /* Para posicionar el círculo dentro */
   display: flex;
   justify-content: flex-start; /* Alinea el círculo a la derecha */
@@ -538,8 +538,8 @@ html, body {
   font-family: var(--font-titulos);
   font-weight: bold;
   margin: 0;
-  padding: 0.2rem 0.25rem 0.2rem 0.25rem;
-  font-size: 2rem;
+  padding: 0.2rem 0.35rem 0.2rem 0.35rem;
+  font-size: 1.7rem;
 }
 .valores-list-texto p{
   color: var(--gris-claro);
@@ -622,7 +622,7 @@ html, body {
 
 }
 .mision-vision-detalle h1{
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--gris-oscuro);
   padding: 0;
   margin: 2rem 0 0 0;
@@ -906,7 +906,7 @@ html, body {
 }
 .proyecto-sauces h1{
 
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-align: center;
   padding: 1rem 0 1rem 0;
   margin: 0;
@@ -988,7 +988,7 @@ html, body {
   padding: 1rem;
 }
 .espacios-sauces h1{
-  font-size: 4.5rem;
+  font-size: 4rem;
   color: var(--gris-claro);
   font-family: var(--font-titulos);
   margin:1rem;
@@ -1096,7 +1096,7 @@ html, body {
 .comodidades-sauces h1{
   font-family: var(--font-titulos);
   color: var(--gris-claro);
-  font-size: 4rem;
+  font-size: 3.5rem;
   -webkit-text-stroke: 2px var(--gris-claro); /* Añade un contorno negro */
   width: 50%;
   line-height: 1;
@@ -1177,7 +1177,7 @@ html, body {
   padding:2rem;
 }
 .sauces-eleccion h1,.sauces-eleccion h2{
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: var(--gris-oscuro);
   text-align: center;
   padding: 0;
@@ -1242,7 +1242,7 @@ html, body {
   color: var(--gris-oscuro);
   margin: 0;
   padding: 0;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   letter-spacing: -0.01em;
   -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
@@ -1519,7 +1519,7 @@ html, body {
 }
 .proyecto-piamonte h1{
 
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-align: center;
   padding: 1rem 0 1rem 0;
   margin: 0;
@@ -1601,7 +1601,7 @@ html, body {
   padding: 1rem;
 }
 .espacios-piamonte h1{
-  font-size: 4.5rem;
+  font-size: 4rem;
   color: var(--gris-claro);
   font-family: var(--font-titulos);
   margin:1rem;
@@ -1717,7 +1717,7 @@ html, body {
 .comodidades-piamonte h1{
   font-family: var(--font-titulos);
   color: var(--gris-oscuro);
-  font-size: 4rem;
+  font-size: 3.5rem;
   -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
   width: 50%;
   line-height: 1;
@@ -1798,7 +1798,7 @@ html, body {
   padding:2rem;
 }
 .piamonte-eleccion h1,h2{
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: var(--gris-claro);
   text-align: center;
   padding: 0;
@@ -1850,7 +1850,7 @@ html, body {
   color: var(--verde-oscuro-piamonte);
   margin: 0;
   padding: 0;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   letter-spacing: -0.01em;
   -webkit-text-stroke: 2px var(--verde-oscuro-piamonte); /* Añade un contorno negro */
@@ -2136,7 +2136,7 @@ html, body {
 }
 .proyecto-acacias h1{
 
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-align: center;
   padding: 1rem 0 1rem 0;
   margin: 0;
@@ -2219,7 +2219,7 @@ html, body {
   padding: 1rem;
 }
 .espacios-acacias h1{
-  font-size: 4.5rem;
+  font-size: 4rem;
   color: var(--gris-claro);
   font-family: var(--font-titulos);
   margin:1rem;
@@ -2329,7 +2329,7 @@ html, body {
 .comodidades-acacias h1{
   font-family: var(--font-titulos);
   color: var(--gris-oscuro);
-  font-size: 4rem;
+  font-size: 3.5rem;
   -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
   width: 50%;
   line-height: 1;
@@ -2419,7 +2419,7 @@ html, body {
   padding:2rem;
 }
 .acacias-eleccion h1{
-  font-size: 3.7rem;
+  font-size: 3.5rem;
   color: var(--gris-claro);
   text-align: center;
   padding: 0;
@@ -2471,7 +2471,7 @@ html, body {
   color: var(--azul-oscuro-acacias);
   margin: 0;
   padding: 0;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   letter-spacing: -0.01em;
   -webkit-text-stroke: 2px var(--azul-oscuro-acacias); /* Añade un contorno negro */
@@ -2757,7 +2757,7 @@ html, body {
 }
 .proyecto-alameda h1{
 
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-align: center;
   padding: 1rem 0 1rem 0;
   margin: 0;
@@ -2840,7 +2840,7 @@ html, body {
   padding: 1rem;
 }
 .espacios-alameda h1{
-  font-size: 4.5rem;
+  font-size: 4rem;
   color: var(--gris-claro);
   font-family: var(--font-titulos);
   margin:1rem;
@@ -2950,7 +2950,7 @@ html, body {
 .comodidades-alameda h1{
   font-family: var(--font-titulos);
   color: var(--azul-oscuro-alameda);
-  font-size: 4rem;
+  font-size: 3.5rem;
   -webkit-text-stroke: 2px var(--azul-oscuro-alameda); /* Añade un contorno negro */
   width: 50%;
   line-height: 1;
@@ -3032,7 +3032,7 @@ html, body {
   padding:2rem;
 }
 .alameda-eleccion h1{
-  font-size: 3.7rem;
+  font-size: 3.5rem;
   color: var(--gris-claro);
   text-align: center;
   padding: 0;
@@ -3084,7 +3084,7 @@ html, body {
   color: var(--azul-oscuro-alameda);
   margin: 0;
   padding: 0;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   letter-spacing: -0.01em;
   -webkit-text-stroke: 2px var(--azul-oscuro-alameda); /* Añade un contorno negro */
