@@ -71,10 +71,10 @@ const Sauce = () => {
 
     emailjs
       .send(
-        'service_z9iajad', // Reemplaza con tu Service ID
-        'template_v3pg618', // Reemplaza con tu Template ID
+        'service_25ja9cm', // Reemplaza con tu Service ID
+        'template_ulhn4x8', // Reemplaza con tu Template ID
         templateParams,
-        'mYRqabaum9FpJ6eh0' // Reemplaza con tu Public Key
+        'KZxSEnh7Eaym3oClF' // Reemplaza con tu Public Key
       )
       .then(
         (response) => {
