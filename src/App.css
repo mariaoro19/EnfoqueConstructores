@@ -282,7 +282,7 @@ html, body {
 }
 
 .BannerHome{
-  width: 60%; 
+  width: 100%; 
   margin: 2rem 4rem 0 4rem;
   border-radius: 0.5rem;
   padding: 0 4rem 0 4rem;
