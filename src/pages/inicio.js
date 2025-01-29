@@ -98,7 +98,10 @@ const inicio = () => {
             <h1 style={{color: '#fff'}}>desarrollados</h1>
           </div>
         </div>
-        <img className='LogosProyectos' src={LogosProyectos} alt="LogosProyectos" />
+        <div className='LogosProyectosDiv'>
+          <img className='LogosProyectos' src={LogosProyectos} alt="LogosProyectos" />
+        </div>
+        
       </div>
       <div className='clientes'>
         <div className='clientes-logo'>
