@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 import BannerHome from '../utils/inicio/Banner-Home.webp';
-import HomeCircle from '../utils/inicio/Image-circle.webp';
+import Constructor from '../utils/inicio/constructor.webp';
+import Vivienda from '../utils/inicio/vivienda.webp';
 import LogosProyectos from '../utils/inicio/Logos-proyectos.webp';
 import Grua from '../utils/inicio/Grua.webp';
+import emailjs from '@emailjs/browser';
 
-const inicio = () => {
+const Inicio = () => {
+  const [formData, setFormData] = useState({
+    nombre: '',
+    apellido: '',
+    email: '',
+    celular: '',
+    autorizacion: false,
+  });
   /*
   const schemaData = {
     "@context": "https://schema.org",
@@ -71,6 +80,55 @@ const inicio = () => {
       ]
     }
   };*/
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === 'checkbox' ? checked : value,
+    });
+  };
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+    console.log("handleOnSubmit")
+
+    const templateParams = {
+      nombre: formData.nombre,
+      apellido: formData.apellido,
+      email: formData.email,
+      celular: formData.celular,
+      autorizacion: formData.autorizacion ? 'Sí' : 'No',
+      to_email: 'mariao.1994@gmail.com', // Define el destinatario aquí,
+      tipo: formData.tipoUsuario === "Soy constructor" ? "Construcción" : "Vivienda"
+    };
+
+    console.log(templateParams)
+
+    emailjs
+      .send(
+        'service_25ja9cm', // Reemplaza con tu Service ID
+        'template_w4dndmd', // Reemplaza con tu Template ID
+        templateParams,
+        'KZxSEnh7Eaym3oClF' // Reemplaza con tu Public Key
+      )
+      .then(
+        (response) => {
+          alert('Formulario enviado correctamente. ¡Pronto te contactaremos!');
+          console.log('SUCCESS!', response.status, response.text);
+          setFormData({
+            nombre: '',
+            apellido: '',
+            email: '',
+            celular: '',
+            tipo:'',
+            autorizacion: false,
+          });
+        },
+        (error) => {
+          alert('Hubo un error al enviar el formulario');
+          console.error('FAILED...', error);
+        }
+      );
+  };
   
   return (
     <div className='inicio'>
@@ -82,12 +140,36 @@ const inicio = () => {
       <img className="BannerHome" src={BannerHome} alt="BannerHome" />
       <div className='aliados'>
         <div className='aliadosInfo'>
-          <h1>Somos el aliado que necesitas para hacer realidad tus proyectos de construcción.</h1>
-          <p>Brindamos outsourcing especializado en todo Colombia para constructoras,
-          gestionando tareas clave como procesos jurídicos, cartera y administración, para que
-          puedas enfocarte en construir.</p>
+          <h2>Nos encargamos que la construcción y la compra de vivienda sean procesos más simples, eficientes y seguros.</h2>
+          <div className='cuadro-gris-btn'>
+            <h3>¿Eres constructor o buscas vivienda?</h3>
+            <div className='btnGrisClaro'>
+              <a href="#contacto">Haz clic aquí</a>
+            </div>
+            <h3>Para ponernos en contacto</h3>
+          </div>   
         </div>
-        <img className='HomeCircle' src={HomeCircle} alt="HomeCircle" />
+        <div className='constructor-vivienda'>
+          <div className='constructor'>
+            <img className="constructor" id="elemento1" src={Constructor} alt="Constructor" />
+            <h3 id="elemento2">Si eres <strong>constructor</strong></h3>
+            <p id="elemento3">Nos encargamos de la gestión administrativa,
+              jurídica y financiera de tus proyectos, para
+                que te enfoques en lo más importante: construir.
+                Además, vendemos tus desarrollos al cliente final,
+                  asegurando que lleguen a las personas indicadas.</p>
+
+          </div>
+          <div className='vivienda'>
+            <img className="vivienda" id="elemento1" src={Vivienda} alt="Vivienda" />
+            <h3 id="elemento2">Si <strong>buscas vivienda</strong></h3>
+            <p id="elemento3">Para invertir o vivir, te conectamos con 
+              proyectos confiables y bien gestionados, 
+              brindándote acompañamiento en cada paso hasta 
+              la entrega de tu nuevo hogar.</p>
+          </div>
+
+        </div>
       </div>
       <div className='proyectos-list'>
         <div className='proyectos-list-info'>
@@ -96,6 +178,7 @@ const inicio = () => {
             <h1 style={{color: 'var(--naranja)'}}>Más de 16</h1>
             <h1 style={{color: '#fff'}}>proyectos</h1>
             <h1 style={{color: '#fff'}}>desarrollados</h1>
+            <p>Conoce algunos de ellos</p>
           </div>
         </div>
         <div className='LogosProyectosDiv'>
@@ -130,6 +213,86 @@ const inicio = () => {
         </dvi>
 
       </div>
+      <div className='constructor-vivienda-form'>
+        <div className='mensaje-constructor-vivienda'>
+          <h2>¿Eres constructor o buscas vivienda?</h2>
+          <h3>Diligencia nuestro formulario para ser contactado(a)
+            en el menor tiempo posible y brindarte toda la información.</h3>
+        </div>
+
+        
+        <div className='form-inicio'>
+            <form onSubmit={handleOnSubmit}>
+              <div>
+                <label>Nombre</label>
+                <input
+                  type="text"
+                  name="nombre"
+                  value={formData.nombre}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label>Apellido</label>
+                <input
+                  type="text"
+                  name="apellido"
+                  value={formData.apellido}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label>¿Eres constructor o buscas vivienda?</label>
+                <select
+                 className="custom-select"
+                  name="tipoUsuario"
+                  value={formData.tipoUsuario}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Selecciona una opción</option>
+                  <option value="constructor">Soy constructor</option>
+                  <option value="busco-vivienda">Busco vivienda</option>
+                </select>
+              </div>
+              <div>
+                <label>Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label>Celular</label>
+                <input
+                  type="text"
+                  name="celular"
+                  value={formData.celular}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className='autorizo-checkbox-inicio'>
+                <label className='autorizo'>
+                  <input
+                    type="checkbox"
+                    name="autorizacion"
+                    checked={formData.autorizacion}
+                    onChange={handleChange}
+                    required
+                  />
+                  Autorizo el tratamiento de mis datos personales y <br></br> políticas de privacidad
+                </label>
+              </div>
+              <button className='btnNaranjaAcacias' type="submit">Enviar información</button>
+            </form>
+          </div>
+          </div>
      
       
       
@@ -138,4 +301,4 @@ const inicio = () => {
   );
 };
 
-export default inicio;
+export default Inicio;

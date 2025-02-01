@@ -5,15 +5,20 @@
   --gris-oscuro: #525151;  /* Color secundario */
   --gris-claro: #d9d9d9;  /* Color de acento */
   --gris-medio:#7f7f7f;
+  --gris-oscuro-acacias:#545454;
   --verde-sauces:#95b733;
   --verde-oscuro-piamonte:#27703b;
   --verde-claro-piamonte:#95b733;
   --azul-oscuro-acacias:#072b5f;
   --azul-oscuro-alameda:#072b5f;
   --azul-claro-alameda:#3b82bd;
+  --naranja-claro-alameda:#e99f3c;
   --font-cuerpo: 'Futura', Arial, sans-serif;
   --font-titulos: 'Mulish', sans-serif;
-  
+  --letra-h1:3.5rem;
+  --letra-h2:2.5rem;
+  --letra-h3:1.5rem;
+  --letra-p:1.3rem;
 
 
 }
@@ -73,7 +78,7 @@ html, body {
   /*flex-direction: row;*/
   gap: 2rem; /* Espaciado entre elementos */
   position: relative; /* Necesario para submenús */
-  width: 40rem;
+  width: 55rem;
   padding: 0; 
 
   
@@ -276,18 +281,17 @@ html, body {
   justify-content: space-between; 
   text-align: center;
   background-color: white;
-  
-  
+  width: 100%;
 
 }
 
 .BannerHome{
   width: 100%; 
-  margin: 2rem 4rem 0 4rem;
-  border-radius: 0.5rem;
-  padding: 0 4rem 0 4rem;
+  margin: 2rem 0rem 0 0rem;
+  padding:0;
   
 }
+
 .aliados{
   display: flex; 
   flex-direction: row;
@@ -298,40 +302,156 @@ html, body {
   margin: 2rem 0 2rem 0;
   height: 40%;
   
-  
-  
+
 }
-.HomeCircle {
-  padding: 0;
-  margin: 0;
-  width: 25%;
+
+
+.aliados{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-between; 
 }
 .aliadosInfo{
-  margin:2rem 4rem 0 0;
+  display: flex; 
+  flex-direction: row;
+  align-items: flex-start; 
+  justify-content: space-between; 
+  margin:2rem 4cm 0 0;
   height: 100%;
   
   
-  
 }
-.aliadosInfo h1 {
-  font-size: 2.5rem;
+.aliadosInfo > h2 {
+  font-size: var(--letra-h2);
   color:var(--gris-oscuro);
   font-family: var(--font-titulos);
   font-weight: 900;
   text-align: left;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  width: 50%;
+  margin: 0 1rem 0 3rem;
 }
-.aliadosInfo p {
-  font-size: 1.5rem;
-  color:var(--gris-medio);
+.cuadro-gris-btn{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-between; 
+  background-color: var(--gris-oscuro);
+  width: 32%;
+  border-radius: 0.5rem;
+  margin: 0 1rem 0 0;
+}
+.cuadro-gris-btn h3{
+  color:var(--gris-claro);
+  font-size:var(--letra-h3);
   font-family: var(--font-cuerpo);
-  text-align: justify;
-  font-weight: 400;
-  letter-spacing: -0.05em; 
+  padding: 0.5rem;
+
+}
+.btnGrisClaro {
+  background-color: var(--gris-claro);
+  border-radius: 2rem;
+  width: 50%;
+  padding: 0.5rem 0 0.5rem 0;
+  margin: 0;
+  
+}
+.btnGrisClaro a{
+  color: var(--gris-oscuro) !important;
+  font-size: var(--letra-p);
+  font-weight: bold;
+  -webkit-text-stroke: 0.3px var(--gris-oscuro); /* Añade un contorno negro */
+  font-family: var(--font-cuerpo);
+}
+.constructor-vivienda{
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  gap:2rem;
+  margin: 0;
+  height: 27rem;
+  
   
   
 }
+.constructor, .vivienda{
+  
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  margin:0;
+  padding: 0;
+  width: 30rem;
+  height: 10rem;
+  position: relative;
+
+  
+}
+
+.constructor img{
+  width: 4rem;  
+  height: auto;
+}
+.vivienda img{
+  width: 3rem;
+  height: auto;
+}
+.constructor h3, .vivienda h3{
+  
+  font-size: var(--letra-h3);
+  background-color: var(--naranja);
+  font-family: var(--font-titulos);
+  color: var(--gris-oscuro);
+  padding: 0.8rem;
+  border-radius: 2.5rem;
+  width: 20rem;
+  
+
+  
+}
+.constructor h3 strong, .vivienda h3 strong {
+  font-weight: 900; /* O usa 800 si 900 es demasiado grueso */
+  -webkit-text-stroke: 1.5px var(--gris-oscuro); /* Añade un contorno negro */
+}
+.constructor p, .vivienda p{
+  
+  font-size: var(--letra-p) ;
+  background-color: var(--gris-claro);
+  font-family: var(--font-cuerpo) !important;
+  color: var(--gris-oscuro) !important;
+  padding: 3rem 1.5rem 1rem 1.5rem;
+  max-width: 30rem;
+  border-radius: 2rem;
+  font-weight: var(--letra-p);
+  min-height: 20rem;
+  width: 25rem;
+  text-align: justify;
+  
+}
+
+#elemento1 {
+  position: absolute;
+  top: -50%;
+  transform: translateY(-10%);
+  z-index: 3; /* Mayor valor = más arriba */
+}
+
+#elemento2 {
+  position: absolute;
+  top: -40%;
+  transform: translateY(-10%);
+  z-index: 2; /* Debajo de elemento1 */
+}
+
+#elemento3 {
+  position: absolute;
+  top: -25%;
+  z-index: 1; /* Debajo de elemento2 */
+}
+
+
 .proyectos-list{
   background-image: url('utils/inicio/BKproyectos.webp');
   background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
@@ -340,9 +460,10 @@ html, body {
   width: 100%;
   padding: 4rem;
   display: flex; 
-  flex-direction: column;
-  align-items: left; 
+  flex-direction: row;
+  align-items: center; 
   text-align: left;
+  justify-content: center;
 
 }
 .LogosProyectosDiv{
@@ -353,9 +474,11 @@ html, body {
   align-items: center; 
   text-align: center;
   
+  
 }
 .LogosProyectos{
   width: 80%;
+  border-radius: 2rem;
   
 }
 .proyectos-list-info{
@@ -370,22 +493,33 @@ html, body {
 .proyectos-list-info-text{
   margin: 0;
   padding: 0;
+  
 }
 .proyectos-list-info-text h1{
   padding: 0;
   margin: 0;
-  font-size: 3rem;
+  font-size: var(--letra-h1);
   line-height: 1;
+}
+.proyectos-list-info-text p{
+  padding: 0;
+  margin: 0;
+  font-size: var(--letra-p);
+  line-height: 1.1;
+  color: var(--gris-claro);
+  font-family: var(--font-cuerpo);
+
 }
 
 .lineaVertical{
   background-color: var(--naranja);
   width: 0.25rem;
-  margin: 0.5rem;
+  margin: 0 0.5rem 0 0;
+  
 }
 
 .clientes{
-  background-color: var(--naranja);
+  background-color:white;
   display: flex; 
   flex-direction: row;
   align-items: center; 
@@ -438,6 +572,129 @@ html, body {
 .grua{
   margin: 2rem;
 }
+.constructor-vivienda-form{
+  background-color: var(--naranja);
+  display: flex; 
+  flex-direction: row;
+  align-items:center; 
+  justify-content: space-around; 
+  width: 100%;
+  
+}
+.mensaje-constructor-vivienda{
+  width: 25%;
+  margin: 1rem 0 1rem 7rem;
+  text-align: left;
+}
+.mensaje-constructor-vivienda h2{
+  font-size: var(--letra-h2);
+  color: var(--gris-claro);
+  font-family: var(--font-titulos);
+  text-align: left;
+  -webkit-text-stroke: 2px var(--gris-claro); /* Añade un contorno negro */
+  
+}
+.mensaje-constructor-vivienda h3{
+  font-size: var(--letra-h3);
+  color: var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  font-weight: 100;
+
+}
+.form-inicio {
+  background-color: var(--gris-oscuro);
+  border-radius: 2.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%; /* Ancho total de la tarjeta del formulario */
+  box-sizing: border-box; /* Asegúrate de incluir padding en el cálculo del ancho */
+  margin: 1rem 10rem 1rem 1rem;
+  
+}
+
+.form-inicio form {
+  width: 100%; /* Formulario ocupa todo el ancho del contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem; /* Espaciado entre los elementos */
+  text-align: left;
+}
+
+.form-inicio form > div {
+  width: 100%; /* Cada div ocupa el ancho total del formulario */
+}
+
+.form-inicio label {
+  display: block; /* Para que ocupe todo el ancho disponible */
+  font-size: var(--letra-p);
+  color: var(--gris-claro);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-cuerpo);
+}
+
+.form-inicio input[type="text"],
+.form-inicio input[type="email"]{
+  width: 100%; /* Input ocupa todo el ancho de su contenedor padre */
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-sizing: border-box;
+  font-size: var(--letra-p);
+  font-family: var(--font-cuerpo);
+}
+.custom-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: var(--letra-p);
+  cursor: pointer;
+  font-family: var(--font-cuerpo);
+  color: var(--gris-oscuro);
+}
+
+.custom-select:focus {
+  border-color: var(--naranja);
+  outline: none;
+}
+
+.custom-select option {
+  padding: 10px;
+  font-family: var(--font-cuerpo);
+}
+.autorizo-checkbox-inicio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem; /* Espacio entre el checkbox y el texto */
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.autorizo-checkbox-inicio input[type="checkbox"] {
+  margin: 0; /* Elimina cualquier margen por defecto */
+  width: auto; /* Asegúrate de que no se extienda horizontalmente */
+  height: auto; /* Ajusta la altura al tamaño predeterminado */
+  font-weight: bold;
+}
+
+.autorizo-checkbox-inicio label {
+  font-size: 1rem;
+  color: var(--gris-claro);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  line-height: 1.5rem; /* Para un alineamiento vertical más limpio */
+  gap: 0.5rem; /* Espaciado entre los elementos internos */
+  font-family: var(--font-cuerpo);
+}
+
 /*CONOCENOS*/
 .conocenos{
   display: flex; 
@@ -799,6 +1056,7 @@ html, body {
   width: 100%;
   gap: 0.5rem; /* Espacio entre el checkbox y el texto */
   margin-top: 0.5rem;
+  
 }
 
 .autorizo-checkbox-sauces input[type="checkbox"] {
@@ -914,7 +1172,7 @@ html, body {
   
 
 }
-.descubre-sacuces{
+.descubre-sauces{
   display: flex; /* Asegura alineación dentro del botón */
   align-items: center; 
   justify-content: center;
@@ -922,13 +1180,21 @@ html, body {
   width: 100%;
 
 }
-.descubre-sacuces p{
+.descubre-sauces-texto{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+}
+.descubre-sauces p{
   font-family: var(--font-cuerpo);
   color: var(--gris-oscuro);
-  width: 50%;
+  width: 100%;
   font-size: 1.7rem;
   text-align: justify;
-  padding: 3rem;
+  padding: 3rem 3rem 0 3rem;
+  
   
 
 }
@@ -942,15 +1208,23 @@ html, body {
   
 }
 
+
 .contenedor-foto {
   width: 100%;
   height: auto;
+  max-width: 30rem;
+  max-height: 20rem; 
 }
 
 .contenedor-foto img {
+  /*
   width: 100%;
   height: auto;
-  display: block;
+  display: block;*/
+  max-width: 100%;  /* Evita que se salga del contenedor */
+  max-height: 20rem; /* Asegura que respete la altura máxima */
+  height: auto;     /* Mantiene la proporción */
+  width: auto; 
 }
 
 .btn-flecha {
@@ -1440,15 +1714,15 @@ html, body {
   justify-content: space-between; 
 
 }
-.btnNaranjaPiamonte {
+.btnVerdePiamonte {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   height: auto;
-  color: var(--gris-claro);
-  background: var(--naranja);
+  color: var(--gris-oscuro);
+  background: var(--verde-claro-piamonte);
   border-radius: 1rem;
   margin: 0.5rem;
   cursor: pointer;
@@ -1475,15 +1749,15 @@ html, body {
 .btnNaranjaPiamonte:hover {
   background: var(--gris-medio); /* Color más claro al pasar el cursor */
 }
-.btnNaranjaPiamonte2 {
+.btnVerdePiamonte2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   height: auto;
-  color: var(--gris-claro);
-  background: var(--naranja);
+  color: var(--gris-oscuro);
+  background: var(--verde-claro-piamonte);
   border-radius: 2rem;
   margin: 1rem;
   cursor: pointer;
@@ -1496,7 +1770,7 @@ html, body {
   box-shadow: none; /* Elimina sombras */
   transition: background-color 0.3s ease; /* Transición para hover */
 }
-.btnNaranjaPiamonte2 a {
+.btnVerdePiamonte2 a {
   color: inherit; /* Hereda el color del contenedor */
   text-decoration: none; /* Sin subrayado */
   width: 100%; /* Ocupar todo el ancho del botón */
@@ -1506,7 +1780,7 @@ html, body {
   justify-content: center;
 }
 
-.btnNaranjaPiamonte2:hover {
+.btnVerdePiamonte2:hover {
   background: var(--gris-medio); /* Color más claro al pasar el cursor */
 }
 
@@ -1535,13 +1809,20 @@ html, body {
   width: 100%;
 
 }
+.descubre-piamonte-texto{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+}
 .descubre-piamonte p{
   font-family: var(--font-cuerpo);
   color: var(--gris-oscuro);
-  width: 50%;
+  width: 100%;
   font-size: 1.7rem;
   text-align: justify;
-  padding: 3rem;
+  padding: 3rem 3rem 0 3rem;
   
 
 }
@@ -1865,15 +2146,15 @@ html, body {
   width: 100%;
 }
 
-.btnNaranjaPiamonteContacto {
+.btnVerdePiamonteContacto {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   height: auto;
-  color: var(--gris-claro);
-  background: var(--naranja);
+  color: var(--gris-oscuro);
+  background: var(--verde-claro-piamonte);
   border-radius: 2rem;
   margin: 2rem 0 2rem 0;
   cursor: pointer;
@@ -1886,7 +2167,7 @@ html, body {
   box-shadow: none; /* Elimina sombras */
   transition: background-color 0.3s ease; /* Transición para hover */
 }
-.btnNaranjaPiamonteContacto a {
+.btnVerdePiamonteContacto a {
   color: inherit; /* Hereda el color del contenedor */
   text-decoration: none; /* Sin subrayado */
   width: 100%; /* Ocupar todo el ancho del botón */
@@ -1896,7 +2177,7 @@ html, body {
   justify-content: center;
 }
 
-.btnNaranjaPiamonteContacto:hover {
+.btnVerdePiamonteContacto:hover {
   background: var(--gris-medio); /* Color más claro al pasar el cursor */
 }
 
@@ -1914,6 +2195,7 @@ html, body {
 }
 .logoAcacias{
   margin-top: 1rem;
+  width: 20rem;
 }
 
 .banner-acacias{
@@ -1981,7 +2263,7 @@ html, body {
 }
 
 .form-acacias {
-  background-color: var(--azul-oscuro-acacias);
+  background-color: var(--gris-oscuro-acacias);
   border-radius: 2.5rem;
   padding: 2rem;
   display: flex;
@@ -2152,13 +2434,20 @@ html, body {
   width: 100%;
 
 }
+.descubre-acacias-texto{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+}
 .descubre-acacias p{
   font-family: var(--font-cuerpo);
   color: var(--gris-oscuro);
-  width: 50%;
+  width: 100%;
   font-size: 1.7rem;
   text-align: justify;
-  padding: 3rem;
+  padding: 3rem 3rem 0 3rem;
   
 
 }
@@ -2210,7 +2499,7 @@ html, body {
 }
 
 .espacios-acacias{
-  background-color: var(--azul-oscuro-acacias);
+  background-color: var(--gris-oscuro-acacias);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2352,6 +2641,7 @@ html, body {
 }
 .comodidades-acacias-lista img{
   margin:0.5rem 0.5rem 0 0;
+  width: 3rem;
 
 }
 .comodidades-acacias-lista p{
@@ -2432,7 +2722,7 @@ html, body {
  flex-direction: row;
  align-items: center;
  justify-content: center;
- background-color: var(--azul-oscuro-acacias);
+ background-color: var(--gris-oscuro-acacias);
  width: 100%;
  padding: 1rem;
  gap:3rem;
@@ -2468,18 +2758,18 @@ html, body {
 }
 .contactenos-acacias-info h1{
   font-family: var(--font-titulos);
-  color: var(--azul-oscuro-acacias);
+  color: var(--gris-oscuro-acacias);
   margin: 0;
   padding: 0;
   font-size: 3rem;
   font-weight: bold;
   letter-spacing: -0.01em;
-  -webkit-text-stroke: 2px var(--azul-oscuro-acacias); /* Añade un contorno negro */
+  -webkit-text-stroke: 2px var(--gris-oscuro-acacias); /* Añade un contorno negro */
   width: 30rem;
 }
 .contactenos-acacias-info p{
   font-family: var(--font-titulos);
-  color: var(--azul-oscuro-acacias);
+  color: var(--gris-oscuro-acacias);
   margin: 0;
   padding: 0;
   font-size: 2rem;
@@ -2533,7 +2823,14 @@ html, body {
   margin: 2rem 0 1rem 0;
   padding: 0;
 }
-
+.logoAlameda{
+  height: 10rem;
+  margin: 1rem 0 0 0;
+}
+.comodidades-alameda-lista img{
+  height: 2rem;
+  margin: 1rem 0 0 0;
+}
 .banner-alameda{
   display: flex; 
   flex-direction: row;
@@ -2749,7 +3046,7 @@ html, body {
 }
 
 .proyecto-alameda{
-  background-color: var(--azul-claro-alameda);
+  background-color: var(--naranja);
   color: var(--gris-claro);
   font-family: var(--font-titulos);
   width: 100%;
@@ -2773,13 +3070,20 @@ html, body {
   width: 100%;
 
 }
+.descubre-alameda-texto{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+}
 .descubre-alameda p{
   font-family: var(--font-cuerpo);
   color: var(--azul-oscuro-alameda);
-  width: 50%;
+  width: 100%;
   font-size: 1.7rem;
   text-align: justify;
-  padding: 3rem;
+  padding: 3rem 3rem 0 3rem;
   
 
 }
@@ -2859,8 +3163,8 @@ html, body {
   text-align: justify;
   padding: 0.5rem;
 }
-.lineaVerticalAzulClaro{
-  background-color: var(--azul-claro-alameda);
+.lineaVerticalNaranjaClaro{
+  background-color: var(--naranja);
   width: 0.4rem;
   height: 90%;
   margin: 1rem;
@@ -2913,7 +3217,7 @@ html, body {
 }
 
 .planta-alameda{
-  background-color: var(--azul-claro-alameda);
+  background-color: var(--naranja);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2924,9 +3228,9 @@ html, body {
 
 .planta-alameda h1{
   font-family: var(--font-titulos);
-  color: var(--gris-claro);
+  color: var(--azul-oscuro-alameda);
   font-size: 4rem;
-  -webkit-text-stroke: 2px var(--gris-claro); /* Añade un contorno negro */
+  -webkit-text-stroke: 2px var(--azul-oscuro-alameda); /* Añade un contorno negro */
 }
 .planta-alameda img{
   width: 55%;
@@ -3045,7 +3349,7 @@ html, body {
  flex-direction: row;
  align-items: center;
  justify-content: center;
- background-color: var(--azul-claro-alameda);
+ background-color: var(--naranja);
  width: 100%;
  padding: 1rem;
  gap:3rem;
@@ -3172,8 +3476,9 @@ html, body {
   width: 50%;
   
 }
-.footbar-info a, .btnNaranjaNavbar a,.btnNaranjaNavbarMovil a, .btnNaranjaFootbar a, .btnNaranja a,button, .btnGrisSauces2 a,
-.btnNaranjaPiamonte2 a, .btnNaranjaAcacias2 a,.btnNaranjaAlameda2 a  {
+.footbar-info a, 
+.btnNaranjaNavbar a,.btnNaranjaNavbarMovil a, .btnNaranjaFootbar a, .btnNaranja a,button, .btnGrisSauces2 a,
+.btnNaranjaPiamonte2 a, .btnNaranjaAcacias2 a,.btnNaranjaAlameda2 a, .btnGrisClaro a  {
   text-decoration: none; /* Elimina el subrayado */
   color: inherit; /* Usa el color del texto padre o define un color específico */
 }
@@ -3949,7 +4254,7 @@ nav ul li a{
   font-size: 2rem;
 
 }
-.descubre-sacuces{
+.descubre-sauces{
   display: flex; /* Asegura alineación dentro del botón */
   align-items: center; 
   justify-content: center;
@@ -3957,7 +4262,7 @@ nav ul li a{
   width: 100%;
 
 }
-.descubre-sacuces p{
+.descubre-sauces p{
  
   width: 100%;
   font-size: 1rem;
@@ -4242,7 +4547,7 @@ nav ul li a{
 .btnNaranjaPiamonte2{
   width: 15rem !important;
 }
-.btnNaranjaPiamonteContacto {
+.btnVerdePiamonteContacto {
   width: 100%;
 }
 .proyecto-piamonte h1{

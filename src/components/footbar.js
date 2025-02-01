@@ -7,8 +7,9 @@ import '../App.css';
 const footbar = ({ isConocenosPage,isSaucesPage,isPiamontePage,isAlamedaPage,isAcaciasPage }) => {
   return (
     
+
     
-    <footer className={`footbar ${isConocenosPage || isSaucesPage || isPiamontePage || isAlamedaPage || isAcaciasPage  ? 'footer-hidden' : ''}`}>
+    <footer className="footbar" >
 
       <div className="footbar-info">
         <a href="https://www.instagram.com/enfoque.constructores/" target="_blank" rel="noopener noreferrer" className='instagram'>

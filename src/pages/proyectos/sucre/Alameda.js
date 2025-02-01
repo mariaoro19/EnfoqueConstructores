@@ -196,9 +196,9 @@ const Sauce = () => {
       </div>
       <div className='espacios-alameda'>
         <h1>Espacios<br></br> amplios y <br></br>  cómodos</h1>
-        <div className='lineaVerticalAzulClaro'></div>
+        <div className='lineaVerticalNaranjaClaro'></div>
         <p>Casas de 43 m2 en lotes de 72 m2 y con placa para construir segundo piso. </p>
-        <div className='lineaVerticalAzulClaro'></div>
+        <div className='lineaVerticalNaranjaClaro'></div>
         <div className='info-alameda'>
           <div className='info-alameda-img'>
           <img src={metros} alt="metros" />
@@ -221,11 +221,11 @@ const Sauce = () => {
       </div>
       <div className='comodidades-alameda'>
         <h1>Excelentes comodidades de la urbanización para compartir en familia</h1>
-        <div className='lineaVerticalAzulClaro'></div>
+        <div className='lineaVerticalNaranjaClaro'></div>
         <div className='comodidades-alameda-lista'>
           <div className='salon'>
             <img src={logoSolo} alt="logoSolo" />
-            <p>Salón social.</p>
+            <p>Zonas de entretenimiento</p>
           </div>
           <div className='juegos'>
             <img src={logoSolo} alt="logoSolo" />

@@ -160,8 +160,8 @@ const Sauce = () => {
                 Autorizo el tratamiento de mis datos personales y <br></br> políticas de privacidad
               </label>
             </div>
-            <button className='btnNaranjaPiamonte' type="submit">Solicitar Información</button>
-            <div className='btnNaranjaPiamonte2'>
+            <button className='btnVerdePiamonte' type="submit">Solicitar Información</button>
+            <div className='btnVerdePiamonte2'>
               <a href="https://wa.link/ox86uj" target="_blank" rel="noopener noreferrer">Contactar un asesor</a>
             </div>
           </form>
@@ -220,7 +220,7 @@ const Sauce = () => {
         <div className='comodidades-piamonte-lista'>
           <div className='salon'>
             <img src={logoSolo} alt="logoSolo" />
-            <p>Salón social.</p>
+            <p>Zonas de entretenimiento</p>
           </div>
           <div className='juegos'>
             <img src={logoSolo} alt="logoSolo" />
@@ -271,7 +271,7 @@ const Sauce = () => {
       <div className='contactenos-piamonte'>
         <div className='contactenos-piamonte-info'>
           <h1>Contáctanos y recibe asesoría personalizada </h1>
-          <div className='btnNaranjaPiamonteContacto'>
+          <div className='btnVerdePiamonteContacto'>
             <a href="https://wa.link/ox86uj" target="_blank" rel="noopener noreferrer">¡Hablemos aquí!</a>  
           </div>
           <p>O diligencia nuestro formulario <br></br>para ser contactado(a) por uno de
@@ -331,7 +331,7 @@ const Sauce = () => {
                 Autorizo el tratamiento de mis datos personales y <br></br> políticas de privacidad
               </label>
             </div>
-            <button className='btnNaranjaPiamonte' type="submit">Solicitar Información</button>
+            <button className='btnVerdePiamonte' type="submit">Solicitar Información</button>
           </form>
         </div>
 

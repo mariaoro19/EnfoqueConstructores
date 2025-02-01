@@ -221,11 +221,11 @@ const Sauce = () => {
       </div>
       <div className='comodidades-acacias'>
         <h1>Excelentes comodidades de la urbanización para compartir en familia</h1>
-        <div className='lineaVerticalVerdeOscuro'></div>
+        <div className='lineaVerticalNaranja'></div>
         <div className='comodidades-acacias-lista'>
           <div className='salon'>
             <img src={logoSolo} alt="logoSolo" />
-            <p>Salón social.</p>
+            <p>Zonas de entretenimiento</p>
           </div>
           <div className='juegos'>
             <img src={logoSolo} alt="logoSolo" />
