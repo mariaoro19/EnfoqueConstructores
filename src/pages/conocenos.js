@@ -1,11 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 import BannerConocenos from '../utils/conocenos/Imagen-banner.webp';
 import ImagenSomos from '../utils/conocenos/Imagen_Somos.webp';
 import ImagenCohete from '../utils/conocenos/Imagen_Cohete.webp';
 import ImagenBombillo from '../utils/conocenos/Imagen_Bombillo.webp';
+import emailjs from '@emailjs/browser';
 
+const Conocenos = () => {
+  const [formData, setFormData] = useState({
+    nombre: '',
+    apellido: '',
+    email: '',
+    celular: '',
+    autorizacion: false,
+  });
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === 'checkbox' ? checked : value,
+    });
+  };
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+    console.log("handleOnSubmit")
 
-const conocenos = () => {
+    const templateParams = {
+      nombre: formData.nombre,
+      apellido: formData.apellido,
+      email: formData.email,
+      celular: formData.celular,
+      autorizacion: formData.autorizacion ? 'Sí' : 'No',
+      to_email: 'mariao.1994@gmail.com', // Define el destinatario aquí,
+      tipo: formData.tipoUsuario === "Soy constructor" ? "Construcción" : "Vivienda"
+    };
+
+    console.log(templateParams)
+
+    emailjs
+      .send(
+        'service_25ja9cm', // Reemplaza con tu Service ID
+        'template_w4dndmd', // Reemplaza con tu Template ID
+        templateParams,
+        'KZxSEnh7Eaym3oClF' // Reemplaza con tu Public Key
+      )
+      .then(
+        (response) => {
+          alert('Formulario enviado correctamente. ¡Pronto te contactaremos!');
+          console.log('SUCCESS!', response.status, response.text);
+          setFormData({
+            nombre: '',
+            apellido: '',
+            email: '',
+            celular: '',
+            tipo:'',
+            autorizacion: false,
+          });
+        },
+        (error) => {
+          alert('Hubo un error al enviar el formulario');
+          console.error('FAILED...', error);
+        }
+      );
+  };
   return (
     <div className='conocenos'>
       <img className="BannerHome" src={BannerConocenos} alt="BannerHome" />
@@ -15,7 +71,7 @@ const conocenos = () => {
         <p>Nuestra historia comenzó con la visión de crear un aliado confiable y eficiente para
           constructoras de todo el país, comprometidos a brindar servicios que agilicen la
           gestión jurídica, administrativa y financiera de sus proyectos.
-          Desde nuestros inicios, hemos trabajado mano a mano con el sector de la
+          <br></br><br></br>Desde nuestros inicios, hemos trabajado mano a mano con el sector de la
           construcción, optimizando cada uno de los procesos clave que lo sustentan.</p>
       </div>
       <div className='valores'>
@@ -83,13 +139,88 @@ const conocenos = () => {
             </div>
           </div>
         </div>
-        <div className='mision-vision-contactanos'>
-          <h1>Confía en nosotros y enfócate en construir</h1>
-          <div className='btnNaranja'>
-            <a href="https://wa.me/3206192322" target="_blank" rel="noopener noreferrer">¡Contáctanos!</a>
-          </div>
-        </div>
+
       </div>
+      <div className='constructor-vivienda-form-conocenos'>
+        <div className='mensaje-constructor-vivienda-conocenos'>
+          <h2>¿Eres constructor o buscas vivienda?</h2>
+          <h3>Diligencia nuestro formulario para ser contactado(a)
+            en el menor tiempo posible y brindarte toda la información.</h3>
+        </div>
+
+        
+        <div className='form-conocenos'>
+            <form onSubmit={handleOnSubmit}>
+              <div>
+                <label>Nombre</label>
+                <input
+                  type="text"
+                  name="nombre"
+                  value={formData.nombre}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label>Apellido</label>
+                <input
+                  type="text"
+                  name="apellido"
+                  value={formData.apellido}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label>¿Eres constructor o buscas vivienda?</label>
+                <select
+                 className="custom-select"
+                  name="tipoUsuario"
+                  value={formData.tipoUsuario}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Selecciona una opción</option>
+                  <option value="constructor">Soy constructor</option>
+                  <option value="busco-vivienda">Busco vivienda</option>
+                </select>
+              </div>
+              <div>
+                <label>Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label>Celular</label>
+                <input
+                  type="text"
+                  name="celular"
+                  value={formData.celular}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className='autorizo-checkbox-conocenos'>
+                <label className='autorizo'>
+                  <input
+                    type="checkbox"
+                    name="autorizacion"
+                    checked={formData.autorizacion}
+                    onChange={handleChange}
+                    required
+                  />
+                  Autorizo el tratamiento de mis datos personales y <br></br> políticas de privacidad
+                </label>
+              </div>
+              <button className='btnNaranjaAcacias' type="submit">Enviar información</button>
+            </form>
+          </div>
+        </div>  
 
       
       
@@ -97,4 +228,4 @@ const conocenos = () => {
   );
 };
 
-export default conocenos;
+export default Conocenos;

@@ -292,10 +292,7 @@ const Inicio = () => {
               <button className='btnNaranjaAcacias' type="submit">Enviar información</button>
             </form>
           </div>
-          </div>
-     
-      
-      
+        </div>  
     
     </div>
   );

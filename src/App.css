@@ -571,6 +571,7 @@ html, body {
 }
 .grua{
   margin: 2rem;
+  width: 18rem;
 }
 .constructor-vivienda-form{
   background-color: var(--naranja);
@@ -797,6 +798,7 @@ html, body {
   margin: 0;
   padding: 0.2rem 0.35rem 0.2rem 0.35rem;
   font-size: 1.7rem;
+  -webkit-text-stroke: 1.5px var(--gris-oscuro); 
 }
 .valores-list-texto p{
   color: var(--gris-claro);
@@ -804,6 +806,7 @@ html, body {
   font-size: 1.5rem;
   padding: 0;
   margin: 0;
+  font-weight: 100;
 }
 .valores-list-texto{
   display: flex; 
@@ -826,7 +829,8 @@ html, body {
   align-items:center; 
   justify-content: space-evenly;  
   padding: 1rem 4rem 1rem 4rem;
-  width: 90%;
+  width: 100%;
+  background-color: var(--gris-claro);
 
 }
 .mision-vision-detalle{
@@ -838,7 +842,7 @@ html, body {
 
 }
 .logo-mision, .logo-vision{
-  background-color: var(--naranja);
+  
   border-radius: 3rem;  /* Hace que los bordes sean redondeados, formando un óvalo */
   position: relative;  /* Para posicionar el círculo dentro */
   display: flex;
@@ -925,6 +929,129 @@ html, body {
   font-weight: bold;
   
 }
+.constructor-vivienda-form-conocenos{
+  background-color: white;
+  display: flex; 
+  flex-direction: row;
+  align-items:center; 
+  justify-content: space-around; 
+  width: 100%;
+  
+}
+.mensaje-constructor-vivienda-conocenos{
+  width: 25%;
+  margin: 1rem 0 1rem 7rem;
+  text-align: left;
+}
+.mensaje-constructor-vivienda-conocenos h2{
+  font-size: var(--letra-h2);
+  color: var(--naranja);
+  font-family: var(--font-titulos);
+  text-align: left;
+  -webkit-text-stroke: 2px var(--naranja); /* Añade un contorno negro */
+  
+}
+.mensaje-constructor-vivienda-conocenos h3{
+  font-size: var(--letra-h3);
+  color: var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  font-weight: 100;
+
+}
+.form-conocenos {
+  background-color: var(--gris-oscuro);
+  border-radius: 2.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 35%; /* Ancho total de la tarjeta del formulario */
+  box-sizing: border-box; /* Asegúrate de incluir padding en el cálculo del ancho */
+  margin: 1rem 10rem 1rem 1rem;
+  
+}
+
+.form-conocenos form {
+  width: 100%; /* Formulario ocupa todo el ancho del contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem; /* Espaciado entre los elementos */
+  text-align: left;
+}
+
+.form-conocenos form > div {
+  width: 100%; /* Cada div ocupa el ancho total del formulario */
+}
+
+.form-conocenos label {
+  display: block; /* Para que ocupe todo el ancho disponible */
+  font-size: var(--letra-p);
+  color: var(--gris-claro);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-cuerpo);
+}
+
+.form-conocenos input[type="text"],
+.form-conocenos input[type="email"]{
+  width: 100%; /* Input ocupa todo el ancho de su contenedor padre */
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-sizing: border-box;
+  font-size: var(--letra-p);
+  font-family: var(--font-cuerpo);
+}
+.custom-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: var(--letra-p);
+  cursor: pointer;
+  font-family: var(--font-cuerpo);
+  color: var(--gris-oscuro);
+}
+
+.custom-select:focus {
+  border-color: var(--naranja);
+  outline: none;
+}
+
+.custom-select option {
+  padding: 10px;
+  font-family: var(--font-cuerpo);
+}
+.autorizo-checkbox-conocenos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem; /* Espacio entre el checkbox y el texto */
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.autorizo-checkbox-conocenos input[type="checkbox"] {
+  margin: 0; /* Elimina cualquier margen por defecto */
+  width: auto; /* Asegúrate de que no se extienda horizontalmente */
+  height: auto; /* Ajusta la altura al tamaño predeterminado */
+  font-weight: bold;
+}
+
+.autorizo-checkbox-conocenos label {
+  font-size: 1rem;
+  color: var(--gris-claro);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  line-height: 1.5rem; /* Para un alineamiento vertical más limpio */
+  gap: 0.5rem; /* Espaciado entre los elementos internos */
+  font-family: var(--font-cuerpo);
+}
+
 
 /*Sauces*/
 .sauces{
@@ -1175,22 +1302,18 @@ html, body {
 .descubre-sauces{
   display: flex; /* Asegura alineación dentro del botón */
   align-items: center; 
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   width: 100%;
+  gap:0;
 
 }
-.descubre-sauces-texto{
-  display: flex; /* Asegura alineación dentro del botón */
-  align-items: center; 
-  justify-content: space-between;
-  flex-direction: column;
-  width: 60%;
-}
+
+
 .descubre-sauces p{
   font-family: var(--font-cuerpo);
   color: var(--gris-oscuro);
-  width: 100%;
+  width: 50rem;
   font-size: 1.7rem;
   text-align: justify;
   padding: 3rem 3rem 0 3rem;
@@ -1200,11 +1323,12 @@ html, body {
 }
 .galerias-fotos-sauces {
   position: relative;
-  width: 60%;
+  width: 30rem;
   max-width: 600px; /* Ajusta el tamaño según sea necesario */
   display: flex;
   justify-content: center;
   align-items: center;
+  
   
 }
 
