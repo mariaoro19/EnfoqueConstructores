@@ -2,6 +2,8 @@
   "name": "enfoque-constructores",
   "version": "0.1.0",
   "private": true,
+  "optionalDependencies": {
+  "fsevents": "^2.3.3"},
   "dependencies": {
     "@babel/eslint-parser": "^7.26.5",
     "@emailjs/browser": "^4.4.1",
@@ -11,7 +13,6 @@
     "@testing-library/user-event": "^13.5.0",
     "core-js": "^3.40.0",
     "emailjs-com": "^3.2.0",
-    "fsevents": "^2.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
