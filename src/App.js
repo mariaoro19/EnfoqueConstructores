@@ -14,7 +14,6 @@ import ScrollToTop from "./pages/ScrollToTop";
 
 const CURRENT_VERSION = '1.1.5'; 
 
-
 function App() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
