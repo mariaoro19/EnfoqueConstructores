@@ -2,8 +2,6 @@
   "name": "enfoque-constructores",
   "version": "0.1.0",
   "private": true,
-  "optionalDependencies": {
-  "fsevents": "^2.3.3"},
   "dependencies": {
     "@babel/eslint-parser": "^7.26.5",
     "@emailjs/browser": "^4.4.1",
