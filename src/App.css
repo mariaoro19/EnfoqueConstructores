@@ -9,6 +9,8 @@
   --verde-sauces:#95b733;
   --verde-oscuro-piamonte:#27703b;
   --verde-claro-piamonte:#95b733;
+  --verde-oscuro-santaclara:#27703b;
+  --verde-claro-santaclara:#95b733;
   --azul-oscuro-acacias:#072b5f;
   --azul-oscuro-alameda:#072b5f;
   --azul-claro-alameda:#3b82bd;
@@ -19,6 +21,8 @@
   --letra-h2:2.5rem;
   --letra-h3:1.5rem;
   --letra-p:1.3rem;
+  --letra-pp:0.9rem;
+  --letra-boton:2rem;
 
 
 }
@@ -90,7 +94,7 @@ html, body {
   /* removed some rules that were causing bad positioning */
   position: absolute; /* instead of relative - stops pushing other menu items around */
   display: none;
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   font-family: var(--font-cuerpo);
   background-color: white;
   color: var(--gris-oscuro);
@@ -147,7 +151,7 @@ html, body {
   display: block;
   position: relative; 
   height: 2.9rem;
-  font-size: 1.2rem;
+  font-size: var(--letra-p);
   font-weight: bold;
   
 
@@ -195,7 +199,7 @@ html, body {
 .navbar-pc .navbar-menu ul li {
   padding: 0.5rem;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: var(--letra-p);
   width: 7rem;
   text-align: center;
   display: flex;
@@ -203,6 +207,7 @@ html, body {
   justify-content: center;
   border: 1px solid gray;
 }
+
 
 /*Menu 3 (Proyectos)*/
 .navbar-pc .navbar-menu ul li a{
@@ -247,7 +252,7 @@ html, body {
 
 }
 .btnNaranjaNavbar a{
-  font-size: 1.5rem !important;
+  font-size: var(--letra-h3) !important;
   font-weight: bold;
   text-align: center;
   
@@ -267,7 +272,7 @@ html, body {
   
 }
 .btnNaranjaFootbar a{
-  font-size: 2rem !important;
+  font-size: var(--letra-boton) !important;
   font-weight: bold;
   
 }
@@ -373,8 +378,6 @@ html, body {
   margin: 0;
   height: 27rem;
   
-  
-  
 }
 .constructor, .vivienda{
   
@@ -424,7 +427,6 @@ html, body {
   padding: 3rem 1.5rem 1rem 1.5rem;
   max-width: 30rem;
   border-radius: 2rem;
-  font-weight: var(--letra-p);
   min-height: 20rem;
   width: 25rem;
   text-align: justify;
@@ -536,7 +538,7 @@ html, body {
   width: 30%;
 }
 .clientes-logo h1{
-  font-size: 3rem;
+  font-size: var(--letra-h1);
   font-weight: bold;
   color: var(--gris-oscuro);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
@@ -564,7 +566,7 @@ html, body {
   margin: 4rem;
 }
 .clientes-info li{
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   color: var(--gris-oscuro);
   font-family: var(--font-cuerpo);
   margin-bottom: 0.5rem;
@@ -610,9 +612,9 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 30%; /* Ancho total de la tarjeta del formulario */
+  width: 35%; /* Ancho total de la tarjeta del formulario */
   box-sizing: border-box; /* Asegúrate de incluir padding en el cálculo del ancho */
-  margin: 1rem 10rem 1rem 1rem;
+  margin: 1rem 5rem 1rem 1rem;
   
 }
 
@@ -675,7 +677,7 @@ html, body {
   width: 100%;
   gap: 0.5rem; /* Espacio entre el checkbox y el texto */
   margin-top: 0.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 .autorizo-checkbox-inicio input[type="checkbox"] {
@@ -686,7 +688,7 @@ html, body {
 }
 
 .autorizo-checkbox-inicio label {
-  font-size: 1rem;
+  font-size: var(--letra-p);
   color: var(--gris-claro);
   display: flex;
   align-items: center;
@@ -694,6 +696,7 @@ html, body {
   line-height: 1.5rem; /* Para un alineamiento vertical más limpio */
   gap: 0.5rem; /* Espaciado entre los elementos internos */
   font-family: var(--font-cuerpo);
+  
 }
 
 /*CONOCENOS*/
@@ -723,7 +726,7 @@ html, body {
   width: 0.25rem;
 }
 .somos p{
-  font-size: 1.8rem;
+  font-size: var(--letra-h3);
   color: var(--gris-oscuro);
   font-family: var(--font-cuerpo);
   width: 50%;
@@ -764,7 +767,7 @@ html, body {
   margin: 0 0.35rem 0 0;
   padding: 0;
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: var(--letra-h2);
   line-height: 1;
   width: 60%;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
@@ -797,13 +800,13 @@ html, body {
   font-weight: bold;
   margin: 0;
   padding: 0.2rem 0.35rem 0.2rem 0.35rem;
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   -webkit-text-stroke: 1.5px var(--gris-oscuro); 
 }
 .valores-list-texto p{
   color: var(--gris-claro);
   font-family: var(--font-cuerpo);
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   padding: 0;
   margin: 0;
   font-weight: 100;
@@ -883,13 +886,13 @@ html, body {
 
 }
 .mision-vision-detalle h1{
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   color: var(--gris-oscuro);
   padding: 0;
   margin: 2rem 0 0 0;
 }
 .mision-vision-detalle p{
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   color: var(--gris-oscuro);
   padding: 1rem;
   margin: 0;
@@ -904,7 +907,7 @@ html, body {
 
 }
 .mision-vision-contactanos h1{
-  font-size: 2.5rem;
+  font-size: var(--letra-h2);
   color: var(--gris-oscuro);
   text-align: center;
   
@@ -925,7 +928,7 @@ html, body {
   
 }
 .btnNaranja a{
-  font-size: 2.5rem !important;
+  font-size: var(--letra-h2) !important;
   font-weight: bold;
   
 }
@@ -1042,7 +1045,7 @@ html, body {
 }
 
 .autorizo-checkbox-conocenos label {
-  font-size: 1rem;
+  font-size: var(--letra-p);
   color: var(--gris-claro);
   display: flex;
   align-items: center;
@@ -1092,7 +1095,7 @@ html, body {
 }
 .banner-sauces-info h1{
   color:var(--gris-claro);
-  font-size: 4rem;
+  font-size: var(--letra-h1);
   font-family: var(--font-titulos);
   font-weight: bold;
   -webkit-text-stroke: 3px var(--gris-claro); /* Añade un contorno negro */
@@ -1104,7 +1107,7 @@ html, body {
 }
 .banner-sauces-info h3{
   color:var(--gris-claro);
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   font-family: var(--font-titulos);
   font-weight: bold;
   -webkit-text-stroke: 1px var(--gris-claro); /* Añade un contorno negro */
@@ -1124,7 +1127,7 @@ html, body {
 
 }
 .banner-ubicacion-sauces h2{
-  font-size: 1.8rem;
+  font-size: var(--letra-h2);
   font-family: var(--font-titulos);
   color: var(--gris-claro);
   font-weight: bold;
@@ -1160,7 +1163,7 @@ html, body {
 
 .form-sauces label {
   display: block; /* Para que ocupe todo el ancho disponible */
-  font-size: 1.2rem;
+  font-size: var(--letra-p);
   color: var(--gris-oscuro);
   margin-bottom: 0.5rem;
   font-family: var(--font-cuerpo);
@@ -1173,7 +1176,7 @@ html, body {
   border-radius: 0.5rem;
   border: none;
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: var(--letra-p);
   font-family: var(--font-cuerpo);
 }
 .autorizo-checkbox-sauces {
@@ -1194,7 +1197,7 @@ html, body {
 }
 
 .autorizo-checkbox-sauces label {
-  font-size: 1rem;
+  font-size: var(--letra-p);
   color: var(--gris-oscuro);
   display: flex;
   align-items: center;
@@ -1225,7 +1228,7 @@ html, body {
   cursor: pointer;
   padding: 0.5rem;
   width: 100%;
-  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-size: var(--letra-h3); /* Ajusta el tamaño de la letra */
   
   font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
   border: none; /* Elimina bordes */
@@ -1260,7 +1263,7 @@ html, body {
   cursor: pointer;
   padding: 0.5rem;
   width: 20rem !important;
-  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-size: var(--letra-h3); /* Ajusta el tamaño de la letra */
   font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
   border: none; /* Elimina bordes */
   outline: none; /* Elimina contornos */
@@ -1291,7 +1294,7 @@ html, body {
 }
 .proyecto-sauces h1{
 
-  font-size: 3.5rem;
+  font-size: var(--letra-h1);
   text-align: center;
   padding: 1rem 0 1rem 0;
   margin: 0;
@@ -1314,16 +1317,22 @@ html, body {
   font-family: var(--font-cuerpo);
   color: var(--gris-oscuro);
   width: 50rem;
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   text-align: justify;
   padding: 3rem 3rem 0 3rem;
   
+}
+.info-y-avance-sauces{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
   
-
 }
 .galerias-fotos-sauces {
   position: relative;
-  width: 30rem;
+  width: 60%;
   max-width: 600px; /* Ajusta el tamaño según sea necesario */
   display: flex;
   justify-content: center;
@@ -1357,7 +1366,7 @@ html, body {
   transform: translateY(-50%);
   background-color: #fff;
   color: #333;
-  font-size: 2rem;
+  font-size: var(--letra-boton);
   width: 3rem;
   height: 3rem;
   display: flex;
@@ -1386,7 +1395,7 @@ html, body {
   padding: 1rem;
 }
 .espacios-sauces h1{
-  font-size: 4rem;
+  font-size: var(--letra-h1);
   color: var(--gris-claro);
   font-family: var(--font-titulos);
   margin:1rem;
@@ -1398,12 +1407,12 @@ html, body {
   text-align: center;
 }
 .espacios-sauces p{
-  font-size: 2.3rem;
+  font-size: var(--letra-h2);
   color: var(--gris-claro);
   font-family: var(--font-cuerpo);
   width: 30%;
   text-align: justify;
-  padding: 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
 }
 .lineaVerticalVerde{
   background-color: var(--verde-sauces);
@@ -1449,7 +1458,7 @@ html, body {
 .info-sauces-texto p{
   color: var(--gris-claro);
   font-family: var(--font-cuerpo);
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   padding: 0;
   width: 100%;
   margin: 0.5rem 0 0.5rem 0;
@@ -1470,7 +1479,7 @@ html, body {
 .planta-sauces h1{
   font-family: var(--font-titulos);
   color: var(--gris-claro);
-  font-size: 4rem;
+  font-size: var(--letra-h1);
   -webkit-text-stroke: 2px var(--gris-claro); /* Añade un contorno negro */
 }
 .planta-sauces img{
@@ -1494,7 +1503,7 @@ html, body {
 .comodidades-sauces h1{
   font-family: var(--font-titulos);
   color: var(--gris-claro);
-  font-size: 3.5rem;
+  font-size: var(--letra-h1);
   -webkit-text-stroke: 2px var(--gris-claro); /* Añade un contorno negro */
   width: 50%;
   line-height: 1;
@@ -1521,7 +1530,7 @@ html, body {
 }
 .comodidades-sauces-lista p{
   width: 100%;
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   font-family: var(--font-cuerpo);
   color: var(--gris-claro);
   margin: 0;
@@ -1547,7 +1556,7 @@ html, body {
 }
 .ubicacion-sauces-info h1{
   font-family: var(--font-titulos);
-  font-size: 3rem;
+  font-size: var(--letra-h1);
   color: var(--gris-oscuro);
   -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
   letter-spacing: 0.01em;
@@ -1556,7 +1565,7 @@ html, body {
 }
 .ubicacion-sauces-info h2{
   font-family: var(--font-titulos);
-  font-size: 2.5rem;
+  font-size: var(--letra-h2);
   color: var(--gris-oscuro);
   letter-spacing: -0.02em;
   margin:0;
@@ -1575,7 +1584,7 @@ html, body {
   padding:2rem;
 }
 .sauces-eleccion h1,.sauces-eleccion h2{
-  font-size: 3.5rem;
+  font-size: var(--letra-h1);
   color: var(--gris-oscuro);
   text-align: center;
   padding: 0;
@@ -1597,7 +1606,7 @@ html, body {
 }
 .sauces-info p{
   color: var(--gris-claro);
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   font-weight: bold;
   text-align: center;
 }
@@ -1631,7 +1640,7 @@ html, body {
   color: var(--gris-oscuro);
   margin: 0;
   padding: 0;
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   width: 100%;
 }
 
@@ -1640,7 +1649,7 @@ html, body {
   color: var(--gris-oscuro);
   margin: 0;
   padding: 0;
-  font-size: 3rem;
+  font-size: var(--letra-h1);
   font-weight: bold;
   letter-spacing: -0.01em;
   -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
@@ -1663,7 +1672,7 @@ html, body {
   cursor: pointer;
   padding: 0.5rem;
   width: 30%;
-  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-size: var(--letra-h3); /* Ajusta el tamaño de la letra */
   
   font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
   border: none; /* Elimina bordes */
@@ -1721,7 +1730,7 @@ html, body {
 }
 .banner-piamonte-info h1{
   color:var(--gris-oscuro);
-  font-size: 4rem;
+  font-size: var(--letra-h1);
   font-family: var(--font-titulos);
   font-weight: bold;
   -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
@@ -1733,7 +1742,7 @@ html, body {
 
 .banner-piamonte-info h3{
   color:var(--gris-oscuro);
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   font-family: var(--font-titulos);
   font-weight: bold;
   -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
@@ -1753,7 +1762,7 @@ html, body {
 
 }
 .banner-ubicacion-piamonte h2{
-  font-size: 1.8rem;
+  font-size: var(--letra-h3);
   font-family: var(--font-titulos);
   color: var(--gris-oscuro);
   font-weight: bold;
@@ -1788,7 +1797,7 @@ html, body {
 
 .form-piamonte label {
   display: block; /* Para que ocupe todo el ancho disponible */
-  font-size: 1.2rem;
+  font-size: var(--letra-p);
   color: var(--gris-claro);
   margin-bottom: 0.5rem;
   font-family: var(--font-cuerpo);
@@ -1801,7 +1810,7 @@ html, body {
   border-radius: 0.5rem;
   border: none;
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: var(--letra-p);
   font-family: var(--font-cuerpo);
 }
 .autorizo-checkbox {
@@ -1821,7 +1830,7 @@ html, body {
 }
 
 .autorizo-checkbox label {
-  font-size: 1rem;
+  font-size: var(--letra-p);
   color: var(--gris-claro);
   display: flex;
   align-items: center;
@@ -1852,7 +1861,7 @@ html, body {
   cursor: pointer;
   padding: 0.5rem;
   width: 100%;
-  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-size: var(--letra-h3); /* Ajusta el tamaño de la letra */
   
   font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
   border: none; /* Elimina bordes */
@@ -1887,7 +1896,7 @@ html, body {
   cursor: pointer;
   padding: 0.5rem;
   width: 20rem !important;
-  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-size: var(--letra-h3); /* Ajusta el tamaño de la letra */
   font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
   border: none; /* Elimina bordes */
   outline: none; /* Elimina contornos */
@@ -1917,7 +1926,7 @@ html, body {
 }
 .proyecto-piamonte h1{
 
-  font-size: 3.5rem;
+  font-size: var(--letra-h1);
   text-align: center;
   padding: 1rem 0 1rem 0;
   margin: 0;
@@ -1944,11 +1953,19 @@ html, body {
   font-family: var(--font-cuerpo);
   color: var(--gris-oscuro);
   width: 100%;
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   text-align: justify;
   padding: 3rem 3rem 0 3rem;
   
 
+}
+.info-y-avance-piamonte{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+  
 }
 .galerias-fotos-piamonte {
   position: relative;
@@ -1977,7 +1994,7 @@ html, body {
   transform: translateY(-50%);
   background-color: #fff;
   color: #333;
-  font-size: 2rem;
+  font-size: var(--letra-boton);
   width: 3rem;
   height: 3rem;
   display: flex;
@@ -2006,7 +2023,7 @@ html, body {
   padding: 1rem;
 }
 .espacios-piamonte h1{
-  font-size: 4rem;
+  font-size: var(--letra-h1);
   color: var(--gris-claro);
   font-family: var(--font-titulos);
   margin:1rem;
@@ -2018,7 +2035,7 @@ html, body {
   text-align: center;
 }
 .espacios-piamonte p{
-  font-size: 2.3rem;
+  font-size: var(--letra-h2);
   color: var(--gris-claro);
   font-family: var(--font-cuerpo);
   width: 30%;
@@ -2069,7 +2086,7 @@ html, body {
 .info-piamonte-texto p{
   color: var(--gris-claro);
   font-family: var(--font-cuerpo);
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   padding: 0;
   width: 100%;
   margin: 0.6rem 0 0.6rem 0;
@@ -2091,7 +2108,7 @@ html, body {
 .planta-piamonte h1{
   font-family: var(--font-titulos);
   color: var(--gris-claro);
-  font-size: 4rem;
+  font-size: var(--letra-h1);
   -webkit-text-stroke: 2px var(--gris-claro); /* Añade un contorno negro */
 }
 .planta-piamonte img{
@@ -2115,14 +2132,14 @@ html, body {
 .lineaVerticalVerdeOscuro{
   background-color: var(--verde-oscuro-piamonte);
   width: 0.4rem;
-  height: 90%;
+  height: 70%;
   margin: 1rem;
 
 }
 .comodidades-piamonte h1{
   font-family: var(--font-titulos);
   color: var(--gris-oscuro);
-  font-size: 3.5rem;
+  font-size: var(--letra-h1);
   -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
   width: 50%;
   line-height: 1;
@@ -2149,7 +2166,7 @@ html, body {
 }
 .comodidades-piamonte-lista p{
   width: 100%;
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   font-family: var(--font-cuerpo);
   color: var(--gris-oscuro);
   margin: 0;
@@ -2175,7 +2192,7 @@ html, body {
 }
 .ubicacion-piamonte-info h1{
   font-family: var(--font-titulos);
-  font-size: 3rem;
+  font-size: var(--letra-h1);
   color: var(--gris-oscuro);
   -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
   letter-spacing: 0.01em;
@@ -2184,7 +2201,7 @@ html, body {
 }
 .ubicacion-piamonte-info h2{
   font-family: var(--font-titulos);
-  font-size: 2.5rem;
+  font-size: var(--letra-h2);
   color: var(--gris-oscuro);
   letter-spacing: -0.02em;
   margin:0;
@@ -2203,7 +2220,7 @@ html, body {
   padding:2rem;
 }
 .piamonte-eleccion h1,h2{
-  font-size: 3.5rem;
+  font-size: var(--letra-h1);
   color: var(--gris-claro);
   text-align: center;
   padding: 0;
@@ -2223,7 +2240,7 @@ html, body {
 }
 .piamonte-info p{
   color: var(--gris-claro);
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   font-weight: bold;
   text-align: center;
 }
@@ -2255,18 +2272,18 @@ html, body {
   color: var(--verde-oscuro-piamonte);
   margin: 0;
   padding: 0;
-  font-size: 3rem;
+  font-size: var(--letra-h1);
   font-weight: bold;
   letter-spacing: -0.01em;
   -webkit-text-stroke: 2px var(--verde-oscuro-piamonte); /* Añade un contorno negro */
-  width: 30rem;
+  width: 100%;
 }
 .contactenos-piamonte-info p{
   font-family: var(--font-titulos);
   color: var(--verde-oscuro-piamonte);
   margin: 0;
   padding: 0;
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   width: 100%;
 }
 
@@ -2284,7 +2301,7 @@ html, body {
   cursor: pointer;
   padding: 0.5rem;
   width: 30%;
-  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-size: var(--letra-h3); /* Ajusta el tamaño de la letra */
   font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
   border: none; /* Elimina bordes */
   outline: none; /* Elimina contornos */
@@ -2302,6 +2319,654 @@ html, body {
 }
 
 .btnVerdePiamonteContacto:hover {
+  background: var(--gris-medio); /* Color más claro al pasar el cursor */
+}
+
+/*Santa Clara*/
+
+.santaclara{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  width: 100%;
+  margin: 2rem 0 1rem 0;
+  padding: 0;
+}
+
+.banner-santaclara{
+  display: flex; 
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-between; 
+  width: 100%;
+  background-image: url('utils/santaclara/Banner.webp');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  margin: 0;
+  height: auto;
+}
+.banner-santaclara-info{
+  display: flex; 
+  flex-direction: column;
+  align-items:flex-start; 
+  justify-content: center; 
+  padding: 1rem 5rem 1rem 5rem;
+  height: 40rem;
+  width: 100%;
+}
+.banner-santaclara-info h1{
+  color:var(--gris-oscuro);
+  font-size: var(--letra-h1);
+  font-family: var(--font-titulos);
+  font-weight: bold;
+  -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
+  padding: 0;
+  margin: 7rem 0 0 0;
+  line-height: 1; 
+  width: 40%;
+  padding: 0;
+}
+
+.banner-santaclara-info h3{
+  color:var(--gris-oscuro);
+  font-size: var(--letra-h3);
+  font-family: var(--font-titulos);
+  font-weight: bold;
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  padding: 0;
+  margin: 0 0 1rem 0;
+  line-height: 1; 
+  width: 60%;
+
+}
+.banner-santaclara-info img{
+  width: 10rem;
+}
+
+.banner-ubicacion-santaclara{
+  display: flex; 
+  flex-direction: row;
+  align-items:center; 
+  justify-content: space-between; 
+  gap:0.5rem
+
+}
+.banner-ubicacion-santaclara h2{
+  font-size: var(--letra-h3);
+  font-family: var(--font-titulos);
+  color: var(--gris-oscuro);
+  font-weight: bold;
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  letter-spacing: -0.02em;
+}
+.banner-ubicacion-santaclara img{
+  width: 2rem;
+}
+
+.form-santaclara {
+  background-color: var(--verde-oscuro-santaclara);
+  border-radius: 2.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 52rem; /* Ancho total de la tarjeta del formulario */
+  box-sizing: border-box; /* Asegúrate de incluir padding en el cálculo del ancho */
+  margin: 1rem 5rem 1rem 1rem;
+}
+
+.form-santaclara form {
+  width: 100%; /* Formulario ocupa todo el ancho del contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem; /* Espaciado entre los elementos */
+}
+
+.form-santaclara form > div {
+  width: 100%; /* Cada div ocupa el ancho total del formulario */
+}
+
+.form-santaclara label {
+  display: block; /* Para que ocupe todo el ancho disponible */
+  font-size: var(--letra-p);
+  color: var(--gris-claro);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-cuerpo);
+}
+
+.form-santaclara input[type="text"],
+.form-santaclara input[type="email"]{
+  width: 100%; /* Input ocupa todo el ancho de su contenedor padre */
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-sizing: border-box;
+  font-size: var(--letra-p);
+  font-family: var(--font-cuerpo);
+}
+.autorizo-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem; /* Espacio entre el checkbox y el texto */
+  margin-top: 0.5rem;
+}
+
+.autorizo-checkbox input[type="checkbox"] {
+  margin: 0; /* Elimina cualquier margen por defecto */
+  width: auto; /* Asegúrate de que no se extienda horizontalmente */
+  height: auto; /* Ajusta la altura al tamaño predeterminado */
+  font-weight: bold;
+}
+
+.autorizo-checkbox label {
+  font-size: var(--letra-p);
+  color: var(--gris-claro);
+  display: flex;
+  align-items: center;
+  line-height: 1.5rem; /* Para un alineamiento vertical más limpio */
+  gap: 0.5rem; /* Espaciado entre los elementos internos */
+  font-family: var(--font-cuerpo);
+}
+
+
+.form-santaclara div{
+  display: flex; 
+  flex-direction: column;
+  align-items:flex-start; 
+  justify-content: space-between; 
+
+}
+.btnVerdeSantaClara {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  color: var(--gris-oscuro);
+  background: var(--verde-claro-santaclara);
+  border-radius: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: var(--letra-h3); /* Ajusta el tamaño de la letra */
+  
+  font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
+  border: none; /* Elimina bordes */
+  outline: none; /* Elimina contornos */
+  box-shadow: none; /* Elimina sombras */
+  transition: background-color 0.3s ease; /* Transición para hover */
+}
+.btnNaranjaSantaClara a {
+  color: inherit; /* Hereda el color del contenedor */
+  text-decoration: none; /* Sin subrayado */
+  width: 100%; /* Ocupar todo el ancho del botón */
+  height: 100%; /* Ocupar toda la altura del botón */
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+}
+
+.btnNaranjaSantaClara:hover {
+  background: var(--gris-medio); /* Color más claro al pasar el cursor */
+}
+.btnVerdeSantaClara2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  color: var(--gris-oscuro);
+  background: var(--verde-claro-santaclara);
+  border-radius: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 20rem !important;
+  font-size: var(--letra-h3); /* Ajusta el tamaño de la letra */
+  font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
+  border: none; /* Elimina bordes */
+  outline: none; /* Elimina contornos */
+  box-shadow: none; /* Elimina sombras */
+  transition: background-color 0.3s ease; /* Transición para hover */
+}
+.btnVerdeSantaClara2 a {
+  color: inherit; /* Hereda el color del contenedor */
+  text-decoration: none; /* Sin subrayado */
+  width: 100%; /* Ocupar todo el ancho del botón */
+  height: 100%; /* Ocupar toda la altura del botón */
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+}
+
+.btnVerdeSantaClara2:hover {
+  background: var(--gris-medio); /* Color más claro al pasar el cursor */
+}
+
+.proyecto-santaclara{
+  background-color: var(--verde-claro-santaclara);
+  color: var(--gris-claro);
+  font-family: var(--font-titulos);
+  width: 100%;
+
+}
+.proyecto-santaclara h1{
+
+  font-size: var(--letra-h1);
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  margin: 0;
+  -webkit-text-stroke: 2px var(--gris-claro); /* Añade un contorno negro */
+  
+
+}
+.descubre-santaclara{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+
+}
+.descubre-santaclara-texto{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+}
+.descubre-santaclara p{
+  font-family: var(--font-cuerpo);
+  color: var(--gris-oscuro);
+  width: 100%;
+  font-size: var(--letra-h3);
+  text-align: justify;
+  padding: 3rem 3rem 0 3rem;
+  
+
+}
+.info-y-avance-santaclara{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+  
+}
+.galerias-fotos-santaclara {
+  position: relative;
+  width: 60%;
+  max-width: 600px; /* Ajusta el tamaño según sea necesario */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.contenedor-foto {
+  width: 100%;
+  height: auto;
+}
+
+.contenedor-foto img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.btn-flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  color: #333;
+  font-size: var(--letra-boton);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-flecha.izquierda {
+  left: 10px; /* Posición de la flecha izquierda */
+}
+
+.btn-flecha.derecha {
+  right: 10px; /* Posición de la flecha derecha */
+}
+
+.espacios-santaclara{
+  background-color: var(--verde-oscuro-santaclara);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+  padding: 1rem;
+}
+.espacios-santaclara h1{
+  font-size: var(--letra-h1);
+  color: var(--gris-claro);
+  font-family: var(--font-titulos);
+  margin:1rem;
+  padding: 0;
+  -webkit-text-stroke: 3px var(--gris-claro); /* Añade un contorno negro */
+  font-weight: bold;
+  line-height: 1;
+  width: 30%;
+  text-align: center;
+}
+.espacios-santaclara p{
+  font-size: var(--letra-h2);
+  color: var(--gris-claro);
+  font-family: var(--font-cuerpo);
+  width: 30%;
+  text-align: justify;
+  padding: 0.5rem;
+}
+.lineaVerticalVerde{
+  background-color: var(--verde-claro-santaclara);
+  width: 0.4rem;
+  height: 90%;
+  margin: 1rem;
+
+}
+
+.info-santaclara {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+ }
+.info-santaclara-img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  margin:1rem;
+
+}
+.info-santaclara-img img{
+  margin:0.5rem;
+  height: 3rem;
+  
+
+}
+.info-santaclara-texto{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin:0.5rem;
+  
+  
+
+}
+.info-santaclara-texto p{
+  color: var(--gris-claro);
+  font-family: var(--font-cuerpo);
+  font-size: var(--letra-h3);
+  padding: 0;
+  width: 100%;
+  margin: 0.6rem 0 0.6rem 0;
+  text-align: left;
+  height: 3rem;
+  line-height: 1;
+}
+
+.planta-santaclara{
+  background-color: var(--verde-claro-santaclara);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.planta-santaclara h1{
+  font-family: var(--font-titulos);
+  color: var(--gris-claro);
+  font-size: var(--letra-h1);
+  -webkit-text-stroke: 2px var(--gris-claro); /* Añade un contorno negro */
+}
+.planta-santaclara img{
+  width: 55%;
+  text-align: center;
+}
+.comodidades-santaclara{
+  background-image: url('utils/santaclara/Banner2.webp');
+  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+  padding: 2rem;
+
+}
+.lineaVerticalVerdeOscuro{
+  background-color: var(--verde-oscuro-santaclara);
+  width: 0.4rem;
+  height: 70%;
+  margin: 1rem;
+
+}
+.comodidades-santaclara h1{
+  font-family: var(--font-titulos);
+  color: var(--gris-oscuro);
+  font-size: var(--letra-h1);
+  -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
+  width: 50%;
+  line-height: 1;
+}
+.comodidades-santaclara-lista{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  margin: 1rem;
+
+}
+.salon,.juegos,.sendero,.cancha{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+
+}
+.comodidades-santaclara-lista img{
+  margin:0.5rem 0.5rem 0 0;
+  width: 2rem;
+
+}
+.comodidades-santaclara-lista p{
+  width: 100%;
+  font-size: var(--letra-h3);
+  font-family: var(--font-cuerpo);
+  color: var(--gris-oscuro);
+  margin: 0;
+  padding: 0;
+
+
+}
+.ubicacion-santaclara{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 5rem;
+}
+.ubicacion-santaclara-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+  width: 40%;
+
+}
+.ubicacion-santaclara-info h1{
+  font-family: var(--font-titulos);
+  font-size: var(--letra-h1);
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
+  letter-spacing: 0.01em;
+  margin:0.5rem;
+  padding: 0;
+}
+.ubicacion-santaclara-info h2{
+  font-family: var(--font-titulos);
+  font-size: var(--letra-h2);
+  color: var(--gris-oscuro);
+  letter-spacing: -0.02em;
+  margin:0;
+  padding: 0;
+}
+.ubicacion-santaclara-info h3{
+  font-family: var(--font-titulos);
+  font-size: var(--letra-h3);
+  color: var(--gris-oscuro);
+  letter-spacing: -0.02em;
+  -webkit-text-stroke: 1px var(--gris-oscuro); 
+  margin:0;
+  padding: 0;
+}
+.ubicacion-santaclara-info img {
+  width: 7rem;
+}
+.ubicacion-santaclara-maps{
+  width: 50%;
+}
+.ubicacion-santaclara-maps img{
+  width: 100%;
+
+}
+.santaclara-eleccion{
+  background-color: var(--verde-oscuro-santaclara);
+  width: 100%;
+  padding:2rem;
+}
+.santaclara-eleccion h1,h2{
+  font-size: var(--letra-h1);
+  color: var(--gris-claro);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+.santaclara-info{
+  display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ background-color: var(--verde-claro-santaclara);
+ width: 100%;
+ padding: 1rem;
+ gap:3rem;
+}
+.santaclara-info p{
+  color: var(--gris-claro);
+  font-size: var(--letra-h3);
+  font-weight: bold;
+  text-align: center;
+}
+.santaclara-info img{
+  text-align: center;
+}
+.santaclara-info div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+}
+.contactenos-santaclara{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 2rem 0 2rem 4rem;
+  height: auto;
+}
+.contactenos-santaclara-info{
+  width: 100%;
+  padding: 2rem 0 2rem 3rem;
+}
+.contactenos-santaclara-info h1{
+  font-family: var(--font-titulos);
+  color: var(--verde-oscuro-santaclara);
+  margin: 0;
+  padding: 0;
+  font-size: var(--letra-h1);
+  font-weight: bold;
+  letter-spacing: -0.01em;
+  -webkit-text-stroke: 2px var(--verde-oscuro-santaclara); /* Añade un contorno negro */
+  width: 100%;
+}
+.contactenos-santaclara-info p{
+  font-family: var(--font-titulos);
+  color: var(--verde-oscuro-santaclara);
+  margin: 0;
+  padding: 0;
+  font-size: var(--letra-h3);
+  width: 100%;
+}
+
+.btnVerdeSantaClaraContacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  color: var(--gris-oscuro);
+  background: var(--verde-claro-santaclara);
+  border-radius: 2rem;
+  margin: 2rem 0 2rem 0;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 30%;
+  font-size: var(--letra-h3); /* Ajusta el tamaño de la letra */
+  font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
+  border: none; /* Elimina bordes */
+  outline: none; /* Elimina contornos */
+  box-shadow: none; /* Elimina sombras */
+  transition: background-color 0.3s ease; /* Transición para hover */
+}
+.btnVerdeSantaClaraContacto a {
+  color: inherit; /* Hereda el color del contenedor */
+  text-decoration: none; /* Sin subrayado */
+  width: 100%; /* Ocupar todo el ancho del botón */
+  height: 100%; /* Ocupar toda la altura del botón */
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+}
+
+.btnVerdeSantaClaraContacto:hover {
   background: var(--gris-medio); /* Color más claro al pasar el cursor */
 }
 
@@ -2346,7 +3011,7 @@ html, body {
 }
 .banner-acacias-info h1{
   color:var(--gris-oscuro);
-  font-size: 4rem;
+  font-size: var(--letra-h1);
   font-family: var(--font-titulos);
   font-weight: bold;
   -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
@@ -2358,7 +3023,7 @@ html, body {
 
 .banner-acacias-info h3{
   color:var(--gris-oscuro);
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   font-family: var(--font-titulos);
   font-weight: bold;
   -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
@@ -2378,7 +3043,7 @@ html, body {
 
 }
 .banner-ubicacion-acacias h2{
-  font-size: 1.8rem;
+  font-size: var(--letra-h3);
   font-family: var(--font-titulos);
   color: var(--gris-oscuro);
   font-weight: bold;
@@ -2413,7 +3078,7 @@ html, body {
 
 .form-acacias label {
   display: block; /* Para que ocupe todo el ancho disponible */
-  font-size: 1.2rem;
+  font-size: var(--letra-p);
   color: var(--gris-claro);
   margin-bottom: 0.5rem;
   font-family: var(--font-cuerpo);
@@ -2426,7 +3091,7 @@ html, body {
   border-radius: 0.5rem;
   border: none;
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: var(--letra-p);
   font-family: var(--font-cuerpo);
 }
 .autorizo-checkbox {
@@ -2446,7 +3111,7 @@ html, body {
 }
 
 .autorizo-checkbox label {
-  font-size: 1rem;
+  font-size: var(--letra-p);
   color: var(--gris-claro);
   display: flex;
   align-items: center;
@@ -2477,7 +3142,7 @@ html, body {
   cursor: pointer;
   padding: 0.5rem;
   width: 100%;
-  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-size: var(--letra-h3); /* Ajusta el tamaño de la letra */
   
   font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
   border: none; /* Elimina bordes */
@@ -2512,7 +3177,7 @@ html, body {
   cursor: pointer;
   padding: 0.5rem;
   width: 20rem !important;
-  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-size: var(--letra-h3); /* Ajusta el tamaño de la letra */
   font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
   border: none; /* Elimina bordes */
   outline: none; /* Elimina contornos */
@@ -2542,7 +3207,7 @@ html, body {
 }
 .proyecto-acacias h1{
 
-  font-size: 3.5rem;
+  font-size: var(--letra-h1);
   text-align: center;
   padding: 1rem 0 1rem 0;
   margin: 0;
@@ -2569,11 +3234,19 @@ html, body {
   font-family: var(--font-cuerpo);
   color: var(--gris-oscuro);
   width: 100%;
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   text-align: justify;
   padding: 3rem 3rem 0 3rem;
   
 
+}
+.info-y-avance-acacias{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+  
 }
 .galerias-fotos-acacias {
   position: relative;
@@ -2603,7 +3276,7 @@ html, body {
   transform: translateY(-50%);
   background-color: #fff;
   color: #333;
-  font-size: 2rem;
+  font-size: var(--letra-boton);
   width: 3rem;
   height: 3rem;
   display: flex;
@@ -2632,7 +3305,7 @@ html, body {
   padding: 1rem;
 }
 .espacios-acacias h1{
-  font-size: 4rem;
+  font-size: var(--letra-h1);
   color: var(--gris-claro);
   font-family: var(--font-titulos);
   margin:1rem;
@@ -2644,12 +3317,12 @@ html, body {
   text-align: center;
 }
 .espacios-acacias p{
-  font-size: 2.3rem;
+  font-size: var(--letra-h2);
   color: var(--gris-claro);
   font-family: var(--font-cuerpo);
   width: 30%;
   text-align: justify;
-  padding: 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
 }
 .lineaVerticalNaranja{
   background-color: var(--naranja);
@@ -2695,7 +3368,7 @@ html, body {
 .info-acacias-texto p{
   color: var(--gris-claro);
   font-family: var(--font-cuerpo);
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   padding: 0;
   width: 100%;
   margin: 0.6rem 0 0.6rem 0;
@@ -2717,7 +3390,7 @@ html, body {
 .planta-acacias h1{
   font-family: var(--font-titulos);
   color: var(--gris-claro);
-  font-size: 4rem;
+  font-size: var(--letra-h1);
   -webkit-text-stroke: 2px var(--gris-claro); /* Añade un contorno negro */
 }
 .planta-acacias img{
@@ -2742,7 +3415,7 @@ html, body {
 .comodidades-acacias h1{
   font-family: var(--font-titulos);
   color: var(--gris-oscuro);
-  font-size: 3.5rem;
+  font-size: var(--letra-h1);
   -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
   width: 50%;
   line-height: 1;
@@ -2770,7 +3443,7 @@ html, body {
 }
 .comodidades-acacias-lista p{
   width: 100%;
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   font-family: var(--font-cuerpo);
   color: var(--gris-oscuro);
   margin: 0;
@@ -2796,7 +3469,7 @@ html, body {
 }
 .ubicacion-acacias-info h1{
   font-family: var(--font-titulos);
-  font-size: 3rem;
+  font-size: var(--letra-h1);
   color: var(--gris-oscuro);
   -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
   letter-spacing: 0.01em;
@@ -2805,7 +3478,7 @@ html, body {
 }
 .ubicacion-acacias-info h2{
   font-family: var(--font-titulos);
-  font-size: 2.5rem;
+  font-size: var(--letra-h2);
   color: var(--gris-oscuro);
   letter-spacing: -0.02em;
   margin:0;
@@ -2813,7 +3486,7 @@ html, body {
 }
 .ubicacion-acacias-info h3{
   font-family: var(--font-titulos);
-  font-size: 2.5rem;
+  font-size: var(--letra-h2);
   color: var(--gris-oscuro);
   margin:0;
   padding: 0;
@@ -2833,7 +3506,7 @@ html, body {
   padding:2rem;
 }
 .acacias-eleccion h1{
-  font-size: 3.5rem;
+  font-size: var(--letra-h1);
   color: var(--gris-claro);
   text-align: center;
   padding: 0;
@@ -2853,7 +3526,7 @@ html, body {
 }
 .acacias-info p{
   color: var(--gris-claro);
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   font-weight: bold;
   text-align: center;
 }
@@ -2885,7 +3558,7 @@ html, body {
   color: var(--gris-oscuro-acacias);
   margin: 0;
   padding: 0;
-  font-size: 3rem;
+  font-size: var(--letra-h1);
   font-weight: bold;
   letter-spacing: -0.01em;
   -webkit-text-stroke: 2px var(--gris-oscuro-acacias); /* Añade un contorno negro */
@@ -2896,7 +3569,7 @@ html, body {
   color: var(--gris-oscuro-acacias);
   margin: 0;
   padding: 0;
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   width: 100%;
 }
 
@@ -2914,7 +3587,7 @@ html, body {
   cursor: pointer;
   padding: 0.5rem;
   width: 30%;
-  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-size: var(--letra-h3); /* Ajusta el tamaño de la letra */
   font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
   border: none; /* Elimina bordes */
   outline: none; /* Elimina contornos */
@@ -2979,7 +3652,7 @@ html, body {
 }
 .banner-alameda-info h1{
   color:var(--azul-oscuro-alameda);
-  font-size: 4rem;
+  font-size: var(--letra-h1);
   font-family: var(--font-titulos);
   font-weight: bold;
   -webkit-text-stroke: 3px var(--azul-oscuro-alameda); /* Añade un contorno negro */
@@ -2992,7 +3665,7 @@ html, body {
 
 .banner-alameda-info h3{
   color:var(--azul-oscuro-alameda);
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   font-family: var(--font-titulos);
   font-weight: bold;
   -webkit-text-stroke: 1px var(--azul-oscuro-alameda); /* Añade un contorno negro */
@@ -3012,7 +3685,7 @@ html, body {
 
 }
 .banner-ubicacion-alameda h2{
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   font-family: var(--font-titulos);
   color: var(--azul-oscuro-alameda);
   font-weight: bold;
@@ -3048,7 +3721,7 @@ html, body {
 
 .form-alameda label {
   display: block; /* Para que ocupe todo el ancho disponible */
-  font-size: 1.2rem;
+  font-size: var(--letra-p);
   color: var(--gris-claro);
   margin-bottom: 0.5rem;
   font-family: var(--font-cuerpo);
@@ -3062,7 +3735,7 @@ html, body {
   border-radius: 0.5rem;
   border: none;
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: var(--letra-p);
   font-family: var(--font-cuerpo);
 }
 .autorizo-checkbox {
@@ -3082,7 +3755,7 @@ html, body {
 }
 
 .autorizo-checkbox label {
-  font-size: 1rem;
+  font-size: var(--letra-p);
   color: var(--gris-claro);
   display: flex;
   align-items: center;
@@ -3113,7 +3786,7 @@ html, body {
   cursor: pointer;
   padding: 0.5rem;
   width: 100%;
-  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-size: var(--letra-h3); /* Ajusta el tamaño de la letra */
   
   font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
   border: none; /* Elimina bordes */
@@ -3148,7 +3821,7 @@ html, body {
   cursor: pointer;
   padding: 0.5rem;
   width: 20rem !important;
-  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-size: var(--letra-h3); /* Ajusta el tamaño de la letra */
   font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
   border: none; /* Elimina bordes */
   outline: none; /* Elimina contornos */
@@ -3178,7 +3851,7 @@ html, body {
 }
 .proyecto-alameda h1{
 
-  font-size: 3.5rem;
+  font-size: var(--letra-h1);
   text-align: center;
   padding: 1rem 0 1rem 0;
   margin: 0;
@@ -3205,11 +3878,19 @@ html, body {
   font-family: var(--font-cuerpo);
   color: var(--azul-oscuro-alameda);
   width: 100%;
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   text-align: justify;
   padding: 3rem 3rem 0 3rem;
   
 
+}
+.info-y-avance-alameda{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+  
 }
 .galerias-fotos-alameda {
   position: relative;
@@ -3239,7 +3920,7 @@ html, body {
   transform: translateY(-50%);
   background-color: #fff;
   color: #333;
-  font-size: 2rem;
+  font-size: var(--letra-boton);
   width: 3rem;
   height: 3rem;
   display: flex;
@@ -3268,7 +3949,7 @@ html, body {
   padding: 1rem;
 }
 .espacios-alameda h1{
-  font-size: 4rem;
+  font-size: var(--letra-h1);
   color: var(--gris-claro);
   font-family: var(--font-titulos);
   margin:1rem;
@@ -3280,17 +3961,17 @@ html, body {
   text-align: center;
 }
 .espacios-alameda p{
-  font-size: 2.3rem;
+  font-size: var(--letra-h2);
   color: var(--gris-claro);
   font-family: var(--font-cuerpo);
   width: 30%;
   text-align: justify;
-  padding: 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
 }
 .lineaVerticalNaranjaClaro{
   background-color: var(--naranja);
   width: 0.4rem;
-  height: 90%;
+  height: 60%;
   margin: 1rem;
 
 }
@@ -3331,7 +4012,7 @@ html, body {
 .info-alameda-texto p{
   color: var(--gris-claro);
   font-family: var(--font-cuerpo);
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   padding: 0;
   width: 100%;
   margin: 0.6rem 0 0.6rem 0;
@@ -3353,11 +4034,11 @@ html, body {
 .planta-alameda h1{
   font-family: var(--font-titulos);
   color: var(--azul-oscuro-alameda);
-  font-size: 4rem;
+  font-size: var(--letra-h1);
   -webkit-text-stroke: 2px var(--azul-oscuro-alameda); /* Añade un contorno negro */
 }
 .planta-alameda img{
-  width: 55%;
+  width: 40%;
   text-align: center;
 }
 .comodidades-alameda{
@@ -3378,7 +4059,7 @@ html, body {
 .comodidades-alameda h1{
   font-family: var(--font-titulos);
   color: var(--azul-oscuro-alameda);
-  font-size: 3.5rem;
+  font-size: var(--letra-h1);
   -webkit-text-stroke: 2px var(--azul-oscuro-alameda); /* Añade un contorno negro */
   width: 50%;
   line-height: 1;
@@ -3405,7 +4086,7 @@ html, body {
 }
 .comodidades-alameda-lista p{
   width: 100%;
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   font-family: var(--font-cuerpo);
   color: var(--azul-oscuro-alameda);
   margin: 0;
@@ -3431,7 +4112,7 @@ html, body {
 }
 .ubicacion-alameda-info h1{
   font-family: var(--font-titulos);
-  font-size: 3rem;
+  font-size: var(--letra-h1);
   color: var(--azul-oscuro-alameda);
   -webkit-text-stroke: 3px var(--azul-oscuro-alameda); /* Añade un contorno negro */
   letter-spacing: 0.05em;
@@ -3440,7 +4121,7 @@ html, body {
 }
 .ubicacion-alameda-info h2{
   font-family: var(--font-titulos);
-  font-size: 3rem;
+  font-size: var(--letra-h1);
   color: var(--azul-oscuro-alameda);
   letter-spacing: -0.02em;
   margin:0;
@@ -3460,7 +4141,7 @@ html, body {
   padding:2rem;
 }
 .alameda-eleccion h1{
-  font-size: 3.5rem;
+  font-size: var(--letra-h1);
   color: var(--gris-claro);
   text-align: center;
   padding: 0;
@@ -3480,7 +4161,7 @@ html, body {
 }
 .alameda-info p{
   color: var(--gris-claro);
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   font-weight: bold;
   text-align: center;
 }
@@ -3512,10 +4193,10 @@ html, body {
   color: var(--azul-oscuro-alameda);
   margin: 0;
   padding: 0;
-  font-size: 3rem;
+  font-size: var(--letra-h1);
   font-weight: bold;
   letter-spacing: -0.01em;
-  -webkit-text-stroke: 2px var(--azul-oscuro-alameda); /* Añade un contorno negro */
+  -webkit-text-stroke: 1px var(--azul-oscuro-alameda); /* Añade un contorno negro */
   width: 30rem;
 }
 .contactenos-alameda-info p{
@@ -3523,7 +4204,7 @@ html, body {
   color: var(--azul-oscuro-alameda);
   margin: 0;
   padding: 0;
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   width: 100%;
 }
 
@@ -3541,7 +4222,7 @@ html, body {
   cursor: pointer;
   padding: 0.5rem;
   width: 30%;
-  font-size: 1.5rem; /* Ajusta el tamaño de la letra */
+  font-size: var(--letra-h3); /* Ajusta el tamaño de la letra */
   font-family: var(--font-cuerpo, Arial, sans-serif); /* Cambia la fuente */
   border: none; /* Elimina bordes */
   outline: none; /* Elimina contornos */
@@ -3602,7 +4283,7 @@ html, body {
 }
 .footbar-info a, 
 .btnNaranjaNavbar a,.btnNaranjaNavbarMovil a, .btnNaranjaFootbar a, .btnNaranja a,button, .btnGrisSauces2 a,
-.btnNaranjaPiamonte2 a, .btnNaranjaAcacias2 a,.btnNaranjaAlameda2 a, .btnGrisClaro a  {
+.btnNaranjaPiamonte2 a,.btnNaranjaSantaClara2 a, .btnNaranjaAcacias2 a,.btnNaranjaAlameda2 a, .btnGrisClaro a  {
   text-decoration: none; /* Elimina el subrayado */
   color: inherit; /* Usa el color del texto padre o define un color específico */
 }
@@ -3623,7 +4304,7 @@ html, body {
   
 }
 .footbar-info p, .contactanos p{
-  font-size: 1.2rem;
+  font-size: var(--letra-p);
   color: var(--gris-oscuro);
   font-family: var(--font-cuerpo);
   padding: 0;
@@ -3692,7 +4373,7 @@ html, body {
   align-items: center;
   padding: 0 1rem;
   position: relative;
-  font-size: 1rem;
+  font-size: var(--letra-p);
 
 }*/
 .menu-icon,.navbar-pc {
@@ -3706,7 +4387,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
-  font-size: 1rem;
+  font-size: var(--letra-p);
 }
 /* Menú desplegado */
 .menu-content {
@@ -3924,7 +4605,7 @@ nav ul li a{
 
 .menu-content .navbar-menu li a {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: var(--letra-pp);
   color:var(--gris-oscuro);
   margin: 0;
   padding: 0;
@@ -3935,13 +4616,16 @@ nav ul li a{
 /*menu 3 proyectos*/
 .menu-content .navbar-menu ul li a {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: var(--letra-pp);
   color:var(--gris-claro);
   padding: 0;
   font-family: var(--font-titulos);
+  margin:0;
   
-  
-  
+}
+/*ciudades*/
+.menu-content .navbar-menu {
+  font-size: var(--letra-pp);
 }
 
 /* Estilo para el hover - línea debajo del enlace */
@@ -3979,7 +4663,7 @@ nav ul li a{
   
 }
 .btnNaranjaNavbarMovil a{
-  font-size: 1.2rem !important;
+  font-size: var(--letra-p) !important;
   font-weight: bold;
   color: var(--gris-oscuro);
 
@@ -4022,40 +4706,243 @@ nav ul li a{
   
 }
 .aliadosInfo{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
   margin:0;
   width: 100%;
   
   
 }
-.aliadosInfo h1 {
-  font-size: 1.5rem;
-  padding: 0;
-  margin: 0;
+.aliadosInfo > h2 {
+  font-size: var(--letra-h3);
   color:var(--gris-oscuro);
-  font-family: var(--font-cuerpo);
-  font-weight: bolder;
-  text-align: justify;
+  font-family: var(--font-titulos);
+  font-weight: 100;
+  text-align: left;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-text-stroke: 0.8px var(--gris-oscuro); /* Añade un contorno negro */
+  width: 90%;
+  margin: 0 1rem 0 3rem;
 }
 .aliadosInfo p {
-  font-size: 1rem;
+  font-size: var(--letra-p);
   color:var(--gris-oscuro);
   font-family: var(--font-cuerpo);
   text-align: justify;
   
+}
+.cuadro-gris-btn{
+
+  width: 80%;
+  margin: 1rem 0 1rem 0;
+}
+
+.cuadro-gris-btn h3{
+  color:var(--gris-claro);
+  font-size:var(--letra-p);
+  font-family: var(--font-cuerpo);
+  padding: 0;
+
+}
+.btnGrisClaro {
+
+  width: 70%;
+  margin: 0;
+  
+}
+
+.constructor-vivienda{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  gap:13rem;
+  margin: 0;
+  width: 90%;
+  height: 50rem;
+  
+}
+.constructor, .vivienda{
+  
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  margin:2rem 0 0 0 ;
+  padding: 0;
+  width: 90%;
+  position: relative;
+
+  
+}
+
+.constructor img{
+  width: 4rem;  
+  height: auto;
+}
+.vivienda img{
+  width: 3rem;
+  height: auto;
+}
+.constructor h3, .vivienda h3{
+  
+  font-size: var(--letra-h3);
+  background-color: var(--naranja);
+  font-family: var(--font-titulos);
+  color: var(--gris-oscuro);
+  padding: 0.8rem;
+  border-radius: 2.5rem;
+  width: 90%;
+  
+
+  
+}
+
+.constructor p, .vivienda p{
+  
+  font-size: var(--letra-p) ;
+  padding: 3rem 1.5rem 1rem 1.5rem;
+  max-width: 20rem;
+  border-radius: 2rem;
+  width: 20rem;
+  /*min-height: 20rem;
+  width: 25rem;
+  text-align: justify;*/
+  
+}
+
+#elemento1 {
+  position: absolute;
+  top: -35%;
+  transform: translateY(-10%);
+  z-index: 3; /* Mayor valor = más arriba */
+}
+
+#elemento2 {
+  position: absolute;
+  top: -5%;
+  transform: translateY(-10%);
+  z-index: 2; /* Debajo de elemento1 */
+}
+
+#elemento3 {
+  position: absolute;
+  top: 0%;
+  z-index: 1; /* Debajo de elemento2 */
+}
+.constructor-vivienda-form, .constructor-vivienda-form-conocenos{
+  
+  display: flex; 
+  flex-direction: column;
+  align-items:center; 
+  justify-content: space-around; 
+  width: 100%;
+  
+}
+.mensaje-constructor-vivienda, .mensaje-constructor-vivienda-conocenos{
+  width: 90%;
+  margin: 1rem;
+  text-align: left;
+}
+.mensaje-constructor-vivienda h2{
+  font-size: var(--letra-h3);
+  text-align: left;
+  -webkit-text-stroke: 1px var(--gris-claro); /* Añade un contorno negro */
+  
+}
+.mensaje-constructor-vivienda h3{
+  font-size: var(--letra-p);
+  font-weight: 100;
+
+}
+.form-inicio, .form-conocenos{
+  width: 90%;
+  margin: 0 0 1rem 0;
+  
+  
+}
+.form-inicio label, .form-conocenos label {
+  font-size: var(--letra-pp);
+  margin-bottom: 0.5rem;
+
+}
+
+.form-inicio input[type="text"],
+.form-inicio input[type="email"],
+.form-conocenos input[type="text"],
+.form-conocenos input[type="email"]{
+  width: 100%; /* Input ocupa todo el ancho de su contenedor padre */
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: var(--letra-pp);
+}
+.custom-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: var(--letra-pp);
+
+}
+
+.custom-select:focus {
+  border-color: var(--naranja);
+  outline: none;
+}
+
+.custom-select option {
+  padding: 10px;
+  font-family: var(--font-cuerpo);
+}
+.autorizo-checkbox-inicio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem; /* Espacio entre el checkbox y el texto */
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+
+.autorizo-checkbox-inicio label {
+  font-size: var(--letra-pp);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  line-height: 1.5rem; /* Para un alineamiento vertical más limpio */
+  gap: 0.5rem; /* Espaciado entre los elementos internos */
 }
 .proyectos-list{
   padding: 1rem;
-
 }
+.LogosProyectosDiv{
+  margin: 1rem 0 0 0;
+}
+
 .LogosProyectos{
   
-  margin:1rem 0 0 0;
+  margin:0;
+  border-radius: 1rem;
   
 }
+.proyectos-list{
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: left;
+}
+
 
 .proyectos-list-info-text h1{
 
-  font-size: 1.5rem; 
+  font-size: var(--letra-h3); 
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+}
+.proyectos-list-info-text p{
+  font-size: var(--letra-pp);
 }
 
 .lineaVertical{
@@ -4064,8 +4951,9 @@ nav ul li a{
   margin: 0.5rem;
 }
 
+
 .clientes{
-  background-color: var(--naranja);
+  
   display: flex; 
   flex-direction: column;
   align-items: center; 
@@ -4085,7 +4973,7 @@ nav ul li a{
   width: 90%;
 }
 .clientes-logo h1{
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   font-weight: bold;
   color: var(--gris-oscuro);
 }
@@ -4106,7 +4994,7 @@ nav ul li a{
   margin: 1rem;
 }
 .clientes-info li{
-  font-size: 1rem;
+  font-size: var(--letra-p);
   color: var(--gris-oscuro);
   font-family: var(--font-cuerpo);
   margin-bottom: 1rem;
@@ -4139,7 +5027,7 @@ nav ul li a{
   display: none;
 }
 .somos p{
-  font-size: 1rem;
+  font-size: var(--letra-p);
   width: 100%;
 }
 .valores{
@@ -4166,7 +5054,7 @@ nav ul li a{
 .ovalGreyConocenos h1{
   margin: 0 0.35rem 0 0.5rem;
   padding: 0;
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   width: 80%;
 }
 .valores-list{
@@ -4184,10 +5072,10 @@ nav ul li a{
 .ovalGreyValores h1{
   margin: 0;
   padding: 0.2rem 0.25rem 0.2rem 0.25rem;
-  font-size: 1.2rem;
+  font-size: var(--letra-p);
 }
 .valores-list-texto p{
-  font-size: 1rem;
+  font-size: var(--letra-p);
 }
 .valores-list-texto{
 
@@ -4216,12 +5104,12 @@ nav ul li a{
 
 }
 .mision-vision-detalle h1{
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   padding: 1.5rem 0 0 0;
   margin: 0;
 }
 .mision-vision-detalle p{
-  font-size: 1rem;
+  font-size: var(--letra-p);
   padding: 1rem;
   margin: 0;
   
@@ -4251,12 +5139,12 @@ nav ul li a{
   align-items:center; 
   justify-content:center;
   text-align: center;
-  margin: 1rem 0 0 0;
+  margin: 0;
 }
 .mision-texto,.vision-texto{
-  width:78%;
+  width:90%;
   padding: 0.5rem 0 0 0;
-  height: 17rem;
+  height: 20rem;
   display: flex; 
   flex-direction: column;
   align-items:center; 
@@ -4271,7 +5159,7 @@ nav ul li a{
 }
 
 .mision-vision-contactanos h1{
-  font-size: 2rem;
+  font-size: var(--letra-h3);
 
   
 }
@@ -4291,7 +5179,7 @@ nav ul li a{
   
 }
 .btnNaranja a{
-  font-size: 2.5rem !important;
+  font-size: var(--letra-h2) !important;
   font-weight: bold;
   
 }
@@ -4325,26 +5213,29 @@ nav ul li a{
   justify-content: space-between; 
   padding: 0.5rem;
   width: 100%;
+  height: 30rem;
 }
 
+
 .banner-sauces-info h1{
-  font-size: 3rem;
+  font-size: var(--letra-h2);
   color: var(--gris-oscuro);
   -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
   width: 100%;
   text-align: center;
+ 
 
 }
 .banner-sauces-info h2{
-  font-size: 2.5rem;
+  font-size: var(--letra-h3);
   color: var(--gris-oscuro);
   -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
-  
+
 
 }
 .banner-sauces-info h3{
   width: 100%;
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   padding: 1rem;
   color: var(--gris-oscuro);
   -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
@@ -4365,7 +5256,7 @@ nav ul li a{
 }
 
 .btnGrisSauces a {
-  font-size: 1rem;
+  font-size: var(--letra-p);
 }
 .btnGrisSauces2{
   width: 15rem !important;
@@ -4375,7 +5266,7 @@ nav ul li a{
 }
 .proyecto-sauces h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
 
 }
 .descubre-sauces{
@@ -4389,10 +5280,14 @@ nav ul li a{
 .descubre-sauces p{
  
   width: 100%;
-  font-size: 1rem;
+  font-size: var(--letra-p);
   padding: 0.8rem;
   
 
+}
+.info-y-avance-sauces{
+  width: 90%;
+  
 }
 .galerias-fotos-sauces {
   position: relative;
@@ -4404,7 +5299,7 @@ nav ul li a{
 
 .btn-flecha {
 
-  font-size: 1rem;
+  font-size: var(--letra-p);
   width: 2rem;
   height: 2rem;
 
@@ -4414,20 +5309,21 @@ nav ul li a{
   
   flex-direction: column;
   height: auto;
-  padding: 0.5rem;
+  padding: 1rem 0 0 0;
 }
 .espacios-sauces h1{
-  font-size: 2.5rem;
-  margin:0.5rem;
+  font-size: var(--letra-h2);
+  margin:0;
   padding: 0;
   -webkit-text-stroke: 1px var(--gris-claro); /* Añade un contorno negro */
   width: 100%;
   text-align: center;
 }
 .espacios-sauces p{
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   width: 100%;
-  padding: 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
+  margin:0;
 }
 .lineaVerticalVerde{
   width: 90%;
@@ -4450,7 +5346,7 @@ nav ul li a{
   align-items: center;
   justify-content: center;
   width: 20%;
-  margin:1rem;
+  margin:0 1rem 0 1rem;
 
 }
 .info-sauces-img img{
@@ -4465,7 +5361,7 @@ nav ul li a{
 
 }
 .info-sauces-texto p{
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   padding: 0;
   width: 100%;
   margin: 0.5rem 0 0.5rem 0;
@@ -4481,13 +5377,13 @@ nav ul li a{
 
 .planta-sauces h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   
 }
 
 .comodidades-sauces{
   background-image: url('utils/sauces/Banner2.webp');
-  background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
+  background-size: auto 150px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
   background-position: center top; /* Alinea la imagen hacia arriba */
   background-repeat: no-repeat;/* Evita la repetición de la imagen */
   width: 100%;
@@ -4501,14 +5397,16 @@ nav ul li a{
 }
 .comodidades-sauces h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   width: 100%;
+  margin:1.5rem 0 1rem 0;
+  -webkit-text-stroke: 1px var(--gris-claro);
   
 }
 
 .comodidades-sauces-lista p{
   width: 100%;
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   color: var(--gris-oscuro);
 
 
@@ -4531,7 +5429,7 @@ nav ul li a{
 }
 .ubicacion-sauces-info h1{
   
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   color: var(--gris-oscuro);
   -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
   letter-spacing: 0.1em;
@@ -4539,7 +5437,7 @@ nav ul li a{
   padding: 0;
 }
 .ubicacion-sauces-info h2{
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   letter-spacing: -0.05em;
   margin:0;
   padding: 0;
@@ -4557,14 +5455,14 @@ nav ul li a{
 }
 
 .sauces-eleccion h1,.sauces-eleccion h2{
-  font-size: 2rem;
+  font-size: var(--letra-h3);
 }
 
 .sauces-info{
- flex-direction: column;
- width: 100%;
- padding: 1rem;
- gap:1rem;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 
@@ -4583,7 +5481,7 @@ nav ul li a{
 }
 .contactenos-sauces-info h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   letter-spacing: -0.01em;
   -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
   width: 100%;
@@ -4592,7 +5490,7 @@ nav ul li a{
 }
 .contactenos-sauces-info p{
 
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   width: 100%;
   margin:0.5rem;
 }
@@ -4628,17 +5526,18 @@ nav ul li a{
   justify-content: space-between; 
   padding: 0.5rem;
   width: 100%;
+  height: 35rem;
 }
 
 .banner-piamonte-info h1{
-  font-size: 3rem;
+  font-size: var(--letra-h2);
   color: var(--gris-oscuro);
   -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
   width: 100%;
   padding: 1rem;
 }
 .banner-piamonte-info h2{
-  font-size: 2.5rem;
+  font-size: var(--letra-h3);
   color: var(--gris-oscuro);
   -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
   
@@ -4646,7 +5545,7 @@ nav ul li a{
 }
 .banner-piamonte-info h3{
   width: 100%;
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   padding: 1rem;
   color: var(--gris-oscuro);
   -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
@@ -4666,7 +5565,7 @@ nav ul li a{
 }
 
 .btnNaranjaPiamonte a {
-  font-size: 1rem;
+  font-size: var(--letra-p);
 }
 .btnNaranjaPiamonte2{
   width: 15rem !important;
@@ -4676,7 +5575,7 @@ nav ul li a{
 }
 .proyecto-piamonte h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
 
 }
 .descubre-piamonte{
@@ -4690,10 +5589,14 @@ nav ul li a{
 .descubre-piamonte p{
  
   width: 100%;
-  font-size: 1rem;
+  font-size: var(--letra-p);
   padding: 0.8rem;
   
 
+}
+.info-y-avance-piamonte{
+  width: 90%;
+  
 }
 .galerias-fotos-piamonte {
   position: relative;
@@ -4705,7 +5608,7 @@ nav ul li a{
 
 .btn-flecha {
 
-  font-size: 1rem;
+  font-size: var(--letra-p);
   width: 2rem;
   height: 2rem;
 
@@ -4715,20 +5618,21 @@ nav ul li a{
   
   flex-direction: column;
   height: auto;
-  padding: 0.5rem;
+  padding: 1rem 0 0 0;
 }
 .espacios-piamonte h1{
-  font-size: 2.5rem;
-  margin:0.5rem;
+  font-size: var(--letra-h2);
+  margin:0;
   padding: 0;
   -webkit-text-stroke: 1px var(--gris-claro); /* Añade un contorno negro */
   width: 100%;
   text-align: center;
 }
 .espacios-piamonte p{
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   width: 100%;
-  padding: 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
+  margin:0;
 }
 .lineaVerticalVerdeOscuro{
   width: 90%;
@@ -4752,7 +5656,7 @@ nav ul li a{
   align-items: center;
   justify-content: center;
   width: 20%;
-  margin:1rem;
+  margin:0 1rem 0 1rem;
 
 }
 .info-piamonte-img img{
@@ -4767,7 +5671,7 @@ nav ul li a{
 
 }
 .info-piamonte-texto p{
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   padding: 0;
   width: 100%;
   margin: 0.5rem 0 0.5rem 0;
@@ -4783,13 +5687,12 @@ nav ul li a{
 
 .planta-piamonte h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   
 }
 
 .comodidades-piamonte{
-  background-image: url('utils/piamonte/Banner2.webp');
-  background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
+  background-size: auto 150px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
   background-position: center top; /* Alinea la imagen hacia arriba */
   background-repeat: no-repeat;/* Evita la repetición de la imagen */
   width: 100%;
@@ -4799,18 +5702,21 @@ nav ul li a{
   justify-content: center;
   height: auto;
   padding: 0.5rem;
+  
 
 }
 .comodidades-piamonte h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   width: 100%;
+  -webkit-text-stroke: 0.5px var(--gris-oscuro);
+  margin:1.5rem 0 1rem 0;
   
 }
 
 .comodidades-piamonte-lista p{
   width: 100%;
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   color: var(--gris-oscuro);
 
 
@@ -4833,7 +5739,7 @@ nav ul li a{
 }
 .ubicacion-piamonte-info h1{
   
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   color: var(--gris-oscuro);
   -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
   letter-spacing: 0.1em;
@@ -4841,7 +5747,7 @@ nav ul li a{
   padding: 0;
 }
 .ubicacion-piamonte-info h2{
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   letter-spacing: -0.05em;
   margin:0;
   padding: 0;
@@ -4859,14 +5765,14 @@ nav ul li a{
 }
 
 .piamonte-eleccion h1,h2{
-  font-size: 2rem;
+  font-size: var(--letra-h3);
 }
 
 .piamonte-info{
- flex-direction: column;
- width: 100%;
- padding: 1rem;
- gap:1rem;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 
@@ -4882,15 +5788,323 @@ nav ul li a{
 }
 .contactenos-piamonte-info h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   letter-spacing: 0.1em;
   width: 100%;
   text-align: center;
+  -webkit-text-stroke: 1px var(--verde-oscuro-piamonte);
   
 }
 .contactenos-piamonte-info p{
 
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
+  width: 100%;
+  margin:0.5rem;
+}
+
+/*Santa Clara*/
+
+.santaclara{
+
+  padding: 0;
+  margin: 0;
+
+}
+
+.banner-santaclara{
+
+  background-image: url('utils/santaclara/Banner.webp');
+  background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
+  background-position: center top; /* Alinea la imagen hacia arriba */
+  background-repeat: no-repeat;
+  height: auto; /* Ajusta la altura según lo necesites */
+  width: 100%; /* Ajusta el ancho si es necesario */
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.banner-santaclara-info{
+  display: flex; 
+  flex-direction: column;
+  align-items:center; 
+  justify-content: space-between; 
+  padding: 0.5rem;
+  width: 100%;
+  height: 35rem;
+}
+
+.banner-santaclara-info h1{
+  font-size: var(--letra-h2);
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
+  width: 100%;
+  padding: 1rem;
+}
+.banner-santaclara-info h2{
+  font-size: var(--letra-h3);
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+  
+
+}
+.banner-santaclara-info h3{
+  width: 100%;
+  font-size: var(--letra-h3);
+  padding: 1rem;
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
+
+}
+
+
+.form-santaclara {
+  border-radius: 2.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20rem; /* Ancho total de la tarjeta del formulario */
+  margin: 0 0 1rem 0;
+}
+
+.btnNaranjaSantaClara a {
+  font-size: var(--letra-p);
+}
+.btnNaranjaSantaClara2{
+  width: 15rem !important;
+}
+.btnVerdeSantaClaraContacto {
+  width: 100%;
+}
+.proyecto-santaclara h1{
+
+  font-size: var(--letra-h3);
+
+}
+.descubre-santaclara{
+  display: flex; /* Asegura alineación dentro del botón */
+  align-items: center; 
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+}
+.descubre-santaclara p{
+ 
+  width: 100%;
+  font-size: var(--letra-p);
+  padding: 0.8rem;
+  
+
+}
+.info-y-avance-santaclara{
+  width: 90%;
+  
+}
+.galerias-fotos-santaclara {
+  position: relative;
+  width: 80%;
+  margin: 0 0 1rem;
+  
+}
+
+
+.btn-flecha {
+
+  font-size: var(--letra-p);
+  width: 2rem;
+  height: 2rem;
+
+}
+
+.espacios-santaclara{
+  
+  flex-direction: column;
+  height: auto;
+  padding: 1rem 0 0 0;
+}
+.espacios-santaclara h1{
+  font-size: var(--letra-h2);
+  margin:0;
+  padding: 0;
+  -webkit-text-stroke: 1px var(--gris-claro); /* Añade un contorno negro */
+  width: 100%;
+  text-align: center;
+}
+.espacios-santaclara p{
+  font-size: var(--letra-h3);
+  width: 100%;
+  padding: 0 0.5rem 0 0.5rem;
+  margin:0;
+}
+.lineaVerticalVerdeOscuro{
+  width: 90%;
+  height: 0.4rem;
+  margin: 1rem;
+
+}
+
+
+.info-santaclara {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+ }
+.info-santaclara-img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  margin:0 1rem 0 1rem;
+
+}
+.info-santaclara-img img{
+  margin:1.5rem;
+  height: 3.5rem;
+  
+
+}
+.info-santaclara-texto{
+  
+  flex-direction: column;
+
+}
+.info-santaclara-texto p{
+  font-size: var(--letra-h3);
+  padding: 0;
+  width: 100%;
+  margin: 0.5rem 0 0.5rem 0;
+  text-align: left;
+  height: 5rem;
+}
+
+.planta-santaclara{
+
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.planta-santaclara h1{
+
+  font-size: var(--letra-h3);
+  
+}
+
+.comodidades-santaclara{
+  background-size: auto 150px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
+  background-position: center top; /* Alinea la imagen hacia arriba */
+  background-repeat: no-repeat;/* Evita la repetición de la imagen */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 0.5rem;
+  
+
+}
+.comodidades-santaclara h1{
+
+  font-size: var(--letra-h3);
+  width: 100%;
+  -webkit-text-stroke: 0.5px var(--gris-oscuro);
+  margin:1.5rem 0 1rem 0;
+  
+}
+
+.comodidades-santaclara-lista p{
+  width: 100%;
+  font-size: var(--letra-h3);
+  color: var(--gris-oscuro);
+
+
+}
+.ubicacion-santaclara{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+.ubicacion-santaclara-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+
+}
+.ubicacion-santaclara-info h1{
+  
+  font-size: var(--letra-h3);
+  color: var(--gris-oscuro);
+  -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
+  letter-spacing: 0.1em;
+  margin:0.5rem;
+  padding: 0;
+}
+.ubicacion-santaclara-info h2{
+  font-size: var(--letra-h3);
+  letter-spacing: -0.05em;
+  margin:0;
+  padding: 0;
+}
+.ubicacion-santaclara-info img{
+  width: 3rem;
+}
+.ubicacion-santaclara-maps{
+  width: 90%;
+  margin:0.5rem
+}
+.ubicacion-santaclara-maps img{
+  width: 100%;
+
+}
+
+.santaclara-eleccion h1,h2{
+  font-size: var(--letra-h3);
+}
+
+.santaclara-info{
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+.contactenos-santaclara{
+
+  flex-direction: column;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  
+}
+.contactenos-santaclara-info{
+  padding: 0.5rem;
+
+}
+.contactenos-santaclara-info h1{
+
+  font-size: var(--letra-h3);
+  letter-spacing: 0.1em;
+  width: 100%;
+  text-align: center;
+  -webkit-text-stroke: 1px var(--verde-oscuro-santaclara);
+  
+}
+.contactenos-santaclara-info p{
+
+  font-size: var(--letra-h3);
   width: 100%;
   margin:0.5rem;
 }
@@ -4926,21 +6140,23 @@ nav ul li a{
   justify-content: space-between; 
   padding: 0.5rem;
   width: 100%;
+  height: 35rem;
 }
+
 .logoAcacias{
   height: 10rem;
   margin: 1rem 0 0 0;
 }
 
 .banner-acacias-info h1{
-  font-size: 3rem;
+  font-size: var(--letra-h2);
   color: var(--gris-oscuro);
   -webkit-text-stroke: 3px var(--gris-oscuro); /* Añade un contorno negro */
   width: 100%;
   padding: 1rem;
 }
 .banner-acacias-info h2{
-  font-size: 2.5rem;
+  font-size: var(--letra-h3);
   color: var(--gris-oscuro);
   -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
   
@@ -4948,7 +6164,7 @@ nav ul li a{
 }
 .banner-acacias-info h3{
   width: 100%;
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   padding: 1rem;
   color: var(--gris-oscuro);
   -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
@@ -4968,7 +6184,7 @@ nav ul li a{
 }
 
 .btnNaranjaAcacias a {
-  font-size: 1rem;
+  font-size: var(--letra-p);
 }
 .btnNaranjaAcacias2{
   width: 15rem !important;
@@ -4978,7 +6194,7 @@ nav ul li a{
 }
 .proyecto-acacias h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
 
 }
 .descubre-acacias{
@@ -4992,10 +6208,14 @@ nav ul li a{
 .descubre-acacias p{
  
   width: 100%;
-  font-size: 1rem;
+  font-size: var(--letra-p);
   padding: 0.8rem;
   
 
+}
+.info-y-avance-acacias{
+  width: 90%;
+  
 }
 .galerias-fotos-acacias {
   position: relative;
@@ -5007,7 +6227,7 @@ nav ul li a{
 
 .btn-flecha {
 
-  font-size: 1rem;
+  font-size: var(--letra-p);
   width: 2rem;
   height: 2rem;
 
@@ -5017,20 +6237,22 @@ nav ul li a{
   
   flex-direction: column;
   height: auto;
-  padding: 0.5rem;
+  padding: 0;
+  margin:0;
 }
 .espacios-acacias h1{
-  font-size: 2.5rem;
-  margin:0.5rem;
-  padding: 0;
+  font-size: var(--letra-h2);
+  margin:0;
+  padding: 1rem 0 0 0;
   -webkit-text-stroke: 1px var(--gris-claro); /* Añade un contorno negro */
   width: 100%;
   text-align: center;
 }
 .espacios-acacias p{
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   width: 100%;
-  padding: 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
+  margin:0;
 }
 .lineaVerticalNaranja{
   width: 90%;
@@ -5053,7 +6275,7 @@ nav ul li a{
   align-items: center;
   justify-content: center;
   width: 20%;
-  margin:1rem;
+  margin:0 1rem 0 1rem;
 
 }
 .info-acacias-img img{
@@ -5068,7 +6290,7 @@ nav ul li a{
 
 }
 .info-acacias-texto p{
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   padding: 0;
   width: 100%;
   margin: 1rem 0 0 0;
@@ -5084,13 +6306,13 @@ nav ul li a{
 
 .planta-acacias h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   
 }
 
 .comodidades-acacias{
   background-image: url('utils/acacias/Banner2.webp');
-  background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
+  background-size: auto 150px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
   background-position: center top; /* Alinea la imagen hacia arriba */
   background-repeat: no-repeat;/* Evita la repetición de la imagen */
   width: 100%;
@@ -5104,15 +6326,17 @@ nav ul li a{
 }
 .comodidades-acacias h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   width: 100%;
   letter-spacing: 0.05em;
+  margin:1.5rem 0 1rem 0;
+  -webkit-text-stroke: 1px var(--gris-oscuro);
   
 }
 
 .comodidades-acacias-lista p{
   width: 100%;
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   color: var(--gris-oscuro);
 
 
@@ -5135,7 +6359,7 @@ nav ul li a{
 }
 .ubicacion-acacias-info h1{
   
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   color: var(--gris-oscuro);
   -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
   letter-spacing: 0.1em;
@@ -5144,13 +6368,13 @@ nav ul li a{
   
 }
 .ubicacion-acacias-info h2{
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   letter-spacing: -0.05em;
   margin:0;
   padding: 0;
 }
 .ubicacion-acacias-info h3{
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   letter-spacing: 0.05em;
   margin:0;
   padding: 0;
@@ -5169,14 +6393,14 @@ nav ul li a{
 }
 
 .acacias-eleccion h1,h2{
-  font-size: 2rem;
+  font-size: var(--letra-h3);
 }
 
 .acacias-info{
- flex-direction: column;
- width: 100%;
- padding: 1rem;
- gap:1rem;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 
@@ -5193,14 +6417,14 @@ nav ul li a{
 }
 .contactenos-acacias-info h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   letter-spacing: -0.01em;
   -webkit-text-stroke: 1px var(--gris-oscuro); /* Añade un contorno negro */
   width: 100%;
 }
 .contactenos-acacias-info p{
 
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   width: 100%;
   margin:0.5rem;
 }
@@ -5237,6 +6461,7 @@ nav ul li a{
   justify-content: space-between; 
   padding: 0.5rem;
   width: 100%;
+  height: 35rem;
 }
 .logoAlameda{
   height: 10rem;
@@ -5244,18 +6469,19 @@ nav ul li a{
 }
 
 .banner-alameda-info h1{
-  font-size: 3rem;
+  font-size: var(--letra-h2);
   width: 100%;
   padding: 1rem;
 }
 .banner-alameda-info h2{
-  font-size: 2.5rem;
+  font-size: var(--letra-h3);
+
 
 
 }
 .banner-alameda-info h3{
   width: 100%;
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   padding: 1rem;
 }
 
@@ -5272,7 +6498,7 @@ nav ul li a{
 }
 
 .btnNaranjaAlameda a {
-  font-size: 1rem;
+  font-size: var(--letra-p);
 }
 .btnNaranjaAlameda2{
   width: 15rem !important;
@@ -5282,7 +6508,7 @@ nav ul li a{
 }
 .proyecto-alameda h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
 
 }
 .descubre-alameda{
@@ -5296,10 +6522,14 @@ nav ul li a{
 .descubre-alameda p{
  
   width: 100%;
-  font-size: 1rem;
+  font-size: var(--letra-p);
   padding: 0.8rem;
   
 
+}
+.info-y-avance-alameda{
+  width: 90%;
+  
 }
 .galerias-fotos-alameda {
   position: relative;
@@ -5311,7 +6541,7 @@ nav ul li a{
 
 .btn-flecha {
 
-  font-size: 1rem;
+  font-size: var(--letra-p);
   width: 2rem;
   height: 2rem;
 
@@ -5321,26 +6551,33 @@ nav ul li a{
   
   flex-direction: column;
   height: auto;
-  padding: 0.5rem;
+  padding: 0;
+  margin:0;
 }
 .espacios-alameda h1{
-  font-size: 2.5rem;
-  margin:0.5rem;
-  padding: 0;
+  font-size: var(--letra-h2);
+  margin:0;
+  padding: 1rem 0 0 0;
   -webkit-text-stroke: 1px var(--gris-claro); /* Añade un contorno negro */
   width: 100%;
   text-align: center;
 }
 .espacios-alameda p{
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   width: 100%;
-  padding: 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
+  margin:0;
 }
 .lineaVerticalAzulClaro{
   width: 90%;
   height: 0.4rem;
   margin: 1rem;
 
+}
+.lineaVerticalNaranjaClaro{
+  width: 90%;
+  height: 0.4rem;
+  margin: 1rem;
 }
 
 .info-alameda {
@@ -5358,6 +6595,7 @@ nav ul li a{
   justify-content: center;
   width: 20%;
   margin:1rem;
+  margin:0 1rem 0 1rem;
 
 }
 .info-alameda-img img{
@@ -5372,7 +6610,7 @@ nav ul li a{
 
 }
 .info-alameda-texto p{
-  font-size: 1.7rem;
+  font-size: var(--letra-h3);
   padding: 0;
   width: 100%;
   margin: 1rem 0 0 0;
@@ -5388,13 +6626,13 @@ nav ul li a{
 
 .planta-alameda h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   
 }
 
 .comodidades-alameda{
   background-image: url('utils/alameda/Banner2.webp');
-  background-size: auto 200px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
+  background-size: auto 150px; /* Ajusta la altura de la imagen a 300px y la escala proporcionalmente */
   background-position: center top; /* Alinea la imagen hacia arriba */
   background-repeat: no-repeat;/* Evita la repetición de la imagen */
   width: 100%;
@@ -5408,15 +6646,17 @@ nav ul li a{
 }
 .comodidades-alameda h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   width: 100%;
   letter-spacing: 0.05em;
+  margin:1.5rem 0 1rem 0;
+  -webkit-text-stroke: 1px var(--azul-oscuro-alameda);
   
 }
 
 .comodidades-alameda-lista p{
   width: 100%;
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   color: var(--gris-oscuro);
 
 
@@ -5439,7 +6679,7 @@ nav ul li a{
 }
 .ubicacion-alameda-info h1{
   
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   color: var(--gris-oscuro);
   -webkit-text-stroke: 2px var(--gris-oscuro); /* Añade un contorno negro */
   letter-spacing: 0.1em;
@@ -5448,7 +6688,7 @@ nav ul li a{
   
 }
 .ubicacion-alameda-info h2{
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   letter-spacing: -0.05em;
   margin:0;
   padding: 0;
@@ -5467,14 +6707,33 @@ nav ul li a{
 }
 
 .alameda-eleccion h1,h2{
-  font-size: 2rem;
+  font-size: var(--letra-h3);
 }
 
 .alameda-info{
- flex-direction: column;
- width: 100%;
- padding: 1rem;
- gap:1rem;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+ 
+}
+.acceso , .independencia , .ambiente{
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+
+}
+.acceso img, .independencia img, .ambiente img{
+  width: 5rem;
+  height: auto;
+}
+.acceso p, .independencia p, .ambiente p{
+  width: 7rem;
+  height: auto;
+  font-size: var(--letra-pp);
+  text-align: center;
+  
 }
 
 
@@ -5491,13 +6750,14 @@ nav ul li a{
 }
 .contactenos-alameda-info h1{
 
-  font-size: 2rem;
+  font-size: var(--letra-h3);
   letter-spacing: -0.01em;
   width: 100%;
+  -webkit-text-stroke: 1px var(--azul-oscuro-alameda);
 }
 .contactenos-alameda-info p{
 
-  font-size: 1.5rem;
+  font-size: var(--letra-h3);
   width: 100%;
   margin:0.5rem;
 }
@@ -5510,6 +6770,7 @@ nav ul li a{
   align-items: center; 
   justify-content: space-between;  
   padding: 1rem;
+  height: 17rem;
 
 
 }
@@ -5519,7 +6780,7 @@ nav ul li a{
   align-items: flex-start; 
   justify-content: space-between; 
   width: 100%;
-  margin: 0.5rem;
+  margin: 0.5rem 0.5rem 0 0.5rem;
   
 }
 
@@ -5540,8 +6801,6 @@ nav ul li a{
 }
 .footbar-info p, .contactanos p{
   font-size: 0.85rem;
-
-  
   
 }
 .contactanos{
@@ -5551,7 +6810,7 @@ nav ul li a{
   justify-content: center;
   text-align: center;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 0;
   
   
 }
@@ -5560,7 +6819,7 @@ nav ul li a{
 }
 
 .btnNaranjaFootbar a{
-  font-size: 1.5rem !important;
+  font-size: var(--letra-h3) !important;
 
   
 }

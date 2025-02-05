@@ -6,10 +6,11 @@ import Conocenos from './pages/conocenos';
 import Lanzamientos from './pages/lanzamientos';
 import Navbar from './components/navbar';
 import Footbar from './components/footbar';
-import Sauce from './pages/proyectos/union/Sauces'; 
-import Piamonte from './pages/proyectos/bolivar/Piamonte'; 
-import Acacias from './pages/proyectos/bolivar/Acacias';
-import Alameda from './pages/proyectos/sucre/Alameda';
+import Sauce from './pages/proyectos/antioquia/Sauces'; 
+import Piamonte from './pages/proyectos/cartagena/Piamonte'; 
+import Acacias from './pages/proyectos/cartagena/Acacias';
+import SantaClara from './pages/proyectos/cartagena/SantaClara';
+import Alameda from './pages/proyectos/sincelejo/Alameda';
 import ScrollToTop from "./pages/ScrollToTop";
 
 const CURRENT_VERSION = '1.1.5'; 
@@ -46,10 +47,11 @@ function App() {
 
   // Aplica 'conocenos-bg' a Footbar si la ruta es '/conocenos'
   const isConocenosPage = location.pathname === '/conocenos';
-  const isSaucesPage = location.pathname === '/proyectos/union/Sauces';
-  const isPiamontePage = location.pathname === '/proyectos/bolivar/Piamonte';
-  const isAlamedaPage = location.pathname === '/proyectos/sucre/Alameda';
-  const isAcaciasPage = location.pathname === '/proyectos/bolivar/Acacias';
+  const isSaucesPage = location.pathname === '/proyectos/antioquia/Sauces';
+  const isPiamontePage = location.pathname === '/proyectos/cartagena/Piamonte';
+  const isAlamedaPage = location.pathname === '/proyectos/sincelejo/Alameda';
+  const isAcaciasPage = location.pathname === '/proyectos/cartagena/Acacias';
+  const isSantaClaraPage = location.pathname === '/proyectos/cartagena/SantaClara';
 
   return (
     
@@ -59,10 +61,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/conocenos" element={<Conocenos />} />
-            <Route path="/proyectos/union/Sauces" element={<Sauce />} />
-            <Route path="/proyectos/bolivar/Piamonte" element={<Piamonte />} />
-            <Route path="/proyectos/bolivar/Acacias" element={<Acacias />} />
-            <Route path="/proyectos/sucre/Alameda" element={<Alameda />} />
+            <Route path="/proyectos/antioquia/Sauces" element={<Sauce />} />
+            <Route path="/proyectos/cartagena/Piamonte" element={<Piamonte />} />
+            <Route path="/proyectos/cartagena/Acacias" element={<Acacias />} />
+            <Route path="/proyectos/cartagena/SantaClara" element={<SantaClara />} />
+            <Route path="/proyectos/sincelejo/Alameda" element={<Alameda />} />
+            
             <Route path="/lanzamientos" element={<Lanzamientos />} />
           </Routes>
         </div>
@@ -72,6 +76,7 @@ function App() {
          isPiamontePage={isPiamontePage}
          isAlamedaPage={isAlamedaPage}
          isAcaciasPage={isAcaciasPage}
+         isSantaClaraPage={isSantaClaraPage}
          />
          <ScrollToTop />
       </div>

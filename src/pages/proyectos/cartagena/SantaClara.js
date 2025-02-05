@@ -1,22 +1,19 @@
 import React, { useState } from 'react';
-import logoSauces from '../../../utils/sauces/Logo.webp';
-import ubicacionNaranja from '../../../utils/sauces/UbicacionNaranja.webp';
-import metros from '../../../utils/sauces/Metros-cuadrados.webp';
-import habitacion from '../../../utils/sauces/Habitaciones.webp';
-import bano from '../../../utils/sauces/Bano.webp';
-import parqueadero from '../../../utils/sauces/Parqueadero.webp';
-import otros from '../../../utils/sauces/Casa.webp';
-import planta from '../../../utils/sauces/Planta.webp';
-import arbol from '../../../utils/sauces/Arbol.webp';
-import ubicacion from '../../../utils/sauces/Ubicacion.webp';
-import acceso from '../../../utils/sauces/Figura1.webp';
-import independencia from '../../../utils/sauces/Figura2.webp';
-import ambiente from '../../../utils/sauces/Figura3.webp';
-import Imagen1 from '../../../utils/sauces/Imagen1.webp';
-import Imagen2 from '../../../utils/sauces/Imagen2.webp';
-import Imagen3 from '../../../utils/sauces/Imagen3.webp';
-import Imagen4 from '../../../utils/sauces/Imagen4.webp';
-import Mapa from '../../../utils/sauces/mapaSauces.webp';
+import logoSantaClara from '../../../utils/santaclara/Logo.webp';
+import ubicacion1 from '../../../utils/santaclara/Ubicacion1.webp';
+import ubicacion2 from '../../../utils/santaclara/Ubicacion2.webp';
+import metros from '../../../utils/santaclara/Metros-cuadrados.webp';
+import habitacion from '../../../utils/santaclara/Habitaciones.webp';
+import bano from '../../../utils/santaclara/Bano.webp';
+import otros from '../../../utils/santaclara/Casa.webp';
+import planta from '../../../utils/santaclara/Planta.webp';
+import logoSolo from '../../../utils/santaclara/LogoSolo.webp';
+import acceso from '../../../utils/santaclara/Figura1.webp';
+import independencia from '../../../utils/santaclara/Figura2.webp';
+import ambiente from '../../../utils/santaclara/Figura3.webp';
+import Imagen1 from '../../../utils/santaclara/Imagen1.webp';
+import Imagen2 from '../../../utils/santaclara/Imagen2.webp';
+import Mapa from '../../../utils/santaclara/mapa.webp';
 import emailjs from '@emailjs/browser';
 
 
@@ -30,9 +27,8 @@ const Sauce = () => {
     celular: '',
     autorizacion: false,
   });
-  const fotos = [Imagen1, Imagen2, Imagen3, Imagen4];
-
-  const googleMapsUrl = `https://www.google.com/maps/place/5%C2%B058'15.3%22N+75%C2%B021'17.3%22W/@5.9709096,-75.3573723,17z/data=!3m1!4b1!4m4!3m3!8m2!3d5.9709096!4d-75.3547974?hl=es&entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D`;
+  const fotos = [Imagen1, Imagen2];
+  const googleMapsUrl = `https://www.google.com/maps/place/10%C2%B020'43.1%22N+75%C2%B024'13.1%22W/@10.345293,-75.40365,15z/data=!4m4!3m3!8m2!3d10.345293!4d-75.40365?entry=ttu&g_ep=EgoyMDI1MDIwMi4wIKXMDSoASAFQAw%3D%3D`;
 
 
   const [indiceActual, setIndiceActual] = useState(0);
@@ -65,9 +61,10 @@ const Sauce = () => {
       email: formData.email,
       celular: formData.celular,
       autorizacion: formData.autorizacion ? 'Sí' : 'No',
-      to_email: 'ejecutivocomercial@enfoqueconstructores.com', // Define el destinatario aquí,
-      proyecto:"Los Sauces"
+      to_email: 'iyoung@enfoqueconstructores.com', // Define el destinatario aquí,
+      proyecto:"Santa Clara"
     };
+
     console.log(templateParams)
 
     emailjs
@@ -96,18 +93,18 @@ const Sauce = () => {
       );
   };
   return (
-    <div className='sauces'>
-      <div className='banner-sauces'>
-        <div className='banner-sauces-info'>
-          <img className="logoSauces" src={logoSauces} alt="logoSauces" />
-          <h1>Casas VIS</h1>
-          <div className='banner-ubicacion-sauces'>
-            <img src={ubicacionNaranja} alt="ubicacionNaranja" />
-            <h2>La Unión <br></br>Antioquia</h2>
+    <div className='santaclara'>
+      <div className='banner-santaclara'>
+        <div className='banner-santaclara-info'>
+          <img src={logoSantaClara} alt="logoSantaClara" />
+          <h1>Proyecto de casas</h1>
+          <div className='banner-ubicacion-santaclara'>
+            <img src={ubicacion1} alt="ubicacionNaranja" />
+            <h2>Turbaco<br></br>Bolivar</h2>
           </div>
-          <h3>*|Casas con posibilidad de ampliación a segundo piso</h3>
+          
         </div>
-        <div className='form-sauces'>
+        <div className='form-santaclara'>
           <form onSubmit={handleOnSubmit}>
             <div>
               <label>Nombre</label>
@@ -149,7 +146,7 @@ const Sauce = () => {
                 required
               />
             </div>
-            <div className='autorizo-checkbox-sauces'>
+            <div className='autorizo-checkbox'>
               <label className='autorizo'>
                 <input
                   type="checkbox"
@@ -158,27 +155,32 @@ const Sauce = () => {
                   onChange={handleChange}
                   required
                 />
-                Autorizo el tratamiento de mis datos personales y <br></br> políticas de privacidad
+                Autorizo el tratamiento de mis datos personales y políticas de privacidad
               </label>
             </div>
-            <button className='btnGrisSauces' type="submit">Solicitar Información</button>
-            <div className='btnGrisSauces2'>
-              <a href="https://wa.link/np8w02" target="_blank" rel="noopener noreferrer">Contactar un asesor</a>
+            <button className='btnVerdeSantaClara' type="submit">Solicitar Información</button>
+            <div className='btnVerdeSantaClara2'>
+              <a href="https://wa.link/f3f9g0" target="_blank" rel="noopener noreferrer">Contactar un asesor</a>
             </div>
           </form>
         </div>
       </div>
-      <div className='proyecto-sauces'>
-        <h1>Proyecto de casas <br></br> desde 135 SMMLV</h1>
+      <div className='proyecto-santaclara'>
+        <h1>Proyecto de casas <br></br> desde 113 SMMLV</h1>
       </div>
-      <div className='descubre-sauces'>
-        <p><strong>Descubre nuestro proyecto Los Sauces, </strong>
-          un lugar donde la independencia y la tranquilidad se encuentran. 
-          <strong> Este proyecto de 402 casas en La Unión - Antioquia,</strong> ofrece más que viviendas: 
-          te invita a formar parte de una comunidad segura y privilegiada. 
-          Imagina un hogar con patio y antejardín, perfecto para disfrutar con tu familia. 
-          <strong> ¿Te animas a ser parte de Los Sauces?</strong> </p>
-        <div className="galerias-fotos-sauces">
+      <div className='descubre-santaclara'>
+      <div className='info-y-avance-santaclara'>
+          <p>Vive la tranquilidad y el confort en un espacio diseñado para ti y tu familia. 
+          <strong>Con 206 casas independientes</strong>, este proyecto en <strong>Túrbaco, Bolívar,</strong> 
+          te ofrece la combinación perfecta entre naturaleza y modernidad. 
+          <strong>¡Tu nuevo hogar te espera en Santa Clara!</strong></p>
+          <div className='btnVerdeSantaClaraContacto'>
+            <a href="https://drive.google.com/drive/u/4/folders/1Fjm5bHGXnTKuoF68ZOlEcfpvVpiWH7zL" target="_blank" rel="noopener noreferrer">Avance de la obra</a>  
+          </div>
+
+        </div>
+        
+        <div className="galerias-fotos-santaclara">
          <button className="btn-flecha izquierda" onClick={anteriorFoto}>
             &#8249;
           </button>
@@ -191,66 +193,65 @@ const Sauce = () => {
         </div>
 
       </div>
-      <div className='espacios-sauces'>
+      <div className='espacios-santaclara'>
         <h1>Espacios<br></br> amplios y <br></br>  cómodos</h1>
         <div className='lineaVerticalVerde'></div>
-        <p>Casas de 48 m2 en lotes de 68 m2 y con placa para construir segundo piso.</p>
+        <p>Casas de 50.5 m2 en lotes de 72 m2 y con placa para construir segundo piso.</p>
         <div className='lineaVerticalVerde'></div>
-        <div className='info-sauces'>
-          <div className='info-sauces-img'>
+        <div className='info-santaclara'>
+          <div className='info-santaclara-img'>
           <img src={metros} alt="metros" />
           <img src={habitacion} alt="habitaciones" />
           <img src={bano} alt="banos" />
-          <img src={parqueadero} alt="parqueadero" />
           <img src={otros} alt="otros" />
 
           </div>
-          <div className='info-sauces-texto'>
-            <p>48 m2.</p>
+          <div className='info-santaclara-texto'>
+            <p>50.5 m2.</p>
             <p>2 habitaciones.</p>
             <p>1 baño.</p>
-            <p>1 parqueadero.</p>
             <p>Patio, cocina, sala-comedor y antejardín.</p>
           </div>
         </div>
       </div>
-      <div className='planta-sauces'>
+      <div className='planta-santaclara'>
         <h1>Planta arquitectónica</h1>
         <img src={planta} alt="planta" />
       </div>
-      <div className='comodidades-sauces'>
+      <div className='comodidades-santaclara'>
         <h1>Excelentes comodidades de la urbanización para compartir en familia</h1>
-        <div className='lineaVerticalVerde'></div>
-        <div className='comodidades-sauces-lista'>
+        <div className='lineaVerticalVerdeOscuro'></div>
+        <div className='comodidades-santaclara-lista'>
           <div className='salon'>
-            <img src={arbol} alt="arbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Zonas de entretenimiento</p>
           </div>
           <div className='juegos'>
-            <img src={arbol} alt="arbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Juegos infantiles.</p>
           </div>
           <div className='sendero'>
-            <img src={arbol} alt="arbol" />
+            <img src={logoSolo} alt="logoSolo" />
             <p>Sendero.</p>
           </div>
           <div className='cancha'>
-            <img src={arbol} alt="arbol" />
-            <p>Cancha múltiple.</p>
+            <img src={logoSolo} alt="logoSolo" />
+            <p>Elemento de lista.</p>
           </div>
-          <div className='parqueadero'>
-            <img src={arbol} alt="arbol" />
-            <p>Parqueadero visitantes.</p>
+          <div className='cancha'>
+            <img src={logoSolo} alt="logoSolo" />
+            <p>Lago.</p>
           </div>
         </div>
       </div>
-      <div className='ubicacion-sauces'>
-        <div className='ubicacion-sauces-info'>
-          <img src={ubicacion} alt="ubicacion" />
-          <h1>Fácil acceso <br></br> por la vía principal</h1>
-          <h2> La Unión - Sonsón</h2>
+      <div className='ubicacion-santaclara'>
+        <div className='ubicacion-santaclara-info'>
+          <img src={ubicacion2} alt="ubicacion" />
+          <h1>Fácil acceso</h1>
+          <h2>Turbaco - Bolivar</h2>
+          <h3>A tan solo 30 minutos de Cartagena</h3>
         </div>
-        <div className='ubicacion-sauces-maps'>
+        <div className='ubicacion-santaclara-maps'>
           <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
             <img src={Mapa} alt="Mapa" />
           </a>
@@ -258,11 +259,11 @@ const Sauce = () => {
 
 
       </div>
-      <div className='sauces-eleccion'>
-        <h1>Vivir en casa sí es posible y </h1>
-        <h2>Los Sauces es tu mejor elección.</h2>
+      <div className='santaclara-eleccion'>
+        <h1>Si buscas un lugar que lo tenga todo, <strong>Santa Clara te abre las puertas de tu nuevo hogar.</strong>  </h1>
+        
       </div>
-      <div className='sauces-info'>
+      <div className='santaclara-info'>
         <div className='acceso'>
           <img src={acceso} alt="acceso" />
           <p>Fácil acceso y excelente ubicación</p>
@@ -276,16 +277,16 @@ const Sauce = () => {
           <p>Ambiente tranquilo y natural</p>
         </div>
       </div>
-      <div className='contactenos-sauces'>
-        <div className='contactenos-sauces-info'>
+      <div className='contactenos-santaclara'>
+        <div className='contactenos-santaclara-info'>
           <h1>Contáctanos y recibe asesoría personalizada </h1>
-          <div className='btnGrisSaucesContacto'>
-            <a href="https://wa.link/np8w02" target="_blank" rel="noopener noreferrer">¡Hablemos aquí!</a>  
+          <div className='btnVerdeSantaClaraContacto'>
+            <a href="https://wa.link/f3f9g0" target="_blank" rel="noopener noreferrer">¡Hablemos aquí!</a>  
           </div>
           <p>O diligencia nuestro formulario <br></br>para ser contactado(a) por uno de
           nuestros asesores.</p>
         </div>
-        <div className='form-sauces'>
+        <div className='form-santaclara'>
           <form onSubmit={handleOnSubmit}>
             <div>
               <label>Nombre</label>
@@ -327,7 +328,7 @@ const Sauce = () => {
                 required
               />
             </div>
-            <div className='autorizo-checkbox-sauces'>
+            <div className='autorizo-checkbox'>
               <label className='autorizo'>
                 <input
                   type="checkbox"
@@ -336,10 +337,10 @@ const Sauce = () => {
                   onChange={handleChange}
                   required
                 />
-                Autorizo el tratamiento de mis datos personales y <br></br> políticas de privacidad
+                Autorizo el tratamiento de mis datos personales y políticas de privacidad
               </label>
             </div>
-            <button className='btnGrisSauces' type="submit">Solicitar Información</button>
+            <button className='btnVerdeSantaClara' type="submit">Solicitar Información</button>
           </form>
         </div>
 

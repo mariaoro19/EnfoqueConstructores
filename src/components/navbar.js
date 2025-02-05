@@ -69,14 +69,14 @@ const Navbar = () => {
             <ul >
               <li
                 className="union-item"
-                onMouseEnter={() => selectCity('Union')}
+                onMouseEnter={() => selectCity('Antioquia')}
                 onMouseLeave={() => selectCity(null)}
               >
-                La Unión
-                {selectedCity === 'Union' && (
+                Antioquia
+                {selectedCity === 'Antioquia' && (
                   <ul>
                     <li>
-                      <NavLink to="/proyectos/union/Sauces">Los Sauces</NavLink>
+                      <NavLink to="/proyectos/antioquia/Sauces">Los Sauces</NavLink>
                     </li>
                     
                   </ul>
@@ -85,31 +85,35 @@ const Navbar = () => {
               
               <li
                 className="bolivar-item"
-                onMouseEnter={() => selectCity('Bolivar')}
+                onMouseEnter={() => selectCity('Cartagena')}
                 onMouseLeave={() => selectCity(null)}
               >
-                Bolivar
-                {selectedCity === 'Bolivar' && (
+                Cartagena
+                {selectedCity === 'Cartagena' && (
                   <ul >
                     <li>
-                      <NavLink to="/proyectos/bolivar/Piamonte">Piamonte</NavLink>
+                      <NavLink to="/proyectos/cartagena/Piamonte">Piamonte</NavLink>
                     </li>
                     <li>
-                      <NavLink to="/proyectos/bolivar/Acacias">Las Acacias</NavLink>
+                      <NavLink to="/proyectos/cartagena/Acacias">Las Acacias</NavLink>
                     </li>
+                    <li>
+                      <NavLink to="/proyectos/cartagena/SantaClara">Santa Clara</NavLink>
+                    </li>
+                    
                   </ul>
                 )}
               </li>
               <li
                 className="sucre-item"
-                onMouseEnter={() => selectCity('Sucre')}
+                onMouseEnter={() => selectCity('Sincelejo')}
                 onMouseLeave={() => selectCity(null)}
               >
-                Sucre
-                {selectedCity === 'Sucre' && (
+                Sincelejo
+                {selectedCity === 'Sincelejo' && (
                   <ul >
                     <li>
-                      <NavLink to="/proyectos/sucre/Alameda">Alameda</NavLink>
+                      <NavLink to="/proyectos/sincelejo/Alameda">Alameda</NavLink>
                     </li>
                   </ul>
                 )}
@@ -148,44 +152,47 @@ const Navbar = () => {
           {isProyectosOpen && (
             <ul>
               <li
-                onMouseEnter={() => selectCity('Union')}
+                onMouseEnter={() => selectCity('Antioquia')}
                 onMouseLeave={() => selectCity(null)}
               >
-                La Unión
-                {selectedCity === 'Union' && (
+                Antioquia
+                {selectedCity === 'Antioquia' && (
                   <ul >
                     <li>
-                      <NavLink to="/proyectos/union/Sauces">Los Sauces</NavLink>
+                      <NavLink to="/proyectos/antioquia/Sauces">Los Sauces</NavLink>
                     </li>
                   </ul>
                 )}
               </li>
               
               <li
-                onMouseEnter={() => selectCity('Bolivar')}
+                onMouseEnter={() => selectCity('Cartagena')}
                 onMouseLeave={() => selectCity(null)}
               >
-                Bolivar
-                {selectedCity === 'Bolivar' && (
+                Cartagena
+                {selectedCity === 'Cartagena' && (
                   <ul>
                     <li>
-                      <NavLink to="/proyectos/bolivar/Piamonte">Piamonte</NavLink>
+                      <NavLink to="/proyectos/cartagena/Piamonte">Piamonte</NavLink>
                     </li>
                     <li>
-                      <NavLink to="/proyectos/bolivar/Acacias">Las Acacias</NavLink>
+                      <NavLink to="/proyectos/cartagena/Acacias">Las Acacias</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/proyectos/cartagena/SantaClara">Santa Clara</NavLink>
                     </li>
                   </ul>
                 )}
               </li>
               <li
-                onMouseEnter={() => selectCity('Sucre')}
+                onMouseEnter={() => selectCity('Sincelejo')}
                 onMouseLeave={() => selectCity(null)}
               >
-                Sucre
-                {selectedCity === 'Sucre' && (
+                Sincelejo
+                {selectedCity === 'Sincelejo' && (
                   <ul >
                     <li>
-                      <NavLink to="/proyectos/sucre/Alameda">Alameda</NavLink>
+                      <NavLink to="/proyectos/sincelejo/Alameda">Alameda</NavLink>
                     </li>
                   </ul>
                 )}

@@ -1,25 +1,28 @@
 import React, { useState } from 'react';
-import logoAcacias from '../../../utils/acacias/Logo.webp';
-import ubicacion1 from '../../../utils/acacias/Ubicacion1.webp';
-import ubicacion2 from '../../../utils/acacias/Ubicacion2.webp';
-import metros from '../../../utils/acacias/Metros-cuadrados.webp';
-import habitacion from '../../../utils/acacias/Habitaciones.webp';
-import bano from '../../../utils/acacias/Bano.webp';
-import otros from '../../../utils/acacias/Casa.webp';
-import planta from '../../../utils/acacias/Planta.webp';
-import logoSolo from '../../../utils/acacias/LogoSolo.webp';
-import acceso from '../../../utils/acacias/Figura1.webp';
-import independencia from '../../../utils/acacias/Figura2.webp';
-import ambiente from '../../../utils/acacias/Figura3.webp';
-import Imagen1 from '../../../utils/acacias/Imagen1.webp';
-import Imagen2 from '../../../utils/acacias/Imagen2.webp';
-import Imagen3 from '../../../utils/acacias/Imagen3.webp';
-import Imagen4 from '../../../utils/acacias/Imagen4.webp';
-import Imagen5 from '../../../utils/acacias/Imagen5.webp';
-import Imagen6 from '../../../utils/acacias/Imagen6.webp';
-import Imagen7 from '../../../utils/acacias/Imagen7.webp';
-import Imagen8 from '../../../utils/acacias/Imagen8.webp';
-import Mapa from '../../../utils/acacias/mapa.webp';
+import logoAlameda from '../../../utils/alameda/Logo.webp';
+import ubicacion1 from '../../../utils/alameda/Ubicacion1.webp';
+import ubicacion2 from '../../../utils/alameda/Ubicacion2.webp';
+import metros from '../../../utils/alameda/Metros-cuadrados.webp';
+import habitacion from '../../../utils/alameda/Habitaciones.webp';
+import bano from '../../../utils/alameda/Bano.webp';
+import otros from '../../../utils/alameda/Casa.webp';
+import planta from '../../../utils/alameda/Planta.webp';
+import logoSolo from '../../../utils/alameda/LogoSolo.webp';
+import acceso from '../../../utils/alameda/Figura1.webp';
+import independencia from '../../../utils/alameda/Figura2.webp';
+import ambiente from '../../../utils/alameda/Figura3.webp';
+import Imagen1 from '../../../utils/alameda/Imagen1.webp';
+import Imagen3 from '../../../utils/alameda/Imagen3.webp';
+import Imagen4 from '../../../utils/alameda/Imagen4.webp';
+import Imagen5 from '../../../utils/alameda/Imagen5.webp';
+import Imagen7 from '../../../utils/alameda/Imagen7.webp';
+import Imagen8 from '../../../utils/alameda/Imagen8.webp';
+import Imagen9 from '../../../utils/alameda/Imagen9.webp';
+import Imagen10 from '../../../utils/alameda/Imagen10.webp';
+import Imagen11 from '../../../utils/alameda/Imagen11.webp';
+import Imagen12 from '../../../utils/alameda/Imagen12.webp';
+import Imagen13 from '../../../utils/alameda/Imagen13.webp';
+import Mapa from '../../../utils/alameda/mapa.webp';
 import emailjs from '@emailjs/browser';
 
 
@@ -33,9 +36,8 @@ const Sauce = () => {
     celular: '',
     autorizacion: false,
   });
-  const fotos = [Imagen1, Imagen2, Imagen3, Imagen4,Imagen5,Imagen6,Imagen7,Imagen8];
-
-  const googleMapsUrl = `https://www.google.com/maps?ll=10.341112,-75.409567&z=10&t=m&hl=es-ES&gl=US&mapclient=embed&q=Dg.+35+Turbaco,+Bol%C3%ADvar`;
+  const fotos = [Imagen1, Imagen3, Imagen4,Imagen5,Imagen7,Imagen8,Imagen9,Imagen10,Imagen11,Imagen12,Imagen13];
+  const googleMapsUrl = `https://www.google.com/maps/place/7JWG%2BR5,+Sincelejo,+Sucre,+Colombia/@9.297062,-75.374562,14z/data=!4m5!3m4!1s0x8e59144841172957:0xfd54006d98c481fc!8m2!3d9.2970625!4d-75.3745625?hl=es-ES&entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D`;
 
 
   const [indiceActual, setIndiceActual] = useState(0);
@@ -68,8 +70,8 @@ const Sauce = () => {
       email: formData.email,
       celular: formData.celular,
       autorizacion: formData.autorizacion ? 'Sí' : 'No',
-      to_email: 'iyoung@enfoqueconstructores.com', // Define el destinatario aquí,
-      proyecto:"Acacias"
+      to_email: 'mvergara@enfoqueconstructores.com', // Define el destinatario aquí,
+      proyecto:"Alameda"
     };
 
     console.log(templateParams)
@@ -100,18 +102,18 @@ const Sauce = () => {
       );
   };
   return (
-    <div className='acacias'>
-      <div className='banner-acacias'>
-        <div className='banner-acacias-info'>
-          <img className='logoAcacias' src={logoAcacias} alt="logoAcacias" />
+    <div className='alameda'>
+      <div className='banner-alameda'>
+        <div className='banner-alameda-info'>
+          <img className='logoAlameda' src={logoAlameda} alt="logoAlameda" />
           <h1>Proyecto de casas</h1>
-          <div className='banner-ubicacion-acacias'>
+          <div className='banner-ubicacion-alameda'>
             <img src={ubicacion1} alt="ubicacionNaranja" />
-            <h2>Turbaco<br></br>Bolivar</h2>
+            <h2>Sincelejo<br></br>Sucre</h2>
           </div>
           <h3>*|Casas con posibilidad de ampliación a segundo piso</h3>
         </div>
-        <div className='form-acacias'>
+        <div className='form-alameda'>
           <form onSubmit={handleOnSubmit}>
             <div>
               <label>Nombre</label>
@@ -162,26 +164,31 @@ const Sauce = () => {
                   onChange={handleChange}
                   required
                 />
-                Autorizo el tratamiento de mis datos personales y <br></br> políticas de privacidad
+                Autorizo el tratamiento de mis datos personales y políticas de privacidad
               </label>
             </div>
-            <button className='btnNaranjaAcacias' type="submit">Solicitar Información</button>
-            <div className='btnNaranjaAcacias2'>
-              <a href="https://wa.link/5rrb86" target="_blank" rel="noopener noreferrer">Contactar un asesor</a>
+            <button className='btnNaranjaAlameda' type="submit">Solicitar Información</button>
+            <div className='btnNaranjaAlameda2'>
+              <a href="https://wa.link/fgp87p" target="_blank" rel="noopener noreferrer">Contactar un asesor</a>
             </div>
           </form>
         </div>
       </div>
-      <div className='proyecto-acacias'>
-        <h1>Proyecto de casas <br></br> desde $166.400.000</h1>
+      <div className='proyecto-alameda'>
+        <h1>Proyecto de casas <br></br> desde $150.000.000</h1>
       </div>
-      <div className='descubre-acacias'>
-        <p><strong>Las Acacias </strong>
-        es más que un proyecto de casas, es la oportunidad de vivir como siempre soñaste. 
-        <strong> Ubicado en Turbaco - Bolivar a tan solo 30 minutos de Cartagena, </strong> 
-        con 500 viviendas independientes; disfrutarás de un hogar con patio y antejardín, ideal para ti y tu familia. 
-        <strong>¡Conoce lo que hace de Las Acacias un lugar especial!</strong> </p>
-        <div className="galerias-fotos-acacias">
+      <div className='descubre-alameda'>
+      <div className='info-y-avance-alameda'>
+        <p><strong>Bienvenidos a Alameda, un exclusivo proyecto de casas en Sincelejo - Sucre, </strong>
+        diseñado para quienes buscan tranquilidad, seguridad y un espacio propio para disfrutar en familia.  Con 180 viviendas cuidadosamente construidas, tendrás un hogar con patio y antejardín en un entorno que inspira comunidad y calidad de vida.
+        <strong> ¡Descubre cómo vivir de una manera única y especial!</strong> </p>
+        <div className='btnNaranjaAlamedaContacto'>
+        <a href="https://drive.google.com/drive/u/4/folders/1Fjm5bHGXnTKuoF68ZOlEcfpvVpiWH7zL" target="_blank" rel="noopener noreferrer">Avance de la obra</a>  
+        </div>
+
+        </div>
+        
+        <div className="galerias-fotos-alameda">
          <button className="btn-flecha izquierda" onClick={anteriorFoto}>
             &#8249;
           </button>
@@ -194,35 +201,35 @@ const Sauce = () => {
         </div>
 
       </div>
-      <div className='espacios-acacias'>
+      <div className='espacios-alameda'>
         <h1>Espacios<br></br> amplios y <br></br>  cómodos</h1>
-        <div className='lineaVerticalNaranja'></div>
-        <p>Casas de 61 m2 en lotes de 98 m2 y con placa para construir segundo piso.</p>
-        <div className='lineaVerticalNaranja'></div>
-        <div className='info-acacias'>
-          <div className='info-acacias-img'>
+        <div className='lineaVerticalNaranjaClaro'></div>
+        <p>Casas de 43 m2 en lotes de 72 m2 y con placa para construir segundo piso. </p>
+        <div className='lineaVerticalNaranjaClaro'></div>
+        <div className='info-alameda'>
+          <div className='info-alameda-img'>
           <img src={metros} alt="metros" />
           <img src={habitacion} alt="habitaciones" />
           <img src={bano} alt="banos" />
           <img src={otros} alt="otros" />
 
           </div>
-          <div className='info-acacias-texto'>
-            <p>61 m2 con posibilidad de ampliación. </p>
+          <div className='info-alameda-texto'>
+            <p>43 m2 con posibilidad de ampliación.</p>
             <p>2 habitaciones.</p>
             <p>1 baño.</p>
             <p>Patio, cocina, sala-comedor y antejardín.</p>
           </div>
         </div>
       </div>
-      <div className='planta-acacias'>
+      <div className='planta-alameda'>
         <h1>Planta arquitectónica</h1>
         <img src={planta} alt="planta" />
       </div>
-      <div className='comodidades-acacias'>
+      <div className='comodidades-alameda'>
         <h1>Excelentes comodidades de la urbanización para compartir en familia</h1>
-        <div className='lineaVerticalNaranja'></div>
-        <div className='comodidades-acacias-lista'>
+        <div className='lineaVerticalNaranjaClaro'></div>
+        <div className='comodidades-alameda-lista'>
           <div className='salon'>
             <img src={logoSolo} alt="logoSolo" />
             <p>Zonas de entretenimiento</p>
@@ -235,24 +242,20 @@ const Sauce = () => {
             <img src={logoSolo} alt="logoSolo" />
             <p>Sendero.</p>
           </div>
-          <div className='elemento'>
+          <div className='cancha'>
             <img src={logoSolo} alt="logoSolo" />
-            <p>Elemento de lista.</p>
-          </div>
-          <div className='lago'>
-            <img src={logoSolo} alt="logoSolo" />
-            <p>Lago.</p>
+            <p>Cancha múltiple.</p>
           </div>
         </div>
       </div>
-      <div className='ubicacion-acacias'>
-        <div className='ubicacion-acacias-info'>
+      <div className='ubicacion-alameda'>
+        <div className='ubicacion-alameda-info'>
           <img src={ubicacion2} alt="ubicacion" />
-          <h1>Fácil acceso</h1>
-          <h2>Turbaco - Bolivar</h2>
-          <h3>A tan solo 30 minutos de Cartagena</h3>
+          <h1>Fácil acceso <br></br>por vía principal</h1>
+          <h2>Sincelejo - Sucre</h2>
+  
         </div>
-        <div className='ubicacion-acacias-maps'>
+        <div className='ubicacion-alameda-maps'>
           <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
             <img src={Mapa} alt="Mapa" />
           </a>
@@ -260,11 +263,11 @@ const Sauce = () => {
 
 
       </div>
-      <div className='acacias-eleccion'>
-        <h1>Si buscas un lugar que lo tenga todo, <br></br> <strong>Las Acacias te abre las puertas de tu nuevo hogar.</strong>  </h1>
+      <div className='alameda-eleccion'>
+        <h1>Vivir en casa no es solo un sueño, <br></br> <strong>en Alameda es una realidad hecha para ti.</strong>  </h1>
         
       </div>
-      <div className='acacias-info'>
+      <div className='alameda-info'>
         <div className='acceso'>
           <img src={acceso} alt="acceso" />
           <p>Fácil acceso y excelente ubicación</p>
@@ -278,16 +281,16 @@ const Sauce = () => {
           <p>Ambiente tranquilo y natural</p>
         </div>
       </div>
-      <div className='contactenos-acacias'>
-        <div className='contactenos-acacias-info'>
+      <div className='contactenos-alameda'>
+        <div className='contactenos-alameda-info'>
           <h1>Contáctanos y recibe asesoría personalizada </h1>
-          <div className='btnNaranjaAcaciasContacto'>
-            <a href="https://wa.link/5rrb86" target="_blank" rel="noopener noreferrer">¡Hablemos aquí!</a>  
+          <div className='btnNaranjaAlamedaContacto'>
+            <a href="https://wa.link/fgp87p" target="_blank" rel="noopener noreferrer">¡Hablemos aquí!</a>  
           </div>
           <p>O diligencia nuestro formulario <br></br>para ser contactado(a) por uno de
           nuestros asesores.</p>
         </div>
-        <div className='form-acacias'>
+        <div className='form-alameda'>
           <form onSubmit={handleOnSubmit}>
             <div>
               <label>Nombre</label>
@@ -338,10 +341,10 @@ const Sauce = () => {
                   onChange={handleChange}
                   required
                 />
-                Autorizo el tratamiento de mis datos personales y <br></br> políticas de privacidad
+                Autorizo el tratamiento de mis datos personales y políticas de privacidad
               </label>
             </div>
-            <button className='btnNaranjaAcacias' type="submit">Solicitar Información</button>
+            <button className='btnNaranjaAlameda' type="submit">Solicitar Información</button>
           </form>
         </div>
 

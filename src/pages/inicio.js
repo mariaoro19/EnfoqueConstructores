@@ -221,7 +221,7 @@ const Inicio = () => {
         </div>
 
         
-        <div className='form-inicio'>
+        <div id='contacto' className='form-inicio'>
             <form onSubmit={handleOnSubmit}>
               <div>
                 <label>Nombre</label>
@@ -286,7 +286,7 @@ const Inicio = () => {
                     onChange={handleChange}
                     required
                   />
-                  Autorizo el tratamiento de mis datos personales y <br></br> políticas de privacidad
+                  Autorizo el tratamiento de mis datos personales y políticas de privacidad
                 </label>
               </div>
               <button className='btnNaranjaAcacias' type="submit">Enviar información</button>
