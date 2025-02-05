@@ -16,7 +16,7 @@ import Vivienda from './pages/vivienda';
 import PQR from './pages/pqr';
 import ScrollToTop from "./pages/ScrollToTop";
 
-const CURRENT_VERSION = '1.1.5'; 
+const CURRENT_VERSION = '1.2.0'; 
 
 
 function App() {
