@@ -136,7 +136,7 @@ html, body {
   align-items: center; 
   text-align: left;
   padding: 0.5rem;
-  max-width: 10rem;
+  max-width: 13rem;
   position: relative;
 
    
@@ -153,12 +153,7 @@ html, body {
   height: 2.9rem;
   font-size: var(--letra-p);
   font-weight: bold;
-  
-
-  
-  
-
-  
+ 
 
 }
 
@@ -200,12 +195,18 @@ html, body {
   padding: 0.5rem;
   cursor: pointer;
   font-size: var(--letra-p);
-  width: 7rem;
+  width: 8rem;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid gray;
+}
+.navbar-pc .navbar-menu .servicioCliente li{
+  width: 100%;
+  padding: 0.1rem;
+  height: auto;
+  font-size: var(--letra-p);
 }
 
 
@@ -4363,6 +4364,214 @@ html, body {
   transform: scale(0.9);
 }
 
+/*Constructor*/
+.constructor-page{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 60rem;
+  width: 100%;
+}
+
+.constructor-page-title{
+  
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-end; 
+  margin:0;
+  padding: 0;
+  width: 50rem;
+  height: 10rem;
+  position: relative;
+  
+}
+
+.constructor-page-title img{
+  width: 5rem;
+  height: auto;
+  margin: 0 2rem 0 0;
+}
+.constructor-page-title h2{
+  font-size: var(--letra-h2);
+  background-color: var(--naranja);
+  font-family: var(--font-titulos);
+  color: var(--gris-oscuro);
+  padding: 0.8rem;
+  border-radius: 0 2.5rem 2.5rem 0;
+  width: 50rem;
+  text-align: right;
+}
+.constructor-page-title h2 strong {
+  font-weight: 900; /* O usa 800 si 900 es demasiado grueso */
+  -webkit-text-stroke: 1.5px var(--gris-oscuro); /* Añade un contorno negro */
+}
+
+
+#elementoC1 {
+  position: absolute;
+  top: -25%;
+  transform: translateY(-10%);
+  z-index: 3; /* Mayor valor = más arriba */
+}
+
+#elementoC2 {
+  position: absolute;
+  top: 5%;
+  transform: translateY(-10%);
+  z-index: 2; /* Debajo de elemento1 */
+}
+
+.constructor-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: justify;
+}
+.mensaje-constructor{
+  width: 50%;
+  padding: 0 3rem 0 3rem;
+}
+.mensaje-constructor h2{
+  font-size: var(--letra-h2);
+  color: var(--naranja);
+  font-family: var(--font-titulos);
+  text-align: left;
+  -webkit-text-stroke: 2.5px var(--naranja);
+}
+.mensaje-constructor p{
+  font-size: var(--letra-p);
+  color: var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  
+}
+/*Vivienda*/
+.vivienda-page{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 60rem;
+  width: 100%;
+}
+
+.vivienda-page-title{
+  
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-end; 
+  margin:0;
+  padding: 0;
+  width: 50rem;
+  height: 10rem;
+  position: relative;
+  
+}
+
+.vivienda-page-title img{
+  width: 4rem;
+  height: auto;
+  margin: 0 2rem 0 0;
+}
+.vivienda-page-title h2{
+  font-size: var(--letra-h2);
+  background-color: var(--naranja);
+  font-family: var(--font-titulos);
+  color: var(--gris-oscuro);
+  padding: 0.8rem;
+  border-radius: 0 2.5rem 2.5rem 0;
+  width: 50rem;
+  text-align: right;
+}
+.vivienda-page-title h2 strong {
+  font-weight: 900; /* O usa 800 si 900 es demasiado grueso */
+  -webkit-text-stroke: 1.5px var(--gris-oscuro); /* Añade un contorno negro */
+}
+
+
+#elementoV1 {
+  position: absolute;
+  top: -25%;
+  transform: translateY(-10%);
+  z-index: 3; /* Mayor valor = más arriba */
+}
+
+#elementoV2 {
+  position: absolute;
+  top: 5%;
+  transform: translateY(-10%);
+  z-index: 2; /* Debajo de elemento1 */
+}
+
+.vivienda-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: justify;
+}
+.mensaje-vivienda{
+  width: 50%;
+  padding: 0 3rem 0 3rem;
+}
+.mensaje-vivienda h2{
+  font-size: var(--letra-h2);
+  color: var(--naranja);
+  font-family: var(--font-titulos);
+  text-align: left;
+  -webkit-text-stroke: 2.5px var(--naranja);
+}
+.mensaje-vivienda p{
+  font-size: var(--letra-p);
+  color: var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  
+}
+
+/*PQR*/
+.pqr-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  margin: 4rem 1rem 1rem 1rem;
+}
+
+
+
+.pqr-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: justify;
+}
+.mensaje-pqr{
+  width: 50%;
+  padding: 0 3rem 0 3rem;
+}
+.mensaje-pqr h1{
+  font-size: var(--letra-h1);
+  color: var(--naranja);
+  font-family: var(--font-titulos);
+  text-align: left;
+  -webkit-text-stroke: 2.5px var(--naranja);
+}
+.mensaje-pqr h2{
+  font-size: 2rem;
+  color: var(--gris-oscuro);
+  font-family: var(--font-titulos);
+  text-align: left;
+  
+}
+.mensaje-pqr p{
+  font-size: var(--letra-p);
+  color: var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  
+}
 
 @media screen and (max-width: 1060px) {
  /* Navbar contenedor */
@@ -4399,14 +4608,14 @@ html, body {
   background-color: var(--naranja);
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
   transition: right 0.3s ease; /* Transición suave para 'right' */
-  z-index: 1; /* Asegura que el menú se muestre por encima de otros elementos */
+  z-index: 5; /* Asegura que el menú se muestre por encima de otros elementos */
   padding: 0 0.5rem 0 0;
   margin: 0;
   
 }
 .menu-content > ul > li > a {
   position: relative;  /* Asegura que el pseudo-elemento se posicione relativo al enlace */
-  z-index: 1 ; /* Mantiene el texto por encima del fondo */
+  z-index: 4 ; /* Mantiene el texto por encima del fondo */
 }
 
 .menu-content > ul > li > a:hover::after {
@@ -4445,10 +4654,15 @@ html, body {
 .menu-content li:hover > ul {
   display: block; 
 }
+
 .proxLanzamientos a{
   line-height: 1;
   margin: 1rem 0 0 0 !important;
 
+}
+.servicioClienteLi a{
+  line-height: 1;
+  margin: 1rem 0 0 0 !important;
 }
 
 .menu-icon {
@@ -4457,7 +4671,7 @@ html, body {
   position: fixed; /* Fija el ícono en la parte superior */
   top: 1rem; /* Ajusta la distancia desde la parte superior */
   right: 1rem; /* Coloca el ícono en el lado derecho */
-  z-index: 3; /* Asegura que el ícono esté por encima del menú */
+  z-index: 6; /* Asegura que el ícono esté por encima del menú */
 }
 
 .union-item {
@@ -6760,6 +6974,206 @@ nav ul li a{
   font-size: var(--letra-h3);
   width: 100%;
   margin:0.5rem;
+}
+
+/*Constructor*/
+.constructor-page{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+
+.constructor-page-title{
+  
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-end; 
+  margin:4rem 0 0 0;
+  padding: 0;
+  width: 20rem;
+  height: 4rem;
+  position: relative;
+  
+}
+
+.constructor-page-title img{
+  width: 5rem;
+  height: auto;
+  margin: 0 2rem 0 0;
+}
+.constructor-page-title h2{
+  font-size: var(--letra-h3);
+  padding: 0.8rem;
+  border-radius: 0 1.5rem 1.5rem 0;
+  width: 20rem;
+  text-align: right;
+}
+.constructor-page-title h2 strong {
+  font-weight: 900; /* O usa 800 si 900 es demasiado grueso */
+  -webkit-text-stroke: 1.5px var(--gris-oscuro); /* Añade un contorno negro */
+}
+
+
+#elementoC1 {
+  position: absolute;
+  top: -70%;
+  transform: translateY(-10%);
+  z-index: 3; /* Mayor valor = más arriba */
+}
+
+#elementoC2 {
+  position: absolute;
+  top: 5%;
+  transform: translateY(-10%);
+  z-index: 2; /* Debajo de elemento1 */
+}
+
+.constructor-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+}
+.mensaje-constructor{
+  width: 100%;
+  padding: 1rem;
+}
+.mensaje-constructor h2{
+  font-size: var(--letra-h2);
+  text-align: left;
+  -webkit-text-stroke: 2px var(--naranja);
+}
+.mensaje-constructor p{
+  font-size: var(--letra-p);
+  color: var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  
+}
+/*Vivienda*/
+.vivienda-page{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+
+.vivienda-page-title{
+  
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-end; 
+  margin:4rem 0 0 0;
+  padding: 0;
+  width: 20rem;
+  height: 4rem;
+  position: relative;
+  
+}
+
+.vivienda-page-title img{
+  width: 4rem;
+  height: auto;
+  margin: 0 2rem 0 0;
+}
+.vivienda-page-title h2{
+  font-size: var(--letra-h3);
+  padding: 0.8rem;
+  border-radius: 0 1.5rem 1.5rem 0;
+  width: 20rem;
+  text-align: right;
+}
+.vivienda-page-title h2 strong {
+  font-weight: 900; /* O usa 800 si 900 es demasiado grueso */
+  -webkit-text-stroke: 1.5px var(--gris-oscuro); /* Añade un contorno negro */
+}
+
+
+#elementoV1 {
+  position: absolute;
+  top: -70%;
+  transform: translateY(-10%);
+  z-index: 3; /* Mayor valor = más arriba */
+}
+
+#elementoV2 {
+  position: absolute;
+  top: 5%;
+  transform: translateY(-10%);
+  z-index: 2; /* Debajo de elemento1 */
+}
+
+.vivienda-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+}
+.mensaje-vivienda{
+  width: 100%;
+  padding: 1rem;
+}
+.mensaje-vivienda h2{
+  font-size: var(--letra-h2);
+  text-align: left;
+  -webkit-text-stroke: 2px var(--naranja);
+}
+.mensaje-vivienda p{
+  font-size: var(--letra-p);
+  color: var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  
+}
+
+/*PQR*/
+.pqr-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+  width: 100%;
+  margin: 4rem 0 0 0;
+}
+
+
+
+.pqr-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+}
+.mensaje-pqr{
+  width: 100%;
+  padding: 0 1rem 1rem 1rem;
+}
+.mensaje-pqr h1{
+  font-size: var(--letra-h2);
+  color: var(--naranja);
+  font-family: var(--font-titulos);
+  text-align: left;
+  -webkit-text-stroke: 2.5px var(--naranja);
+}
+.mensaje-pqr h2{
+  font-size: 2rem;
+  color: var(--gris-oscuro);
+  font-family: var(--font-titulos);
+  text-align: left;
+  
+}
+.mensaje-pqr p{
+  font-size: var(--letra-p);
+  color: var(--gris-oscuro);
+  font-family: var(--font-cuerpo);
+  
 }
 
 /*footbar*/

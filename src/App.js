@@ -11,6 +11,9 @@ import Piamonte from './pages/proyectos/cartagena/Piamonte';
 import Acacias from './pages/proyectos/cartagena/Acacias';
 import SantaClara from './pages/proyectos/cartagena/SantaClara';
 import Alameda from './pages/proyectos/sincelejo/Alameda';
+import Constructor from './pages/constructor';
+import Vivienda from './pages/vivienda';
+import PQR from './pages/pqr';
 import ScrollToTop from "./pages/ScrollToTop";
 
 const CURRENT_VERSION = '1.1.5'; 
@@ -52,6 +55,9 @@ function App() {
   const isAlamedaPage = location.pathname === '/proyectos/sincelejo/Alameda';
   const isAcaciasPage = location.pathname === '/proyectos/cartagena/Acacias';
   const isSantaClaraPage = location.pathname === '/proyectos/cartagena/SantaClara';
+  const isConstructorPage = location.pathname === '/constructor';
+  const isViviendaPage = location.pathname === '/vivienda';
+  const isPQRPage = location.pathname === '/pqr';
 
   return (
     
@@ -66,6 +72,9 @@ function App() {
             <Route path="/proyectos/cartagena/Acacias" element={<Acacias />} />
             <Route path="/proyectos/cartagena/SantaClara" element={<SantaClara />} />
             <Route path="/proyectos/sincelejo/Alameda" element={<Alameda />} />
+            <Route path="/constructor" element={<Constructor />} />
+            <Route path="/vivienda" element={<Vivienda />} />
+            <Route path="/pqr" element={<PQR />} />
             
             <Route path="/lanzamientos" element={<Lanzamientos />} />
           </Routes>
@@ -77,6 +86,9 @@ function App() {
          isAlamedaPage={isAlamedaPage}
          isAcaciasPage={isAcaciasPage}
          isSantaClaraPage={isSantaClaraPage}
+         isConstructorPage={isConstructorPage}
+         isViviendaPage={isViviendaPage}
+         isPQRPage={isPQRPage}
          />
          <ScrollToTop />
       </div>
