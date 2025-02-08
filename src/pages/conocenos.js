@@ -30,7 +30,7 @@ const Conocenos = () => {
       email: formData.email,
       celular: formData.celular,
       autorizacion: formData.autorizacion ? 'Sí' : 'No',
-      to_email: 'mariao.1994@gmail.com', // Define el destinatario aquí,
+      to_email: 'servicioalcliente@enfoqueconstructores.com', // Define el destinatario aquí,
       tipo: formData.tipoUsuario === "Soy constructor" ? "Construcción" : "Vivienda"
     };
 
